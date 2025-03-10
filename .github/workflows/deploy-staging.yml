@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NODE_VERSION: 20.18.2
-      FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID_STAGING }}
+      FIREBASE_DEPLOY_STAGING: ${{ secrets.FIREBASE_DEPLOY_STAGING }}
     environment: staging
     steps:
       - name: Checkout repository
@@ -61,8 +61,7 @@ jobs:
 
       - name: Authenticate with Firebase
         run: |
-          printf '%s' '${{ secrets.FIREBASE_DEPLOY_STAGING }}' > firebaselogin.json
-          ls -lah firebaselogin.json
+          echo $FIREBASE_DEPLOY_STAGING > firebaselogin.json
           export GOOGLE_APPLICATION_CREDENTIALS=firebaselogin.json
 
       - name: Deploy to Firebase (Staging)
