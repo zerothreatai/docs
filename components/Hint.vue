@@ -1,6 +1,6 @@
 <template>
-  <div id="alert-div" class="flex gap-x-1 items-start shadow-sm text-sm px-4 py-3 my-4" :class="bgStyle">
-    <font-awesome-icon :icon="icon" class="text-base pe-2 translate-y-0.5" :class="iconClass" />
+  <div id="alert-div" class="flex gap-x-1 items-start rounded-2xl shadow-sm text-sm px-5 py-5 my-4" :class="bgStyle">
+    <font-awesome-icon :icon="icon" class="text-sm pe-2 translate-y-0.5" :class="iconClass" />
     <div>
       <slot />
     </div>
@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { defineProps } from 'vue';
 defineProps({
   bgStyle:{
-    default:'bg-gray-50/50 rounded-md border-gray-300 text-gray-500',
+    default:'bg-slate-50/50 rounded-2xl border-gray-300 text-gray-500',
     type:String
   },
   icon:{
@@ -29,23 +29,25 @@ defineProps({
 <style>
 #alert-div h6 {
   font-weight: 500;
-  color: rgb(48, 47, 47);
+  /* color: #0284c7; */
+  line-height: 1.4rem;
 }
-#alert-div h6 a {
+/* #alert-div h6 a {
   font-weight: 500;
   color: #9b26b6;
   text-decoration: underline;
   letter-spacing: 0.01rem;
-}
+} */
 #alert-div h5 {
   padding-bottom: 10px;
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.05rem;
+  font-weight: 600;
 }
-#alert-div blockquote {
+/* #alert-div blockquote {
   border: none !important;
   padding: 0px !important;
   background-color: transparent !important;
-}
+} */
 </style>
 
 

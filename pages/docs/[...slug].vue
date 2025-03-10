@@ -118,55 +118,59 @@ useSeoMeta({
 </template>
 
 <style>
+#contentrenderer{
+  letter-spacing: 0.02rem;
+}
 #contentrenderer h1 {
   font-size: 2.25rem;
   font-weight: 600;
   padding-top: 20px;
 }
 #contentrenderer h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  padding-top: 30px;
-  padding-bottom: 10px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-top: 40px;
+  padding-bottom: 0px;
   color: #1a202c;
 }
-#contentrenderer h2 strong {
+/* #contentrenderer h2 strong {
   font-size: 1.5rem;
   font-weight: 600;
   padding-top: 20px;
   padding-bottom: 10px;
-}
+} */
 #contentrenderer h3 {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  color: rgb(0, 0, 0);
-  padding-top: 30px;
-  padding-bottom: 8px;
+  color: #1a202c;
+  padding-top: 60px;
+}
+#contentrenderer h3:first-of-type{
+  padding-top: 60px;
 }
 #contentrenderer h4 {
   font-size: 1rem;
   font-weight: 600;
   padding: 15px 0;
 }
-#contentrenderer h2 a {
+/* #contentrenderer h2 a {
   font-weight: 600;
   font-size: 1.8rem;
   color:#1a202cef;
-  /* color: red; */
-}
-#contentrenderer h2 a strong {
+} */
+/* #contentrenderer h2 a strong {
   font-weight: 600;
   font-size: 1.8rem;
-}
-#contentrenderer h3 a {
+} */
+/* #contentrenderer h3 a {
   font-weight: 600;
   font-size: 1.4rem;
   color:#1a202cef;
-}
-#contentrenderer h3 a strong {
+} */
+/* #contentrenderer h3 a strong {
   font-weight: 600;
   font-size: 1.4rem;
-}
+} */
 #contentrenderer h4 a {
   font-weight: 600;
   font-size: 1.35rem;
@@ -188,18 +192,19 @@ useSeoMeta({
   color: #1a202c;
 }
 
-#contentrenderer p a,
-p a strong {
+#contentrenderer p a, ol li a, h6 a{
   color: #9b26b6 !important;
   font-weight: 500;
-  text-decoration: underline;
 }
-#contentrenderer li a {
+#contentrenderer p a:hover, ol li a:hover, h6 a:hover {
+  text-decoration: underline !important;
+}
+/* #contentrenderer li a {
   color: #9b26b6;
   text-decoration: underline;
-}
-#contentrenderer ul {
-  padding: 0px 0;
+} */
+#contentrenderer ul, ol {
+  padding-top: 10px;
 }
 #contentrenderer ol ul {
   padding: 5px 0;
@@ -242,16 +247,21 @@ ul li a {
   list-style: disc;
   /* margin-left: 2rem; */
 }
+#contentrenderer ol li ul li ul li {
+  list-style: square !important;
+}
 #contentrenderer ol li {
   font-size: 1rem;
   color: rgb(28 27 44);
-  padding: 5px 0;
+  padding: 10px 0;
   list-style: decimal;
   margin-left: 20px;
 }
 #contentrenderer blockquote {
   border-left: 4px solid rgba(128, 128, 128, 0.493);
-  padding: 0px 20px;
+  padding: 5px 20px;
+  margin-top: 40;
+  margin-bottom: 20px;
   background-color: rgba(128, 128, 128, 0.055);
 }
 #contentrenderer blockquote strong {
@@ -298,18 +308,33 @@ font-weight: 600 !important;
 color: #9b26b6 !important;
 }
 #contentrenderer img {
-  margin: 10px auto;
-  box-shadow: 0px 2px 2px rgba(114, 114, 114, 0.2);
+  margin: 30px auto;
+  box-shadow: 0px 2px 5px rgba(114, 114, 114);
   border: 1px solid rgba(235, 235, 235, 0.705);
   border-radius: 5px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
-#contentrenderer ul li img, ol li img {
+#contentrenderer ul li img  {
+  display : inline;
+  margin: 0px;
+  translate: var(--tw-translate-x) -7px;
+  margin-left: 2px;
+  margin-right: 5px;
+}
+#contentrenderer ol li img {
+  display : inline;
+  margin: 0px;
+  translate: var(--tw-translate-x) -4px;
+  margin-left: 2px;
+  margin-right: 5px;
+}
+/* style="display:inline; margin:0px; margin-bottom:0px; translate: var(--tw-translate-x) -7px;" */
+/* #contentrenderer ul li img, ol li img {
   margin: 7px auto !important;
   box-shadow: 0px 2px 2px rgba(114, 114, 114, 0.2);
   border: 1px solid rgba(235, 235, 235, 0.705);
   border-radius: 5px;
-}
+} */
 hr {
   margin: 0.5rem 0;
 }
@@ -322,8 +347,8 @@ pre {
   padding: 15px 20px;
   border: 1px solid rgb(207, 207, 207);
   border-radius: 5px;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   color: #6c6c81;
   cursor: pointer;
 }

@@ -4,7 +4,7 @@ const tabs = [{
     title:"Target",
     category:FaqCategory.Target,
     icon:'crosshairs',
-    iconClass:"text-red-500"
+    iconClass:"text-fuchsia-500"
 },
 {
     title:"Scan",

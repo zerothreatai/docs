@@ -15,7 +15,7 @@
         technologies.
       </h4>
       <!-- serchbar old ui -->
-      <div class="flex items-center gap-x-2 hidden">
+      <div class="flex items-center gap-x-2 hidden translate-y-1">
         <input
           type="text"
           placeholder="Search Documentation"
