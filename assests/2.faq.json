@@ -1,0 +1,58 @@
+[
+    {
+        "q":"Why perform an authenticated scan?",
+        "a":"Authenticated scans uncover vulnerabilities in protected areas like user dashboards or admin panels, which traditional scanners can’t access. They ensure that all parts of your application are tested, protect sensitive user data, and provide a more comprehensive security assessment."
+    },
+    {
+        "q":"Can ZeroThreat scan MFA-protected apps?",
+        "a":"Yes, it supports Multi-Factor Authentication scans. Using the ZeroThreat Chrome Recorder extension, it can even scan MFA apps including OTPs, CAPTCHAs, SSO, or others. Check Scan MFA App for a step-by-step guide."
+    },
+    {
+        "q":"Why use the ZeroThreat AI Chrome Extension?",
+        "a":"The ZeroThreat AI Chrome Recorder Extension enables authenticated scans by capturing login sequences, including complex steps like MFA, SSO, and CAPTCHAs, to access protected areas such as admin dashboards. It overcomes traditional scanner limitations by navigating intricate workflows and ensuring thorough testing of restricted sections."
+    },
+    {
+        "q":"What is the data storage location?",
+        "a":"It’s the storage location where the scan data is stored. Choosing the right location ensures compliance with laws like GDPR, keeping data secure and within required geographic boundaries. "
+    },
+    {
+        "q":"How does ZeroThreat scan resources outside a target’s domain?",
+        "a":"Authenticated scans uncover vulnerabilities in protected areas like user dashboards or admin panels, which traditional scanners can’t access. They ensure that all parts of your application are tested, protect sensitive user data, and provide a more comprehensive security assessment."
+    },
+    {
+        "q":"Can I scan specific parts of a target?",
+        "a":"Yes, you can use a navigation sequence-only scan to focus only on areas navigated during recording, like a dashboard or search functionality. You can also refine a target’s scope by ignoring unwanted URLs in Target Configuration, such as /login or /test, to exclude them from the scan. This allows ZeroThreat to assess just the intended parts of your application."
+    },
+    {
+        "q":"Why add custom headers to scans?",
+        "a":"Custom headers (e.g., authorization tokens or API keys) is an optional setting which can help the scanner interact correctly with your app’s back-end. They also help differentiate scan traffic from real users in logs by adding a custom header (e.g., 'X-Scanner-User: ZeroThreat') for better monitoring."
+    },
+    {
+        "q":"How can I use the Scans section in ZeroThreat?",
+        "a":"The Scans section allows you to track active scans, check completed ones, and open detailed reports. You can also see scans shared by others, making it easier to collaborate without repeating scans yourself."
+    },
+    {
+        "q":"How do I delete a scan report?",
+        "a":"In the Scans section, find your report, click the three dots icon, and select 'Delete' from the options. Note that deletion is permanent, so ensure you no longer need the report before confirming." 
+    },
+    {
+        "q":"What’s the benefit of choosing a nearby scanning server?",
+        "a":"A scanning server close to your target reduces network latency, speeds up scan times, and boosts result accuracy by minimizing disruptions. It’s also helpful when your application has location restriction, restricting access to certain geographic regions. A nearby server ensures the scan can reach the target effectively, making it key for efficient and reliable scanning in such cases."
+    },
+    {
+        "q":"How do I perform a quick scan?",
+        "a":"After logging into ZeroThreat, go to the dashboard, enter your target URL in the central input field, select a nearby scanning server from the dropdown, and click 'Start Scan.' This initiates an unauthenticated scan limited to publicly accessible pages. For more, see Quick Scan Guide."
+    },
+    {
+        "q":"How do I scan with a login sequence?",
+        "a":"Install the ZeroThreat Chrome Recorder, select your target, and record your login steps (e.g., entering credentials and navigating authenticated areas). Tag key HTTP requests (login, authenticated, logout), save the sequence, and start the scan. Details at Scan with Login Sequence."
+    },
+    {
+       "q":"What are the prerequisites to start a security scan?" ,
+       "a":"To run a scan in ZeroThreat, you need two things: the Chrome browser and the ZeroThreat Chrome Extension. The browser supports the scanning process, while the extension enables advanced features like authenticated scans across your target application."
+    },
+    {
+        "q":"What if the ZeroThreat extension doesn’t open with the target in a new tab during recording?",
+        "a":"When recording a login sequence, the ZeroThreat extension should open with the target page in a new tab, but if it doesn’t, you can open it manually. Launch the target in a new tab, click the extension icon in Chrome’s toolbar, and select ZeroThreat AI Recorder. Copy the Steps Token and Target Code from the scanning portal, paste them into the extension, and click Open Step Recorder to continue. See the docs for a detailed guide."
+    }
+]

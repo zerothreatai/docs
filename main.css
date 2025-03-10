@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .zt_purple {
+color: rgb(155 38 182);
+} */
+a[aria-hidden="true"]::before {
+  content: "#"; /* Insert the hash */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.2s;
+  margin-right: 0.25rem; /* Adjust spacing if needed */
+  color: #6b7280; /* Use a Tailwind color or any desired color */
+}
+
+/* Show the hash when hovering over the heading */
+/* h1:hover a[aria-hidden="true"]::before,
+  h2:hover a[aria-hidden="true"]::before,
+  h3:hover a[aria-hidden="true"]::before,
+  h4:hover a[aria-hidden="true"]::before,
+  h5:hover a[aria-hidden="true"]::before,
+  h6:hover a[aria-hidden="true"]::before {
+    opacity: 1;
+  } */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  scroll-margin-top: 80px; /* Adjust based on header height */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+  body {
+    @apply font-zt_regular;
+  }
+
+
+@font-face {
+  font-family: 'Roboto-ExtraLight';
+  src: url('./public/fonts/Roboto-ExtraLight.woff2') format('woff2'),
+      url('Roboto-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('./public/fonts/Roboto-Light.woff2') format('woff2'),
+      url('./public/fonts/Roboto-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-ExtraBold';
+  src: url('./public/fonts/Roboto-ExtraBold.woff2') format('woff2'),
+      url('./public/fonts/Roboto-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('./public/fonts/Roboto-Bold.woff2') format('woff2'),
+      url('./public/fonts/Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url('Roboto-Black.woff2') format('woff2'),
+      url('Roboto-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-SemiBold';
+  src: url('./public/fonts/Roboto-SemiBold.woff2') format('woff2'),
+      url('./public/fonts/Roboto-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('./public/fonts/Roboto-Medium.woff2') format('woff2'),
+      url('./public/fonts/Roboto-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('./public/fonts/Roboto-Regular.woff2') format('woff2'),
+      url('./public/fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
