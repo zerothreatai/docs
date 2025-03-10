@@ -8,6 +8,7 @@ export default defineNuxtConfig({
       toc: {
         depth: 3, // include h3 headings
       },
+      remarkPlugins: ['remark-external-links']
     },
   },
   nitro: {

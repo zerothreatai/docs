@@ -53,7 +53,7 @@ const filteredfaqs = computed(() => {
 <template>
   <div class="py-16">
     <!--Heading-->
-    <div class="relative mb-2 border-b pb-2">
+    <div class="relative mb-4 border-dashed border-b pb-2">
       <div class="flex justify-between items-center">
         <div class="font-zt_medium text-2xl text-gray-900 2xl:text-2xl">
           Frequently asked questions
@@ -80,7 +80,7 @@ const filteredfaqs = computed(() => {
       </div>
     </div>
     <!-- search -->
-    <div class="flex w-full items-center border-b border-slate-50/10">
+    <!-- <div class="flex w-full items-center border-b border-slate-50/10">
       <span>
         <font-awesome-icon
           icon="magnifying-glass"
@@ -95,7 +95,7 @@ const filteredfaqs = computed(() => {
         placeholder="Search"
         autocomplete="off"
       />
-    </div>
+    </div> -->
     <!--FAQs list-->
     <!-- old UI -->
     <!-- <div class="block hidden w-full rounded-lg shadow-zt_shadow_two">
@@ -293,9 +293,9 @@ const filteredfaqs = computed(() => {
           <li v-for="(item, index) in filteredfaqs" :key="index">
             <div>
               <div
-                class="text-sm tracking-wide font-zt_regular text-gray-900 flex items-center gap-x-3 px-8 py-4 cursor-pointer hover:bg-gray-100"
+                class="text-sm tracking-wide text-gray-900 flex items-center gap-x-3 px-8 py-4 cursor-pointer hover:bg-gray-100"
                 :class="{
-                  'bg-gray-100': item.isOpen,
+                  'bg-gray-100 font-zt_medium': item.isOpen,
                   'rounded-t-lg': index === 0,
                   'rounded-b-lg':
                     !item.isOpen[index],

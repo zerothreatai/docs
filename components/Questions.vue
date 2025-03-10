@@ -189,9 +189,9 @@ const filteredfaqs = computed(() => {
         <div v-for="(item, index) in filteredfaqs" :key="index">
           <div>
             <div
-              class="text-sm tracking-wide font-zt_medium text-gray-900 flex items-center gap-x-3 px-8 py-4 cursor-pointer hover:bg-gray-100"
+              class="text-sm tracking-wide text-gray-900 flex items-center gap-x-3 px-8 py-4 cursor-pointer hover:bg-gray-100"
               :class="{
-                'bg-gray-100': item.isOpen,
+                'bg-gray-100 font-zt_medium': item.isOpen,
                 'rounded-t-lg': index === 0,
                 'rounded-b-lg':
                   !item.isOpen && filteredfaqs.length - 1 === index,
