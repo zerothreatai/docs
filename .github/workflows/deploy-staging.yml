@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NODE_VERSION: 20.18.2
+    environment: staging
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -39,6 +40,7 @@ jobs:
     env:
       NODE_VERSION: 20.18.2
       FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID_STAGING }}
+    environment: staging
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
