@@ -60,15 +60,15 @@ const { activeHeadings } = useToc();
   }
 
   ::-webkit-scrollbar-track {
-    background: white;
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: white;
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: white;
+    background: transparent;
   }
 
 

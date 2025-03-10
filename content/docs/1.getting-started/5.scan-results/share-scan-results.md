@@ -12,21 +12,19 @@ description: Sharing scan results is an integral part of collaborative vulnerabi
 3.  **Locate the Share Button:**
 
     * On the right side of the report page, find and click on the Share button.
-  <img src="/image (75).png" alt="">
+  <img src="/image (75).png" alt="" style="display:block; margin:30px auto;">
   
 4. **Enter User Details:**
    * A prompt will appear asking for the recipient's details. Enter the Name and Email ID of the person with whom you want to share the scan report.
      *   **Example:**
          * For Name, enter "Zerothreat Admin".
          * For Email ID, enter "Zerothreat.example@zer  othreat.com".
-         ::fiqure-img{source="/image (76).png" width=421}
-         <!-- <img src="/image (76).png" alt="" width="421"> -->
-         ::
+         <img src="/image (76).png" alt="" style="display:block; margin:30px auto;">
 
 5. **Send the Report:**
    * After entering the details, confirm and send the scan report. The user will receive the report at the provided email address.
 
-::hint{bgStyle="bg-blue-50 rounded-md border-blue-200 text-gray-700 text-justify" icon="circle-info"}
+::hint{style="background-color:#f7fcff; border:1px solid #07405a33; color:#1e6995;" icon="circle-info" iconClass="text-sky-600"}
 ##### Double-Check Recipient Details
 
 ###### ZeroThreat recommends to always verify the recipient's Name and Email ID before sharing to ensure the report reaches the intended person.

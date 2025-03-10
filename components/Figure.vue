@@ -32,7 +32,7 @@ const closeModal = () => {
 </script>
 <template>
 <div>
-    <div class="flex gap-4">
+    <div class="flex justify-center">
       <img 
         :key="index" 
         :src="source" 

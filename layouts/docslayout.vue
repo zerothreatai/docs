@@ -8,6 +8,7 @@ const { data: navigation } = await useAsyncData(
 );
 </script>
 <template>
+  <div data-v-8837e8c5="" class="fixed left-0 top-0 -z-10 h-full w-full bg-white bg-[url('/pattern.jpg')] bg-cover bg-center bg-no-repeat after:fixed after:left-0 after:top-0 after:h-full after:w-full after:bg-white/20"></div>
   <div class="w-full flex justify-center">
     <div class="grid grid-cols-12 2xl:gap-x-8 px-16 max-w-[110rem]">
       <div
