@@ -8,25 +8,23 @@ export default defineNuxtConfig({
       toc: {
         depth: 3, // include h3 headings
       },
+      remarkPlugins: [
+        ['remark-external-links', { target: '_blank', rel: 'noopener noreferrer' }]
+      ]
+      
     },
   },
   nitro: {
     prerender: {
-      routes: ["/"],
-      crawlLinks: true,
+      crawlLinks: true, // Stops unnecessary crawling
+      routes: ['/'],
+      ignore: ['/docs/getting-started/"https://zerothreat.ai/"'],
     },
   },
   css: ['~/main.css','@fortawesome/fontawesome-svg-core/styles.css'],
   
   plugins:['~/plugins/contentScrollFix.client.ts','~/plugins/directives.ts','~/plugins/fontawesome.ts'],
-  // head: {
-  //   link: [
-  //     {
-  //       rel: 'stylesheet',
-  //       href: 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;500;600;700&display=swap'
-  //     }
-  //   ]
-  // }
+
   routeRules:{
     '/docs/getting-started':{redirect:'/docs/getting-started/quickstart'},
     '/docs/manage-targets':{redirect:'/docs/manage-targets/targets-section'},
@@ -36,10 +34,11 @@ export default defineNuxtConfig({
   components: [
     {
       path: '~/components',
-      pathPrefix: false // Allows <JumpRight> without <JumpRight.vue>
+      pathPrefix: false 
     },
     {
       global:true
     }
   ]
 });
+
