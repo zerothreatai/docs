@@ -61,7 +61,8 @@ jobs:
 
       - name: Authenticate with Firebase
         run: |
-          echo "${{ secrets.FIREBASE_DEPLOY_STAGING }}" > firebaselogin.json
+          printf '%s' '${{ secrets.FIREBASE_DEPLOY_STAGING }}' > firebaselogin.json
+          ls -lah firebaselogin.json
           export GOOGLE_APPLICATION_CREDENTIALS=firebaselogin.json
 
       - name: Deploy to Firebase (Staging)
