@@ -11,7 +11,7 @@ export default defineNuxtPlugin(() => {
       const targetElement = targetId ? document.getElementById(targetId) : null
 
       if (targetElement) {
-        const headerOffset = 70 // Adjust this value as needed
+        const headerOffset = 90 // Adjust this value as needed
         const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY
         const offsetPosition = elementPosition - headerOffset
 
