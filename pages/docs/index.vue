@@ -135,7 +135,7 @@ const [prev, next] = surround.value || []
   </div>
 </template>
 
-<style scoped>
+<style >
   #homeContent h3 {
     font-size: 1rem;
     font-family: 'Inter-Bold';
