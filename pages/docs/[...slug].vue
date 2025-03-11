@@ -47,17 +47,17 @@ useSeoMeta({
     <div class="content col-span-9 py-5">
       <div class="border-b pb-2">
         <div>
-          <span class="text-zt_purple/80 tracking-wide font-semibold text-xs uppercase">{{ title }}</span>
+          <span class="text-zt_purple/80 tracking-wide font-semibold text-sm">{{ title }}</span>
         </div>
         <div class="flex items-center">
           <span class="text-3xl text-gray-500">
             <font-awesome-icon :icon="page?.meta.icon" class="pe-3 pt-6" />
           </span>
-          <h1 class="text-4xl text-gray-800 pt-5 font-zt_extra_bold">{{ page?.title }}</h1>
+          <h1 class="text-3xl text-gray-800 pt-5 font-zt_bold">{{ page?.title }}</h1>
         </div>
         <h5
         id="page-description"
-          class="text-base text-gray-500 tracking-wide leading-7 text-justify"
+          class="text-base text-[#3c3c43] tracking-wide leading-7"
           :class="page?.description ? 'pt-5 pb-5' : 'pb-2'"
           v-html="page?.description"
         ></h5>
@@ -119,77 +119,50 @@ useSeoMeta({
 
 <style>
 #contentrenderer{
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.03rem;
 }
 #contentrenderer h1 {
-  font-size: 2.25rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-family: 'Inter-Bold';
   padding-top: 20px;
 }
 #contentrenderer h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  padding-top: 40px;
+  font-size: 22px;
+  font-family: 'Inter-Bold';
+  padding-top: 48px;
   padding-bottom: 0px;
-  color: #1a202c;
+  color: #3c3c43;
 }
-/* #contentrenderer h2 strong {
-  font-size: 1.5rem;
-  font-weight: 600;
-  padding-top: 20px;
-  padding-bottom: 10px;
-} */
 #contentrenderer h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #1a202c;
-  padding-top: 60px;
-}
-#contentrenderer h3:first-of-type{
-  padding-top: 60px;
+  font-size: 19px;
+  font-family: 'Inter-Bold';
+  color: #3c3c43;
+  padding-top: 32px;
 }
 #contentrenderer h4 {
   font-size: 1rem;
-  font-weight: 600;
-  padding: 15px 0;
+  font-family: 'Inter-Bold';
+  padding-top: 40px;
 }
-/* #contentrenderer h2 a {
-  font-weight: 600;
-  font-size: 1.8rem;
-  color:#1a202cef;
-} */
-/* #contentrenderer h2 a strong {
-  font-weight: 600;
-  font-size: 1.8rem;
-} */
-/* #contentrenderer h3 a {
-  font-weight: 600;
-  font-size: 1.4rem;
-  color:#1a202cef;
-} */
-/* #contentrenderer h3 a strong {
-  font-weight: 600;
-  font-size: 1.4rem;
-} */
 #contentrenderer h4 a {
-  font-weight: 600;
+  font-family: 'Inter-Bold';
   font-size: 1.35rem;
   color: #2c2c38 !important;
+  padding-top: 40px;
 }
 #contentrenderer h4 a strong {
-  font-weight: 600;
-  font-size: 1.35rem;
+  font-family: 'Inter-Bold';
 }
 #contentrenderer p {
   font-size: 1rem;
-  color: rgb(28 27 44);
-  padding: 15px 0;
-  text-align: justify;
+  color: #3c3c43;
+  padding-top: 15px;
+  /* text-align: justify; */
   font-weight: 400;
 }
 #contentrenderer p strong {
-  font-weight: 600;
-  color: #1a202c;
+  font-family: 'Inter-Bold';
+  color: #3c3c43;
 }
 
 #contentrenderer p a, ol li a, h6 a{
@@ -199,25 +172,14 @@ useSeoMeta({
 #contentrenderer p a:hover, ol li a:hover, h6 a:hover {
   text-decoration: underline !important;
 }
-/* #contentrenderer li a {
-  color: #9b26b6;
-  text-decoration: underline;
-} */
-#contentrenderer ul, ol {
-  padding-top: 10px;
-}
-#contentrenderer ol ul {
-  padding: 5px 0;
-}
 #contentrenderer ul li strong {
   font-size: 1rem;
-  color: #212031;
-  padding: 20px 0;
-  font-weight: 600;
+  color: #3c3c43;
+  font-family: 'Inter-Bold';
 }
 #contentrenderer ol li strong {
-  color: #212031;
-  font-weight: 600;
+  color: #3c3c43;
+  font-family: 'Inter-Bold';
   font-size: 1rem;
 }
 #contentrenderer ol li a strong,
@@ -230,38 +192,36 @@ ul li a {
 }
 #contentrenderer ul li {
   font-size: 1rem;
-  color: rgb(28 27 44) !important;
-  text-align: justify;
-  padding: 7px 0;
+  /* text-align: justify; */
   list-style: disc;
   margin-left: 2rem;
 }
 #contentrenderer ul li ul li {
-  list-style: circle !important;
+  list-style: disc;
   text-align: left;
 }
 #contentrenderer ol li ul li {
   font-size: 1rem;
-  color: rgb(28 27 44) !important;
-  padding: 5px 0;
   list-style: disc;
-  /* margin-left: 2rem; */
 }
 #contentrenderer ol li ul li ul li {
-  list-style: square !important;
+  list-style: list;
 }
-#contentrenderer ol li {
+#contentrenderer ol li, ul li {
   font-size: 1rem;
-  color: rgb(28 27 44);
-  padding: 10px 0;
+  color: #3c3c43;
+  margin-top: 10px;
   list-style: decimal;
   margin-left: 20px;
+}
+#contentrenderer ol li *:last-child, ul li *:last-child {
+  margin-bottom: 0;
 }
 #contentrenderer blockquote {
   border-left: 4px solid rgba(128, 128, 128, 0.493);
   padding: 5px 20px;
-  margin-top: 40;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  /* margin-bottom: 20px; */
   background-color: rgba(128, 128, 128, 0.055);
 }
 #contentrenderer blockquote strong {
@@ -269,13 +229,11 @@ ul li a {
   color: rgb(55 65 81);
 }
 #contentrenderer code {
-  font-size: 1rem;
-  color: rgba(0, 0, 0, 0.911);
-  background-color: rgb(247 247 251);
+  font-size: 14px;
+  color: rgb(158, 0, 158);
+  background-color: rgba(255, 232, 255, 0.623);
   padding: 1px 5px;
   border-radius: 5px;
-  font-family: monospace;
-  border: 1px solid rgb(216, 216, 216);
 }
 #contentrenderer table {
   font-size: 1rem;
@@ -308,15 +266,16 @@ font-weight: 600 !important;
 color: #9b26b6 !important;
 }
 #contentrenderer img {
-  margin: 30px auto;
-  box-shadow: 0px 2px 5px rgba(114, 114, 114);
+  margin-top: 20px;
+  box-shadow: 0px 2px 5px rgb(160, 160, 160);
   border: 1px solid rgba(235, 235, 235, 0.705);
   border-radius: 5px;
-  /* margin-bottom: 20px; */
+  margin-left: auto;
+  margin-right: auto;
 }
 #contentrenderer ul li img  {
   display : inline;
-  margin: 0px;
+  /* margin: 0px 0px; */
   translate: var(--tw-translate-x) -7px;
   margin-left: 2px;
   margin-right: 5px;
@@ -328,16 +287,10 @@ color: #9b26b6 !important;
   margin-left: 2px;
   margin-right: 5px;
 }
-/* style="display:inline; margin:0px; margin-bottom:0px; translate: var(--tw-translate-x) -7px;" */
-/* #contentrenderer ul li img, ol li img {
-  margin: 7px auto !important;
-  box-shadow: 0px 2px 2px rgba(114, 114, 114, 0.2);
-  border: 1px solid rgba(235, 235, 235, 0.705);
-  border-radius: 5px;
-} */
 hr {
-  margin: 0.5rem 0;
+  margin-top: 20px;
 }
+
 pre {
   max-width: 640px;
   overflow-x: auto;

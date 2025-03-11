@@ -1,5 +1,5 @@
 <template>
-  <div id="alert-div" class="flex gap-x-1 items-start rounded-2xl shadow-sm text-sm px-5 py-5 my-4" :class="bgStyle">
+  <div id="alert-div" class="flex gap-x-1 items-start rounded-2xl shadow-sm text-sm px-5 py-5 mt-[30px]" :class="bgStyle">
     <font-awesome-icon :icon="icon" class="text-sm pe-2 translate-y-0.5" :class="iconClass" />
     <div>
       <slot />

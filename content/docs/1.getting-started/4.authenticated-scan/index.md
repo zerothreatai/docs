@@ -28,8 +28,8 @@ Zero Threat offers two powerful methods to perform authenticated scans, covering
 
 For detailed guide, refer to:
 
-* [Scan with Login Sequence](authenticated-scan/scan-with-login-sequence)
-* [Scan MFA App](authenticated-scan/scan-mfa-app)
+* [**Scan with Login Sequence**](authenticated-scan/scan-with-login-sequence)
+* [**Scan MFA App**](authenticated-scan/scan-mfa-app)
 
 With these methods, Zero Threat enables you to achieve a comprehensive security assessment, safeguarding your applications and their users from potential threats.
 

@@ -29,8 +29,8 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header class="sticky top-0 left-0 z-50">
-    <div class="py-2.5 shadow-md bg-gray-50">
+  <header class="sticky top-0 left-0 z-50 bg-white shadow-md">
+    <div class="py-2.5">
       <div
         class="flex justify-between items-center px-16 max-w-[110rem] mx-auto text-sm text-gray-800"
       >
