@@ -63,6 +63,10 @@ useSeoMeta({
           :class="page?.description ? 'pt-5 pb-5' : 'pb-2'"
           v-html="page?.description"
         />
+        <mdc
+          v-if="page?.description"
+          :value="page?.description ?? ''"
+        />
       </div>
       <ContentRenderer
         v-if="page"

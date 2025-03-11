@@ -54,6 +54,7 @@
 import { defineProps } from 'vue'
 import RecursiveNavigation from './RecursiveNavigation.vue'
 
+// eslint-disable-next-line vue/require-prop-types
 const props = defineProps(['navigation'])
 const route = useRoute()
 // console.log(props.navigation)

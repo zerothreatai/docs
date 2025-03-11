@@ -1,3 +1,4 @@
+<!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <script setup lang="ts">
 import MiniSearch from 'minisearch'
 import { defineEmits } from 'vue'
@@ -132,8 +133,8 @@ onBeforeUnmount(() => {
             <span class="text-black font-zt_medium">{{ item.title }}</span>
           </div>
           <ul
-            v-for="(itemlist, index) in item.children"
-            :key="index"
+            v-for="(itemlist, idx) in item.children"
+            :key="idx"
             class="py-2 border-b border-dashed"
           >
             <!-- <div
@@ -188,8 +189,8 @@ onBeforeUnmount(() => {
             <span class="text-gray-800 font-zt_medium">{{ item.title }}</span>
           </div>
           <ul
-            v-for="(itemlist, index) in item.children"
-            :key="index"
+            v-for="(itemlist, index2) in item.children"
+            :key="index2"
             class="py-2 border-b"
           >
             <div
@@ -199,8 +200,8 @@ onBeforeUnmount(() => {
               {{ itemlist.title }}
             </div>
             <li
-              v-for="(itemdata, index) in itemlist.children"
-              :key="index"
+              v-for="(itemdata, idx) in itemlist.children"
+              :key="idx"
             >
               <NuxtLink
                 class="flex items-start space-x-2 overflow-hidden text-ellipsis px-2 py-1 rounded-md hover:bg-gray-200/30"
