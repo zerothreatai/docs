@@ -1,6 +1,9 @@
 <template>
   <div class="max-h-[calc(100vh-125px)] overflow-y-scroll pb-10 z-10">
-    <div v-for="(items, index) in props.navigation" :key="index">
+    <div
+      v-for="(items, index) in props.navigation"
+      :key="index"
+    >
       <h5
         v-if="items.children"
         class="text-sm font-zt_semibold tracking-wide capitalize text-gray-700 pt-4 pb-2"
@@ -46,11 +49,13 @@
     </div>
   </div>
 </template>
+
 <script setup lang="ts">
-import { defineProps } from "vue";
-import RecursiveNavigation from "./RecursiveNavigation.vue";
-const props = defineProps(["navigation"]);
-const route = useRoute();
+import { defineProps } from 'vue'
+import RecursiveNavigation from './RecursiveNavigation.vue'
+
+const props = defineProps(['navigation'])
+const route = useRoute()
 // console.log(props.navigation)
 </script>
 

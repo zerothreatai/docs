@@ -1,22 +1,10 @@
 <script setup>
-import SearchbarSection from "~/components/SearchbarSection.vue";
-import Footer from "~/components/Footer.vue";
-import Faqs from "~/components/Faqs.vue";
-import VideoSection from "~/components/VideoSection.vue";
+import VideoSection from '~/components/VideoSection.vue'
 
 navigateTo('/docs')
-
-// const { data: navigation } = await useAsyncData(
-//   "navigationdocs",
-//   async () => {
-//     const result = await queryCollectionNavigation("content");
-//     return result;
-//   },
-//   { transform: (data) => data.find((d) => d.stem === "docs").children }
-// );
 </script>
+
 <template>
-  <searchbar-section />
   <div class="px-16 max-w-[110rem] mx-auto py-16">
     <!-- new ui -->
     <!-- <div class="grid grid-cols-12 gap-x-16">
@@ -69,8 +57,8 @@ navigateTo('/docs')
             </div>
             <div>
               <p class="text-gray-400 text-sm text-justify py-3">
-                <!-- {{ descriptions[items.path] || "No description available" }} -->
-                <!-- {{ items.description }}
+                 {{ descriptions[items.path] || "No description available" }} -->
+    <!-- {{ items.description }}
               </p>
               <ul class="*:text-sm *:py-0.5">
                 <li
@@ -117,9 +105,8 @@ navigateTo('/docs')
           </div>
         </div>
       </div>
-    </div> --> 
+    </div> -->
     <!-- <info-corner /> -->
     <video-section />
   </div>
-  <Footer />
 </template>

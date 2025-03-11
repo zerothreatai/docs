@@ -1,31 +1,32 @@
 <script setup lang="ts">
 // import ContentSearchButton from './ContentSearchButton.vue'
-import githubIcon from "./icon/github.icon.vue";
-import SearchModal from "./SearchModal.vue";
+import githubIcon from './icon/github.icon.vue'
+import SearchModal from './SearchModal.vue'
 
-const showSearchModal = ref(false);
+const showSearchModal = ref(false)
 
 const toggleSearch = () => {
-  showSearchModal.value = !showSearchModal.value;
+  showSearchModal.value = !showSearchModal.value
   if (showSearchModal.value) {
-    document.body.classList.add("overflow-hidden");
-  } else {
-    document.body.classList.remove("overflow-hidden");
+    document.body.classList.add('overflow-hidden')
   }
-};
+  else {
+    document.body.classList.remove('overflow-hidden')
+  }
+}
 const handleKeydown = (event: KeyboardEvent) => {
-  if (event.ctrlKey && event.key === "k") {
-    event.preventDefault();
-    toggleSearch();
+  if (event.ctrlKey && event.key === 'k') {
+    event.preventDefault()
+    toggleSearch()
   }
-};
+}
 onMounted(() => {
-  window.addEventListener("keydown", handleKeydown);
-});
+  window.addEventListener('keydown', handleKeydown)
+})
 
 onBeforeUnmount(() => {
-  window.removeEventListener("keydown", handleKeydown);
-});
+  window.removeEventListener('keydown', handleKeydown)
+})
 </script>
 
 <template>
@@ -37,7 +38,10 @@ onBeforeUnmount(() => {
         <div>
           <NuxtLink :to="'/'">
             <div class="w-24 xl:w-32">
-              <img src="../public/ZeroThreat_logo_1000x400.png" alt="" />
+              <img
+                src="../public/ZeroThreat_logo_1000x400.png"
+                alt=""
+              >
             </div>
           </NuxtLink>
         </div>
@@ -48,10 +52,9 @@ onBeforeUnmount(() => {
             @click="toggleSearch"
           >
             <div class="flex items-center gap-x-3">
-              <span
-                ><font-awesome-icon
-                  icon="magnifying-glass"
-                  class="text-gray-400 translate-y-0.5"
+              <span><font-awesome-icon
+                icon="magnifying-glass"
+                class="text-gray-400 translate-y-0.5"
               /></span>
               <span class="text-gray-400">Search Documentation</span>
             </div>
@@ -75,7 +78,10 @@ onBeforeUnmount(() => {
           />
         </div>
       </div>
-      <SearchModal v-if="showSearchModal" @close="toggleSearch" />
+      <SearchModal
+        v-if="showSearchModal"
+        @close="toggleSearch"
+      />
     </div>
   </header>
 </template>
