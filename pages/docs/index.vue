@@ -136,13 +136,14 @@ const [prev, next] = surround.value || []
 </template>
 
 <style>
-  /* #homeContent h3 {
-    font-size: 1rem;
+  #homeContent h3 {
+    font-size: 1.5rem;
     font-family: 'Inter-Bold';
-    color: rgb(0, 0, 0);
-    padding-top: 30px;
-    padding-bottom: 8px;
-  } */
+    margin-top: 40px !important;
+  }
+  #homeContent p {
+    margin: 4px 0 !important;
+  }
 
 /* #homeContent h3 a {
   font-family: 'Inter-Medium' !important;

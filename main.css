@@ -210,5 +210,5 @@ blockquote p {
   @apply my-2
 }
 .right_navlinks ul {
-  @apply ml-8
+  @apply ml-4 mb-0
 }

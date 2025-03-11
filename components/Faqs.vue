@@ -1,60 +1,60 @@
 <script setup>
-import targetFaq from '../assests/1.faq.json'
-import ScanFaq from '../assests/2.faq.json'
-import OrganizationFaq from '../assests/3.faq.json'
-import ScanReportFaq from '../assests/4.faq.json'
-import tabs from '~/const/categoryTab'
-import { FaqCategory } from '~/utils/category.enum'
+  import targetFaq from '../assests/1.faq.json'
+  import ScanFaq from '../assests/2.faq.json'
+  import OrganizationFaq from '../assests/3.faq.json'
+  import ScanReportFaq from '../assests/4.faq.json'
+  import tabs from '~/const/categoryTab'
+  import { FaqCategory } from '~/utils/category.enum'
 
-const searchQuery = ref('')
+  const searchQuery = ref('')
 
-const activeTab = ref(tabs[0])
+  const activeTab = ref(tabs[0])
 
-const targetfaqs = ref(targetFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-const Scanfaqs = ref(ScanFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-const Organizationfaqs = ref(OrganizationFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-const ScanReportfaqs = ref(ScanReportFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
+  const targetfaqs = ref(targetFaq.slice(0, 3).map((d) => ({ ...d, isOpen: false })))
+  const Scanfaqs = ref(ScanFaq.slice(0, 3).map((d) => ({ ...d, isOpen: false })))
+  const Organizationfaqs = ref(OrganizationFaq.slice(0, 3).map((d) => ({ ...d, isOpen: false })))
+  const ScanReportfaqs = ref(ScanReportFaq.slice(0, 3).map((d) => ({ ...d, isOpen: false })))
 
-const selectButton = (tab) => {
-  activeTab.value = tab
-}
-
-const filteredfaqs = computed(() => {
-  switch (activeTab.value.category) {
-    case FaqCategory.Target:
-      if (searchQuery.value.trim().length) {
-        return targetfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return targetfaqs.value
-      break
-    case FaqCategory.Scan:
-      if (searchQuery.value.trim().length) {
-        return Scanfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return Scanfaqs.value
-      break
-    case FaqCategory.Organization:
-      if (searchQuery.value.trim().length) {
-        return Organizationfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return Organizationfaqs.value
-      break
-    case FaqCategory['Scan-Report']:
-      if (searchQuery.value.trim().length) {
-        return ScanReportfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return ScanReportfaqs.value
+  const selectButton = (tab) => {
+    activeTab.value = tab
   }
-  return []
-})
+
+  const filteredfaqs = computed(() => {
+    switch (activeTab.value.category) {
+      case FaqCategory.Target:
+        if (searchQuery.value.trim().length) {
+          return targetfaqs.value.filter((t) =>
+            t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim())
+          )
+        }
+        return targetfaqs.value
+        break
+      case FaqCategory.Scan:
+        if (searchQuery.value.trim().length) {
+          return Scanfaqs.value.filter((t) =>
+            t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim())
+          )
+        }
+        return Scanfaqs.value
+        break
+      case FaqCategory.Organization:
+        if (searchQuery.value.trim().length) {
+          return Organizationfaqs.value.filter((t) =>
+            t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim())
+          )
+        }
+        return Organizationfaqs.value
+        break
+      case FaqCategory['Scan-Report']:
+        if (searchQuery.value.trim().length) {
+          return ScanReportfaqs.value.filter((t) =>
+            t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim())
+          )
+        }
+        return ScanReportfaqs.value
+    }
+    return []
+  })
 </script>
 
 <template>
@@ -294,18 +294,15 @@ const filteredfaqs = computed(() => {
     <div class="relative">
       <div>
         <div
-          class="border *:border-b *:border-dashed last:*:border-b-0 rounded-t-lg rounded-b-lg last:*:rounded-b-lg first:*:rounded-t-lg"
+          class="border *:border-b *:border-dashed last:*:border-b-0 rounded-t-lg rounded-b-lg first:*:rounded-t-lg *:rounded-b-none last:*:rounded-b-lg"
         >
           <template v-if="filteredfaqs.length">
-            <div
-              v-for="(item, index) in filteredfaqs"
-              :key="index"
-            >
+            <div v-for="(item, index) in filteredfaqs" :key="index">
               <div>
                 <div
-                  class="text-base tracking-wide text-gray-900 flex items-center gap-x-3 px-8 py-4 cursor-pointer hover:bg-gray-100"
+                  class="text-base flex tracking-wide items-center gap-x-5 text-gray-600 font-zt_regular hover:bg-gray-100 px-6 py-5 cursor-pointer rounded-t-lg"
                   :class="{
-                    'bg-gray-100 font-zt_medium': item.isOpen,
+                    'bg-gray-100 font-zt_medium rounded-b-none': item.isOpen,
                     'rounded-t-lg': index === 0,
                     'rounded-b-lg': !item.isOpen[index],
                   }"
@@ -329,13 +326,13 @@ const filteredfaqs = computed(() => {
                 </div>
                 <div
                   :class="{
-                    'max-h-52 overflow-y-auto bg-slate-50/20 ': item.isOpen,
+                    'max-h-52 overflow-y-auto bg-slate-50/20': item.isOpen,
                     'max-h-0': !item.isOpen,
                   }"
                   class="transition-all duration-500 overflow-hidden px-8"
                 >
                   <div
-                    class="pt-8 pb-5 text-gray-600 tracking-wide text-sm font-zt_regular text-justify"
+                    class="py-4 text-gray-600 tracking-wider text-sm font-zt_regular leading-6"
                   >
                     {{ item.a }}
                   </div>
@@ -344,14 +341,14 @@ const filteredfaqs = computed(() => {
             </div>
           </template>
           <template v-else>
-            <div class="text-base">
-              No FAQ's Found
-            </div>
+            <div class="text-base">No FAQ's Found</div>
           </template>
         </div>
       </div>
       <NuxtLink :to="'/docs/getting-started/faqs'">
-        <span class="absolute cursor-pointer right-0 underline -bottom-10 text-zt_purple text-sm">Show More...</span>
+        <span class="absolute cursor-pointer right-0 underline -bottom-10 text-zt_purple text-sm"
+          >Show More...</span
+        >
       </NuxtLink>
     </div>
   </div>
