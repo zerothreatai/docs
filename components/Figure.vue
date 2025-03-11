@@ -35,7 +35,7 @@
                 :key="index"
                 :src="source"
                 class="object-cover rounded-lg shadow-md cursor-zoom-in"
-                :width="width"
+                :width="width!=1 ? width: 300"
                 alt="Thumbnail"
                 @click="openModal(source)"
             />
