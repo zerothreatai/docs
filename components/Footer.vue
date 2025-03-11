@@ -6,14 +6,14 @@
 </script>
 
 <template>
-  <footer class="fixed w-full bottom-0 left-0 bg-gray-50 z-20">
+  <footer class="border-t">
     <div class="py-5 max-lg:py-10">
       <div class="px-16 max-w-[110rem] mx-auto">
         <div
           class="lg:flex items-center lg:justify-between sm:max-md:flex-col sm:max-md:items-center max-lg:space-y-5"
         >
           <p
-            class="text-sm font-DMSans_Regular text-gray-500 max-lg:text-center lg:text-center md:order-2 lg:order-1"
+            class="text-xs font-zt_regular tracking-wide text-gray-500 max-lg:text-center lg:text-center md:order-2 lg:order-1"
           >
             Copyright © 2025
           </p>

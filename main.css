@@ -23,13 +23,17 @@ a[aria-hidden="true"]::before {
     opacity: 1;
   } */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h1 a,
+h2, h2 a,
+h3, h3 a,
+h4, h4 a,
+h5, h5 a,
+h6, h6 a {
   scroll-margin-top: 80px; /* Adjust based on header height */
+  font-family: 'Inter-SemiBold';
+}
+b, strong {
+  font-family: 'Inter-SemiBold';
 }
 html {
   scroll-behavior: smooth;

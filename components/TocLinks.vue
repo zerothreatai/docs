@@ -37,13 +37,13 @@ const { activeHeadings } = useToc();
       Table Of Content
     </h5>
     <p v-for="item, index in toclinks" :key="index" class="py-[3px]">
-      <NuxtLink class="text-sm mt-1 font-zt_regular text-gray-700 hover:text-zt_purple cursor-pointer py-1"
+      <NuxtLink class="text-sm mt-1 tracking-wide font-zt_regular text-gray-700 hover:text-zt_purple cursor-pointer py-1"
         :to="route.path + '#' + item?.id" :class="{ 'text-zt_purple': route.hash === `${item.id}` || activeHeadings.includes(item?.id) }"
         @click.prevent="scrollToSection(item.id)">{{ item.text }}
       </NuxtLink>
     <ul v-if="item?.children">
       <li v-for="link, index in item['children']" :key="index"  class="py-0.5 ps-6">
-        <NuxtLink class="text-sm mt-1 font-zt_regular text-gray-700 hover:text-zt_purple cursor-pointer py-1"
+        <NuxtLink class="text-sm mt-1 tracking-wide font-zt_regular text-gray-700 hover:text-zt_purple cursor-pointer py-1"
           :to="route.path + '#' + link.id" :class="{ 'text-zt_purple': (route.hash === `#${link.id}`) || activeHeadings.includes(link.id)  }"
           @click.prevent="scrollToSection(link.id)">{{ link.text }}
         </NuxtLink>

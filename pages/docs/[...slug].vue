@@ -6,21 +6,20 @@ import RightArrowIcon from "~/components/icon/right-arrow-icon.vue";
 import Figure from "~/components/Figure.vue";
 
 const components = {
-  "hint": Hint,
-  "fiqure-img":Figure
+  hint: Hint,
+  "fiqure-img": Figure,
 };
 
 const route = useRoute();
 
-const params = (route.params['slug'] as string[]) || []
+const params = (route.params["slug"] as string[]) || [];
 
 // if (params.length) params.pop();
 
 const title = params[0]
-      .split('-') // Split by hyphen
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize each word
-      .join(' ') // Join words with space
-
+  .split("-") // Split by hyphen
+  .map((word) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize each word
+  .join(" "); // Join words with space
 
 const { data: page } = await useAsyncData(`docs-${route.path}`, () =>
   queryCollection("content").path(route.path).first()
@@ -38,8 +37,8 @@ const [prev, next] = surround.value || [];
 
 useSeoMeta({
   title: page.value?.title,
-  description: page.value?.description
-})
+  description: page.value?.description,
+});
 </script>
 
 <template>
@@ -47,16 +46,20 @@ useSeoMeta({
     <div class="content col-span-9 py-5">
       <div class="border-b pb-2">
         <div>
-          <span class="text-zt_purple/80 tracking-wide font-semibold text-sm">{{ title }}</span>
+          <span class="text-zt_purple/80 tracking-wide font-semibold text-sm">{{
+            title
+          }}</span>
         </div>
         <div class="flex items-center">
           <span class="text-3xl text-gray-500">
             <font-awesome-icon :icon="page?.meta.icon" class="pe-3 pt-6" />
           </span>
-          <h1 class="text-3xl text-gray-800 pt-5 font-zt_bold">{{ page?.title }}</h1>
+          <h1 class="text-3xl text-gray-800 pt-5 font-zt_bold">
+            {{ page?.title }}
+          </h1>
         </div>
         <h5
-        id="page-description"
+          id="page-description"
           class="text-base text-[#3c3c43] tracking-wide leading-7"
           :class="page?.description ? 'pt-5 pb-5' : 'pb-2'"
           v-html="page?.description"
@@ -75,14 +78,15 @@ useSeoMeta({
         <div class="w-1/2">
           <div
             v-if="prev"
-            class="prev border rounded-md hover:bg-gray-50/30 group p-1 transition-all duration-300 hover:border-zt_purple/10"
+            class="prev border rounded-md group p-1 hover:bg-slate-50/30 transition-all duration-300 hover:border-zt_purple/70"
           >
             <NuxtLink :to="prev.path">
-              <div v-if="prev" class="surround-prev flex justify-between items-center gap-x-3">
-                <font-awesome-icon icon="angles-left" class="text-gray-600 transition-all duration-300 group-hover:text-zt_purple text-sm rounded-full group-hover:bg-slate-100 px-4 py-3.5"/>
-                <div class="text-right px-4 py-2.5 space-y-1">
-                  <span class="text-xs text-gray-400">Previous</span>
-                  <h5 class="text-gray-800 group-hover:text-zt_purple w-full text-right text-base font-zt_medium">{{ prev.title }}</h5>
+              <div v-if="prev" class="surround-prev">
+                <div class="px-3 py-1">
+                  <span class="text-xs text-gray-600">Previous</span>
+                  <h5 class="text-zt_purple text-base font-zt_medium">
+                    {{ prev.title }}
+                  </h5>
                 </div>
               </div>
             </NuxtLink>
@@ -91,18 +95,16 @@ useSeoMeta({
         <div class="w-1/2">
           <div
             v-if="next"
-            class="next text-right border rounded-md hover:bg-slate-50/30 p-1 group transition-all duration-300 hover:border-zt_purple/10"
+            class="next text-right border rounded-md hover:bg-slate-50/30 p-1 group transition-all duration-300 hover:border-zt_purple/70"
           >
             <NuxtLink :to="next.path">
-              <div
-                v-if="next"
-                class="surround-next flex justify-between items-center gap-x-3 transition-all duration-300"
-              >
-              <div class="text-left px-4 py-2.5 space-y-1">
-                <span class="text-xs text-gray-400">Next</span>
-                <h5 class="text-gray-800 font-zt_medium text-base group-hover:text-zt_purple w-full">{{ next.title }}</h5>
-              </div>
-              <font-awesome-icon icon="angles-right" class="text-gray-600 group-hover:text-zt_purple text-sm transition-all duration-300 rounded-full group-hover:bg-slate-100 px-4 py-3.5" />
+              <div v-if="next" class="surround-next">
+                <div class="px-3 py-1">
+                  <span class="text-xs text-gray-600">Next</span>
+                  <h5 class="text-zt_purple font-zt_medium text-base">
+                    {{ next.title }}
+                  </h5>
+                </div>
               </div>
             </NuxtLink>
           </div>
@@ -118,40 +120,40 @@ useSeoMeta({
 </template>
 
 <style>
-#contentrenderer{
+#contentrenderer {
   letter-spacing: 0.03rem;
 }
 #contentrenderer h1 {
   font-size: 1.5rem;
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
   padding-top: 20px;
 }
 #contentrenderer h2 {
   font-size: 22px;
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
   padding-top: 48px;
   padding-bottom: 0px;
   color: #3c3c43;
 }
 #contentrenderer h3 {
   font-size: 19px;
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
   color: #3c3c43;
   padding-top: 32px;
 }
 #contentrenderer h4 {
   font-size: 1rem;
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
   padding-top: 40px;
 }
 #contentrenderer h4 a {
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
   font-size: 1.35rem;
   color: #2c2c38 !important;
   padding-top: 40px;
 }
 #contentrenderer h4 a strong {
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
 }
 #contentrenderer p {
   font-size: 1rem;
@@ -168,6 +170,14 @@ useSeoMeta({
 }
 #contentrenderer p a:hover,p a strong:hover, ol li a:hover,ul li a:hover, h6 a:hover {
   text-decoration: underline !important;
+}
+#contentrenderer ol li a strong,
+ol li a {
+  color: #9b26b6;
+}
+#contentrenderer ul li a strong,
+ul li a {
+  color: #9b26b6;
 }
 #contentrenderer ul li {
   font-size: 1rem;
@@ -186,14 +196,16 @@ useSeoMeta({
 #contentrenderer ol li ul li ul li {
   list-style: list;
 }
-#contentrenderer ol li, ul li {
+#contentrenderer ol li,
+ul li {
   font-size: 1rem;
   color: #3c3c43;
   margin-top: 10px;
   list-style: decimal;
   margin-left: 20px;
 }
-#contentrenderer ol li *:last-child, ul li *:last-child {
+#contentrenderer ol li *:last-child,
+ul li *:last-child {
   margin-bottom: 0;
 }
 #contentrenderer blockquote {
@@ -237,12 +249,14 @@ useSeoMeta({
   border-bottom: 1px solid rgb(243 244 246);
   border-style: dashed;
 }
-#contentrenderer table tbody tr td a, tr td a strong {
-text-decoration: underline;
-font-weight: 600 !important;
+#contentrenderer table tbody tr td a,
+tr td a strong {
+  text-decoration: underline;
+  font-weight: 600 !important;
 }
-#contentrenderer table tbody tr td a:hover, table tbody tr td a strong :hover {
-color: #9b26b6 !important;
+#contentrenderer table tbody tr td a:hover,
+table tbody tr td a strong :hover {
+  color: #9b26b6 !important;
 }
 #contentrenderer img {
   margin-top: 20px;
@@ -252,15 +266,15 @@ color: #9b26b6 !important;
   margin-left: auto;
   margin-right: auto;
 }
-#contentrenderer ul li img  {
-  display : inline;
+#contentrenderer ul li img {
+  display: inline;
   /* margin: 0px 0px; */
   translate: var(--tw-translate-x) -7px;
   margin-left: 2px;
   margin-right: 5px;
 }
 #contentrenderer ol li img {
-  display : inline;
+  display: inline;
   margin: 0px;
   translate: var(--tw-translate-x) -4px;
   margin-left: 2px;
@@ -292,10 +306,11 @@ pre {
 pre code {
   font-size: 0.9rem;
 }
-#page-description strong{
+#page-description strong {
   color: rgba(0, 0, 0, 0.836);
 }
-.next h5, .prev h5 {
+.next h5,
+.prev h5 {
   font-size: 600;
 }
 ::-webkit-scrollbar {
@@ -309,4 +324,3 @@ pre code {
   background: rgba(161, 160, 160, 0.603);
 }
 </style>
-
