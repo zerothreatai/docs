@@ -1,13 +1,13 @@
 <script setup>
-    import VideoSection from '~/components/VideoSection.vue'
+import VideoSection from '~/components/VideoSection.vue'
 
-    navigateTo('/docs')
+navigateTo('/docs')
 </script>
 
 <template>
-    <div class="px-16 max-w-[110rem] mx-auto py-16">
-        <!-- new ui -->
-        <!-- <div class="grid grid-cols-12 gap-x-16">
+  <div class="px-16 max-w-[110rem] mx-auto py-16">
+    <!-- new ui -->
+    <!-- <div class="grid grid-cols-12 gap-x-16">
       <div class="col-span-8">
         <faqs />
       </div>
@@ -58,7 +58,7 @@
             <div>
               <p class="text-gray-400 text-sm text-justify py-3">
                  {{ descriptions[items.path] || "No description available" }} -->
-        <!-- {{ items.description }}
+    <!-- {{ items.description }}
               </p>
               <ul class="*:text-sm *:py-0.5">
                 <li
@@ -106,7 +106,7 @@
         </div>
       </div>
     </div> -->
-        <!-- <info-corner /> -->
-        <video-section />
-    </div>
+    <!-- <info-corner /> -->
+    <video-section />
+  </div>
 </template>

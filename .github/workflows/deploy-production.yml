@@ -1,66 +1,66 @@
 name: Deploy Documentation to Production
 
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        env:
-            NODE_VERSION: 20.18.2
-        environment: production
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: 20.18.2
+    environment: production
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ env.NODE_VERSION }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
 
-            - name: Install dependencies
-              run: npm install
+      - name: Install dependencies
+        run: npm install
 
-            - name: Generate documentation
-              run: npm run generate
+      - name: Generate documentation
+        run: npm run generate
 
-            - name: Upload build artifacts
-              uses: actions/upload-artifact@v4
-              with:
-                  name: documentation-build-production
-                  path: |
-                      .output/public
-                      firebase.json
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentation-build-production
+          path: |
+            .output/public
+            firebase.json
 
-    deploy:
-        needs: build
-        runs-on: ubuntu-latest
-        env:
-            NODE_VERSION: 20.18.2
-            FIREBASE_DEPLOY_PRODUCTION: ${{ secrets.FIREBASE_DEPLOY_PRODUCTION }}
-        environment: production
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: 20.18.2
+      FIREBASE_DEPLOY_PRODUCTION: ${{ secrets.FIREBASE_DEPLOY_PRODUCTION }}
+    environment: production
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ env.NODE_VERSION }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
 
-            - name: Download build artifacts
-              uses: actions/download-artifact@v4
-              with:
-                  name: documentation-build-production
-                  path: .
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: documentation-build-production
+          path: .
 
-            - name: Install Firebase CLI
-              run: npm install -g firebase-tools
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
 
-            - name: Deploy to Firebase (Production)
-              run: |
-                  echo $FIREBASE_DEPLOY_PRODUCTION > firebaselogin.json
-                  export GOOGLE_APPLICATION_CREDENTIALS=firebaselogin.json
-                  firebase deploy --project ${{ secrets.FIREBASE_PROJECT_ID_PRODUCTION }}
+      - name: Deploy to Firebase (Production)
+        run: |
+          echo $FIREBASE_DEPLOY_PRODUCTION > firebaselogin.json
+          export GOOGLE_APPLICATION_CREDENTIALS=firebaselogin.json
+          firebase deploy --project ${{ secrets.FIREBASE_PROJECT_ID_PRODUCTION }}

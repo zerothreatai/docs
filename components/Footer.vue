@@ -1,8 +1,8 @@
 <script setup lang="ts">
-    // import facebookIcon from "./icon/facebook.icon.vue";
-    // import githubIcon from "./icon/github.icon.vue";
-    // import discordIcon from "./icon/discord.icon.vue";
-    // import twitterIcon from "./icon/twitter.icon.vue";
+// import facebookIcon from "./icon/facebook.icon.vue";
+// import githubIcon from "./icon/github.icon.vue";
+// import discordIcon from "./icon/discord.icon.vue";
+// import twitterIcon from "./icon/twitter.icon.vue";
 </script>
 
 <template>
@@ -24,9 +24,9 @@
             <span><discordIcon class="w-5 fill-gray-700 cursor-pointer" /></span>
             <span><twitter-icon class="w-5 fill-gray-700 cursor-pointer" /></span>
             <span><github-icon class="w-5 fill-gray-700 cursor-pointer" /></span> -->
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </footer>
 </template>

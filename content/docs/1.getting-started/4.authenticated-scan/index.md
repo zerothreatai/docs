@@ -17,12 +17,12 @@ The **Zero Threat Chrome Recorder extension** bridges this gap by enabling authe
 Zero Threat offers two powerful methods to perform authenticated scans, covering two different authentication mechanisms:
 
 1. **Scan with Login Sequence**
-    - Ideal for traditional login flows using usernames and passwords.
-    - Captures and replicates the login process, allowing the scanner to navigate authenticated areas.
-    - Suitable for applications without advanced authentication techniques like MFA.
+   - Ideal for traditional login flows using usernames and passwords.
+   - Captures and replicates the login process, allowing the scanner to navigate authenticated areas.
+   - Suitable for applications without advanced authentication techniques like MFA.
 2. **Scan MFA App**
-    - Designed for applications protected by Multi-Factor Authentication (MFA).
-    - Allows users to handle additional security steps, such as SSO's, OTPs, CAPTCHAs, and more ensuring that even these highly secure sections are included in the scan.
+   - Designed for applications protected by Multi-Factor Authentication (MFA).
+   - Allows users to handle additional security steps, such as SSO's, OTPs, CAPTCHAs, and more ensuring that even these highly secure sections are included in the scan.
 
 ---
 
