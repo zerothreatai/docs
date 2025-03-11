@@ -1,36 +1,37 @@
 <script setup lang="ts">
-import { ref, defineProps } from "vue";
-import { useRoute } from "vue-router";
+import { ref, defineProps } from 'vue'
+import { useRoute } from 'vue-router'
 
-const props = defineProps(["item"]);
-const route = useRoute();
-const isOpen = ref(false);
+// eslint-disable-next-line vue/require-prop-types
+const props = defineProps(['item'])
+const route = useRoute()
+const isOpen = ref(false)
 
 const openChildren = () => {
-  isOpen.value = true;
-};
+  isOpen.value = true
+}
 
 const toggleChild = (event: Event) => {
-  event.stopPropagation(); // Prevents event from affecting parent elements
-  isOpen.value = !isOpen.value;
-};
+  event.stopPropagation() // Prevents event from affecting parent elements
+  isOpen.value = !isOpen.value
+}
 
 const isChildActive = computed(() => {
   if (props.item.children) {
-    return props.item.children.some((child: { path: string; }) =>
-      route.path.startsWith(child.path)
-    );
+    return props.item.children.some((child: { path: string }) =>
+      route.path.startsWith(child.path),
+    )
   }
-  return false;
-});
+  return false
+})
 
 watch(
   () => route.path,
   () => {
-    isOpen.value = isChildActive.value ? isChildActive.value : isOpen.value;
+    isOpen.value = isChildActive.value ? isChildActive.value : isOpen.value
   },
-  { immediate: true } // Runs once on component mount
-);
+  { immediate: true }, // Runs once on component mount
+)
 </script>
 
 <template>
@@ -38,23 +39,29 @@ watch(
     <div
       class="flex justify-between hover:bg-slate-100 w-full items-center px-3 rounded-md transition-all duration-300"
     >
-      <span v-if="item.meta.icon" class="min-w-5">
-        <font-awesome-icon :icon="item.meta.icon" class="text-gray-400" />
+      <span
+        v-if="item.meta.icon"
+        class="min-w-5"
+      >
+        <font-awesome-icon
+          :icon="item.meta.icon"
+          class="text-gray-400"
+        />
       </span>
       <NuxtLink
-        class="text-sm mt-1 ps-2 font-zt_regular tracking-wide text-gray-700 flex items-center justify-between hover:text-zt_purple hover:border-zt_purple/70 transition-all duration-300 cursor-pointer py-1 my-1 w-full"
+        class="text-sm mt-1 ps-2 font-zt_regular text-gray-700 flex items-center justify-between hover:text-zt_purple hover:border-zt_purple/70 transition-all duration-300 cursor-pointer py-1 my-1 w-full"
         :class="{
           'text-zt_purple border-zt_purple/70': route.path === item.path,
         }"
-        @click="() => openChildren()"
         :to="item.path"
+        @click="() => openChildren()"
       >
         <span class="w-full">{{ item.title }}</span>
       </NuxtLink>
       <span
-        @click.stop="($event) => toggleChild($event)"
         v-if="item.children"
         class="w-5 h-5 flex justify-center items-center cursor-pointer transition-all duration-300 hover:bg-gray-200 rounded-full"
+        @click.stop="($event) => toggleChild($event)"
       >
         <font-awesome-icon
           :icon="'chevron-right'"
@@ -70,7 +77,10 @@ watch(
       class="transition-all duration-500 overflow-hidden"
     >
       <div class="transition-all ms-5 duration-300 border-l-2 my-2">
-        <template v-for="child in item.children" :key="child.title">
+        <template
+          v-for="child in item.children"
+          :key="child.title"
+        >
           <RecursiveNavigation
             v-if="child.path !== item.path"
             :item="child"

@@ -5,8 +5,8 @@
 /* .zt_purple {
 color: rgb(155 38 182);
 } */
-a[aria-hidden="true"]::before {
-  content: "#"; /* Insert the hash */
+a[aria-hidden='true']::before {
+  content: '#'; /* Insert the hash */
   opacity: 0; /* Start hidden */
   transition: opacity 0.2s;
   margin-right: 0.25rem; /* Adjust spacing if needed */
@@ -23,25 +23,32 @@ a[aria-hidden="true"]::before {
     opacity: 1;
   } */
 
-h1, h1 a,
-h2, h2 a,
-h3, h3 a,
-h4, h4 a,
-h5, h5 a,
-h6, h6 a {
+h1,
+h1 a,
+h2,
+h2 a,
+h3,
+h3 a,
+h4,
+h4 a,
+h5,
+h5 a,
+h6,
+h6 a {
   scroll-margin-top: 80px; /* Adjust based on header height */
   font-family: 'Inter-SemiBold';
 }
-b, strong {
+b,
+strong {
   font-family: 'Inter-SemiBold';
 }
 html {
   scroll-behavior: smooth;
 }
 
-  body {
-    font-family: 'Inter-Regular';
-  }
+body {
+  font-family: 'Inter-Regular';
+}
 
 /* 
 @font-face {
@@ -120,8 +127,9 @@ html {
 
 @font-face {
   font-family: 'Inter-ExtraBold';
-  src: url('./public/fonts/Inter28pt-ExtraBold.woff2') format('woff2'),
-      url('./public/fonts/Inter28pt-ExtraBold.woff') format('woff');
+  src:
+    url('./public/fonts/Inter28pt-ExtraBold.woff2') format('woff2'),
+    url('./public/fonts/Inter28pt-ExtraBold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -129,8 +137,9 @@ html {
 
 @font-face {
   font-family: 'Inter-Bold';
-  src: url('./public/fonts/Inter28pt-Bold.woff2') format('woff2'),
-      url('./public/fonts/Inter28pt-Bold.woff') format('woff');
+  src:
+    url('./public/fonts/Inter28pt-Bold.woff2') format('woff2'),
+    url('./public/fonts/Inter28pt-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -138,8 +147,9 @@ html {
 
 @font-face {
   font-family: 'Inter-Black';
-  src: url('./public/fonts/Inter28pt-Black.woff2') format('woff2'),
-      url('./public/fonts/Inter28pt-Black.woff') format('woff');
+  src:
+    url('./public/fonts/Inter28pt-Black.woff2') format('woff2'),
+    url('./public/fonts/Inter28pt-Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -147,8 +157,9 @@ html {
 
 @font-face {
   font-family: 'Inter-ExtraLight';
-  src: url('./public/fonts/Inter28pt-ExtraLight.woff2') format('woff2'),
-      url('./public/fonts/Inter28pt-ExtraLight.woff') format('woff');
+  src:
+    url('./public/fonts/Inter28pt-ExtraLight.woff2') format('woff2'),
+    url('./public/fonts/Inter28pt-ExtraLight.woff') format('woff');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -156,8 +167,9 @@ html {
 
 @font-face {
   font-family: 'Inter-Thin';
-  src: url('./public/fonts/Inter28pt-Thin.woff2') format('woff2'),
-      url('./public/fonts/Inter28pt-Thin.woff') format('woff');
+  src:
+    url('./public/fonts/Inter28pt-Thin.woff2') format('woff2'),
+    url('./public/fonts/Inter28pt-Thin.woff') format('woff');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -165,8 +177,9 @@ html {
 
 @font-face {
   font-family: 'Inter-Medium';
-  src: url('./public/fonts/Inter28pt-Medium.woff2') format('woff2'),
-      url('./public/fonts/Inter28pt-Medium.woff') format('woff');
+  src:
+    url('./public/fonts/Inter28pt-Medium.woff2') format('woff2'),
+    url('./public/fonts/Inter28pt-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -174,8 +187,9 @@ html {
 
 @font-face {
   font-family: 'Inter-SemiBold';
-  src: url('./public/fonts/Inter28pt-SemiBold.woff2') format('woff2'),
-      url('./public/fonts/Inter28pt-SemiBold.woff') format('woff');
+  src:
+    url('./public/fonts/Inter28pt-SemiBold.woff2') format('woff2'),
+    url('./public/fonts/Inter28pt-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -183,8 +197,9 @@ html {
 
 @font-face {
   font-family: 'Inter-Light';
-  src: url('./public/fonts/Inter28pt-Light.woff2') format('woff2'),
-      url('./public/fonts/Inter28pt-Light.woff') format('woff');
+  src:
+    url('./public/fonts/Inter28pt-Light.woff2') format('woff2'),
+    url('./public/fonts/Inter28pt-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -192,11 +207,10 @@ html {
 
 @font-face {
   font-family: 'Inter-Regular';
-  src: url('./public/fonts/Inter28pt-Regular.woff2') format('woff2'),
-      url('./public/fonts/Inter28pt-Regular.woff') format('woff');
+  src:
+    url('./public/fonts/Inter28pt-Regular.woff2') format('woff2'),
+    url('./public/fonts/Inter28pt-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
-
