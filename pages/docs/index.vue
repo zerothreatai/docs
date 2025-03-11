@@ -52,8 +52,13 @@ const [prev, next] = surround.value || []
           id="page-description"
           class="text-base text-gray-500 tracking-wide leading-7 text-justify"
           :class="page?.description ? 'pt-5 pb-5' : 'pb-2'"
-          v-html="page?.description"
-        />
+        >
+          <MDC
+            v-if="page?.description"
+            :value="page?.description"
+            unwrap="p"
+          />
+        </h5>
       </div>
       <ContentRenderer
         id="homeContent"
@@ -81,7 +86,11 @@ const [prev, next] = surround.value || []
                 />
                 <div class="text-right px-4 py-2.5 space-y-1">
                   <span class="text-xs text-gray-400">Previous</span>
-                  <h5 class="text-gray-800 group-hover:text-zt_purple w-full text-right text-base font-zt_medium">{{ prev.title }}</h5>
+                  <h5
+                    class="text-gray-800 group-hover:text-zt_purple w-full text-right text-base font-zt_medium"
+                  >
+                    {{ prev.title }}
+                  </h5>
                 </div>
               </div>
             </NuxtLink>
@@ -99,7 +108,11 @@ const [prev, next] = surround.value || []
               >
                 <div class="text-left px-4 py-2.5 space-y-1">
                   <span class="text-xs text-gray-400">Next</span>
-                  <h5 class="text-gray-800 font-zt_medium text-base group-hover:text-zt_purple w-full">{{ next.title }}</h5>
+                  <h5
+                    class="text-gray-800 font-zt_medium text-base group-hover:text-zt_purple w-full"
+                  >
+                    {{ next.title }}
+                  </h5>
                 </div>
                 <font-awesome-icon
                   icon="angles-right"
