@@ -1,3 +1,2 @@
-
 title: Manage Targets
-description: Set up and configure your scan targets, verify domains, and customize headers to ensure accurate security assessments.
+description: Set up and configure your scan targets carefully, ensuring that all relevant systems and endpoints are included. Verify the domains associated with your targets.

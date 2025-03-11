@@ -2,7 +2,6 @@
 
 // // import { queryCollectionSearchSectionsWithEvent } from "@nuxt/content/dist/runtime/nitro"
 
-
 // // export default eventHandler(async (event) =>{
 // //     const sections = await queryCollectionSearchSections(event,'content')
 // //     return sections
@@ -11,8 +10,7 @@
 // // //     const sections = await queryCollectionSearchSections(event, 'docs')
 // // //     return sections
 // // //   })
-  
-  
+
 // export default eventHandler(async (event) => {
 //   const queryObj = getQuery(event)
 //   const query =
@@ -36,9 +34,6 @@
 //     )
 //   }
 
-  
-  
-  
 //   // Format data to include only required fields
 //   const formattedData = filteredItems
 //     .map((item) => ({

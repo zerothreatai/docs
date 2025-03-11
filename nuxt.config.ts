@@ -1,44 +1,58 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2024-11-01",
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', 'tailwindcss'],
+  plugins: [
+    '~/plugins/contentScrollFix.client.ts',
+    '~/plugins/directives.ts',
+    '~/plugins/fontawesome.ts',
+  ],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false, // Allows <JumpRight> without <JumpRight.vue>
+    },
+    {
+      global: true,
+    },
+  ],
   devtools: { enabled: false },
-  modules: ["@nuxt/content", '@nuxtjs/tailwindcss', "tailwindcss"],
+  css: ['~/main.css', '@fortawesome/fontawesome-svg-core/styles.css'],
   content: {
     markdown: {
       toc: {
         depth: 3, // include h3 headings
       },
-      remarkPlugins: [
-        ['remark-external-links', { target: '_blank', rel: 'noopener noreferrer' }]
-      ]
-
+      remarkPlugins: ['remark-external-links'],
     },
   },
-  nitro: {
-    prerender: {
-      crawlLinks: true, // Stops unnecessary crawling
-      routes: ['/'],
-      ignore: ['/docs/getting-started/"https://zerothreat.ai/"'],
-    },
-  },
-  css: ['~/main.css', '@fortawesome/fontawesome-svg-core/styles.css'],
-
-  plugins: ['~/plugins/contentScrollFix.client.ts', '~/plugins/directives.ts', '~/plugins/fontawesome.ts'],
-
+  // head: {
+  //   link: [
+  //     {
+  //       rel: 'stylesheet',
+  //       href: 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;500;600;700&display=swap'
+  //     }
+  //   ]
+  // }
   routeRules: {
     '/docs/getting-started': { redirect: '/docs/getting-started/quickstart' },
-    '/docs/manage-targets': { redirect: '/docs/manage-targets/targets-section' },
-    '/docs/manage-scans': { redirect: '/docs/manage-scans/scans-section' },
-    '/docs/manage-organizations': { redirect: '/docs/manage-organizations/manage-organization' }
-  },
-  components: [
-    {
-      path: '~/components',
-      pathPrefix: false
+    '/docs/manage-targets': {
+      redirect: '/docs/manage-targets/targets-section',
     },
-    {
-      global: true
-    }
-  ]
-});
-
+    '/docs/manage-scans': { redirect: '/docs/manage-scans/scans-section' },
+    '/docs/manage-organizations': {
+      redirect: '/docs/manage-organizations/manage-organization',
+    },
+  },
+  compatibilityDate: '2024-11-01',
+  nitro: {
+    prerender: {
+      routes: ['/'],
+      crawlLinks: true,
+    },
+  },
+  eslint: {
+    config: {
+      stylistic: true, // <---
+    },
+  },
+})

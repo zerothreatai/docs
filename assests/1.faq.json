@@ -1,39 +1,38 @@
 [
-    {
-        "q":"What is a target?",
-        "a":"A target is referred to as the unique domain address of a website, defined by its name or IP, protocol (e.g., HTTP/HTTPS), and port (e.g., 80/8080). For example, https://app.domain.com and https://docs.domain.com are considered distinct domains because they use different subdomains (app vs. docs), even though they share the same base domain (domain.com). This distinction allows ZeroThreat to treat them as separate entities for scanning purposes."
-    },
-    {
-        "q":"Why is target owner verification important?",
-        "a":"Target owner verification ensures you have permission to scan a target, preventing unauthorized testing. It confirms ownership, and avoids misuse or legal issues. This process safeguards the target owner’s rights and ensures responsible use of ZeroThreat’s scanning capabilities."
-    },
-    {
-        "q":"Why configure the technology stack?",
-        "a":"Specifying the app’s tech stack (e.g., PHP, ASP.NET) ensures ZeroThreat provides accurate analysis and tailored remediation. This customization enhances scan effectiveness, executive summary and makes the remediation for developers more convenient."
-    },
-    {
-        "q":"How do I add a target in ZeroThreat?",
-        "a":"Navigate to the Targets page, click 'Add Target,' input the web app URL (e.g., https://app.example.com), select a scanning server, assign it to an organization, and save. This sets up your scan starting point."
-    },
-    {
-        "q":"How do I verify a target ?",
-        "a":"Go to Targets, click 'Verify Now,' and choose either uploading a provided HTML file to your site’s root or adding a DNS TXT record via your provider. After setup, click 'Verify' to confirm. Check Docs for a detailed step-by-step guide."
-    },
-    {
-        "q":"What is target configuration?",
-        "a":"Target configuration customizes scan settings like server location, technology stack, authentication templates, allowed hosts, and ignored URIs. It ensures scans align with your app’s specifics for more accurate and relevant results."
-    },
-    {
-        "q":"How do I add custom headers?",
-        "a":"Go to Targets, select your target, navigate to Request Headers in configuration, choose a request target, enter a key (e.g., 'access_token') and value, then save. This applies to all scan requests for that target. Check Docs for detailed step-by-step guide."
-    },
-    {
-        "q":"Can I reuse a login sequence?",
-        "a":"Yes, login sequences recorded with the Chrome Recorder are saved as templates in Target Configuration. You can reuse them for future scans on the same target, saving time."
-    },
-    {
-        "q":"How to allow Hosts?",
-        "a":"By default, a target includes all URLs within its domain, such as https://example.com/blogs from https://example.com/dashboard. To add external domains, like payments.thirdparty.com, go to the Targets section, locate the target, and click the gear icon to open the configuration drawer. Enter the external hosts in the Allowed Hosts section. This ensures ZeroThreat scans all related resources for a complete security assessment."
-    }
-   
+  {
+    "q": "What is a target?",
+    "a": "A target is referred to as the unique domain address of a website, defined by its name or IP, protocol (e.g., HTTP/HTTPS), and port (e.g., 80/8080). For example, https://app.domain.com and https://docs.domain.com are considered distinct domains because they use different subdomains (app vs. docs), even though they share the same base domain (domain.com). This distinction allows ZeroThreat to treat them as separate entities for scanning purposes."
+  },
+  {
+    "q": "Why is target owner verification important?",
+    "a": "Target owner verification ensures you have permission to scan a target, preventing unauthorized testing. It confirms ownership, and avoids misuse or legal issues. This process safeguards the target owner’s rights and ensures responsible use of ZeroThreat’s scanning capabilities."
+  },
+  {
+    "q": "Why configure the technology stack?",
+    "a": "Specifying the app’s tech stack (e.g., PHP, ASP.NET) ensures ZeroThreat provides accurate analysis and tailored remediation. This customization enhances scan effectiveness, executive summary and makes the remediation for developers more convenient."
+  },
+  {
+    "q": "How do I add a target in ZeroThreat?",
+    "a": "Navigate to the Targets page, click 'Add Target,' input the web app URL (e.g., https://app.example.com), select a scanning server, assign it to an organization, and save. This sets up your scan starting point."
+  },
+  {
+    "q": "How do I verify a target ?",
+    "a": "Go to Targets, click 'Verify Now,' and choose either uploading a provided HTML file to your site’s root or adding a DNS TXT record via your provider. After setup, click 'Verify' to confirm. Check Docs for a detailed step-by-step guide."
+  },
+  {
+    "q": "What is target configuration?",
+    "a": "Target configuration customizes scan settings like server location, technology stack, authentication templates, allowed hosts, and ignored URIs. It ensures scans align with your app’s specifics for more accurate and relevant results."
+  },
+  {
+    "q": "How do I add custom headers?",
+    "a": "Go to Targets, select your target, navigate to Request Headers in configuration, choose a request target, enter a key (e.g., 'access_token') and value, then save. This applies to all scan requests for that target. Check Docs for detailed step-by-step guide."
+  },
+  {
+    "q": "Can I reuse a login sequence?",
+    "a": "Yes, login sequences recorded with the Chrome Recorder are saved as templates in Target Configuration. You can reuse them for future scans on the same target, saving time."
+  },
+  {
+    "q": "How to allow Hosts?",
+    "a": "By default, a target includes all URLs within its domain, such as https://example.com/blogs from https://example.com/dashboard. To add external domains, like payments.thirdparty.com, go to the Targets section, locate the target, and click the gear icon to open the configuration drawer. Enter the external hosts in the Allowed Hosts section. This ensures ZeroThreat scans all related resources for a complete security assessment."
+  }
 ]
