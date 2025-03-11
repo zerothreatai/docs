@@ -2,6 +2,7 @@
 import { ref, defineProps } from 'vue'
 import { useRoute } from 'vue-router'
 
+// eslint-disable-next-line vue/require-prop-types
 const props = defineProps(['item'])
 const route = useRoute()
 const isOpen = ref(false)
