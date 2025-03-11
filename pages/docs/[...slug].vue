@@ -157,38 +157,17 @@ useSeoMeta({
   font-size: 1rem;
   color: #3c3c43;
   padding-top: 15px;
-  /* text-align: justify; */
-  font-weight: 400;
 }
 #contentrenderer p strong {
-  font-family: 'Inter-Bold';
   color: #3c3c43;
 }
 
-#contentrenderer p a, ol li a, h6 a{
+#contentrenderer p a,p a strong, ol li a,ul li a, h6 a{
   color: #9b26b6 !important;
-  font-weight: 500;
+  font-family: 'Inter-Medium' !important;
 }
-#contentrenderer p a:hover, ol li a:hover, h6 a:hover {
+#contentrenderer p a:hover,p a strong:hover, ol li a:hover,ul li a:hover, h6 a:hover {
   text-decoration: underline !important;
-}
-#contentrenderer ul li strong {
-  font-size: 1rem;
-  color: #3c3c43;
-  font-family: 'Inter-Bold';
-}
-#contentrenderer ol li strong {
-  color: #3c3c43;
-  font-family: 'Inter-Bold';
-  font-size: 1rem;
-}
-#contentrenderer ol li a strong,
-ol li a {
-  color: #9b26b6;
-}
-#contentrenderer ul li a strong,
-ul li a {
-  color: #9b26b6;
 }
 #contentrenderer ul li {
   font-size: 1rem;
@@ -230,8 +209,8 @@ ul li a {
 }
 #contentrenderer code {
   font-size: 14px;
-  color: rgb(158, 0, 158);
-  background-color: rgba(255, 232, 255, 0.623);
+  color: rgba(158, 0, 158, 0.877);
+  background-color: rgba(255, 232, 255, 0.377);
   padding: 1px 5px;
   border-radius: 5px;
 }
@@ -249,7 +228,7 @@ ul li a {
   font-size: 0.9rem;
   color: rgb(75 85 99);
   padding: 10px 20px;
-  font-weight: 500;
+  font-family: 'Inter-Medium';
 }
 #contentrenderer table tbody tr td {
   font-size: 0.9rem;
@@ -267,7 +246,7 @@ color: #9b26b6 !important;
 }
 #contentrenderer img {
   margin-top: 20px;
-  box-shadow: 0px 2px 5px rgb(160, 160, 160);
+  box-shadow: 0px 2px 5px rgba(160, 160, 160, 0.671);
   border: 1px solid rgba(235, 235, 235, 0.705);
   border-radius: 5px;
   margin-left: auto;
@@ -296,7 +275,6 @@ pre {
   overflow-x: auto;
 }
 #contentrenderer details {
-  /* background-color: red; */
   padding: 15px 20px;
   border: 1px solid rgb(207, 207, 207);
   border-radius: 5px;

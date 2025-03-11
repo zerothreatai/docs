@@ -100,25 +100,25 @@ const [prev, next] = surround.value || [];
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 #homeContent h3 {
   font-size: 1rem;
-  font-weight: 600;
+  font-family: 'Inter-Bold';
   color: rgb(0, 0, 0);
   padding-top: 30px;
   padding-bottom: 8px;
 }
 
 #homeContent h3 a {
-  font-weight: 600;
+  font-family: 'Inter-Bold';
   font-size: 1.4rem;
   color: #1a202cef;
 }
 
-#homeContent h3 a strong {
-  font-weight: 600;
+/* #homeContent h3 a strong {
+  font-family: 'Inter-Bold';
   font-size: 1.4rem;
-}
+} */
 
 #homeContent p {
   font-size: 1rem;
@@ -128,15 +128,13 @@ const [prev, next] = surround.value || [];
   font-weight: 400;
 }
 
-#homeContent p strong {
-  font-weight: 600;
-  color: #1a202c;
-}
 
 #homeContent p a,
 p a strong {
   color: #9b26b6 !important;
-  font-weight: 500;
+}
+#homeContent p a:hover,
+p a strong:hover {
   text-decoration: underline;
 }
 </style>
