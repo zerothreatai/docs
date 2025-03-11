@@ -1,89 +1,89 @@
 stages:
-  - build
-  - deploy
+    - build
+    - deploy
 
 stage-zt-documentation-build:
-  stage: build
-  environment:
-    name: staging
-  tags:
-    - ztdevopsdockerrunner
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "stage"'
-  image: node:20.18.2
-  script: |
-    node -v
-    pwd
-    npm install
-    npm run generate
-  artifacts:
-    when: always
-    paths:
-      - .output/public
-      - firebase.json
+    stage: build
+    environment:
+        name: staging
+    tags:
+        - ztdevopsdockerrunner
+    rules:
+        - if: '$CI_COMMIT_BRANCH == "stage"'
+    image: node:20.18.2
+    script: |
+        node -v
+        pwd
+        npm install
+        npm run generate
+    artifacts:
+        when: always
+        paths:
+            - .output/public
+            - firebase.json
 
 stage-zt-documentation-deploy:
-  image: node:20.18.2
-  stage: deploy
-  environment:
-    name: staging
-  variables:
-    REF_FILE_VAR: $firebase_deploy
-  dependencies:
-    - stage-zt-documentation-build
-  tags:
-    - ztdevopsdockerrunner
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "stage"'
-  script: |
-    pwd
-    node -v 
-    npm install -g firebase-tools
-    ls -la
-    pwd
-    cat $REF_FILE_VAR > firebaselogin.json
-    export GOOGLE_APPLICATION_CREDENTIALS=$REF_FILE_VAR
-    firebase deploy --project $Firebase_Project_ID
+    image: node:20.18.2
+    stage: deploy
+    environment:
+        name: staging
+    variables:
+        REF_FILE_VAR: $firebase_deploy
+    dependencies:
+        - stage-zt-documentation-build
+    tags:
+        - ztdevopsdockerrunner
+    rules:
+        - if: '$CI_COMMIT_BRANCH == "stage"'
+    script: |
+        pwd
+        node -v 
+        npm install -g firebase-tools
+        ls -la
+        pwd
+        cat $REF_FILE_VAR > firebaselogin.json
+        export GOOGLE_APPLICATION_CREDENTIALS=$REF_FILE_VAR
+        firebase deploy --project $Firebase_Project_ID
 
 prod-zt-documentation-build:
-  stage: build
-  environment:
-    name: production
-  tags:
-    - ztdevopsdockerrunner
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "master"'
-  image: node:20.18.2
-  script: |
-    node -v
-    pwd
-    npm install
-    npm run generate
-  artifacts:
-    when: always
-    paths:
-      - .output/public
-      - firebase.json
+    stage: build
+    environment:
+        name: production
+    tags:
+        - ztdevopsdockerrunner
+    rules:
+        - if: '$CI_COMMIT_BRANCH == "master"'
+    image: node:20.18.2
+    script: |
+        node -v
+        pwd
+        npm install
+        npm run generate
+    artifacts:
+        when: always
+        paths:
+            - .output/public
+            - firebase.json
 
 prod-zt-documentation-deploy:
-  image: node:20.18.2
-  stage: deploy
-  environment:
-    name: production
-  variables:
-    REF_FILE_VAR: $firebase_deploy
-  dependencies:
-    - prod-zt-documentation-build
-  tags:
-    - ztdevopsdockerrunner
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "master"'
-  script: |
-    pwd
-    node -v 
-    npm install -g firebase-tools
-    ls -la
-    pwd
-    cat $REF_FILE_VAR > firebaselogin.json
-    export GOOGLE_APPLICATION_CREDENTIALS=$REF_FILE_VAR
-    firebase deploy --project $Firebase_Project_ID
+    image: node:20.18.2
+    stage: deploy
+    environment:
+        name: production
+    variables:
+        REF_FILE_VAR: $firebase_deploy
+    dependencies:
+        - prod-zt-documentation-build
+    tags:
+        - ztdevopsdockerrunner
+    rules:
+        - if: '$CI_COMMIT_BRANCH == "master"'
+    script: |
+        pwd
+        node -v 
+        npm install -g firebase-tools
+        ls -la
+        pwd
+        cat $REF_FILE_VAR > firebaselogin.json
+        export GOOGLE_APPLICATION_CREDENTIALS=$REF_FILE_VAR
+        firebase deploy --project $Firebase_Project_ID

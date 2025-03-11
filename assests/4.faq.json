@@ -4,59 +4,59 @@
         "a": "Scan reports contain vulnerabilities with severity, impact, consequences and CVSS v3.0 scores. They also cover sensitive data exposure (e.g., PII), secret data leaks (e.g., API keys), cloud misconfigurations (e.g., open S3 buckets), SSL certificate analysis, vulnerable JavaScript packages, server-side technologies, server ports, and mail configurations. It also includes Affected URIs, HTTP response evidence, and remediation steps, along with compliance specific findings for GDPR, HIPAA, ISO-27001-A, PCI DSS, and OWASP."
     },
     {
-        "q":"How do I share a scan report?",
-        "a":"From the Scans section, select your report, click the 'Share' button on the right, and enter the recipient’s name and email (e.g., 'Zerothreat Admin' at 'zerothreat.example@zerothreat.com'). Confirm and send to securely share the report. Check Docs for detailed step-by-step guide."
-    },{
-        "q":"What are severity levels in scan results?",
-        "a":"Critical vulnerabilities pose serious security and need urgent fixes. Medium issues require moderate effort to exploit and aren’t directly exploitable themselves, while Low ones aid reconnaissance. Informational findings highlight behavior that doesn’t directly threaten but could assist attackers."
+        "q": "How do I share a scan report?",
+        "a": "From the Scans section, select your report, click the 'Share' button on the right, and enter the recipient’s name and email (e.g., 'Zerothreat Admin' at 'zerothreat.example@zerothreat.com'). Confirm and send to securely share the report. Check Docs for detailed step-by-step guide."
     },
     {
-        "q":"What does the Web App Vulnerabilities section show?",
-        "a":"It lists all security weaknesses in your web application, categorized by severity (Critical, Medium, Low, Informational). Each entry includes a description, affected URIs, HTTP request/response data, evidence, and remediation steps to help prioritize and fix issues effectively."
+        "q": "What are severity levels in scan results?",
+        "a": "Critical vulnerabilities pose serious security and need urgent fixes. Medium issues require moderate effort to exploit and aren’t directly exploitable themselves, while Low ones aid reconnaissance. Informational findings highlight behavior that doesn’t directly threaten but could assist attackers."
     },
     {
-        "q":"What is sensitive data exposure in target security scan report?",
-        "a":"Sensitive data exposure in ZeroThreat refers to unprotected personal or financial data—like Social Security Numbers, credit card details,  health records and many more—that attackers could use for identity theft or fraud. The scan report flags these risks, detailing their location and potential impact. You can mark severe cases as Critical for urgent action or ignore false positives to prioritize effectively."
+        "q": "What does the Web App Vulnerabilities section show?",
+        "a": "It lists all security weaknesses in your web application, categorized by severity (Critical, Medium, Low, Informational). Each entry includes a description, affected URIs, HTTP request/response data, evidence, and remediation steps to help prioritize and fix issues effectively."
     },
     {
-        "q":"What is secret data exposure in target security scan report?",
-        "a":"Secret data exposure in ZeroThreat involves leaked credentials, such as AWS keys, API tokens, database passwords and many more, detected in code, logs, or misconfigured systems. Critical leaks require immediate key rotation, to prevent unauthorized system access or API abuse."
+        "q": "What is sensitive data exposure in target security scan report?",
+        "a": "Sensitive data exposure in ZeroThreat refers to unprotected personal or financial data—like Social Security Numbers, credit card details,  health records and many more—that attackers could use for identity theft or fraud. The scan report flags these risks, detailing their location and potential impact. You can mark severe cases as Critical for urgent action or ignore false positives to prioritize effectively."
     },
     {
-        "q":"What are cloud misconfigurations in target security scan report?",
-        "a":"Cloud misconfigurations in the scan report identify security flaws in cloud services, such as open S3 buckets on AWS, or misconfigured Cloud Storage Origins on AWS, Azure and GCP. Critical findings involve unrestricted access to vital data or backups."
+        "q": "What is secret data exposure in target security scan report?",
+        "a": "Secret data exposure in ZeroThreat involves leaked credentials, such as AWS keys, API tokens, database passwords and many more, detected in code, logs, or misconfigured systems. Critical leaks require immediate key rotation, to prevent unauthorized system access or API abuse."
     },
     {
-        "q":"What is the SSL Certificate section in target security scan report?",
-        "a":"The SSL Certificate section in ZeroThreat analyzes your SSL/TLS configuration, covering issuer details, expiration dates, supported protocols (e.g., TLS 1.2/1.3), and a security score. It scans for vulnerabilities like Heartbleed, POODLE, or weak ciphers, and checks compliance with standards like PCI DSS or HIPAA, ensuring secure data transmission."
+        "q": "What are cloud misconfigurations in target security scan report?",
+        "a": "Cloud misconfigurations in the scan report identify security flaws in cloud services, such as open S3 buckets on AWS, or misconfigured Cloud Storage Origins on AWS, Azure and GCP. Critical findings involve unrestricted access to vital data or backups."
     },
     {
-        "q":"What are vulnerable JavaScript packages detected in ZeroThreat?",
-        "a":"ZeroThreat scans JavaScript libraries to detect vulnerable packages, listing their versions, known vulnerabilities (with CVEs), and severity ratings (Critical to Informational). Vulnerable packages are often the easiest way for attackers to exploit weaknesses, because they have publicly known weaknesses. This analysis helps you identify and update them quickly, minimizing exploit risks and enhancing your application’s security."
+        "q": "What is the SSL Certificate section in target security scan report?",
+        "a": "The SSL Certificate section in ZeroThreat analyzes your SSL/TLS configuration, covering issuer details, expiration dates, supported protocols (e.g., TLS 1.2/1.3), and a security score. It scans for vulnerabilities like Heartbleed, POODLE, or weak ciphers, and checks compliance with standards like PCI DSS or HIPAA, ensuring secure data transmission."
     },
     {
-        "q":"What are server-side technologies detected in target security scan report?",
-        "a":"ZeroThreat identifies vulnerabilities in backend technologies, such as web frameworks (e.g., Django, Rails), databases (e.g., MySQL, PostgreSQL), and server software, by analyzing their specific versions. It assigns severity levels like Critical or Medium based on their exploit potential. Each vulnerability is detailed with its CVE identifier. This thorough detection helps you understand exactly which parts of your server setup are at risk."
+        "q": "What are vulnerable JavaScript packages detected in ZeroThreat?",
+        "a": "ZeroThreat scans JavaScript libraries to detect vulnerable packages, listing their versions, known vulnerabilities (with CVEs), and severity ratings (Critical to Informational). Vulnerable packages are often the easiest way for attackers to exploit weaknesses, because they have publicly known weaknesses. This analysis helps you identify and update them quickly, minimizing exploit risks and enhancing your application’s security."
     },
     {
-        "q":"What are server port scans in target security scan report?" ,
-        "a":"The Server Ports Scan in ZeroThreat examines all open ports on your server, such as port 21 for FTP or port 3306 for MySQL, to pinpoint potential security risks. The scan provides a risk assessment, highlighting ports that could serve as entry points if left unsecured. It then offers practical advice, like closing non-essential ports or adding firewalls to secure vital ones, reducing the chances of unauthorized access."
+        "q": "What are server-side technologies detected in target security scan report?",
+        "a": "ZeroThreat identifies vulnerabilities in backend technologies, such as web frameworks (e.g., Django, Rails), databases (e.g., MySQL, PostgreSQL), and server software, by analyzing their specific versions. It assigns severity levels like Critical or Medium based on their exploit potential. Each vulnerability is detailed with its CVE identifier. This thorough detection helps you understand exactly which parts of your server setup are at risk."
     },
     {
-        "q":"What is Mail Configuration in target security scan report?",
-        "a":"The Mail Configuration in ZeroThreat inspects your mail server’s setup, focusing on SPF, DKIM, and DMARC records to verify email sender authentication. It also checks TLS settings for secure transmission, ensuring encryption protects against eavesdropping, and scans for misconfigurations like SMTP open relays that could allow spam or phishing. This detailed check helps you lock down your mail server and maintain secure, trustworthy email communication."
+        "q": "What are server port scans in target security scan report?",
+        "a": "The Server Ports Scan in ZeroThreat examines all open ports on your server, such as port 21 for FTP or port 3306 for MySQL, to pinpoint potential security risks. The scan provides a risk assessment, highlighting ports that could serve as entry points if left unsecured. It then offers practical advice, like closing non-essential ports or adding firewalls to secure vital ones, reducing the chances of unauthorized access."
     },
     {
-        "q":"How can I prioritize vulnerabilities in the report?",
-        "a":"Filter vulnerabilities by severity (Critical to Informational) in sections like Web App Vulnerabilities or API Vulnerabilities. Focus on Critical issues first, using detailed analysis and remediation guidance to address them."
+        "q": "What is Mail Configuration in target security scan report?",
+        "a": "The Mail Configuration in ZeroThreat inspects your mail server’s setup, focusing on SPF, DKIM, and DMARC records to verify email sender authentication. It also checks TLS settings for secure transmission, ensuring encryption protects against eavesdropping, and scans for misconfigurations like SMTP open relays that could allow spam or phishing. This detailed check helps you lock down your mail server and maintain secure, trustworthy email communication."
     },
     {
-        "q":"What evidence supports vulnerability findings?",
-        "a":"Each vulnerability includes HTTP requests, server responses, and specific proof (e.g., error messages, reflected input). This helps validate issues and guide developers in reproducing and fixing them."  
+        "q": "How can I prioritize vulnerabilities in the report?",
+        "a": "Filter vulnerabilities by severity (Critical to Informational) in sections like Web App Vulnerabilities or API Vulnerabilities. Focus on Critical issues first, using detailed analysis and remediation guidance to address them."
     },
     {
-        "q":"How do I fix detected vulnerabilities?",
-        "a":"Remediation guidance offers tailored steps and code examples based on your tech stack. Found in Web App Vulnerabilities and other sections, it ensures efficient resolution of security gaps."
+        "q": "What evidence supports vulnerability findings?",
+        "a": "Each vulnerability includes HTTP requests, server responses, and specific proof (e.g., error messages, reflected input). This helps validate issues and guide developers in reproducing and fixing them."
+    },
+    {
+        "q": "How do I fix detected vulnerabilities?",
+        "a": "Remediation guidance offers tailored steps and code examples based on your tech stack. Found in Web App Vulnerabilities and other sections, it ensures efficient resolution of security gaps."
     }
-
 ]
