@@ -12,14 +12,14 @@ description: Sharing scan results is an integral part of collaborative vulnerabi
 3.  **Locate the Share Button:**
 
     * On the right side of the report page, find and click on the Share button.
-  <img src="/image (75).png" alt="" style="display:block; margin:30px auto;">
+  <img src="/image (75).png" alt="" style="display:block; margin-right:auto; margin-left:auto; margin-top:20px;">
   
 4. **Enter User Details:**
    * A prompt will appear asking for the recipient's details. Enter the Name and Email ID of the person with whom you want to share the scan report.
      *   **Example:**
          * For Name, enter "Zerothreat Admin".
          * For Email ID, enter "Zerothreat.example@zer  othreat.com".
-         <img src="/image (76).png" alt="" style="display:block; margin:30px auto;">
+         <img src="/image (76).png" alt="" style="display:block; margin:30px auto; margin-bottom:0px;">
 
 5. **Send the Report:**
    * After entering the details, confirm and send the scan report. The user will receive the report at the provided email address.

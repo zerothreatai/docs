@@ -37,9 +37,9 @@ cards:
 
 ### Ready to Begin?
 
-Start with  [Quick Scan Guide](/docs/getting-started/publish-your-docs "mention") to run your first scan in minutes.
+Start with  [**Quick Scan Guide**](/docs/getting-started/publish-your-docs "mention") to run your first scan in minutes.
 
-Learn about everything you need to know about scanning you application in our [Concepts](/docs/getting-started/concepts "mention") guide.
+Learn about everything you need to know about scanning you application in our [**Concepts**](/docs/getting-started/concepts "mention") guide.
 
 ### Jump Right In
 <HomePage />

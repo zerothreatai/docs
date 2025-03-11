@@ -33,17 +33,17 @@ const { activeHeadings } = useToc();
 
 <template>
   <div class="max-h-[calc(100vh-110px)] sticky right-0 top-24 toc-links overflow-y-scroll">
-    <h5 class="text-xs font-zt_bold tracking-wide uppercase text-gray-800 pt-4 pb-2">
+    <h5 class="text-sm font-zt_semibold tracking-wide capitalize text-gray-700 pt-4 pb-2">
       Table Of Content
     </h5>
     <p v-for="item, index in toclinks" :key="index" class="py-[3px]">
-      <NuxtLink class="text-sm mt-1 font-DMSans_Regular text-gray-500 hover:text-zt_purple cursor-pointer py-1"
+      <NuxtLink class="text-sm mt-1 font-zt_regular text-gray-700 hover:text-zt_purple cursor-pointer py-1"
         :to="route.path + '#' + item?.id" :class="{ 'text-zt_purple': route.hash === `${item.id}` || activeHeadings.includes(item?.id) }"
         @click.prevent="scrollToSection(item.id)">{{ item.text }}
       </NuxtLink>
     <ul v-if="item?.children">
       <li v-for="link, index in item['children']" :key="index"  class="py-0.5 ps-6">
-        <NuxtLink class="text-sm mt-1 font-DMSans_Regular text-gray-500 hover:text-zt_purple cursor-pointer py-1"
+        <NuxtLink class="text-sm mt-1 font-zt_regular text-gray-700 hover:text-zt_purple cursor-pointer py-1"
           :to="route.path + '#' + link.id" :class="{ 'text-zt_purple': (route.hash === `#${link.id}`) || activeHeadings.includes(link.id)  }"
           @click.prevent="scrollToSection(link.id)">{{ link.text }}
         </NuxtLink>
@@ -55,6 +55,11 @@ const { activeHeadings } = useToc();
 </template>
 
 <style scoped>
+ul li {
+  font-size: 1rem;
+  padding: 0px !important;
+  list-style: none !important;
+}
   ::-webkit-scrollbar {
     width: 2px;
   }
