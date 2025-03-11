@@ -118,26 +118,25 @@
         </div>
     </div>
 </template>
+<style scoped>
+#homeContent h3 {
+  font-size: 1rem;
+  font-family: 'Inter-Bold';
+  color: rgb(0, 0, 0);
+  padding-top: 30px;
+  padding-bottom: 8px;
+}
 
-<style>
-    #homeContent h3 {
-        font-size: 1rem;
-        font-weight: 600;
-        color: rgb(0, 0, 0);
-        padding-top: 30px;
-        padding-bottom: 8px;
-    }
+#homeContent h3 a {
+  font-family: 'Inter-Bold';
+  font-size: 1.4rem;
+  color: #1a202cef;
+}
 
-    #homeContent h3 a {
-        font-weight: 600;
-        font-size: 1.4rem;
-        color: #1a202cef;
-    }
-
-    #homeContent h3 a strong {
-        font-weight: 600;
-        font-size: 1.4rem;
-    }
+/* #homeContent h3 a strong {
+  font-family: 'Inter-Bold';
+  font-size: 1.4rem;
+} */
 
     #homeContent p {
         font-size: 1rem;
@@ -147,15 +146,13 @@
         font-weight: 400;
     }
 
-    #homeContent p strong {
-        font-weight: 600;
-        color: #1a202c;
-    }
 
-    #homeContent p a,
-    p a strong {
-        color: #9b26b6 !important;
-        font-weight: 500;
-        text-decoration: underline;
-    }
+#homeContent p a,
+p a strong {
+  color: #9b26b6 !important;
+}
+#homeContent p a:hover,
+p a strong:hover {
+  text-decoration: underline;
+}
 </style>

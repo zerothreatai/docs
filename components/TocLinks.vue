@@ -39,7 +39,7 @@
         </h5>
         <div v-for="(item, index) in toclinks" :key="index" class="py-[3px]">
             <NuxtLink
-                class="text-sm mt-1 font-zt_regular text-gray-700 hover:text-zt_purple cursor-pointer py-1"
+                class="text-sm mt-1 tracking-wide font-zt_regular text-gray-700 hover:text-zt_purple cursor-pointer py-1"
                 :to="route.path + '#' + item?.id"
                 :class="{
                     'text-zt_purple':
@@ -51,7 +51,7 @@
             <ul v-if="item?.children">
                 <li v-for="(link, index2) in item['children']" :key="index2" class="py-0.5 ps-6">
                     <NuxtLink
-                        class="text-sm mt-1 font-zt_regular text-gray-700 hover:text-zt_purple cursor-pointer py-1"
+                        class="text-sm mt-1 tracking-wide font-zt_regular text-gray-700 hover:text-zt_purple cursor-pointer py-1"
                         :to="route.path + '#' + link.id"
                         :class="{
                             'text-zt_purple':
