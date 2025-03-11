@@ -41,6 +41,7 @@ onBeforeUnmount(() => {
               <img
                 src="../public/ZeroThreat_logo_1000x400.png"
                 alt=""
+                class="border-0 m-0"
               >
             </div>
           </NuxtLink>

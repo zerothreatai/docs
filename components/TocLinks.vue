@@ -33,7 +33,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="max-h-[calc(100vh-110px)] sticky right-0 top-24 toc-links overflow-y-scroll">
+  <div class="max-h-[calc(100vh-110px)] sticky right-0 top-24 toc-links overflow-y-scroll right_navlinks">
     <h5 class="text-sm font-zt_semibold tracking-wide capitalize text-gray-700 pt-4 pb-2">
       Table Of Content
     </h5>

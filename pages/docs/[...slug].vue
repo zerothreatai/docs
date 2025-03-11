@@ -57,19 +57,20 @@ useSeoMeta({
             {{ page?.title }}
           </h1>
         </div>
-        <h5
+        <p
           id="page-description"
-          class="text-base text-[#3c3c43] tracking-wide leading-7"
-          :class="page?.description ? 'pt-5 pb-5' : 'pb-2'"
+          class="text-base text-[#3c3c43] tracking-wide leading-7 pb-2 m-0"
+          :class="page?.description ? 'mt-3' : 'm-0'"
         >
           <MDC
             v-if="page?.description"
             :value="page?.description"
             unwrap="p"
           />
-        </h5>
+        </p>
       </div>
       <ContentRenderer
+        class="mb-5"
         v-if="page"
         id="contentrenderer"
         :value="page"
@@ -147,7 +148,7 @@ useSeoMeta({
   </div>
 </template>
 
-<style>
+<!-- <style>
   #contentrenderer {
     letter-spacing: 0.03rem;
   }
@@ -369,4 +370,4 @@ useSeoMeta({
   ::-webkit-scrollbar-thumb {
     background: rgba(161, 160, 160, 0.603);
   }
-</style>
+</style> -->

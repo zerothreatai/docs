@@ -24,6 +24,14 @@ a[aria-hidden='true']::before {
   } */
 
 h1,
+h2,
+h3,
+h4,
+h5,
+h6, {
+  scroll-margin-top: 80px; /* Adjust based on header height */
+}
+h1,
 h1 a,
 h2,
 h2 a,
@@ -32,10 +40,7 @@ h3 a,
 h4,
 h4 a,
 h5,
-h5 a,
-h6,
-h6 a {
-  scroll-margin-top: 80px; /* Adjust based on header height */
+h5 a, {
   font-family: 'Inter-SemiBold';
 }
 b,
@@ -213,4 +218,69 @@ body {
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+
+h2 {
+  @apply text-2xl text-[#3c3c43] mt-10 mb-4
+}
+h3 {
+  @apply text-xl text-[#3c3c43] mt-12 mb-4
+}
+p {
+  @apply font-zt_regular text-base tracking-wide my-4 text-[#3c3c43]
+}
+ul, ol {
+  @apply ml-10 mb-5
+}
+ul {
+  @apply list-disc
+}
+ol {
+  @apply list-decimal
+}
+ul li, ol li {
+  @apply mt-2 font-zt_regular text-base tracking-wide text-[#3c3c43]
+}
+ul li ul, ol li ul {
+  @apply ml-5 list-none
+}
+li ul li {
+  @apply text-sm mt-2 tracking-wider font-zt_regular leading-6 relative after:absolute after:-left-5 after:top-[1px] after:text-black after:content-['⮚']
+}
+li ul li ul li {
+  @apply text-sm mt-2 tracking-wider font-zt_regular leading-6 relative after:absolute after:-left-5 after:top-[1px] after:text-black after:content-['⬥']
+}
+ul li > ul li code, ol li > ul li code {
+  @apply text-xs
+}
+ul li ul li strong, ol li ul li strong {
+  @apply p-0
+}
+ul li strong, ol li strong {
+  @apply pb-1 inline-block
+}
+img {
+  @apply my-5 border mx-auto
+}
+ul li img, ol li img {
+  @apply p-0 border rounded-md shadow-md mx-1 inline-block my-0
+}
+code {
+  @apply text-xs bg-slate-50 px-2 py-0.5 text-gray-800 font-zt_regular tracking-widest leading-none border rounded-md
+}
+details {
+  @apply border rounded-md px-4 py-3 text-base tracking-wide text-[#3c3c43] cursor-pointer bg-slate-50
+}
+blockquote {
+  @apply bg-zt_purple/5 border-l-4 border-zt_purple/70 py-2 px-3
+}
+blockquote p {
+  @apply leading-6 italic
+}
+.right_navlinks p, .right_navlinks ul li {
+  @apply my-2
+}
+.right_navlinks ul {
+  @apply ml-8
 }

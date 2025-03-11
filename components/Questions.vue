@@ -169,7 +169,7 @@ const filteredfaqs = computed(() => {
           >
             <div>
               <div
-                class="text-base flex justify-between items-center gap-x-5 text-gray-600 font-zt_regular px-6 py-5 cursor-pointer hover:bg-gray-100"
+                class="text-base flex justify-between tracking-wide items-center gap-x-5 text-gray-600 font-zt_regular px-6 py-5 cursor-pointer hover:bg-gray-100"
                 :class="{
                   'bg-gray-100 text-gray-700': item.isOpen,
                   'rounded-t-lg': index === 0,
@@ -195,7 +195,9 @@ const filteredfaqs = computed(() => {
                 }"
                 class="transition-all duration-500 overflow-hidden px-6"
               >
-                <div class="py-4 text-gray-600 tracking-wide text-sm font-zt_regular leading-6">
+                <div
+                  class="py-4 text-gray-600 tracking-wider text-sm font-zt_regular leading-6"
+                >
                   {{ item.a }}
                 </div>
               </div>
