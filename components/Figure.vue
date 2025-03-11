@@ -8,8 +8,8 @@ defineProps({
     type: String,
   },
   width: {
-    default: 1,
-    type: Number,
+    default: true,
+    type: Number || Boolean,
   },
 })
 
@@ -35,7 +35,7 @@ const closeModal = () => {
         :key="index"
         :src="source"
         class="object-cover rounded-lg shadow-md cursor-zoom-in"
-        :width="width != 1 ? width : 300"
+        :width="width"
         alt="Thumbnail"
         @click="openModal(source)"
       >
