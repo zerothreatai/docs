@@ -89,9 +89,7 @@ onBeforeUnmount(() => {
   <div
     class="modal-overlay fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center"
   >
-    <div
-      class="w-[50vw] bg-white p-6 rounded-lg shadow-lg relative"
-    >
+    <div class="w-[50vw] bg-white p-6 rounded-lg shadow-lg relative">
       <h2
         class="relative font-zt_semibold text-2xl text-zt_purple after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-[80px] after:bg-slate-300"
       >
@@ -166,8 +164,13 @@ onBeforeUnmount(() => {
                   <span v-if="itemdata.level != 1" />
                   <span
                     class="text-slate-400 text-nowrap max-w-full overflow-hidden font-zt_regular text-ellipsis ps-1 text-justify"
-                    v-html="itemdata.content"
-                  />
+                  >
+                    <MDC
+                      v-if="itemdata?.content"
+                      :value="itemdata.content"
+                      unwrap="p"
+                    />
+                  </span>
                 </div>
               </NuxtLink>
             </li>
@@ -215,10 +218,13 @@ onBeforeUnmount(() => {
                   <span class="text-gray-600 whitespace-nowrap font-zt_medium">
                     {{ itemdata.title }} :
                   </span>
-                  <span
-                    class="text-slate-400 text-nowrap max-w-full overflow-hidden text-ellipsis font-zt_regular ps-1 text-justify"
-                    v-html="itemdata.description"
-                  />
+                  <span class="text-slate-400 text-nowrap max-w-full overflow-hidden font-zt_regular text-ellipsis ps-1 text-justify">
+                    <MDC
+                      v-if="itemdata.description"
+                      :value="itemdata.description"
+                      unwrap="p"
+                    />
+                  </span>
                 </div>
               </NuxtLink>
             </li>

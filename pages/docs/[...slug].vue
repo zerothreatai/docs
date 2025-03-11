@@ -44,7 +44,9 @@ useSeoMeta({
     <div class="content col-span-9 py-5">
       <div class="border-b pb-2">
         <div>
-          <span class="text-zt_purple/80 tracking-wide font-semibold text-sm">{{ title }}</span>
+          <span class="text-zt_purple/80 tracking-wide font-semibold text-sm">{{
+            title
+          }}</span>
         </div>
         <div class="flex items-center">
           <span class="text-3xl text-gray-500">
@@ -61,12 +63,13 @@ useSeoMeta({
           id="page-description"
           class="text-base text-[#3c3c43] tracking-wide leading-7"
           :class="page?.description ? 'pt-5 pb-5' : 'pb-2'"
-          v-html="page?.description"
-        />
-        <mdc
-          v-if="page?.description"
-          :value="page?.description ?? ''"
-        />
+        >
+          <MDC
+            v-if="page?.description"
+            :value="page?.description"
+            unwrap="p"
+          />
+        </h5>
       </div>
       <ContentRenderer
         v-if="page"
@@ -97,7 +100,11 @@ useSeoMeta({
                 />
                 <div class="text-right px-4 py-2.5 space-y-1">
                   <span class="text-xs text-gray-400">Previous</span>
-                  <h5 class="text-gray-800 group-hover:text-zt_purple w-full text-right text-base font-zt_medium">{{ prev.title }}</h5>
+                  <h5
+                    class="text-gray-800 group-hover:text-zt_purple w-full text-right text-base font-zt_medium"
+                  >
+                    {{ prev.title }}
+                  </h5>
                 </div>
               </div>
             </NuxtLink>
@@ -115,7 +122,11 @@ useSeoMeta({
               >
                 <div class="text-left px-4 py-2.5 space-y-1">
                   <span class="text-xs text-gray-400">Next</span>
-                  <h5 class="text-gray-800 font-zt_medium text-base group-hover:text-zt_purple w-full">{{ next.title }}</h5>
+                  <h5
+                    class="text-gray-800 font-zt_medium text-base group-hover:text-zt_purple w-full"
+                  >
+                    {{ next.title }}
+                  </h5>
                 </div>
                 <font-awesome-icon
                   icon="angles-right"
@@ -139,40 +150,40 @@ useSeoMeta({
 </template>
 
 <style>
-#contentrenderer{
+#contentrenderer {
   letter-spacing: 0.03rem;
 }
 #contentrenderer h1 {
   font-size: 1.5rem;
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
   padding-top: 20px;
 }
 #contentrenderer h2 {
   font-size: 22px;
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
   padding-top: 48px;
   padding-bottom: 0px;
   color: #3c3c43;
 }
 #contentrenderer h3 {
   font-size: 19px;
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
   color: #3c3c43;
   padding-top: 32px;
 }
 #contentrenderer h4 {
   font-size: 1rem;
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
   padding-top: 40px;
 }
 #contentrenderer h4 a {
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
   font-size: 1.35rem;
   color: #2c2c38 !important;
   padding-top: 40px;
 }
 #contentrenderer h4 a strong {
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
 }
 #contentrenderer p {
   font-size: 1rem;
@@ -182,25 +193,29 @@ useSeoMeta({
   font-weight: 400;
 }
 #contentrenderer p strong {
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
   color: #3c3c43;
 }
 
-#contentrenderer p a, ol li a, h6 a{
+#contentrenderer p a,
+ol li a,
+h6 a {
   color: #9b26b6 !important;
   font-weight: 500;
 }
-#contentrenderer p a:hover, ol li a:hover, h6 a:hover {
+#contentrenderer p a:hover,
+ol li a:hover,
+h6 a:hover {
   text-decoration: underline !important;
 }
 #contentrenderer ul li strong {
   font-size: 1rem;
   color: #3c3c43;
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
 }
 #contentrenderer ol li strong {
   color: #3c3c43;
-  font-family: 'Inter-Bold';
+  font-family: "Inter-Bold";
   font-size: 1rem;
 }
 #contentrenderer ol li a strong,
@@ -228,14 +243,16 @@ ul li a {
 #contentrenderer ol li ul li ul li {
   list-style: list;
 }
-#contentrenderer ol li, ul li {
+#contentrenderer ol li,
+ul li {
   font-size: 1rem;
   color: #3c3c43;
   margin-top: 10px;
   list-style: decimal;
   margin-left: 20px;
 }
-#contentrenderer ol li *:last-child, ul li *:last-child {
+#contentrenderer ol li *:last-child,
+ul li *:last-child {
   margin-bottom: 0;
 }
 #contentrenderer blockquote {
@@ -279,12 +296,14 @@ ul li a {
   border-bottom: 1px solid rgb(243 244 246);
   border-style: dashed;
 }
-#contentrenderer table tbody tr td a, tr td a strong {
-text-decoration: underline;
-font-weight: 600 !important;
+#contentrenderer table tbody tr td a,
+tr td a strong {
+  text-decoration: underline;
+  font-weight: 600 !important;
 }
-#contentrenderer table tbody tr td a:hover, table tbody tr td a strong :hover {
-color: #9b26b6 !important;
+#contentrenderer table tbody tr td a:hover,
+table tbody tr td a strong :hover {
+  color: #9b26b6 !important;
 }
 #contentrenderer img {
   margin-top: 20px;
@@ -294,15 +313,15 @@ color: #9b26b6 !important;
   margin-left: auto;
   margin-right: auto;
 }
-#contentrenderer ul li img  {
-  display : inline;
+#contentrenderer ul li img {
+  display: inline;
   /* margin: 0px 0px; */
   translate: var(--tw-translate-x) -7px;
   margin-left: 2px;
   margin-right: 5px;
 }
 #contentrenderer ol li img {
-  display : inline;
+  display: inline;
   margin: 0px;
   translate: var(--tw-translate-x) -4px;
   margin-left: 2px;
@@ -335,10 +354,11 @@ pre {
 pre code {
   font-size: 0.9rem;
 }
-#page-description strong{
+#page-description strong {
   color: rgba(0, 0, 0, 0.836);
 }
-.next h5, .prev h5 {
+.next h5,
+.prev h5 {
   font-size: 600;
 }
 ::-webkit-scrollbar {
