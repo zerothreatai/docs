@@ -1,44 +1,41 @@
 <script setup lang="ts">
-import TocLinks from "~/components/TocLinks.vue";
-import Hint from "~/components/Hint.vue";
-import RightArrowIcon from "~/components/icon/right-arrow-icon.vue";
-// import Figure from '~/components/Figure.vue'
-import Figure from "~/components/Figure.vue";
+import TocLinks from '~/components/TocLinks.vue'
+import Hint from '~/components/Hint.vue'
+import Figure from '~/components/Figure.vue'
 
 const components = {
-  "hint": Hint,
-  "fiqure-img":Figure
-};
+  'hint': Hint,
+  'fiqure-img': Figure,
+}
 
-const route = useRoute();
+const route = useRoute()
 
 const params = (route.params['slug'] as string[]) || []
 
 // if (params.length) params.pop();
 
 const title = params[0]
-      .split('-') // Split by hyphen
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize each word
-      .join(' ') // Join words with space
-
+  .split('-') // Split by hyphen
+  .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize each word
+  .join(' ') // Join words with space
 
 const { data: page } = await useAsyncData(`docs-${route.path}`, () =>
-  queryCollection("content").path(route.path).first()
-);
+  queryCollection('content').path(route.path).first(),
+)
 
 definePageMeta({
-  layout: "docslayout",
-});
+  layout: 'docslayout',
+})
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
-  queryCollectionItemSurroundings("content", route.path)
-);
+  queryCollectionItemSurroundings('content', route.path),
+)
 
-const [prev, next] = surround.value || [];
+const [prev, next] = surround.value || []
 
 useSeoMeta({
   title: page.value?.title,
-  description: page.value?.description
+  description: page.value?.description,
 })
 </script>
 
@@ -51,35 +48,49 @@ useSeoMeta({
         </div>
         <div class="flex items-center">
           <span class="text-3xl text-gray-500">
-            <font-awesome-icon :icon="page?.meta.icon" class="pe-3 pt-6" />
+            <font-awesome-icon
+              :icon="page?.meta.icon"
+              class="pe-3 pt-6"
+            />
           </span>
-          <h1 class="text-3xl text-gray-800 pt-5 font-zt_bold">{{ page?.title }}</h1>
+          <h1 class="text-3xl text-gray-800 pt-5 font-zt_bold">
+            {{ page?.title }}
+          </h1>
         </div>
         <h5
-        id="page-description"
+          id="page-description"
           class="text-base text-[#3c3c43] tracking-wide leading-7"
           :class="page?.description ? 'pt-5 pb-5' : 'pb-2'"
           v-html="page?.description"
-        ></h5>
+        />
       </div>
       <ContentRenderer
         v-if="page"
-        :value="page"
         id="contentrenderer"
+        :value="page"
         :components="components"
       />
       <!-- <ContentRendererMarkdown id="contentrenderer" :value="page" :components="components" />
         </ContentRenderer> -->
-      <hr v-if="surround?.length" />
-      <div v-if="surround" class="surround-div flex justify-end my-5 gap-x-5">
+      <hr v-if="surround?.length">
+      <div
+        v-if="surround"
+        class="surround-div flex justify-end my-5 gap-x-5"
+      >
         <div class="w-1/2">
           <div
             v-if="prev"
             class="prev border rounded-md hover:bg-gray-50/30 group p-1 transition-all duration-300 hover:border-zt_purple/10"
           >
             <NuxtLink :to="prev.path">
-              <div v-if="prev" class="surround-prev flex justify-between items-center gap-x-3">
-                <font-awesome-icon icon="angles-left" class="text-gray-600 transition-all duration-300 group-hover:text-zt_purple text-sm rounded-full group-hover:bg-slate-100 px-4 py-3.5"/>
+              <div
+                v-if="prev"
+                class="surround-prev flex justify-between items-center gap-x-3"
+              >
+                <font-awesome-icon
+                  icon="angles-left"
+                  class="text-gray-600 transition-all duration-300 group-hover:text-zt_purple text-sm rounded-full group-hover:bg-slate-100 px-4 py-3.5"
+                />
                 <div class="text-right px-4 py-2.5 space-y-1">
                   <span class="text-xs text-gray-400">Previous</span>
                   <h5 class="text-gray-800 group-hover:text-zt_purple w-full text-right text-base font-zt_medium">{{ prev.title }}</h5>
@@ -98,11 +109,14 @@ useSeoMeta({
                 v-if="next"
                 class="surround-next flex justify-between items-center gap-x-3 transition-all duration-300"
               >
-              <div class="text-left px-4 py-2.5 space-y-1">
-                <span class="text-xs text-gray-400">Next</span>
-                <h5 class="text-gray-800 font-zt_medium text-base group-hover:text-zt_purple w-full">{{ next.title }}</h5>
-              </div>
-              <font-awesome-icon icon="angles-right" class="text-gray-600 group-hover:text-zt_purple text-sm transition-all duration-300 rounded-full group-hover:bg-slate-100 px-4 py-3.5" />
+                <div class="text-left px-4 py-2.5 space-y-1">
+                  <span class="text-xs text-gray-400">Next</span>
+                  <h5 class="text-gray-800 font-zt_medium text-base group-hover:text-zt_purple w-full">{{ next.title }}</h5>
+                </div>
+                <font-awesome-icon
+                  icon="angles-right"
+                  class="text-gray-600 group-hover:text-zt_purple text-sm transition-all duration-300 rounded-full group-hover:bg-slate-100 px-4 py-3.5"
+                />
               </div>
             </NuxtLink>
           </div>
@@ -110,7 +124,10 @@ useSeoMeta({
       </div>
     </div>
     <div class="col-span-3 flex justify-start">
-      <div class="min-w-52" v-if="page?.body?.toc?.links">
+      <div
+        v-if="page?.body?.toc?.links"
+        class="min-w-52"
+      >
         <TocLinks :toclinks="page.body.toc.links" />
       </div>
     </div>
@@ -331,4 +348,3 @@ pre code {
   background: rgba(161, 160, 160, 0.603);
 }
 </style>
-
