@@ -36,7 +36,7 @@ onBeforeUnmount(() => {
         class="flex justify-between items-center px-16 max-w-[110rem] mx-auto text-sm text-gray-800"
       >
         <div>
-          <NuxtLink :to="'/'">
+          <NuxtLink :to="'/docs'">
             <div class="w-24 xl:w-32">
               <img
                 src="../public/ZeroThreat_logo_1000x400.png"

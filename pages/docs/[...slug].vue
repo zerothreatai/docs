@@ -70,9 +70,9 @@ useSeoMeta({
         </p>
       </div>
       <ContentRenderer
-        class="mb-5"
         v-if="page"
         id="contentrenderer"
+        class="mb-5"
         :value="page"
         :components="components"
       />
