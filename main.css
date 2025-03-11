@@ -153,7 +153,7 @@ h3 {
   @apply text-xl text-[#3c3c43] mt-12 mb-4
 }
 p {
-  @apply font-zt_regular text-base tracking-wide my-4 text-[#3c3c43]
+  @apply font-zt_regular text-base tracking-wide my-4 text-[#3c3c43] leading-[26px]
 }
 ul, ol {
   @apply ml-10 mb-5
@@ -165,13 +165,22 @@ ol {
   @apply list-decimal
 }
 ul li, ol li {
-  @apply mt-2 font-zt_regular text-base tracking-wide text-[#3c3c43]
+  @apply mt-3 mb-2 font-zt_regular text-base tracking-wide text-[#3c3c43]
 }
 ul li ul, ol li ul {
   @apply ml-5 list-none
 }
-li ul li {
+ol li ul li {
+  @apply after:hidden list-disc
+}
+ol li ul li ul li ul li {
+  @apply list-none after:content-['-']
+}
+li ul li, ol li ul li ul li {
   @apply text-sm mt-2 tracking-wider font-zt_regular leading-6 relative after:absolute after:-left-5 after:top-[1px] after:text-black after:content-['⮚']
+}
+ol li ul li ul li {
+  @apply list-none after:inline-block
 }
 li ul li ul li {
   @apply text-sm mt-2 tracking-wider font-zt_regular leading-6 relative after:absolute after:-left-5 after:top-[1px] after:text-black after:content-['⬥']
@@ -186,7 +195,7 @@ ul li strong, ol li strong {
   @apply pb-1 inline-block
 }
 ul li a strong {
-  @apply text-zt_purple hover:underline
+  @apply text-zt_purple hover:underline pb-0
 }
 img {
   @apply my-5 border mx-auto

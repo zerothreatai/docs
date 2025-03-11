@@ -41,7 +41,7 @@
 
 <template>
   <div class="grid grid-cols-12 gap-x-10">
-    <div class="content col-span-9 py-5">
+    <div class="content col-span-9 py-5 px-10">
       <div class="border-b pb-2">
         <div>
           <span class="text-zt_purple/80 tracking-wide font-semibold text-sm">{{ title }}</span>
