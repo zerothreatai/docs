@@ -44,13 +44,13 @@ const [prev, next] = surround.value || []
               class=""
             />
           </span>
-          <h1 class="text-4xl text-gray-800 font-zt_extra_bold">
+          <h1 class="text-3xl text-gray-800 font-zt_bold">
             {{ page?.title }}
           </h1>
         </div>
         <h5
           id="page-description"
-          class="text-base text-gray-500 tracking-wide leading-7 text-justify"
+          class="text-base text-gray-700 font-zt_regular tracking-wide leading-7 text-justify"
           :class="page?.description ? 'pt-5 pb-5' : 'pb-2'"
         >
           <MDC
@@ -78,13 +78,13 @@ const [prev, next] = surround.value || []
             <NuxtLink :to="prev.path">
               <div
                 v-if="prev"
-                class="surround-prev flex justify-between items-center gap-x-3"
+                class="surround-prev flex justify-between items-center gap-x-3 px-4"
               >
                 <font-awesome-icon
                   icon="angles-left"
-                  class="text-gray-600 transition-all duration-300 group-hover:text-zt_purple text-sm rounded-full group-hover:bg-slate-100 px-4 py-3.5"
+                  class="text-gray-600 transition-all duration-300 group-hover:text-zt_purple text-sm"
                 />
-                <div class="text-right px-4 py-2.5 space-y-1">
+                <div class="text-right py-2.5 space-y-1">
                   <span class="text-xs text-gray-400">Previous</span>
                   <h5
                     class="text-gray-800 group-hover:text-zt_purple w-full text-right text-base font-zt_medium"
@@ -104,9 +104,9 @@ const [prev, next] = surround.value || []
             <NuxtLink :to="next.path">
               <div
                 v-if="next"
-                class="surround-next flex justify-between items-center gap-x-3 transition-all duration-300"
+                class="surround-next flex justify-between items-center gap-x-3 transition-all duration-300 px-4"
               >
-                <div class="text-left px-4 py-2.5 space-y-1">
+                <div class="text-left py-2.5 space-y-1">
                   <span class="text-xs text-gray-400">Next</span>
                   <h5
                     class="text-gray-800 font-zt_medium text-base group-hover:text-zt_purple w-full"
@@ -116,7 +116,7 @@ const [prev, next] = surround.value || []
                 </div>
                 <font-awesome-icon
                   icon="angles-right"
-                  class="text-gray-600 group-hover:text-zt_purple text-sm transition-all duration-300 rounded-full group-hover:bg-slate-100 px-4 py-3.5"
+                  class="text-gray-600 group-hover:text-zt_purple text-sm"
                 />
               </div>
             </NuxtLink>
@@ -136,26 +136,26 @@ const [prev, next] = surround.value || []
 </template>
 
 <style>
-  #homeContent h3 {
+  /* #homeContent h3 {
     font-size: 1rem;
     font-family: 'Inter-Bold';
     color: rgb(0, 0, 0);
     padding-top: 30px;
     padding-bottom: 8px;
-  }
+  } */
 
-  #homeContent h3 a {
-    font-family: 'Inter-Bold';
-    font-size: 1.4rem;
-    color: #1a202cef;
-  }
+/* #homeContent h3 a {
+  font-family: 'Inter-Medium' !important;
+  font-size: 1.4rem;
+  color: #1a202cef;
+} */
 
   /* #homeContent h3 a strong {
   font-family: 'Inter-Bold';
   font-size: 1.4rem;
 } */
 
-  #homeContent p {
+  /* #homeContent p {
     font-size: 1rem;
     color: rgb(28 27 44);
     padding: 10px 0;
@@ -170,5 +170,5 @@ const [prev, next] = surround.value || []
   #homeContent p a:hover,
   p a strong:hover {
     text-decoration: underline;
-  }
+  } */
 </style>

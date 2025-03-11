@@ -293,17 +293,17 @@ const filteredfaqs = computed(() => {
     <!-- new UI -->
     <div class="relative">
       <div>
-        <ul
-          class="border *:border-b last:*:border-b-0 rounded-t-lg rounded-b-lg last:*:rounded-b-lg first:*:rounded-t-lg"
+        <div
+          class="border *:border-b *:border-dashed last:*:border-b-0 rounded-t-lg rounded-b-lg last:*:rounded-b-lg first:*:rounded-t-lg"
         >
           <template v-if="filteredfaqs.length">
-            <li
+            <div
               v-for="(item, index) in filteredfaqs"
               :key="index"
             >
               <div>
                 <div
-                  class="text-sm tracking-wide text-gray-900 flex items-center gap-x-3 px-8 py-4 cursor-pointer hover:bg-gray-100"
+                  class="text-base tracking-wide text-gray-900 flex items-center gap-x-3 px-8 py-4 cursor-pointer hover:bg-gray-100"
                   :class="{
                     'bg-gray-100 font-zt_medium': item.isOpen,
                     'rounded-t-lg': index === 0,
@@ -341,14 +341,14 @@ const filteredfaqs = computed(() => {
                   </div>
                 </div>
               </div>
-            </li>
+            </div>
           </template>
           <template v-else>
             <div class="text-base">
               No FAQ's Found
             </div>
           </template>
-        </ul>
+        </div>
       </div>
       <NuxtLink :to="'/docs/getting-started/faqs'">
         <span class="absolute cursor-pointer right-0 underline -bottom-10 text-zt_purple text-sm">Show More...</span>

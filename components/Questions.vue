@@ -108,7 +108,7 @@ const filteredfaqs = computed(() => {
               <span><font-awesome-icon
                 :icon="tab.icon"
                 class="group-hover:text-white"
-                :class="tab.iconCLass"
+                :class=" tab.category === activeTab.category?'text-white':tab.iconCLass "
               /></span>
               <span>{{ tab.title }}</span>
             </div>

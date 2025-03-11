@@ -27,7 +27,7 @@ const cards = page.value.meta.cards || [] // Default to empty array if undefined
           :to="card.path"
           class=""
         >
-          <h5 class="text-gray-600 group-hover:text-zt_purple text-sm tracking-wide mb-1 ">
+          <h5 class="text-gray-600 group-hover:text-zt_purple text-sm tracking-wide mb-1 group-hover:underline">
             {{ card.title }}
           </h5>
           <span class="text-gray-500 text-sm">

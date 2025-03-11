@@ -58,8 +58,8 @@ const { data: navigation } = await useAsyncData(
           <div class="text-gray-400 text-sm text-justify py-3 text-ellipsis text-wrap">
             {{ row.description }}
           </div>
-          <ul class="*:text-sm *:py-0.5">
-            <li
+          <div class="*:text-sm *:py-0.5">
+            <div
               v-for="(child, index2) in row.children.slice(0, 2)"
               :key="index2"
               class="css-1t6p0gm"
@@ -86,8 +86,8 @@ const { data: navigation } = await useAsyncData(
                   child.title
                 }}</a>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
         <span
           class="absolute right-2 bottom-2 text-xs text-gray-400 underline hover:text-zt_purple cursor-pointer transition-all duration-300"

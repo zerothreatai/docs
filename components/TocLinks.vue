@@ -38,6 +38,7 @@ defineProps<{
       Table Of Content
     </h5>
     <div
+    id="left-slide"
       v-for="(item, index) in toclinks"
       :key="index"
       class="py-[3px]"
@@ -56,7 +57,7 @@ defineProps<{
         <li
           v-for="(link, index2) in item['children']"
           :key="index2"
-          class="py-0.5 ps-6"
+          class="py-0.5"
         >
           <NuxtLink
             class="text-sm mt-1 tracking-wide font-zt_regular text-gray-700 hover:text-zt_purple cursor-pointer py-1"
@@ -75,11 +76,18 @@ defineProps<{
 </template>
 
 <style scoped>
-  ul li {
-    font-size: 1rem;
-    padding: 0px !important;
-    list-style: none !important;
-  }
+#left-slide ul li a {
+  list-style: none !important;
+  color: #374151 !important;
+}
+#left-slide ul li a:hover {
+  color: #9b26b6 !important;
+}
+#left-slide ul li {
+  margin: 0px;
+  list-style: none !important;
+  padding-left: 5px;
+}
   ::-webkit-scrollbar {
     width: 2px;
   }
