@@ -73,7 +73,7 @@
         </div>
     </div> -->
   <div>
-    <div class="">
+    <div class="w-full">
       <div class="text-base text-gray-500 font-zt_regular tracking-wide text-justify pt-5 pb-8">
         Frequently asked questions about ZeroThreat features, target, scans, and scan report.
       </div>
@@ -154,9 +154,9 @@
         </div>
       </div>
       <template v-else>
-        <div class="px-6 py-4 text-sm text-gray-600 flex items-center gap-x-2 border border-gray-100 rounded-md bg-slate-50 font-zt_medium mb-10">
+        <div class="min-w-full px-6 py-4 text-sm text-gray-700 flex items-center tracking-wide gap-x-2 border border-gray-100 rounded-md bg-slate-50 font-zt_medium mb-10">
           <span><font-awesome-icon icon="circle-xmark" class="text-red-500"/></span>
-          <span>No FAQ Found</span>
+          <span>Sorry, we couldn't find any FAQs matching your search.</span>
         </div>
       </template>
     </div>
