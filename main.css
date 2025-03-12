@@ -224,3 +224,7 @@ blockquote p {
 .right_navlinks ul {
   @apply ml-4 mb-0
 }
+
+#searchModel strong{
+  @apply text-zt_purple hover:underline
+}

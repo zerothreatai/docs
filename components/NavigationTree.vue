@@ -35,17 +35,6 @@
           />
         </nav>
       </div>
-      <!-- <div v-if="items.children">
-        <nav class="ps-2">
-          <NuxtLink
-            class="text-sm mt-1 block ps-3 font-DMSans_Regular text-gray-500 hover:text-fuchsia-500 cursor-pointer border-l  pt-1 py-1" :class="{'text-fuchsia-500 border-l-fuchsia-400 ': route.path === item._path}"
-            v-for="item in items.children"
-            :to="item._path"
-            :key="item.title"
-            >{{ item.title }}
-          </NuxtLink>
-        </nav>
-      </div> -->
     </div>
   </div>
 </template>
@@ -54,10 +43,8 @@
 import { defineProps } from 'vue'
 import RecursiveNavigation from './RecursiveNavigation.vue'
 
-// eslint-disable-next-line vue/require-prop-types
 const props = defineProps(['navigation'])
 const route = useRoute()
-// console.log(props.navigation)
 </script>
 
 <style scoped>

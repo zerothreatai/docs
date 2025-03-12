@@ -1,8 +1,4 @@
 <script setup lang="ts">
-// import facebookIcon from "./icon/facebook.icon.vue";
-// import githubIcon from "./icon/github.icon.vue";
-// import discordIcon from "./icon/discord.icon.vue";
-// import twitterIcon from "./icon/twitter.icon.vue";
 </script>
 
 <template>
@@ -20,10 +16,6 @@
           <div
             class="flex items-center lg:pe-4 space-x-4 max-lg:text-center lg:text-center md:order-1 lg:order-2"
           >
-            <!-- <span><facebook-icon class="w-5 fill-gray-700 cursor-pointer" /></span>
-            <span><discordIcon class="w-5 fill-gray-700 cursor-pointer" /></span>
-            <span><twitter-icon class="w-5 fill-gray-700 cursor-pointer" /></span>
-            <span><github-icon class="w-5 fill-gray-700 cursor-pointer" /></span> -->
           </div>
         </div>
       </div>

@@ -1,27 +1,23 @@
 <script setup>
-// Get frontmatter data
 
 const route = useRoute()
 const { data: page } = await useAsyncData('page-' + route.path, () =>
   queryCollection('content').path(route.path).first(),
 )
-// console.log(page)
-// const page = usePage(); // Access current Markdown page data
-const cards = page.value.meta.cards || [] // Default to empty array if undefined
+const cards = page.value.meta.cards || [] 
 
-// console.log('Retrieved cards:', cards)
 </script>
 
 <template>
   <div class="">
     <div
       v-if="cards.length"
-      class="flex flex-wrap gap-3 my-10 w-full"
+      class="flex flex-wrap gap-5 my-10 w-full"
     >
       <NuxtLink
         v-for="(card, index) in cards"
         :key="index"
-        class="border hover:border-zt_purple/20 hover:bg-slate-50 hover:shadow-lg transition-all duration-300 rounded-lg shadow-md px-5 py-4 group max-w-[30%]"
+        class="border hover:border-zt_purple/20 hover:bg-slate-50 hover:shadow-lg transition-all duration-300 rounded-lg shadow-md px-5 py-4 group max-w-[45%] 2xl:max-w-[30%]"
 
         :to="card.path"
       >

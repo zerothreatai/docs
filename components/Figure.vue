@@ -31,14 +31,19 @@ const closeModal = () => {
 <template>
   <div>
     <div class="flex justify-center">
-      <img
-        :key="index"
-        :src="source"
-        class="object-cover rounded-lg shadow-md cursor-zoom-in"
-        :width="width"
-        alt="Thumbnail"
-        @click="openModal(source)"
-      >
+      <div>
+        <img
+          :key="index"
+          :src="source"
+          class="object-cover rounded-lg shadow-md cursor-zoom-in"
+          :width="width"
+          alt="Thumbnail"
+          @click="openModal(source)"
+        >
+        <p class="text-sm italic">
+          <slot />
+        </p>
+      </div>
     </div>
 
     <!-- Modal -->

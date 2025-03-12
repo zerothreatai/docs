@@ -82,6 +82,7 @@
 
 <template>
   <div
+  id="searchModel"
     class="modal-overlay fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center"
   >
     <div class="w-[50vw] bg-white p-6 rounded-lg shadow-lg relative">
@@ -114,19 +115,14 @@
         class="mt-4 space-y-3 max-h-[40vh] overflow-y-scroll"
       >
         <div v-for="(item, index) in result" :key="index">
-          <div v-if="true" class="mt-2 border-b pb-1">
-            <span class="text-black font-zt_medium">{{ item.title }}</span>
+          <div v-if="true" class="mt-2 border-b pb-1 mb-2">
+            <span class="text-gray-800 font-zt_semibold tracking-wide">{{ item.title }}</span>
           </div>
           <div
             v-for="(itemlist, idx) in item.children"
             :key="idx"
             class="py-2 border-b border-dashed w-full"
           >
-            <!-- <div
-              class="my-3 mb-4 font-zt_medium tracking-wide text-sm text-zt_purple relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-[50px] after:bg-slate-300"
-            >
-              {{ itemlist.title }}
-            </div> -->
             <div v-for="(itemdata, index2) in itemlist.children" :key="index2">
               <NuxtLink
                 class="flex items-start space-x-2 text-nowrap overflow-hidden text-ellipsis max-w-full px-2 py-1 rounded-md hover:bg-gray-200/30"
@@ -159,8 +155,8 @@
         class="mt-4 space-y-3 max-h-[40vh] h-full overflow-y-scroll"
       >
         <div v-for="(item, index) in nav" :key="index">
-          <div v-if="true" class="mt-2 border-b pb-1 border-gray-300">
-            <span class="text-gray-800 font-zt_medium">{{ item.title }}</span>
+          <div v-if="true" class="mt-2 border-b mb-5 pb-1 border-gray-300">
+            <span class="text-gray-800 font-zt_semibold tracking-wide">{{ item.title }}</span>
           </div>
           <div
             v-for="(itemlist, index2) in item.children"
@@ -169,7 +165,7 @@
           >
             <div
               v-if="itemlist.children"
-              class="my-3 mb-4 font-zt_medium tracking-wide text-sm text-zt_purple relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-[50px] after:bg-slate-300"
+              class="my-3 mb-4 font-zt_semibold tracking-wide text-sm text-gray-800 relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-[50px] after:bg-slate-300"
             >
               {{ itemlist.title }}
             </div>
@@ -199,9 +195,6 @@
       </div>
       <div v-else class="min-h-[40vh] h-full">
         <p class="text-gray-500 w-full flex justify-center items-center gap-x-2 py-2 text-base">
-          <!-- <span
-            ><font-awesome-icon icon="circle-xmark" class="text-red-500"
-          /></span> -->
           <span>We couldn't find any items with that term. Please try again.</span>
         </p>
       </div>

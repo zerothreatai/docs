@@ -10,26 +10,8 @@
         Technical documentation
       </h2>
       <h4 class="text-gray-800 pt-7 pb-14">
-        <!-- old : pb-5 -> pb-14 -->
         Search for in-depth articles on ZeroThreat developer tools and technologies.
       </h4>
-      <!-- serchbar old ui -->
-      <div class="flex items-center gap-x-2 hidden translate-y-1">
-        <input
-          type="text"
-          placeholder="Search Documentation"
-          class="border border-white rounded-md placeholder:text-gray-500 text-gray-700 outline-none px-3.5 py-2 w-full max-w-2xl"
-        >
-        <button
-          class="text-base flex items-center gap-x-2 px-4 py-2 outline-none text-white rounded-md font-medium bg-[#9b26b6]"
-        >
-          <span><font-awesome-icon
-            icon="magnifying-glass"
-            class="text-sm text-white"
-          /></span>
-          <span> Search </span>
-        </button>
-      </div>
       <div class="absolute right-16 top-1/2 -translate-y-1/2 h-fit w-72">
         <img
           src="../public/ai-robo.svg"

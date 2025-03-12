@@ -25,7 +25,7 @@ cards:
       path: /docs/manage-scans/scan-report/server-ports-scan
       description: Scans open ports on the server, assessing potential risks and providing mitigation strategies.
     - title: Mail Configuration
-      path: scan-report/mail-configuration
+      path: /docs/manage-scans/scan-report/mail-configuration
       description: Evaluates the mail server for misconfigurations like open relays and reverse DNS mismatches.
 
 ---

@@ -144,32 +144,4 @@ const [prev, next] = surround.value || []
   #homeContent p {
     margin: 4px 0 !important;
   }
-
-/* #homeContent h3 a {
-  font-family: 'Inter-Medium' !important;
-  font-size: 1.4rem;
-  color: #1a202cef;
-} */
-
-  /* #homeContent h3 a strong {
-  font-family: 'Inter-Bold';
-  font-size: 1.4rem;
-} */
-
-  /* #homeContent p {
-    font-size: 1rem;
-    color: rgb(28 27 44);
-    padding: 10px 0;
-    text-align: justify;
-    font-weight: 400;
-  }
-
-  #homeContent p a,
-  p a strong {
-    color: #9b26b6 !important;
-  }
-  #homeContent p a:hover,
-  p a strong:hover {
-    text-decoration: underline;
-  } */
 </style>
