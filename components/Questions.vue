@@ -112,55 +112,11 @@ const filteredfaqs = computed(() => {
               /></span>
               <span>{{ tab.title }}</span>
             </div>
-            <!-- <div class="flex items-center gap-x-2 w-fit group transition-all duration-300">
-              <span><font-awesome-icon icon="dollar-sign" class="text-green-500 group-hover:text-white"/></span>
-              <span>Pricing</span>
-            </div>
-            <div
-              class="flex items-center gap-x-2 w-fit group transition-all duration-300"
-            >
-              <span
-                ><font-awesome-icon
-                  icon="table-cells-large"
-                  class="text-blue-500 group-hover:text-white"
-              /></span>
-              <span>Dashboard</span>
-            </div>
-            <div
-              class="flex items-center gap-x-2 w-fit group transition-all duration-300"
-            >
-              <span
-                ><font-awesome-icon
-                  icon="lightbulb"
-                  class="text-yellow-500 group-hover:text-white"
-              /></span>
-              <span>Troubleshooting</span>
-            </div>
-            <div
-              class="flex items-center gap-x-2 w-fit group transition-all duration-300"
-            >
-              <span
-                ><font-awesome-icon
-                  icon="key"
-                  class="text-blue-500 group-hover:text-white"
-              /></span>
-              <span>Security</span>
-            </div>
-            <div
-              class="flex items-center gap-x-2 w-fit group transition-all duration-300"
-            >
-              <span
-                ><font-awesome-icon
-                  icon="wand-sparkles"
-                  class="text-orange-500 group-hover:text-white"
-              /></span>
-              <span>API</span>
-            </div> -->
           </div>
         </div>
       </div>
       <div
-        class="border *:border-b *:border-dashed last:*:border-b-0 rounded-t-lg rounded-b-lg last:*:rounded-b-lg first:*:rounded-t-lg"
+        class="border *:border-b *:border-dashed last:*:border-b-0 rounded-t-lg rounded-b-lg last:*:rounded-b-lg first:*:rounded-t-lg mb-24"
       >
         <template v-if="filteredfaqs.length">
           <div
@@ -208,42 +164,6 @@ const filteredfaqs = computed(() => {
           No FAQ Found
         </template>
       </div>
-      <div class="py-10 mb-20">
-        <div class="font-zt_bold">
-          Additional resources :
-        </div>
-        <ul class="text-gray-700">
-          <li>
-            <span class="font-zt_semibold text-gray-800 underline">Keyboard Shortcuts</span>
-            - Complete list of keybindings and shortcuts
-          </li>
-        </ul>
-      </div>
     </div>
   </div>
-  <!-- <div class="flex gap-x-8 py-5 items-center mb-20">
-        <div class="text-gray-700">Was this page helpful?</div>
-        <div class="flex items-center gap-x-3">
-          <div
-            class="flex items-center gap-x-3 px-4 py-1.5 border group rounded-lg bg-white cursor-pointer shadow-sm text-sm"
-          >
-            <span
-              ><like-icon
-                class="w-4 stroke-gray-500 group-hover:stroke-zt_purple"
-            /></span>
-            <span>Yes</span>
-          </div>
-          <div
-            class="flex items-center gap-x-3 px-4 py-1.5 group border rounded-lg bg-white cursor-pointer shadow-sm text-sm"
-          >
-            <span
-              ><like-icon
-                class="w-4 stroke-gray-500 group-hover:stroke-zt_purple -rotate-180"
-            /></span>
-            <span>No</span>
-          </div>
-        </div>
-      </div> -->
-  <!-- </div>
-  </div> -->
 </template>
