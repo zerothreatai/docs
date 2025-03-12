@@ -43,9 +43,9 @@
   <div class="grid grid-cols-12 gap-x-10 w-full">
     <div class="col-span-9 py-5 px-10">
       <div class="border-b pb-2">
-        <div>
-          <span class="text-zt_purple/80 tracking-wide font-semibold text-sm">{{ title }}</span>
-        </div>
+        <NuxtLink :to="`/docs/${params[0]}`">
+          <span class="text-zt_purple/80 tracking-wide font-semibold text-sm hover:underline">{{ title }}</span>
+        </NuxtLink>
         <div class="flex items-center">
           <span class="text-3xl text-gray-500">
             <font-awesome-icon :icon="page?.meta.icon" class="pe-3 pt-6" />
