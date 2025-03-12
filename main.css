@@ -197,11 +197,14 @@ ul li strong, ol li strong {
 ul li a strong {
   @apply text-zt_purple hover:underline pb-0
 }
+p a strong, h6 a strong, ol li a strong, ul li a strong {
+  @apply text-zt_purple hover:underline
+}
 img {
   @apply my-5 border mx-auto
 }
 ul li img, ol li img {
-  @apply p-0 border rounded-md shadow-md mx-1 inline-block my-0
+  @apply p-0 border rounded-md shadow-md mx-1 inline-block my-2
 }
 code {
   @apply text-xs bg-slate-50 px-2 py-0.5 text-gray-800 font-zt_regular tracking-widest leading-none border rounded-md

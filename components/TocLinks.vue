@@ -78,7 +78,6 @@ defineProps<{
 <style scoped>
 #left-slide ul li a {
   list-style: none !important;
-  color: #374151 !important;
 }
 #left-slide ul li a:hover {
   color: #9b26b6 !important;
