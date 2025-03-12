@@ -284,7 +284,7 @@
   #contentrenderer ul li img {
     display: inline;
     /* margin: 0px 0px; */
-    translate: var(--tw-translate-x) -7px;
+   
     margin-left: 2px;
     margin-right: 5px;
   }
