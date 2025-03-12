@@ -19,11 +19,11 @@ const { data: navigation } = await useAsyncData(
 
 <template>
   <div class="">
-    <div class="grid grid-cols-4 gap-5">
+    <div class="grid grid-cols-4 gap-5 pt-1">
       <div
         v-for="(row, index) in navigation"
         :key="index"
-        class="col-span-2 border relative border-gray-100 px-5 py-3 rounded shadow-md"
+        class="col-span-2 border relative border-gray-100 px-5 py-3 rounded shadow-md bg-white"
       >
         <div class="flex items-center group cursor-pointer">
           <div class="flex items-center gap-x-2 border-b w-full pb-2">
@@ -55,7 +55,7 @@ const { data: navigation } = await useAsyncData(
           </div>
         </div>
         <div>
-          <div class="text-gray-400 text-sm text-pretty py-3 text-ellipsis">
+          <div class="text-gray-500 text-sm text-pretty py-3 text-ellipsis tracking-wide">
             {{ row.description }}
           </div>
           <div class="*:text-sm *:py-0.5">
