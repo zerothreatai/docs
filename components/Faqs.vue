@@ -294,17 +294,17 @@
     <div class="relative">
       <div>
         <div
-          class="border *:border-b *:border-dashed last:*:border-b-0 rounded-t-lg rounded-b-lg first:*:rounded-t-lg *:rounded-b-none last:*:rounded-b-lg"
+          class="border *:border-b *:border-dashed last:*:border-b-0 rounded-t-lg rounded-b-lg last:*:rounded-b-lg first:*:rounded-t-lg"
         >
           <template v-if="filteredfaqs.length">
             <div v-for="(item, index) in filteredfaqs" :key="index">
               <div>
                 <div
-                  class="text-base flex tracking-wide items-center gap-x-5 text-gray-600 font-zt_regular hover:bg-gray-100 px-6 py-5 cursor-pointer rounded-t-lg"
+                  class="text-base flex justify-between tracking-wide items-center gap-x-5 text-gray-600 font-zt_regular px-6 py-5 cursor-pointer hover:bg-gray-100"
                   :class="{
-                    'bg-gray-100 font-zt_medium rounded-b-none': item.isOpen,
+                    'bg-gray-100 text-gray-700': item.isOpen,
                     'rounded-t-lg': index === 0,
-                    'rounded-b-lg': !item.isOpen[index],
+                    'rounded-b-lg': !item.isOpen && filteredfaqs.length - 1 === index,
                   }"
                   @click="
                     () => {
@@ -314,14 +314,14 @@
                   "
                 >
                   <span>
+                    {{ item.q }}
+                  </span>
+                  <span>
                     <font-awesome-icon
                       icon="chevron-right"
                       class="text-[10px] transition-all duration-300 group-hover:text-zt_purple -translate-y-0.5"
                       :class="{ 'rotate-90': item.isOpen }"
                     />
-                  </span>
-                  <span>
-                    {{ item.q }}
                   </span>
                 </div>
                 <div
@@ -329,20 +329,18 @@
                     'max-h-52 overflow-y-auto bg-slate-50/20': item.isOpen,
                     'max-h-0': !item.isOpen,
                   }"
-                  class="transition-all duration-500 overflow-hidden px-8"
+                  class="transition-all duration-500 overflow-hidden px-6"
                 >
-                  <div
-                    class="py-4 text-gray-600 tracking-wider text-sm font-zt_regular leading-6"
-                  >
+                  <div class="py-4 text-gray-600 tracking-wider text-sm font-zt_regular leading-6">
                     {{ item.a }}
                   </div>
                 </div>
               </div>
             </div>
           </template>
-          <template v-else>
+          <!-- <template v-else>
             <div class="text-base">No FAQ's Found</div>
-          </template>
+          </template> -->
         </div>
       </div>
       <NuxtLink :to="'/docs/getting-started/faqs'">
