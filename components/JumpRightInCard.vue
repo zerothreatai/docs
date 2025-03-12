@@ -16,21 +16,21 @@ const cards = page.value.meta.cards || [] // Default to empty array if undefined
   <div class="">
     <div
       v-if="cards.length"
-      class="flex flex-wrap justify-start gap-5 my-10"
+      class="flex flex-wrap gap-3 my-10 w-full"
     >
       <NuxtLink
         v-for="(card, index) in cards"
         :key="index"
-        class="border hover:border-zt_purple/20 hover:bg-slate-50 hover:shadow-lg transition-all duration-300 rounded-lg shadow-md px-5 py-4 min-w-60 group max-w-60"
+        class="border hover:border-zt_purple/20 hover:bg-slate-50 hover:shadow-lg transition-all duration-300 rounded-lg shadow-md px-5 py-4 group max-w-[30%]"
 
         :to="card.path"
       >
         <h5
-          class="text-gray-600 group-hover:text-zt_purple text-sm tracking-wide mb-1 group-hover:underline"
+          class="text-gray-700 group-hover:text-zt_purple text-sm tracking-wide mb-2 group-hover:underline"
         >
           {{ card.title }}
         </h5>
-        <span class="text-gray-500 text-sm">
+        <span class="text-gray-600 tracking-wide text-sm">
           {{ card.description }}
         </span>
       </NuxtLink>

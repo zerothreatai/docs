@@ -6,7 +6,7 @@
   >
     <font-awesome-icon
       :icon="icon"
-      class="text-sm pe-2 translate-y-0.5"
+      class="text-sm pe-2 translate-y-[3px]"
       :class="iconClass"
     />
     <div>
