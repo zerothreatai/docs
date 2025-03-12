@@ -20,7 +20,7 @@
   }
 
   const toggleAccordion = (item) => {
-    item.isOpen = !item.isOpen // Vue will now track changes properly
+    item.isOpen = !item.isOpen 
   }
 
   const filteredfaqs = computed(() => {
@@ -59,19 +59,9 @@
     }
     return []
   })
-  // const isOpen = ref(false);
-  // console.log(props.Question);
 </script>
 
 <template>
-  <!-- <div class="w-full">
-        <div @click="isOpen = !isOpen" cla>
-          <slot />
-        </div>
-        <div v-if="isOpen" >
-            <slot  name ='answer' />
-        </div>
-    </div> -->
   <div>
     <div class="w-full">
       <div class="text-base text-gray-500 font-zt_regular tracking-wide text-justify pt-5 pb-8">
@@ -156,7 +146,7 @@
       <template v-else>
         <div class="min-w-full px-6 py-4 text-sm text-gray-700 flex items-center tracking-wide gap-x-2 border border-gray-100 rounded-md bg-slate-50 font-zt_medium mb-10">
           <span><font-awesome-icon icon="circle-xmark" class="text-red-500"/></span>
-          <span>Sorry, we couldn't find any FAQs matching your search.</span>
+          <span>Sorry, we couldn't find any FAQs matching with your search term.</span>
         </div>
       </template>
     </div>

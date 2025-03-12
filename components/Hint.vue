@@ -38,23 +38,11 @@ defineProps({
 <style>
   #alert-div h6 {
     font-weight: 500;
-    /* color: #0284c7; */
     line-height: 1.4rem;
   }
-  /* #alert-div h6 a {
-  font-weight: 500;
-  color: #9b26b6;
-  text-decoration: underline;
-  letter-spacing: 0.01rem;
-} */
   #alert-div h5 {
     padding-bottom: 10px;
     letter-spacing: 0.05rem;
     font-weight: 600;
   }
-  /* #alert-div blockquote {
-  border: none !important;
-  padding: 0px !important;
-  background-color: transparent !important;
-} */
 </style>
