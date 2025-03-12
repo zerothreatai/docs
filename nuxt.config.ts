@@ -12,7 +12,7 @@ export default defineNuxtConfig({
       pathPrefix: false, // Allows <JumpRight> without <JumpRight.vue>
     },
     {
-      global: true,
+      global: false,
     },
   ],
   devtools: { enabled: false },

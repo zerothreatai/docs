@@ -2,7 +2,7 @@
 // Get frontmatter data
 
 const route = useRoute()
-const { data: page } = await useAsyncData('page', () =>
+const { data: page } = await useAsyncData('page-' + route.path, () =>
   queryCollection('content').path(route.path).first(),
 )
 // console.log(page)
@@ -18,23 +18,22 @@ const cards = page.value.meta.cards || [] // Default to empty array if undefined
       v-if="cards.length"
       class="flex flex-wrap justify-start gap-5 my-10"
     >
-      <div
+      <NuxtLink
         v-for="(card, index) in cards"
         :key="index"
-        class="border hover:border-zt_purple/20 hover:bg-slate-50 hover:shadow-lg transition-all duration-300 rounded-lg shadow-md px-5 py-4 min-w-60 group"
+        class="border hover:border-zt_purple/20 hover:bg-slate-50 hover:shadow-lg transition-all duration-300 rounded-lg shadow-md px-5 py-4 min-w-60 group max-w-60"
+
+        :to="card.path"
       >
-        <NuxtLink
-          :to="card.path"
-          class=""
+        <h5
+          class="text-gray-600 group-hover:text-zt_purple text-sm tracking-wide mb-1 group-hover:underline"
         >
-          <h5 class="text-gray-600 group-hover:text-zt_purple text-sm tracking-wide mb-1 group-hover:underline">
-            {{ card.title }}
-          </h5>
-          <span class="text-gray-500 text-sm">
-            {{ card.description }}
-          </span>
-        </NuxtLink>
-      </div>
+          {{ card.title }}
+        </h5>
+        <span class="text-gray-500 text-sm">
+          {{ card.description }}
+        </span>
+      </NuxtLink>
     </div>
     <p v-else>
       No cards found.
