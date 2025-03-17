@@ -13,10 +13,10 @@
         Search for in-depth articles on ZeroThreat developer tools and technologies.
       </h4>
       <div class="absolute right-16 top-1/2 -translate-y-1/2 h-fit w-72">
-        <img
+        <!-- <img
           src="../public/ai-robo.svg"
           alt=""
-        >
+        > -->
       </div>
     </div>
   </div>

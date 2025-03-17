@@ -39,7 +39,7 @@ onBeforeUnmount(() => {
           <NuxtLink :to="'/docs'">
             <div class="w-24 xl:w-32">
               <img
-                src="./public/images/ZeroThreat_logo_1000x400.png"
+                src="../public/ZeroThreat_logo_1000x400.png"
                 alt=""
                 class="border-0 m-0"
               >
