@@ -38,8 +38,8 @@ defineProps<{
       Table Of Content
     </h5>
     <div
-    id="left-slide"
       v-for="(item, index) in toclinks"
+      id="left-slide"
       :key="index"
       class="py-[3px]"
     >

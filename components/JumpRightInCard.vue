@@ -1,14 +1,17 @@
 <script setup>
-  const route = useRoute()
-  const { data: page } = await useAsyncData('page-' + route.path, () =>
-    queryCollection('content').path(route.path).first()
-  )
-  const cards = page.value.meta.cards || []
+const route = useRoute()
+const { data: page } = await useAsyncData('page-' + route.path, () =>
+  queryCollection('content').path(route.path).first(),
+)
+const cards = page.value.meta.cards || []
 </script>
 
 <template>
   <div class="">
-    <div v-if="cards.length" class="flex flex-wrap gap-6 my-10 w-full">
+    <div
+      v-if="cards.length"
+      class="flex flex-wrap gap-6 my-10 w-full"
+    >
       <NuxtLink
         v-for="(card, index) in cards"
         :key="index"
@@ -16,18 +19,26 @@
         :to="card.path"
       >
         <div class="flex items-center gap-x-2">
-          <span><font-awesome-icon icon="file-lines" class="text-gray-500 -translate-y-1 group-hover:text-zt_purple transition-all duration-300"/></span>
+          <span v-if="card.icon"><font-awesome-icon
+            :icon="card.icon"
+            class="text-gray-500 -translate-y-1 group-hover:text-zt_purple transition-all duration-300"
+          /></span>
           <h5
             class="text-gray-700 group-hover:text-zt_purple text-sm tracking-wide mb-3 group-hover:underline underline"
           >
             {{ card.title }}
           </h5>
         </div>
-        <span class="text-gray-600 tracking-wide text-sm">
+        <span
+          v-if="card.description"
+          class="text-gray-600 tracking-wide text-sm"
+        >
           {{ card.description }}
         </span>
       </NuxtLink>
     </div>
-    <p v-else>No cards found.</p>
+    <p v-else>
+      No cards found.
+    </p>
   </div>
 </template>
