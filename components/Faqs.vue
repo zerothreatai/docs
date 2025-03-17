@@ -60,30 +60,37 @@
 <template>
   <div class="py-16">
     <!-- Heading -->
-    <div class="relative mb-4 border-dashed border-b pb-2">
+    <div class="relative border-b pb-2">
       <div class="flex justify-between items-center">
         <div class="font-zt_medium text-2xl text-gray-900 2xl:text-2xl">
           Frequently asked questions
         </div>
-        <!-- Tabs -->
-        <div
-          class="flex flex-wrap items-center gap-1 overflow-hidden rounded-md p-1 shadow-zt_shadow_two md:rounded-[100px]"
-        >
-          <button
-            v-for="(tab, index) in tabs"
-            :key="index"
-            :class="[
-              tab.category === activeTab.category
-                ? 'bg-zt_purple text-white'
-                : 'bg-white text-gray-500 hover:bg-gray-100',
-              'flex items-center justify-center gap-0 rounded-md px-2 py-1 font-zt_medium text-xs transition-all duration-300 md:rounded-[100px]',
-              'lg:gap-1 lg:text-xs xl:px-3',
-            ]"
-            @click="selectButton(tab)"
-          >
-            {{ tab.title }}
-          </button>
-        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="text-base text-gray-500 font-zt_regular tracking-wide text-justify pt-5 pb-5">
+      Frequently asked questions about ZeroThreat features, target, scans, and scan report.
+    </div>
+    <!-- Tabs -->
+    <div
+      class="mb-5 flex items-center space-x-2 text-xs text-gray-600 font-zt_medium *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer"
+    >
+      <div
+        v-for="(tab, index) in tabs"
+        :key="index"
+        class="flex items-center gap-x-2 w-fit group transition-all duration-300"
+        :class="{
+          'bg-zt_purple text-white': tab.category === activeTab.category,
+        }"
+        @click="selectButton(tab)"
+      >
+        <span
+          ><font-awesome-icon
+            :icon="tab.icon"
+            class="group-hover:text-white"
+            :class="tab.category === activeTab.category ? 'text-white' : tab.iconCLass"
+        /></span>
+        <span>{{ tab.title }}</span>
       </div>
     </div>
     <!-- faq -->
