@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./components/**/*.{vue,js,ts}', './pages/**/*.{vue,js,ts}', './content/**/*.{md,vue}'],
+  content: ['./components/**/*.{vue,js,ts}', './pages/**/*.{vue,js,ts}', './content/**/*.{md,vue}', './const/*.{ts,js}'],
   theme: {
     extend: {
       boxShadow: {
