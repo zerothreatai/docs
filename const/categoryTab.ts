@@ -26,14 +26,14 @@ const tabs = [
     iconCLass: 'text-blue-500',
   },
   {
-    title: 'Auhenticate',
-    category: FaqCategory['Scan-Report'],
+    title: 'Authenticate',
+    category: FaqCategory['Authenticate'],
     icon: 'shield-halved',
     iconCLass: 'text-green-500',
   },
   {
-    title: 'Un-Auhenticate',
-    category: FaqCategory['Scan-Report'],
+    title: 'Un-Authenticate',
+    category: FaqCategory['Un-Authenticate'],
     icon: 'shield-virus',
     iconCLass: 'text-red-500',
   },

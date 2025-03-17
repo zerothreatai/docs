@@ -1,60 +1,60 @@
 <script setup>
-  import targetFaq from '../assests/1.faq.json'
-  import ScanFaq from '../assests/2.faq.json'
-  import OrganizationFaq from '../assests/3.faq.json'
-  import ScanReportFaq from '../assests/4.faq.json'
-  import tabs from '~/const/categoryTab'
-  import { FaqCategory } from '~/utils/category.enum'
+import targetFaq from '../assests/1.faq.json'
+import ScanFaq from '../assests/2.faq.json'
+import OrganizationFaq from '../assests/3.faq.json'
+import ScanReportFaq from '../assests/4.faq.json'
+import tabs from '~/const/categoryTab'
+import { FaqCategory } from '~/utils/category.enum'
 
-  const searchQuery = ref('')
+const searchQuery = ref('')
 
-  const activeTab = ref(tabs[0])
+const activeTab = ref(tabs[0])
 
-  const targetfaqs = ref(targetFaq.slice(0, 3).map((d) => ({ ...d, isOpen: false })))
-  const Scanfaqs = ref(ScanFaq.slice(0, 3).map((d) => ({ ...d, isOpen: false })))
-  const Organizationfaqs = ref(OrganizationFaq.slice(0, 3).map((d) => ({ ...d, isOpen: false })))
-  const ScanReportfaqs = ref(ScanReportFaq.slice(0, 3).map((d) => ({ ...d, isOpen: false })))
+const targetfaqs = ref(targetFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
+const Scanfaqs = ref(ScanFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
+const Organizationfaqs = ref(OrganizationFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
+const ScanReportfaqs = ref(ScanReportFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
 
-  const selectButton = (tab) => {
-    activeTab.value = tab
+const selectButton = (tab) => {
+  activeTab.value = tab
+}
+
+const filteredfaqs = computed(() => {
+  switch (activeTab.value.category) {
+    case FaqCategory.Target:
+      if (searchQuery.value.trim().length) {
+        return targetfaqs.value.filter(t =>
+          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
+        )
+      }
+      return targetfaqs.value
+      break
+    case FaqCategory.Scan:
+      if (searchQuery.value.trim().length) {
+        return Scanfaqs.value.filter(t =>
+          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
+        )
+      }
+      return Scanfaqs.value
+      break
+    case FaqCategory.Organization:
+      if (searchQuery.value.trim().length) {
+        return Organizationfaqs.value.filter(t =>
+          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
+        )
+      }
+      return Organizationfaqs.value
+      break
+    case FaqCategory['Scan-Report']:
+      if (searchQuery.value.trim().length) {
+        return ScanReportfaqs.value.filter(t =>
+          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
+        )
+      }
+      return ScanReportfaqs.value
   }
-
-  const filteredfaqs = computed(() => {
-    switch (activeTab.value.category) {
-      case FaqCategory.Target:
-        if (searchQuery.value.trim().length) {
-          return targetfaqs.value.filter((t) =>
-            t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim())
-          )
-        }
-        return targetfaqs.value
-        break
-      case FaqCategory.Scan:
-        if (searchQuery.value.trim().length) {
-          return Scanfaqs.value.filter((t) =>
-            t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim())
-          )
-        }
-        return Scanfaqs.value
-        break
-      case FaqCategory.Organization:
-        if (searchQuery.value.trim().length) {
-          return Organizationfaqs.value.filter((t) =>
-            t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim())
-          )
-        }
-        return Organizationfaqs.value
-        break
-      case FaqCategory['Scan-Report']:
-        if (searchQuery.value.trim().length) {
-          return ScanReportfaqs.value.filter((t) =>
-            t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim())
-          )
-        }
-        return ScanReportfaqs.value
-    }
-    return []
-  })
+  return []
+})
 </script>
 
 <template>
@@ -84,11 +84,10 @@
         }"
         @click="selectButton(tab)"
       >
-        <span
-          ><font-awesome-icon
-            :icon="tab.icon"
-            class="group-hover:text-white"
-            :class="tab.category === activeTab.category ? 'text-white' : tab.iconCLass"
+        <span><font-awesome-icon
+          :icon="tab.icon"
+          class="group-hover:text-white"
+          :class="tab.category === activeTab.category ? 'text-white' : tab.iconCLass"
         /></span>
         <span>{{ tab.title }}</span>
       </div>
@@ -100,7 +99,10 @@
           class="border *:border-b *:border-dashed last:*:border-b-0 rounded-t-lg rounded-b-lg last:*:rounded-b-lg first:*:rounded-t-lg"
         >
           <template v-if="filteredfaqs.length">
-            <div v-for="(item, index) in filteredfaqs" :key="index">
+            <div
+              v-for="(item, index) in filteredfaqs"
+              :key="index"
+            >
               <div>
                 <div
                   class="text-base flex justify-between tracking-wide items-center gap-x-5 text-gray-600 font-zt_regular px-6 py-5 cursor-pointer hover:bg-gray-100"
@@ -143,9 +145,7 @@
         </div>
       </div>
       <NuxtLink :to="'/docs/getting-started/faqs'">
-        <span class="absolute cursor-pointer right-0 underline -bottom-10 text-zt_purple text-sm"
-          >Show More...</span
-        >
+        <span class="absolute cursor-pointer right-0 underline -bottom-10 text-zt_purple text-sm">Show More...</span>
       </NuxtLink>
     </div>
   </div>
