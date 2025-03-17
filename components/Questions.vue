@@ -144,9 +144,13 @@
         </div>
       </div>
       <template v-else>
-        <div class="min-w-full px-6 py-4 text-sm text-gray-700 flex items-center tracking-wide gap-x-2 border border-gray-100 rounded-md bg-slate-50 font-zt_medium mb-10">
+        <div v-if="searchQuery.trim().length" class="min-w-full px-6 py-4 text-sm text-gray-700 flex items-center tracking-wide gap-x-2 border border-gray-100 rounded-md bg-slate-50 font-zt_medium mb-10">
           <span><font-awesome-icon icon="circle-xmark" class="text-red-500"/></span>
           <span>Sorry, we couldn't find any FAQs matching with your search term.</span>
+        </div>
+        <div v-else class="min-w-full px-6 py-4 text-sm text-gray-700 flex items-center tracking-wide gap-x-2 border border-gray-100 rounded-md bg-slate-50 font-zt_medium mb-10">
+          <span><font-awesome-icon icon="circle-xmark" class="text-red-500"/></span>
+          <span>Sorry, we couldn't find any FAQs.</span>
         </div>
       </template>
     </div>

@@ -25,6 +25,18 @@ const tabs = [
     icon: 'file-lines',
     iconCLass: 'text-blue-500',
   },
+  {
+    title: 'Authenticate',
+    category: FaqCategory['Authenticate'],
+    icon: 'shield-halved',
+    iconCLass: 'text-green-500',
+  },
+  {
+    title: 'Un-Authenticate',
+    category: FaqCategory['Un-Authenticate'],
+    icon: 'shield-virus',
+    iconCLass: 'text-red-500',
+  },
 ]
 
 export default tabs

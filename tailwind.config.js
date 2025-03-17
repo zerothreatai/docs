@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./components/**/*.{vue,js,ts}', './pages/**/*.{vue,js,ts}', './content/**/*.{md,vue}'],
+  content: ['./components/**/*.{vue,js,ts}', './pages/**/*.{vue,js,ts}', './content/**/*.{md,vue}', './const/*.{ts,js}'],
   theme: {
     extend: {
       boxShadow: {
@@ -29,5 +29,5 @@ export default {
     },
   },
   plugins: [],
-  safelist: ['text-yellow-400'],
+  safelist: ['text-yellow-500','text-fuchsia-500','text-red-400','text-blue-500','text-green-500'],
 }
