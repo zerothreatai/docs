@@ -73,7 +73,7 @@ const filteredfaqs = computed(() => {
     </div>
     <!-- Tabs -->
     <div
-      class="mb-5 flex items-center space-x-4 text-xs text-gray-600 font-zt_medium *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer"
+      class="mb-5 flex items-center space-x-5 text-xs text-gray-600 font-zt_medium *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer"
     >
       <div
         v-for="(tab, index) in tabs"

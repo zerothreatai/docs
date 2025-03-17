@@ -11,7 +11,7 @@ cards:
       title: Web App Vulnerabilities
       path: /docs/manage-scans/scan-report/web-app-vulnerabilities
       description: Lists detected security issues in web applications, categorized by severity, with detailed remediation steps.
-    - icon: file-lines 
+    - icon: file-circle-check 
       title: Detected API's vulnerabilities
       path: /docs/manage-scans/scan-report/detected-apis-vulnerabilities
       description: Identifies all the security flaws found in a particular API endpoint, showing affected requests and responses.
