@@ -1,7 +1,7 @@
 ---
 icon: up-right-from-square
 title: Share Scan Results
-description: Sharing scan results is an integral part of collaborative vulnerability management. It allows you to keep your team informed, involve stakeholders, and streamline remediation efforts. With Zero Threat, you can securely share detailed scan reports with specific users, ensuring that critical insights reach the right people at the right time.
+description: Sharing scan results is an integral part of collaborative vulnerability management. It allows you to keep your team informed, involve stakeholders, and streamline remediation efforts. With ZeroThreat, you can securely share detailed scan reports with specific users, ensuring that critical insights reach the right people at the right time.
 ---
 ## Share a scan report to a specific user
 
