@@ -5,13 +5,13 @@ const tabs = [
     title: 'Target',
     category: FaqCategory.Target,
     icon: 'crosshairs',
-    iconClass: 'text-fuchsia-500',
+    iconCLass: 'text-zt_purple',
   },
   {
     title: 'Scan',
     category: FaqCategory.Scan,
     icon: 'expand',
-    iconCLass: 'text-green-500',
+    iconCLass: 'text-blue-500',
   },
   {
     title: 'Organization',
@@ -23,7 +23,7 @@ const tabs = [
     title: 'Scan Report',
     category: FaqCategory['Scan-Report'],
     icon: 'file-lines',
-    iconCLass: 'text-blue-500',
+    iconCLass: 'text-gray-500',
   },
   {
     title: 'Authenticate',
@@ -32,8 +32,8 @@ const tabs = [
     iconCLass: 'text-green-500',
   },
   {
-    title: 'Un-Authenticate',
-    category: FaqCategory['Un-Authenticate'],
+    title: 'Unauthenticate',
+    category: FaqCategory['Unauthenticate'],
     icon: 'shield-virus',
     iconCLass: 'text-red-500',
   },

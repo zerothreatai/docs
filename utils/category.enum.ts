@@ -4,5 +4,5 @@ export enum FaqCategory {
   'Organization' = 3,
   'Scan-Report' = 4,
   'Authenticate' = 5,
-  'Un-Authenticate' = 6,
+  'Unauthenticate' = 6,
 }
