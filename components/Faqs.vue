@@ -68,7 +68,7 @@
       </div>
     </div>
     <!--  -->
-    <div class="text-base text-gray-500 font-zt_regular tracking-wide text-justify pt-5 pb-5">
+    <div class="text-base text-gray-500 font-zt_regular tracking-wide text-justify py-4">
       Frequently asked questions about ZeroThreat features, target, scans, and scan report.
     </div>
     <!-- Tabs -->
