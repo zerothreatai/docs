@@ -15,13 +15,13 @@ const cards = page.value.meta.cards || []
       <NuxtLink
         v-for="(card, index) in cards"
         :key="index"
-        class="border hover:border-zt_purple/20 hover:bg-slate-50 hover:shadow-lg transition-all duration-300 rounded-lg shadow-md px-5 py-4 group max-w-[45%] 2xl:max-w-[30%]"
+        class="border hover:border-zt_purple/10 hover:bg-gradient-to-r from-slate-100 via-slate-50 hover:shadow-lg transition-all duration-300 rounded-lg shadow-md px-5 py-4 group max-w-[45%] 2xl:max-w-[30%]"
         :to="card.path"
       >
-        <div class="flex items-center gap-x-2">
+        <div class="flex items-center gap-x-2.5">
           <span v-if="card.icon"><font-awesome-icon
             :icon="card.icon"
-            class="text-gray-500 -translate-y-1 group-hover:text-zt_purple transition-all duration-300"
+            class="text-gray-500 -translate-y-1.5 group-hover:text-zt_purple transition-all duration-300"
           /></span>
           <h5
             class="text-gray-700 group-hover:text-zt_purple text-sm tracking-wide mb-3 group-hover:underline underline"

@@ -3,11 +3,11 @@ icon: square-poll-horizontal
 title: Scan Results
 description: Having run your first scan, you can now review the findings discovered by your scan. These vulnerabilities are weaknesses in your application that could be exploited by attackers.
 cards:
-    - icon: file-lines
+    - icon: square-poll-horizontal
       title: Scanner
       path: /docs/manage-scans/scan-report/scanner
       description: Displays real-time scan progress, including authenticated and unauthenticated crawling, along with OWASP Top 10 checks.
-    - icon: file-lines
+    - icon: globe
       title: Web App Vulnerabilities
       path: /docs/manage-scans/scan-report/web-app-vulnerabilities
       description: Lists detected security issues in web applications, categorized by severity, with detailed remediation steps.
@@ -15,23 +15,23 @@ cards:
       title: Detected API's vulnerabilities
       path: /docs/manage-scans/scan-report/detected-apis-vulnerabilities
       description: Identifies all the security flaws found in a particular API endpoint, showing affected requests and responses.
-    - icon: file-lines
+    - icon: circle-info
       title: Information Exposure
       path: /docs/manage-scans/scan-report/information-exposure
       description: Highlights sensitive data leaks like PII, secret data leaks like credentials, and cloud misconfigurations.
-    - icon: file-lines 
+    - icon: certificate 
       title: SSL Certificate Scan
       path: /docs/manage-scans/scan-report/ssl-certificate
       description: Analyzes SSL/TLS configurations, checking for vulnerabilities, expiration status, and compliance issues.
-    - icon: file-lines
+    - icon: cube
       title: Vulnerable Version detection
       path: /docs/manage-scans/scan-report/vulnerable-version-detection
       description: Detects outdated JavaScript libraries and server-side technologies with known security risks.
-    - icon: file-lines 
+    - icon: database 
       title: Server Ports Scan
       path: /docs/manage-scans/scan-report/server-ports-scan
       description: Scans open ports on the server, assessing potential risks and providing mitigation strategies.
-    - icon: file-lines
+    - icon: envelope
       title: Mail Configuration
       path: /docs/manage-scans/scan-report/mail-configuration
       description: Evaluates the mail server for misconfigurations like open relays and reverse DNS mismatches.
