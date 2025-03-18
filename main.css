@@ -230,15 +230,15 @@ p a strong, h6 a strong, ol li a strong, ul li a strong {
 img {
   @apply my-5 border mx-auto
 }
-
-span img {
-  @apply my-2 border inline-block
+div > img {
+  @apply block mx-auto rounded-lg shadow-md my-0.5
 }
-
 ul li img, ol li img {
   @apply p-0 border rounded-md shadow-md mx-1 inline-block my-2
 }
-
+p > span > img , li > span > img {
+  @apply inline-block rounded-md shadow-md my-0
+}
 code {
   @apply text-xs bg-slate-50 px-2 py-0.5 text-gray-800 font-zt_regular tracking-widest leading-none border rounded-md
 }

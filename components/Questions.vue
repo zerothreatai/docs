@@ -25,7 +25,14 @@ const selectButton = (tab) => {
 }
 
 const toggleAccordion = (item) => {
-  item.isOpen = !item.isOpen
+  filteredfaqs.value.map((d) => {
+    if (d.q == item.q) {
+      d.isOpen = !d.isOpen
+    }
+    else {
+      d.isOpen = false
+    }
+  })
 }
 
 const filteredfaqs = computed(() => {
@@ -80,6 +87,7 @@ const filteredfaqs = computed(() => {
   }
   return []
 })
+
 </script>
 
 <template>

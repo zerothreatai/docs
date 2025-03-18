@@ -55,7 +55,7 @@ const filteredfaqs = computed(() => {
         )
       }
       return ScanReportfaqs.value
-      break;
+      break
     case FaqCategory['Authenticate']:
       if (searchQuery.value.trim().length) {
         return Authenticatedfaqs.value.filter(t =>
@@ -74,7 +74,19 @@ const filteredfaqs = computed(() => {
       return []
   }
   return []
-})
+},
+
+)
+const toggleItem = (item) => {
+  filteredfaqs.value.map((d) => {
+    if (d.q == item.q) {
+      d.isOpen = !d.isOpen
+    }
+    else {
+      d.isOpen = false
+    }
+  })
+}
 </script>
 
 <template>
@@ -133,7 +145,7 @@ const filteredfaqs = computed(() => {
                   }"
                   @click="
                     () => {
-                      item.isOpen = !item.isOpen
+                      toggleItem(item)
                     }
                   "
                 >

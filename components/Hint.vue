@@ -1,7 +1,7 @@
 <template>
   <div
     id="alert-div"
-    class="flex gap-x-1 items-start rounded-2xl shadow-sm text-[15px] tracking-wide px-5 py-5 mt-[30px]"
+    class="flex gap-x-1 items-start rounded-2xl shadow-sm text-[15px] tracking-wide px-5 py-5 mt-7 mb-5"
     :class="bgStyle"
   >
     <font-awesome-icon
