@@ -74,7 +74,9 @@ onBeforeUnmount(() => {
           </div>
         </div>
         <div>
-          <github-icon class="w-6 fill-gray-700 hover:fill-zt_purple cursor-pointer" />
+          <a href="https://github.com/zerothreatai" target="_blank">
+            <github-icon class="w-6 fill-gray-700 hover:fill-zt_purple cursor-pointer" />
+          </a>
         </div>
       </div>
       <SearchModal
