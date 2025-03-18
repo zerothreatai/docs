@@ -1,10 +1,10 @@
 <script setup>
-import targetFaq from '../assests/1.faq.json'
-import ScanFaq from '../assests/2.faq.json'
-import OrganizationFaq from '../assests/3.faq.json'
-import ScanReportFaq from '../assests/4.faq.json'
-import authenticatedFaq from '../assests/5.faq.json'
-import unauthenticateFaq from '../assests/6.faq.json'
+import targetFaq from '../assests/target.faq.json'
+import ScanFaq from '../assests/scan.faq.json'
+import OrganizationFaq from '../assests/organization.faq.json'
+import ScanReportFaq from '../assests/scanReport.faq.json'
+import authenticatedFaq from '../assests/authenticate.faq.json'
+import unauthenticateFaq from '../assests/unauthenticate.faq.json'
 import tabs from '~/const/categoryTab'
 import { FaqCategory } from '~/utils/category.enum'
 
@@ -21,10 +21,7 @@ const Unathenticatefaqs = ref(unauthenticateFaq.slice(0, 3).map(d => ({ ...d, is
 
 const selectButton = (tab) => {
   activeTab.value = tab
-  console.log(activeTab.value)
-  console
 }
-console.log(Authenticatedfaqs)
 const filteredfaqs = computed(() => {
   switch (activeTab.value.category) {
     case FaqCategory.Target:

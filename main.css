@@ -6,11 +6,15 @@
 color: rgb(155 38 182);
 } */
 a[aria-hidden='true']::before {
-  content: '#'; /* Insert the hash */
-  opacity: 0; /* Start hidden */
+  content: '#';
+  /* Insert the hash */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 0.2s;
-  margin-right: 0.25rem; /* Adjust spacing if needed */
-  color: #6b7280; /* Use a Tailwind color or any desired color */
+  margin-right: 0.25rem;
+  /* Adjust spacing if needed */
+  color: #6b7280;
+  /* Use a Tailwind color or any desired color */
 }
 
 /* Show the hash when hovering over the heading */
@@ -28,9 +32,12 @@ h2,
 h3,
 h4,
 h5,
-h6, {
-  scroll-margin-top: 80px; /* Adjust based on header height */
+h6,
+{
+scroll-margin-top: 80px;
+/* Adjust based on header height */
 }
+
 h1,
 h1 a,
 h2,
@@ -43,10 +50,12 @@ h5,
 h5 a {
   font-family: 'Inter-SemiBold';
 }
+
 b,
 strong {
   font-family: 'Inter-SemiBold';
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -149,82 +158,111 @@ body {
 h2 {
   @apply text-2xl text-[#3c3c43] mt-10 mb-4
 }
+
 h3 {
   @apply text-xl text-[#3c3c43] mt-12 mb-4
 }
+
 p {
   @apply font-zt_regular text-base tracking-wide my-4 text-[#3c3c43] leading-[26px]
 }
+
 ul, ol {
   @apply ml-10 mb-5
 }
+
 ul {
   @apply list-disc
 }
+
 ol {
   @apply list-decimal
 }
+
 ul li, ol li {
   @apply mt-3 mb-2 font-zt_regular text-base tracking-wide text-[#3c3c43]
 }
+
 ul li ul, ol li ul {
   @apply ml-5 list-none
 }
+
 ol li ul li {
   @apply after:hidden list-disc
 }
+
 ol li ul li ul li ul li {
   @apply list-none after:content-['-']
 }
+
 li ul li, ol li ul li ul li {
   @apply text-sm mt-2 tracking-wider font-zt_regular leading-6 relative after:absolute after:-left-5 after:top-[1px] after:text-black after:content-['⮚']
 }
+
 ol li ul li ul li {
   @apply list-none after:inline-block
 }
+
 li ul li ul li {
   @apply text-sm mt-2 tracking-wider font-zt_regular leading-6 relative after:absolute after:-left-5 after:top-[1px] after:text-black after:content-['⬥']
 }
-ul li > ul li code, ol li > ul li code {
+
+ul li>ul li code, ol li>ul li code {
   @apply text-xs
 }
+
 ul li ul li strong, ol li ul li strong {
   @apply p-0
 }
+
 ul li strong, ol li strong {
   @apply pb-1 inline-block
 }
+
 ul li a strong {
   @apply text-zt_purple hover:underline pb-0
 }
+
 p a strong, h6 a strong, ol li a strong, ul li a strong {
   @apply text-zt_purple hover:underline
 }
+
 img {
   @apply my-5 border mx-auto
 }
+
+span img {
+  @apply my-2 border inline-block
+}
+
 ul li img, ol li img {
   @apply p-0 border rounded-md shadow-md mx-1 inline-block my-2
 }
+
 code {
   @apply text-xs bg-slate-50 px-2 py-0.5 text-gray-800 font-zt_regular tracking-widest leading-none border rounded-md
 }
+
 details {
   @apply border rounded-md px-4 py-3 text-base tracking-wide text-[#3c3c43] cursor-pointer bg-slate-50
 }
+
 blockquote {
   @apply bg-zt_purple/5 border-l-4 border-zt_purple/70 py-2 px-3
 }
+
 blockquote p {
   @apply leading-6 italic
 }
+
 .right_navlinks p, .right_navlinks ul li {
   @apply my-2
 }
+
 .right_navlinks ul {
   @apply ml-4 mb-0
 }
 
-#searchModel strong{
+#searchModel strong {
   @apply text-zt_purple hover:underline
 }
