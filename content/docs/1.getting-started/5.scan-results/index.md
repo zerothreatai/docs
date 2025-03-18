@@ -63,9 +63,9 @@ For each vulnerability, we provide comprehensive details to help you understand 
 4. **Request Details and Evidence:**
    - Includes the HTTP request (method, URL), request headers, response headers, HTTP response body, and evidence of the vulnerability, such as error messages or abnormal behavior, which confirms the presence and impact of the issue.
 
-::fiqure-img{source="/images/image (130).png" width=563}
+::fiqure-img{source="/Images/image (130).png" width=563}
 
-<!-- <img src="/images/image (130).png" alt="" width="563"> -->
+<!-- <img src="/Images/image (130).png" alt="" width="563"> -->
 
 ::
 
