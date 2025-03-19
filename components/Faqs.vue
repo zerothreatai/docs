@@ -100,12 +100,12 @@ const toggleItem = (item) => {
       </div>
     </div>
     <!--  -->
-    <div class="text-base text-gray-500 font-zt_regular tracking-wide text-justify py-4">
+    <div class="text-base text-gray-500 font-zt_regular tracking-wide text-justify py-5">
       Frequently asked questions about ZeroThreat features, target, scans, and scan report.
     </div>
     <!-- Tabs -->
     <div
-      class="mb-5 flex items-center space-x-5 text-xs text-gray-600 font-zt_medium *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer"
+      class="mb-6 flex items-center gap-x-3 text-xs text-gray-600 font-zt_medium *:text-nowrap *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer max-w-full flex-wrap gap-y-4"
     >
       <div
         v-for="(tab, index) in tabs"
@@ -170,7 +170,7 @@ const toggleItem = (item) => {
                   <div class="py-4 text-gray-600 tracking-wider text-sm font-zt_regular leading-6">
                     {{ item.a }}
                   </div>
-                  <div v-if="item.link">
+                  <div v-if="item.link" id="faq-list" class="relative  ms-4 before:absolute before:w-[7px] before:h-[7px] before:-top-[1px] before:-left-4 before:bg-gray-500 before:rounded-full ">
                     <MDC :value="item.link" />
                   </div>
                 </div>

@@ -266,3 +266,12 @@ blockquote p {
 #searchModel strong {
   @apply text-zt_purple hover:underline
 }
+#faq-list p {
+@apply text-sm text-gray-600 font-zt_regular mt-0 -translate-y-2 mb-2
+}
+#serch-model-list strong {
+  @apply text-gray-600
+}
+#serch-model-list div {
+  @apply max-w-full overflow-hidden text-ellipsis text-nowrap
+}
