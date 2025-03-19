@@ -1,7 +1,7 @@
 <!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <script setup lang="ts">
 const searchComponent = ref(null)
-const {public} = useRuntimeConfig()
+const configs = useRuntimeConfig()
 
 // Function to focus the hidden input and open the modal
 const openSearch = () => {
@@ -18,10 +18,10 @@ const openSearch = () => {
 <template>
   <div class="w-full flex justify-center">
     <AlgoliaDocSearch
-      :api-key="public.algoliaSearchKey ||''"
-      :application-id="public.algoliaAppId ||''"
-      :index-name="public.algoliaIndexName ||''"
       ref="searchComponent"
+      :api-key="`${configs.public.algoliaSearchKey}`"
+      :application-id="`${configs.public.algoliaAppId}`"
+      :index-name="`${configs.public.algoliaIndexName}`"
       placeholder="Search Documentation"
       :transform-items="(items) => {
         return items.map((item) => ({ ...item, url: item.url.replace('/#', '#') }))
