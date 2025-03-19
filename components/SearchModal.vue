@@ -183,6 +183,7 @@
                     {{ itemdata.title }} :
                   </span>
                   <span
+                  id="serch-model-list"
                     class="text-gray-500 text-nowrap max-w-full overflow-hidden font-zt_regular text-ellipsis ps-1 text-justify"
                   >
                     <MDC v-if="itemdata.description" :value="itemdata.description" unwrap="p" />

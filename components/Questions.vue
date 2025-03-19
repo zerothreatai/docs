@@ -173,8 +173,8 @@ const filteredfaqs = computed(() => {
               <div class="py-4 text-gray-600 tracking-wider text-sm font-zt_regular leading-6">
                 {{ item.a }}
               </div>
-              <div v-if="item.link">
-                <MDC :value="item.link" />
+              <div v-if="item.link" id="faq-list" class="relative ms-4 before:absolute before:w-[7px] before:h-[7px] before:-top-[1px] before:-left-4 before:bg-gray-500 before:rounded-full ">
+                <MDC :value="item.link"/>
               </div>
             </div>
           </div>
@@ -205,3 +205,4 @@ const filteredfaqs = computed(() => {
     </div>
   </div>
 </template>
+
