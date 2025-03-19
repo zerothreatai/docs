@@ -105,7 +105,7 @@ const toggleItem = (item) => {
     </div>
     <!-- Tabs -->
     <div
-      class="mb-6 flex items-center space-x-3 text-xs text-gray-600 font-zt_medium *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer"
+      class="mb-6 flex items-center gap-x-3 text-xs text-gray-600 font-zt_medium *:text-nowrap *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer max-w-full flex-wrap gap-y-4"
     >
       <div
         v-for="(tab, index) in tabs"
