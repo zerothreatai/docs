@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', 'tailwindcss'],
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', 'tailwindcss', '@nuxtjs/algolia'],
   plugins: [
     '~/plugins/contentScrollFix.client.ts',
     '~/plugins/directives.ts',
@@ -48,6 +48,13 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/'],
       crawlLinks: true,
+    },
+  },
+  algolia: {
+    apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
+    applicationId: process.env.ALGOLIA_APPLICATION_ID,
+    docSearch: {
+      indexName: process.env.ALGOLIA_INDEX_NAME,
     },
   },
   eslint: {

@@ -13,11 +13,14 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@docsearch/css": "^3.9.0",
+    "@docsearch/js": "^3.9.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@nuxt/content": "^3.2.0",
+    "@nuxtjs/algolia": "^1.10.2",
     "@nuxtjs/fontawesome": "^1.1.2",
     "minisearch": "^7.1.2",
     "nuxt": "^3.15.4",

@@ -24,7 +24,9 @@ jobs:
         run: npm install
 
       - name: Generate documentation
-        run: npm run generate
+        run: |
+          echo $PROJECT_ENV > .env
+          npm run generate
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
