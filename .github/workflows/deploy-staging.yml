@@ -23,10 +23,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Set up environment variables
+        run: |
+          echo "ALGOLIA_APPLICATION_ID=${{ secrets.ALGOLIA_APPLICATION_ID }}" >> $GITHUB_ENV
+          echo "ALGOLIA_SEARCH_API_KEY=${{ secrets.ALGOLIA_SEARCH_API_KEY }}" >> $GITHUB_ENV
+          echo "ALGOLIA_INDEX_NAME=${{ secrets.ALGOLIA_INDEX_NAME }}" >> $GITHUB_ENV
+
       - name: Generate documentation
         run: |
-          echo $PROJECT_ENV > .env
-          cat .env
           npm run generate
 
       - name: Upload build artifacts

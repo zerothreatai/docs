@@ -1,7 +1,6 @@
 <!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <script setup lang="ts">
 const searchComponent = ref(null)
-const configs = useRuntimeConfig()
 
 // Function to focus the hidden input and open the modal
 const openSearch = () => {
@@ -19,9 +18,6 @@ const openSearch = () => {
   <div class="w-full flex justify-center">
     <AlgoliaDocSearch
       ref="searchComponent"
-      :api-key="`${configs.public.algoliaSearchKey}`"
-      :application-id="`${configs.public.algoliaAppId}`"
-      :index-name="`${configs.public.algoliaIndexName}`"
       placeholder="Search Documentation"
       :transform-items="(items) => {
         return items.map((item) => ({ ...item, url: item.url.replace('/#', '#') }))
@@ -220,7 +216,7 @@ const openSearch = () => {
   position: relative;
   width: 100%;
   outline: none !important;
-  border: 2px solid gray !important;
+  border: 2px solid #dbdbdb !important;
 }
 
 .DocSearch-Input {
@@ -230,7 +226,9 @@ const openSearch = () => {
   color: var(--docsearch-text-color);
   flex: 1;
   font: inherit;
-  font-size: 1.2em;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  letter-spacing: 1px !important;
   height: 100%;
   outline: none;
   padding: 0 0 0 8px;
@@ -377,6 +375,9 @@ const openSearch = () => {
   font-size: 1.2em;
 }
 
+/* .DocSearch-Logo  {
+  display: none !important;
+} */
 .DocSearch-Logo a {
   display: flex;
 }
@@ -394,7 +395,7 @@ const openSearch = () => {
 
 .DocSearch-Hits mark {
   background: none;
-  color: var(--docsearch-highlight-color);
+  color: #9b26b6 !important;
 }
 
 .DocSearch-HitsFooter {
@@ -454,7 +455,7 @@ const openSearch = () => {
 
 .DocSearch-Hit-source {
   background: var(--docsearch-modal-background);
-  color: var(--docsearch-highlight-color);
+  color: #9b26b6 !important;
   font-size: 0.85em;
   font-weight: 600;
   line-height: 32px;
@@ -463,6 +464,7 @@ const openSearch = () => {
   position: sticky;
   top: 0;
   z-index: 10;
+  letter-spacing: 0.06rem !important;
 }
 
 .DocSearch-Hit-Tree {
@@ -474,7 +476,7 @@ const openSearch = () => {
 }
 
 .DocSearch-Hit[aria-selected='true'] a {
-  background-color: var(--docsearch-highlight-color);
+  background-color: #9b26b6 !important;
 }
 
 .DocSearch-Hit[aria-selected='true'] mark {
@@ -577,6 +579,7 @@ svg.DocSearch-Hit-Select-Icon {
 
 .DocSearch-Hit-title {
   font-size: 0.9em;
+  color: #6c6c6c !important;
 }
 
 .DocSearch-Hit-path {
@@ -591,7 +594,7 @@ svg.DocSearch-Hit-Select-Icon {
 .DocSearch-Hit[aria-selected='true'] .DocSearch-Hit-icon,
 .DocSearch-Hit[aria-selected='true'] .DocSearch-Hit-action,
 .DocSearch-Hit[aria-selected='true'] .DocSearch-Hit-Tree {
-  color: var(--docsearch-hit-active-color) !important;
+  color: rgb(95, 94, 94) !important;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
