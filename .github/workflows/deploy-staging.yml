@@ -26,6 +26,7 @@ jobs:
       - name: Generate documentation
         run: |
           echo $PROJECT_ENV > .env
+          cat .env
           npm run generate
 
       - name: Upload build artifacts
