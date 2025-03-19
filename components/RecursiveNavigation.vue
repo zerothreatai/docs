@@ -51,7 +51,7 @@ watch(
       <NuxtLink
         class="text-sm mt-1 ps-2 font-zt_regular text-gray-700 flex items-center justify-between hover:text-zt_purple hover:border-zt_purple/70 transition-all duration-300 cursor-pointer py-1 my-1 w-full tracking-wide"
         :class="{
-          'text-zt_purple border-zt_purple/70': route.path === item.path || route.path.replace('/#','#'),
+          'text-zt_purple border-zt_purple/70': route.path === item.path,
         }"
         :to="item.path"
         @click="() => openChildren()"

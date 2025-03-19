@@ -16,7 +16,7 @@
       >
         <h2
           class="text-sm my-3 flex items-center gap-x-2 ms-5 font-zt_medium tracking-wide text-gray-500 hover:text-zt_purple"
-          :class="{ 'text-zt_purple': route.path === items.path || route.path.replace('#/', '#') == items.path }"
+          :class="{ 'text-zt_purple': route.path === items.path }"
         >
           <font-awesome-icon
             :icon="items.meta.icon"
