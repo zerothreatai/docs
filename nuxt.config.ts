@@ -25,6 +25,13 @@ export default defineNuxtConfig({
       remarkPlugins: ['remark-external-links'],
     },
   },
+  runtimeConfig: {
+    public: {
+      algoliaAppId: process.env.ALGOLIA_APPLICATION_ID || '',
+      algoliaSearchKey: process.env.ALGOLIA_SEARCH_API_KEY || '',
+      algoliaIndexName: process.env.ALGOLIA_INDEX_NAME || '',
+    },
+  },
   // head: {
   //   link: [
   //     {
