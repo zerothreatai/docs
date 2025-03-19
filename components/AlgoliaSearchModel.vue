@@ -19,9 +19,6 @@ const openSearch = () => {
     <AlgoliaDocSearch
       ref="searchComponent"
       placeholder="Search Documentation"
-      :transform-items="(items) => {
-        return items.map((item) => ({ ...item, url: item.url.replace('/#', '#') }))
-      }"
     />
     <div
       class="hidden px-3 py-2 w-full max-w-xl cursor-pointer flex items-center justify-between border border-slate-200 rounded-md bg-white shadow-sm"
