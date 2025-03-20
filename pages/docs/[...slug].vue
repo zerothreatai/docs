@@ -41,7 +41,7 @@ useSeoMeta({
 
 <template>
   <div class="grid grid-cols-12 gap-x-10 w-full">
-    <div class="col-span-9 py-5 px-10">
+    <div class="col-span-12 xl:col-span-9 pt-8 pb-5 px-10">
       <div class="border-b pb-2">
         <NuxtLink :to="`/docs/${params[0]}`">
           <span class="text-zt_purple/80 tracking-wide font-semibold text-sm hover:underline">{{ title }}</span>
@@ -125,7 +125,7 @@ useSeoMeta({
         </div>
       </div>
     </div>
-    <div class="col-span-3 flex justify-start">
+    <div class="xl:col-span-3 hidden xl:flex justify-start">
       <div
         v-if="page?.body?.toc?.links"
         class="min-w-52"
