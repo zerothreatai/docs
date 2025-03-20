@@ -15,7 +15,7 @@
         :to="items.path"
       >
         <h2
-          class="text-sm my-3 flex items-center gap-x-2 ms-5 font-zt_medium tracking-wide text-gray-500 hover:text-zt_purple"
+          class="text-sm max-xl:mb-3 max-xl:mt-0 xl:my-3 flex items-center gap-x-2 ms-5 font-zt_medium tracking-wide text-gray-500 hover:text-zt_purple"
           :class="{ 'text-zt_purple': route.path === items.path }"
         >
           <font-awesome-icon

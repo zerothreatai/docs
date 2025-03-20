@@ -30,7 +30,7 @@ const [prev, next] = surround.value || []
 
 <template>
   <div class="grid grid-cols-12 gap-x-10 w-full">
-    <div class="col-span-9 py-5 px-10">
+    <div class="col-span-12 xl:col-span-9 py-5 px-10">
       <div class="border-b pb-2">
         <div>
           <span class="text-zt_purple/80 tracking-wide font-zt_semibold text-xs uppercase">{{
@@ -124,7 +124,7 @@ const [prev, next] = surround.value || []
         </div>
       </div>
     </div>
-    <div class="col-span-3 flex justify-start">
+    <div class="xl:col-span-3 hidden xl:flex justify-start">
       <div
         v-if="page.body.toc.links"
         class="min-w-52"
