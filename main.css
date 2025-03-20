@@ -230,6 +230,9 @@ p a strong, h6 a strong, ol li a strong, ul li a strong {
 img {
   @apply my-5 border mx-auto
 }
+img {
+  @apply max-h-[450px]
+}
 div > img {
   @apply block mx-auto rounded-lg shadow-md my-0.5
 }
