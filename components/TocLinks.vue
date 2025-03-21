@@ -44,16 +44,16 @@ defineProps<{
       class="py-[3px]"
     >
       <NuxtLink
-        class="text-sm mt-1 tracking-wide font-zt_regular text-gray-700 hover:text-zt_purple cursor-pointer py-1"
+        class="text-sm tracking-wide font-zt_regular text-gray-700 hover:text-zt_purple cursor-pointer"
         :to="route.path + '#' + item?.id"
         :class="{
           'text-zt_purple':
             route.hash === `${item.id}` || activeHeadings.includes(item?.id as never),
         }"
         @click.prevent="scrollToSection(item.id)"
-      >{{ item.text }}
+      ><div class="py-0.5">{{ item.text }}</div>
       </NuxtLink>
-      <ul v-if="item?.children">
+      <ul v-if="item?.children" class="pt-1">
         <li
           v-for="(link, index2) in item['children']"
           :key="index2"
@@ -79,13 +79,18 @@ defineProps<{
 #left-slide ul li a {
   list-style: none !important;
 }
+#left-slide span {
+  line-height: 5px !important;
+  padding: 10px 0px !important;
+}
 #left-slide ul li a:hover {
   color: #9b26b6 !important;
 }
 #left-slide ul li {
   margin: 0px;
   list-style: none !important;
-  padding-left: 5px;
+  padding: 5px 0px !important;
+  line-height: 8px !important;
 }
   ::-webkit-scrollbar {
     width: 2px;
