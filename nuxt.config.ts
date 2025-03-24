@@ -69,4 +69,6 @@ export default defineNuxtConfig({
       stylistic: true, // <---
     },
   },
+  // trailingSlashRedirect: false,
+  trailingSlash: false,
 })

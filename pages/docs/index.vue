@@ -50,7 +50,7 @@ const [prev, next] = surround.value || []
         </div>
         <h5
           id="page-description"
-          class="text-base text-gray-700 font-zt_regular tracking-wide leading-7 text-justify"
+          class="text-base text-gray-700 font-zt_regular tracking-wide leading-7"
           :class="page?.description ? 'pt-5 pb-5' : 'pb-2'"
         >
           <MDC
