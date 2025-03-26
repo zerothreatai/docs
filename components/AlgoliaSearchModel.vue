@@ -12,6 +12,13 @@ const openSearch = () => {
     }
   }
 }
+
+const transfromitems = (items: any) => {
+  console.log(items)
+  const data = items.map(item => ({ ...item, url: item.url.replace('/#', '#'), objectID: item.objectID.slice(0, item.objectID.length - 1) }))
+  console.log(data)
+  return data
+}
 </script>
 
 <template>
@@ -19,6 +26,7 @@ const openSearch = () => {
     <AlgoliaDocSearch
       ref="searchComponent"
       placeholder="Search Documentation"
+      :transform-items="(items) => transfromitems(items)"
     />
     <div
       class="hidden px-3 py-2 w-full max-w-xl cursor-pointer flex items-center justify-between border border-slate-200 rounded-md bg-white shadow-sm"
