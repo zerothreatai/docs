@@ -13,7 +13,7 @@ layout:
   pagination:
     visible: true
 title: Welcome
-description: Welcome to the official Zero Threat Documentation! Here, you'll find everything you need to utilize the full power of Zero Threat's advanced security scanner. Our guide is designed for users of all experience levels, from newcomers to seasoned professionals.
+description: Welcome to the official ZeroThreat Documentation! Here, you'll find everything you need to utilize the full power of ZeroThreat's advanced security scanner. Our guide is designed for users of all experience levels, from newcomers to seasoned professionals.
 cards:
   - title: 'Getting Started'
     description: 'Quick Start Guide'
