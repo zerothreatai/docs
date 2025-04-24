@@ -23,6 +23,9 @@ Zero Threat offers two powerful methods to perform authenticated scans, covering
 2. **Scan MFA App**
    - Designed for applications protected by Multi-Factor Authentication (MFA).
    - Allows users to handle additional security steps, such as SSO's, OTPs, CAPTCHAs, and more ensuring that even these highly secure sections are included in the scan.
+3. **Scan Navigation Sequence Only**
+   - Perfect for targeting specific sections or functionalities of an authenticated application.
+   - Records your navigation through selected pages, limiting the scan to only those areas without crawling the entire site.
 
 ---
 
@@ -30,5 +33,6 @@ For detailed guide, refer to:
 
 - [**Scan with Login Sequence**](authenticated-scan/scan-with-login-sequence)
 - [**Scan MFA App**](authenticated-scan/scan-mfa-app)
+- [**Scan Navigation Sequence Only**]( authenticated-scan/scan-navigation-sequence-only)
 
 With these methods, Zero Threat enables you to achieve a comprehensive security assessment, safeguarding your applications and their users from potential threats.
