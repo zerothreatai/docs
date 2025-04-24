@@ -27,7 +27,7 @@ definePageMeta({
   layout: 'docslayout',
 })
 
-const routepath = route.fullPath != '' && route.path.endsWith('/') ? route.fullPath.replace(/\/+$/, '') : route.path
+const routepath = route.path != '/' && route.path.endsWith('/') ? route.path.replace(/\/+$/, '') : route.path
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
   queryCollectionItemSurroundings('content', routepath),
 )
