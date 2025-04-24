@@ -1,44 +1,81 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2024-11-01",
+
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', 'tailwindcss', '@nuxtjs/algolia'],
+  plugins: [
+    '~/plugins/contentScrollFix.client.ts',
+    '~/plugins/directives.ts',
+    '~/plugins/fontawesome.ts',
+  ],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false, // Allows <JumpRight> without <JumpRight.vue>
+    },
+    {
+      global: false,
+    },
+  ],
   devtools: { enabled: false },
-  modules: ["@nuxt/content", '@nuxtjs/tailwindcss', "tailwindcss"],
+  app: {
+    trailingSlash: false,
+  },
+  css: ['~/main.css', '@fortawesome/fontawesome-svg-core/styles.css'],
+  router: {
+    trailingSlash: false,
+  },
   content: {
     markdown: {
       toc: {
         depth: 3, // include h3 headings
       },
-      remarkPlugins: [
-        ['remark-external-links', { target: '_blank', rel: 'noopener noreferrer' }]
-      ]
-
+      remarkPlugins: ['remark-external-links'],
     },
   },
-  nitro: {
-    prerender: {
-      crawlLinks: true, // Stops unnecessary crawling
-      routes: ['/'],
-      ignore: ['/docs/getting-started/"https://zerothreat.ai/"'],
+  runtimeConfig: {
+    public: {
+      algoliaAppId: process.env.ALGOLIA_APPLICATION_ID || '',
+      algoliaSearchKey: process.env.ALGOLIA_SEARCH_API_KEY || '',
+      algoliaIndexName: process.env.ALGOLIA_INDEX_NAME || '',
     },
   },
-  css: ['~/main.css', '@fortawesome/fontawesome-svg-core/styles.css'],
-
-  plugins: ['~/plugins/contentScrollFix.client.ts', '~/plugins/directives.ts', '~/plugins/fontawesome.ts'],
-
+  // head: {
+  //   link: [
+  //     {
+  //       rel: 'stylesheet',
+  //       href: 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;500;600;700&display=swap'
+  //     }
+  //   ]
+  // }
   routeRules: {
     '/docs/getting-started': { redirect: '/docs/getting-started/quickstart' },
-    '/docs/manage-targets': { redirect: '/docs/manage-targets/targets-section' },
-    '/docs/manage-scans': { redirect: '/docs/manage-scans/scans-section' },
-    '/docs/manage-organizations': { redirect: '/docs/manage-organizations/manage-organization' }
-  },
-  components: [
-    {
-      path: '~/components',
-      pathPrefix: false
+    '/docs/manage-targets': {
+      redirect: '/docs/manage-targets/targets-section',
     },
-    {
-      global: true
-    }
-  ]
-});
-
+    '/docs/manage-scans': { redirect: '/docs/manage-scans/scans-section' },
+    '/docs/manage-organizations': {
+      redirect: '/docs/manage-organizations/manage-organization',
+    },
+  },
+  compatibilityDate: '2024-11-01',
+  nitro: {
+    prerender: {
+      routes: ['/'],
+      crawlLinks: true,
+    },
+  },
+  algolia: {
+    apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
+    applicationId: process.env.ALGOLIA_APPLICATION_ID,
+    docSearch: {
+      indexName: process.env.ALGOLIA_INDEX_NAME,
+    },
+  },
+  eslint: {
+    config: {
+      stylistic: true, // <---
+    },
+  },
+  // trailingSlashRedirect: false,
+  trailingSlash: false,
+})

@@ -7,17 +7,24 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
   },
   "dependencies": {
+    "@docsearch/css": "^3.9.0",
+    "@docsearch/js": "^3.9.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@nuxt/content": "^3.2.0",
+    "@nuxtjs/algolia": "^1.10.2",
     "@nuxtjs/fontawesome": "^1.1.2",
     "minisearch": "^7.1.2",
     "nuxt": "^3.15.4",
+    "nuxt-app": "file:",
     "vue": "latest",
     "vue-router": "latest"
   },
@@ -25,8 +32,13 @@
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@nuxt/eslint": "^1.2.0",
     "@nuxtjs/tailwindcss": "^6.13.1",
-    "typescript": "^5.7.3",
+    "eslint": "^9",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
     "vue-tsc": "^2.1.10"
   }
 }

@@ -1,6 +1,7 @@
 <script lang="ts">
-import { defineComponent } from "vue";
-export default defineComponent({});
+import { defineComponent } from 'vue'
+
+export default defineComponent({})
 </script>
 
 <template>
@@ -14,7 +15,10 @@ export default defineComponent({});
           <div class="flex justify-between py-2">
             <div class="flex items-center gap-x-2">
               <span>
-                <font-awesome-icon icon="pen-to-square" class="text-blue-400" />
+                <font-awesome-icon
+                  icon="pen-to-square"
+                  class="text-blue-400"
+                />
               </span>
               <span class="text-base text-gray-500">Answer</span>
               <!-- <font-awesome-icon icon="share-from-square" /> -->
@@ -66,13 +70,14 @@ export default defineComponent({});
         <div class="py-5">
           <div class="flex items-center gap-x-3">
             <div class="w-10 h-10 rounded-full bg-slate-200">
-              <img src="../public/favicon.ico" alt="" />
+              <img
+                src="../public/favicon.ico"
+                alt=""
+              >
             </div>
             <div class="">
               <div class="flex gap-x-1 items-center">
-                <span class="text-sm text-gray-900 font-medium"
-                  >Vijay Vaghela ,</span
-                >
+                <span class="text-sm text-gray-900 font-medium">Vijay Vaghela ,</span>
                 <span class="text-xs text-gray-500">from India</span>
               </div>
               <span class="text-xs text-gray-400">Answered Feb 21</span>
@@ -81,51 +86,40 @@ export default defineComponent({});
         </div>
         <div class="space-y-3 text-sm text-gray-600 text-justify">
           <p>
-            A Target is the URL of a Web Application, Website, or API. All the
-            following are examples of Targets: Lorem, ipsum dolor sit amet
-            consectetur adipisicing elit. Non facilis sapiente culpa repellendus
-            sunt dolores.
+            A Target is the URL of a Web Application, Website, or API. All the following are
+            examples of Targets: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
+            facilis sapiente culpa repellendus sunt dolores.
           </p>
           <p>
             If the Target is
             <span class="text-zt_purple underline">https://example.com,</span>
             the scanner will not scan, for instance,
-            <span class="text-zt_purple underline"
-              >https://www.example.com</span
-            >
-            or any other hosts. In other words, the scanner will only scan URLs
-            prefixed by example.com.
+            <span class="text-zt_purple underline">https://www.example.com</span>
+            or any other hosts. In other words, the scanner will only scan URLs prefixed by
+            example.com.
           </p>
           <p>
-            You can also think of a Target as to how you want to organize your
-            security testing. Imagine you have a big app at
+            You can also think of a Target as to how you want to organize your security testing.
+            Imagine you have a big app at
             <span class="text-zt_purple underline">https://example.com.</span>
-            This app includes different sections or modules that can even be
-            built by different teams. You can split it into different Targets to
-            facilitate your workflows, like
-            <span class="text-zt_purple underline"
-              >https://example.com/sectionA</span
-            >
+            This app includes different sections or modules that can even be built by different
+            teams. You can split it into different Targets to facilitate your workflows, like
+            <span class="text-zt_purple underline">https://example.com/sectionA</span>
             and
-            <span class="text-zt_purple underline"
-              >https://example.com/sectionB</span
-            >.
+            <span class="text-zt_purple underline">https://example.com/sectionB</span>.
           </p>
           <p>
-            A Target is the URL of a Web Application, Website, or API. All the
-            following are examples of Targets: Lorem, ipsum dolor sit amet
-            consectetur adipisicing elit. Non facilis sapiente culpa repellendus
-            sunt dolores.
+            A Target is the URL of a Web Application, Website, or API. All the following are
+            examples of Targets: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
+            facilis sapiente culpa repellendus sunt dolores.
           </p>
           <p>
             If the Target is
             <span class="text-zt_purple underline">https://example.com,</span>
             the scanner will not scan, for instance,
-            <span class="text-zt_purple underline"
-              >https://www.example.com</span
-            >
-            or any other hosts. In other words, the scanner will only scan URLs
-            prefixed by example.com.
+            <span class="text-zt_purple underline">https://www.example.com</span>
+            or any other hosts. In other words, the scanner will only scan URLs prefixed by
+            example.com.
           </p>
           <p class="text-sm text-gray-700 font-medium">
             Watch this video for an overall view of Targets.
@@ -136,7 +130,7 @@ export default defineComponent({});
                 src="https://s3.ap-south-1.amazonaws.com/images.zerothreat.ai/zt_homepage_gif_compressed_9b666221a3.mp4"
                 controls
                 class="rounded-lg"
-              ></video>
+              />
             </div>
           </div>
         </div>
@@ -202,8 +196,11 @@ export default defineComponent({});
                       >
                         <path
                           d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
-                        ></path>
-                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        />
+                        <path
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        />
                       </svg>
                     </span>
                     <span>What is a target?</span>
@@ -223,14 +220,14 @@ export default defineComponent({});
                       >
                         <path
                           d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
-                        ></path>
-                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        />
+                        <path
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        />
                       </svg>
                     </span>
-                    <span
-                      >Why do we require you to verify the ownership of a
-                      domain?</span
-                    >
+                    <span>Why do we require you to verify the ownership of a domain?</span>
                   </div>
                   <!-- <span>
                     <font-awesome-icon icon="chevron-right" class="text-xs" />
@@ -247,8 +244,11 @@ export default defineComponent({});
                       >
                         <path
                           d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
-                        ></path>
-                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        />
+                        <path
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        />
                       </svg>
                     </span>
                     <span>What is the meaning of a finding’s state?</span>
@@ -268,13 +268,14 @@ export default defineComponent({});
                       >
                         <path
                           d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
-                        ></path>
-                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        />
+                        <path
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        />
                       </svg>
                     </span>
-                    <span
-                      >What is the meaning of the .CSV coverage report?</span
-                    >
+                    <span>What is the meaning of the .CSV coverage report?</span>
                   </div>
                   <!-- <span>
                     <font-awesome-icon icon="chevron-right" class="text-xs" />
@@ -291,8 +292,11 @@ export default defineComponent({});
                       >
                         <path
                           d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
-                        ></path>
-                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        />
+                        <path
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        />
                       </svg>
                     </span>
                     <span>What is a target?</span>
@@ -312,14 +316,14 @@ export default defineComponent({});
                       >
                         <path
                           d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
-                        ></path>
-                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        />
+                        <path
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        />
                       </svg>
                     </span>
-                    <span
-                      >Why do we require you to verify the ownership of a
-                      domain?</span
-                    >
+                    <span>Why do we require you to verify the ownership of a domain?</span>
                   </div>
                   <!-- <span>
                     <font-awesome-icon icon="chevron-right" class="text-xs" />
@@ -336,8 +340,11 @@ export default defineComponent({});
                       >
                         <path
                           d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
-                        ></path>
-                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        />
+                        <path
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        />
                       </svg>
                     </span>
                     <span>What is the meaning of a finding’s state?</span>

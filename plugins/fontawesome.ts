@@ -15,4 +15,3 @@ export default defineNuxtPlugin((nuxtApp) => {
 })
 
 // Modify the `nuxt.config.ts` file by adding to the `export default defineNuxtConfig()`
-
