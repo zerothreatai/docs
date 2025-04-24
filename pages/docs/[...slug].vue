@@ -27,8 +27,9 @@ definePageMeta({
   layout: 'docslayout',
 })
 
+const routepath = route.fullPath != '' && route.path.endsWith('/') ? route.fullPath.replace(/\/+$/, '') : route.path
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
-  queryCollectionItemSurroundings('content', route.path.replace('/#', '#')),
+  queryCollectionItemSurroundings('content', routepath),
 )
 
 const [prev, next] = surround.value || []
@@ -37,8 +38,6 @@ useSeoMeta({
   title: page.value?.title,
   description: page.value?.description,
 })
-
-console.log(page.value?.body.toc?.links.length)
 </script>
 
 <template>

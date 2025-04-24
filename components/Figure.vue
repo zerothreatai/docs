@@ -31,7 +31,7 @@ const closeModal = () => {
 <template>
   <div>
     <div class="flex justify-center py-2">
-      <div>
+      <div class="">
         <img
           :key="index"
           :src="source"
@@ -40,9 +40,9 @@ const closeModal = () => {
           alt="Thumbnail"
           @click="openModal(source)"
         >
-        <!-- <p class="text-sm italic">
-          <slot />
-        </p> -->
+        <p class="*:text-sm mt-0 text-center *:text-gray-400 *:mt-2">
+          <slot unwrap="p" />
+        </p>
       </div>
     </div>
 
