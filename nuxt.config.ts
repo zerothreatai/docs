@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+
   modules: ['@nuxt/content', '@nuxtjs/tailwindcss', 'tailwindcss', '@nuxtjs/algolia'],
   plugins: [
     '~/plugins/contentScrollFix.client.ts',
@@ -16,7 +17,13 @@ export default defineNuxtConfig({
     },
   ],
   devtools: { enabled: false },
+  app: {
+    trailingSlash: false,
+  },
   css: ['~/main.css', '@fortawesome/fontawesome-svg-core/styles.css'],
+  router: {
+    trailingSlash: false,
+  },
   content: {
     markdown: {
       toc: {

@@ -37,6 +37,8 @@ useSeoMeta({
   title: page.value?.title,
   description: page.value?.description,
 })
+
+console.log(page.value?.body.toc?.links.length)
 </script>
 
 <template>
@@ -127,7 +129,7 @@ useSeoMeta({
     </div>
     <div class="xl:col-span-3 hidden xl:flex justify-start">
       <div
-        v-if="page?.body?.toc?.links"
+        v-if="page?.body?.toc?.links.length"
         class="min-w-52"
       >
         <TocLinks :toclinks="page.body.toc.links" />

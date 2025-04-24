@@ -25,7 +25,7 @@ import AlgoliaSearchModel from './AlgoliaSearchModel.vue'
         <AlgoliaSearchModel />
         <div>
           <a
-            href="https://github.com/zerothreatai"
+            href="https://github.com/zerothreatai/docs"
             target="_blank"
           >
             <github-icon class="w-6 fill-gray-700 hover:fill-zt_purple cursor-pointer" />
