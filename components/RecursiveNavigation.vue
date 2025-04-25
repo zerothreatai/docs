@@ -7,6 +7,10 @@ const props = defineProps(['item'])
 const route = useRoute()
 const isOpen = ref(false)
 
+function normalizePath(path: string): string {
+  return path !== '/' ? path.replace(/\/+$/, '') : path
+}
+
 const openChildren = () => {
   isOpen.value = true
 }
@@ -51,7 +55,7 @@ watch(
       <NuxtLink
         class="text-sm mt-1 ps-2 font-zt_regular text-gray-700 flex items-center justify-between hover:text-zt_purple hover:border-zt_purple/70 transition-all duration-300 cursor-pointer py-1 my-1 w-full tracking-wide"
         :class="{
-          'text-zt_purple border-zt_purple/70': route.path === item.path,
+          'text-zt_purple border-zt_purple/70': normalizePath(route.path) === normalizePath(item.path),
         }"
         :to="item.path"
         @click="() => openChildren()"

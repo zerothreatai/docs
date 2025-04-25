@@ -16,7 +16,7 @@
       >
         <h2
           class="text-sm max-xl:mb-3 max-xl:mt-0 xl:my-3 flex items-center gap-x-2 ms-5 font-zt_medium tracking-wide text-gray-500 hover:text-zt_purple"
-          :class="{ 'text-zt_purple': route.path === items.path }"
+          :class="{ 'text-zt_purple': normalizePath(route.path) === normalizePath(items.path) }"
         >
           <font-awesome-icon
             :icon="items.meta.icon"
@@ -46,6 +46,11 @@ import RecursiveNavigation from './RecursiveNavigation.vue'
 
 const props = defineProps(['navigation'])
 const route = useRoute()
+
+function normalizePath(path: string): string {
+  return path !== '/' ? path.replace(/\/+$/, '') : path
+}
+// const routepath = computed(() => (route.path != '/' && route.path.endsWith('/') ? route.path.replace(/\/+$/, '') : route.path))
 </script>
 
 <style scoped>
