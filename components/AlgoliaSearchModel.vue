@@ -12,6 +12,10 @@ const openSearch = () => {
     }
   }
 }
+const removeOrigin = (url: string) => {
+  const origin = window.location.origin
+  return url.replace(origin, '')
+}
 </script>
 
 <template>
@@ -21,7 +25,7 @@ const openSearch = () => {
       placeholder="Search Documentation"
       :transform-items="(items) => {
         return items.map((item) => {
-          item.url = item.url.replace('/#', '#')
+          item.url = removeOrigin(item.url.replace('/#', '#'))
           return item
         })
       }"
