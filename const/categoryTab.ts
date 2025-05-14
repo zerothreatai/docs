@@ -4,10 +4,11 @@ const tabs = [
   {
     title: 'Getting Started',
     category: FaqCategory['Getting-Started'],
-    icon: 'crosshairs',
-    iconCLass: 'text-zt_purple',
+    icon: 'circle-play',
+    iconCLass: 'text-blue-400',
     file: '/assets/target.faq.json',
   },
+  // <i class="fa-solid fa-bullseye"></i>
   {
     title: 'Targets',
     category: FaqCategory.Targets,
@@ -18,8 +19,8 @@ const tabs = [
   {
     title: 'Target Verification',
     category: FaqCategory['Target Verification'],
-    icon: 'crosshairs',
-    iconCLass: 'text-zt_purple',
+    icon: 'check-double',
+    iconCLass: 'text-green-500',
     file: '/assets/target.faq.json',
   },
   {
@@ -43,8 +44,8 @@ const tabs = [
   {
     title: 'Product',
     category: FaqCategory.Product,
-    icon: 'shield-virus',
-    iconCLass: 'text-red-500',
+    icon: 'cube',
+    iconCLass: 'text-stone-500',
   },
   {
     title: 'Scan',
@@ -55,50 +56,50 @@ const tabs = [
   {
     title: 'API Security',
     category: FaqCategory['API Security'],
-    icon: 'expand',
-    iconCLass: 'text-blue-500',
+    icon: 'key',
+    iconCLass: 'text-green-500',
   },
   {
     title: 'Reports',
     category: FaqCategory.Reports,
     icon: 'file-lines',
-    iconCLass: 'text-gray-500',
+    iconCLass: 'text-zt_purple',
   },
   {
     title: 'Plans',
     category: FaqCategory.Plans,
-    icon: 'file-lines',
-    iconCLass: 'text-gray-500',
+    icon: 'lightbulb',
+    iconCLass: 'text-yellow-500',
   },
   {
     title: 'Pricing',
     category: FaqCategory.Pricing,
-    icon: 'file-lines',
-    iconCLass: 'text-gray-500',
+    icon: 'dollar-sign',
+    iconCLass: 'text-green-500',
   },
   {
     title: 'Promos',
     category: FaqCategory.Promos,
-    icon: 'file-lines',
-    iconCLass: 'text-gray-500',
+    icon: 'tags',
+    iconCLass: 'text-zt_purple',
   },
   {
     title: 'Integrations',
     category: FaqCategory.Integrations,
-    icon: 'file-lines',
-    iconCLass: 'text-gray-500',
+    icon: 'code',
+    iconCLass: 'text-blue-500',
   },
   {
     title: 'Mannaging Account',
     category: FaqCategory['Managing Account'],
-    icon: 'file-lines',
+    icon: 'gear',
     iconCLass: 'text-gray-500',
   },
   {
     title: 'Trouble Shooting',
     category: FaqCategory['Trouble Shooting'],
-    icon: 'file-lines',
-    iconCLass: 'text-gray-500',
+    icon: 'screwdriver-wrench',
+    iconCLass: 'text-blue-500',
   },
 ]
 

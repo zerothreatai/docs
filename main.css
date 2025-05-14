@@ -32,10 +32,9 @@ h2,
 h3,
 h4,
 h5,
-h6,
-{
-scroll-margin-top: 80px;
-/* Adjust based on header height */
+h6 {
+  scroll-margin-top: 80px;
+  /* Adjust based on header height */
 }
 
 h1,
@@ -154,127 +153,150 @@ body {
   font-display: swap;
 }
 
-
 h2 {
-  @apply text-2xl text-[#3c3c43] mt-10 mb-4
+  @apply text-2xl text-[#3c3c43] mt-10 mb-4;
 }
 
 h3 {
-  @apply text-xl text-[#3c3c43] mt-12 mb-4
+  @apply text-xl text-[#3c3c43] mt-12 mb-4;
 }
 
 p {
-  @apply font-zt_regular text-base tracking-wide my-4 text-[#3c3c43] leading-[26px]
+  @apply font-zt_regular text-base tracking-wide my-4 text-[#3c3c43] leading-[26px];
 }
 
-ul, ol {
-  @apply ml-10 mb-5
+ul,
+ol {
+  @apply ml-10 mb-5;
 }
 
 ul {
-  @apply list-disc
+  @apply list-disc;
 }
 
 ol {
-  @apply list-decimal
+  @apply list-decimal;
 }
 
-ul li, ol li {
-  @apply mt-3 mb-2 font-zt_regular text-base tracking-wide text-[#3c3c43]
+ul li,
+ol li {
+  @apply mt-3 mb-2 font-zt_regular text-base tracking-wide text-[#3c3c43];
 }
 
-ul li ul, ol li ul {
-  @apply ml-5 list-none
+ul li ul,
+ol li ul {
+  @apply ml-5 list-none;
 }
 
 ol li ul li {
-  @apply after:hidden list-disc
+  @apply after:hidden list-disc;
 }
 
 ol li ul li ul li ul li {
-  @apply list-none after:content-['-']
+  @apply list-none after:content-['-'];
 }
 
-li ul li, ol li ul li ul li {
-  @apply text-sm mt-2 tracking-wider font-zt_regular leading-6 relative after:absolute after:-left-5 after:top-[1px] after:text-black after:content-['⮚']
+li ul li,
+ol li ul li ul li {
+  @apply text-sm mt-2 tracking-wider font-zt_regular leading-6 relative after:absolute after:-left-5 after:top-[1px] after:text-black after:content-['⮚'];
 }
 
 ol li ul li ul li {
-  @apply list-none after:inline-block
+  @apply list-none after:inline-block;
 }
 
 li ul li ul li {
-  @apply text-sm mt-2 tracking-wider font-zt_regular leading-6 relative after:absolute after:-left-5 after:top-[1px] after:text-black after:content-['⬥']
+  @apply text-sm mt-2 tracking-wider font-zt_regular leading-6 relative after:absolute after:-left-5 after:top-[1px] after:text-black after:content-['⬥'];
 }
 
-ul li>ul li code, ol li>ul li code {
-  @apply text-xs
+ul li > ul li code,
+ol li > ul li code {
+  @apply text-xs;
 }
 
-ul li ul li strong, ol li ul li strong {
-  @apply p-0
+ul li ul li strong,
+ol li ul li strong {
+  @apply p-0;
 }
 
-ul li strong, ol li strong {
-  @apply pb-1 inline-block
+ul li strong,
+ol li strong {
+  @apply pb-1 inline-block;
 }
 
 ul li a strong {
-  @apply text-zt_purple hover:underline pb-0
+  @apply text-zt_purple hover:underline pb-0;
 }
 
-p a strong, h6 a strong, ol li a strong, ul li a strong {
-  @apply text-zt_purple hover:underline
+p a strong,
+h6 a strong,
+ol li a strong,
+ul li a strong {
+  @apply text-zt_purple hover:underline;
 }
 
 img {
-  @apply my-5 border mx-auto
+  @apply my-5 border mx-auto;
 }
 img {
-  @apply max-h-[450px]
+  @apply max-h-[450px];
 }
 div > img {
-  @apply block mx-auto rounded-lg shadow-md my-0.5
+  @apply block mx-auto rounded-lg shadow-md my-0.5;
 }
-ul li img, ol li img {
-  @apply p-0 border rounded-md shadow-md mx-1 inline-block my-2
+ul li img,
+ol li img {
+  @apply p-0 border rounded-md shadow-md mx-1 inline-block my-2;
 }
-p > span > img , li > span > img {
-  @apply inline-block rounded-md shadow-md my-0
+p > span > img,
+li > span > img {
+  @apply inline-block rounded-md shadow-md my-0;
 }
 code {
-  @apply text-xs bg-slate-50 px-2 py-0.5 text-gray-800 font-zt_regular tracking-widest leading-none border rounded-md
+  @apply text-xs bg-slate-50 px-2 py-0.5 text-gray-800 font-zt_regular tracking-widest leading-none border rounded-md;
 }
 
 details {
-  @apply border rounded-md px-4 py-3 text-base tracking-wide text-[#3c3c43] cursor-pointer bg-slate-50
+  @apply border rounded-md px-4 py-3 text-base tracking-wide text-[#3c3c43] cursor-pointer bg-slate-50;
 }
 
 blockquote {
-  @apply bg-zt_purple/5 border-l-4 border-zt_purple/70 py-2 px-3
+  @apply bg-zt_purple/5 border-l-4 border-zt_purple/70 py-2 px-3;
 }
 
 blockquote p {
-  @apply leading-6 italic
+  @apply leading-6 italic;
 }
 
-.right_navlinks p, .right_navlinks ul li {
-  @apply my-2
+.right_navlinks p,
+.right_navlinks ul li {
+  @apply my-2;
 }
 
 .right_navlinks ul {
-  @apply ml-4 mb-0
+  @apply ml-4 mb-0;
 }
 
 #searchModel strong {
-  @apply text-zt_purple hover:underline
+  @apply text-zt_purple hover:underline;
 }
 #faq-list p {
-@apply text-sm text-gray-600 font-zt_regular mt-0 -translate-y-2 mb-2
+  @apply text-sm text-gray-600 font-zt_regular mt-0 -translate-y-2 mb-2;
 }
 #serch-model-list strong {
-  @apply text-gray-600
+  @apply text-gray-600;
 }
 #serch-model-list div {
-  @apply max-w-full overflow-hidden text-ellipsis text-nowrap
+  @apply max-w-full overflow-hidden text-ellipsis text-nowrap;
+}
+.custom-list li {
+  margin-left: 15px !important;
+  margin: 10px 0px !important;
+  line-height: 1.2rem !important;
+}
+.custom-list > a {
+  color: #9b26b6 !important;
+}
+.custom-list > a:hover {
+  text-decoration: underline !important;
 }
