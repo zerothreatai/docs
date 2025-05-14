@@ -156,16 +156,3 @@ const toggleItem = (item) => {
     </div>
   </div>
 </template>
-
-<style>
-  .custom-list > li {
-    margin-left: 20px !important;
-    padding: 1px 0px !important;
-  }
-  .custom-list > a {
-    color: #9b26b6 !important;
-  }
-  .custom-list > a:hover {
-    text-decoration: underline !important;
-  }
-</style>
