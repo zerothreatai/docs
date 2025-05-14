@@ -93,13 +93,13 @@ const tabs = [
     iconCLass: 'text-zt_purple',
     file: 'assests/promos.faq.json',
   },
-  {
-    title: 'Integrations',
-    category: FaqCategory.Integrations,
-    icon: 'code',
-    iconCLass: 'text-blue-500',
-    file: 'assests/integrations.faq.json',
-  },
+  // {
+  //   title: 'Integrations',
+  //   category: FaqCategory.Integrations,
+  //   icon: 'code',
+  //   iconCLass: 'text-blue-500',
+  //   file: 'assests/integrations.faq.json',
+  // },
   {
     title: 'Managing Account',
     category: FaqCategory['Managing Account'],
