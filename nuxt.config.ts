@@ -39,6 +39,9 @@ export default defineNuxtConfig({
       algoliaIndexName: process.env.ALGOLIA_INDEX_NAME || '',
     },
   },
+  dir: {
+    static: 'public',
+  },
   // head: {
   //   link: [
   //     {
@@ -63,6 +66,10 @@ export default defineNuxtConfig({
       routes: ['/'],
       crawlLinks: true,
     },
+    publicAssets: [{
+      baseURL: 'public/assests',
+      dir: 'public',
+    }],
   },
   algolia: {
     apiKey: process.env.ALGOLIA_SEARCH_API_KEY,

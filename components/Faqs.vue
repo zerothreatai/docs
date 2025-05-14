@@ -1,91 +1,44 @@
 <script setup>
-import targetFaq from '../assests/target.faq.json'
-import ScanFaq from '../assests/scan.faq.json'
-import OrganizationFaq from '../assests/organization.faq.json'
-import ScanReportFaq from '../assests/scanReport.faq.json'
-import authenticatedFaq from '../assests/authenticate.faq.json'
-import unauthenticateFaq from '../assests/unauthenticate.faq.json'
-import gettingStartedFaq from '../assests/getting-started.faq.json'
 import tabs from '~/const/categoryTab'
-import { FaqCategory } from '~/utils/category.enum'
-
-const searchQuery = ref('')
 
 const activeTab = ref(tabs[0])
 
-const targetfaqs = ref(targetFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-const Scanfaqs = ref(ScanFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-const Organizationfaqs = ref(OrganizationFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-const ScanReportfaqs = ref(ScanReportFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-const Authenticatedfaqs = ref(authenticatedFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-const Unathenticatefaqs = ref(unauthenticateFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-const gettingStartedFaqs = ref(gettingStartedFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-
+const filteredfaqs = ref([])
 const selectButton = async (tab) => {
   activeTab.value = tab
-}
-const filteredfaqs = computed(() => {
-  switch (activeTab.value.category) {
-    case FaqCategory.Targets:
-      if (searchQuery.value.trim().length) {
-        return targetfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return targetfaqs.value
-      break
-    case FaqCategory.Scan:
-      if (searchQuery.value.trim().length) {
-        return Scanfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return Scanfaqs.value
-      break
-    case FaqCategory.Organizations:
-      if (searchQuery.value.trim().length) {
-        return Organizationfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return Organizationfaqs.value
-      break
-    case FaqCategory['Scan-Report']:
-      if (searchQuery.value.trim().length) {
-        return ScanReportfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return ScanReportfaqs.value
-      break
-    case FaqCategory['Authenticate']:
-      if (searchQuery.value.trim().length) {
-        return Authenticatedfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return Authenticatedfaqs.value
-    case FaqCategory['Unauthenticate']:
-      if (searchQuery.value.trim().length) {
-        return Unathenticatefaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return Unathenticatefaqs.value
-    case FaqCategory['Getting-Started']:
-      if (searchQuery.value.trim().length) {
-        return gettingStartedFaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return gettingStartedFaqs.value
-    default:
-      return []
+  try {
+    if (tab.file) {
+      const res = await fetch(tab.file)
+      const jsonData = await res.json()
+      // console.log(jsonData)
+      filteredfaqs.value = jsonData ? jsonData.map(d => ({ ...d, isOpen: false })).slice(0, 3) : []
+    }
+    else {
+      filteredfaqs.value = []
+    }
   }
-  return []
-},
+  catch {
+    filteredfaqs.value = []
+  }
+}
 
-)
+onMounted(async () => {
+  if (activeTab.value.file) {
+    try {
+      const res = await fetch(activeTab.value.file)
+      const jsonData = await res.json()
+      // console.log(jsonData)
+      filteredfaqs.value = jsonData.map(d => ({ ...d, isOpen: false })).slice(0, 3)
+    }
+    catch {
+      filteredfaqs.value = []
+    }
+  }
+  else {
+    filteredfaqs.value = []
+  }
+})
+
 const toggleItem = (item) => {
   filteredfaqs.value.map((d) => {
     if (d.q == item.q) {

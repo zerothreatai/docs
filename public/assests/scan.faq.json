@@ -1,0 +1,58 @@
+[
+    {
+        "q":"What happens during a scan? ",
+        "a":"During a scan, ZeroThreat systematically analyzes your web application or API to detect security vulnerabilities. Our intelligent crawler crawls the target, identifies all accessible endpoints and inputs, and simulates real-world attack techniques to uncover issues like SQL injection, XSS, and authentication flaws. "
+    },
+    {
+        "q":"How long will a target scan take? ",
+        "a":"A typical ZeroThreat scan takes between 30 minutes to 2 hours, depending on the size and complexity of the application. "
+    },
+    {
+        "q":"What is the data storage location when you put URL for scan? ",
+        "a":"It\u2019s the storage location where the scan data is stored. Choosing the right location ensures compliance with laws like GDPR, keeping data secure and within required geographic boundaries. "
+    },
+    {
+        "q":"Why add custom headers to scans? ",
+        "a":"Custom headers (e.g., authorization tokens or API keys) is an optional setting which can help the scanner interact correctly with your app\u2019s back-end. They also help differentiate scan traffic from real users in logs by adding a custom header (e.g., 'X-Scanner-User: ZeroThreat') for better monitoring. "
+    },
+    {
+        "q":"How does ZeroThreat scan resources outside a target\u2019s domain? ",
+        "a":"Authenticated scans uncover vulnerabilities in protected areas like user dashboards or admin panels, which traditional scanners can\u2019t access. They ensure that all parts of your application are tested, protect sensitive user data, and provide a more comprehensive security assessment. "
+    },
+    {
+        "q":"How to identify scanner requests through the user-agent header? ",
+        "a":"ZeroThreat uses a custom header value of Mozilla\/5.0 (Windows NT 10.0; Win64; x64; compatible; +https:\/\/zerothreat.ai\/sos) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/115.0.0.0 Safari\/537.36 ZeroThreatAIBot 0.0.65. You can identify scanner requests through similar ZeroThreatAIBot signatures. "
+    },
+    {
+        "q":"Does ZeroThreat scan OWASP Top 10? ",
+        "a":"Yes, ZeroThreat thoroughly scans for all OWASP Top 10 vulnerabilities, including issues like injection flaws, broken access control, security misconfigurations, and more. "
+    },
+    {
+        "q":"How often are vulnerabilities added or updated in ZeroThreat? ",
+        "a":"We consistently update our vulnerability database and scanning engine to efficiently detect threats based on the latest trends and reported CVEs. For example, recent data from CVE Details shows that the most reported vulnerabilities include XSS, SQL Injection, Memory Corruption, Code Execution, and Privilege Escalation. ZeroThreat adapts to these trends to ensure your applications are protected against the most common and critical security risks. "
+    },
+    {
+        "q":"What do the severity levels in ZeroThreat\u2019s findings mean? ",
+        "a":"ZeroThreat assigns severity levels\u2014Critical,  Medium, Low, and Informational\u2014to help you prioritize fixes. Critical issues indicate serious risks needing immediate action, while Medium and Low highlight less urgent issues. Informational findings provide context without direct risk. "
+    },
+    {
+        "q":"Can I pause target scans or prevent them from running at a certain time? ",
+        "a":"No, ZeroThreat does not currently support pausing active scans or setting blackout windows. However, you can schedule scans to start at specific times to minimize impact during peak hours. "
+    },
+    {
+        "q":"What is a scheduled scan in ZeroThreat? ",
+        "a":"A scheduled scan in ZeroThreat automates your scanning process by running scans at set times\u2014daily, weekly, or monthly\u2014without manual triggers. It\u2019s ideal for regular security checks, early vulnerability detection, and compliance needs. For example, schedule a scan for Monday at 2:00 AM after Sunday updates to catch issues early. "
+    },
+    {
+        "q":"How do I set up a scheduled scan in ZeroThreat? ",
+        "a":"Go to the Schedule Scan page via the top navigation bar, click Add Schedule Scan, and pick a verified target. Set the timezone, day, and time (e.g., 02:30 AM), then choose a repeat cycle\u2014one-time, daily, weekly, or monthly. Add an authentication template if needed, then click Schedule Scan to confirm. "
+    },
+    {
+        "q":"Can I schedule a scan with authentication in ZeroThreat? ",
+        "a":"Yes, you can add authentication to a scheduled scan by selecting a saved Authenticated Scan Template during setup. These templates, managed in Target Configuration, ensure scans access protected areas. Only existing templates are available for selection. "
+    },
+    {
+        "q":"How do CAPTCHAs affect my target scan in ZeroThreat? ",
+        "a":"If your application uses CAPTCHAs\u2014especially during the login process\u2014traditional automation methods may fail. To work around this, you can use the ZeroThreat Chrome Extension and perform an Active User Session Authentication (MFA) Scan. This approach leverages an already logged-in browser session, allowing ZeroThreat to scan authenticated areas without needing to bypass CAPTCHA or MFA barriers. "
+    }
+]
