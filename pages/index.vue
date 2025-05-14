@@ -1,7 +1,7 @@
 <script setup>
 import VideoSection from '~/components/VideoSection.vue'
 
-navigateTo('/docs')
+navigateTo('docs')
 </script>
 
 <template>
