@@ -1,0 +1,14 @@
+[
+    {
+        "q":"Why do we require you to verify the ownership of a domain\/target? ",
+        "a":"Target owner verification ensures you have permission to scan a target, preventing unauthorized testing. It confirms ownership, and avoids misuse or legal issues. This process safeguards the target owner\u2019s rights and ensures responsible use of ZeroThreat\u2019s scanning capabilities. "
+    },
+    {
+        "q":"How to verify target with DNS (txt)? ",
+        "a":"To verify a target using a DNS TXT record, copy the unique TXT record provided by ZeroThreat. Log in to your DNS provider (e.g., Cloudflare, GoDaddy, or AWS Route 53), navigate to the DNS settings for your domain, and add a new TXT record with the copied verification value. Save the changes, and click Verify in ZeroThreat. "
+    },
+    {
+        "q":"How to verify target using HTML file upload? ",
+        "a":"To verify a target using an HTML file, download the unique zero-threat.html file provided by ZeroThreat. Upload this file to the root directory of your web application (e.g., https:\/\/yourdomain.com\/zero-threat.html). Ensure the file is accessible by visiting the URL (e.g., https:\/\/yourdomain.com\/zero-threat.html) and confirm it is placed in the root directory, not a subfolder, and click Verify in ZeroThreat. "
+    }
+]
