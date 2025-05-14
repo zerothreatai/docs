@@ -51,7 +51,6 @@ export default defineNuxtConfig({
   //   ]
   // }
   routeRules: {
-    '/docs/': { redirect: '/docs' },
     '/docs/getting-started': { redirect: '/docs/getting-started/quickstart' },
     '/docs/manage-targets': {
       redirect: '/docs/manage-targets/targets-section',
