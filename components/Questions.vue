@@ -5,6 +5,7 @@ import OrganizationFaq from '../assests/organization.faq.json'
 import ScanReportFaq from '../assests/scanReport.faq.json'
 import authenticatedFaq from '../assests/authenticate.faq.json'
 import unauthenticateFaq from '../assests/unauthenticate.faq.json'
+import gettingStartedFaq from '../assests/getting-started.faq.json'
 import tabs from '~/const/categoryTab'
 
 import { FaqCategory } from '~/utils/category.enum'
@@ -19,6 +20,7 @@ const Organizationfaqs = ref(OrganizationFaq.map(d => ({ ...d, isOpen: false }))
 const ScanReportfaqs = ref(ScanReportFaq.map(d => ({ ...d, isOpen: false })))
 const Authenticatedfaqs = ref(authenticatedFaq.map(d => ({ ...d, isOpen: false })))
 const Unathenticatefaqs = ref(unauthenticateFaq.map(d => ({ ...d, isOpen: false })))
+const gettingStartedFaqs = ref(gettingStartedFaq.map(d => ({ ...d, isOpen: false })))
 
 const selectButton = (tab) => {
   activeTab.value = tab
@@ -37,7 +39,7 @@ const toggleAccordion = (item) => {
 
 const filteredfaqs = computed(() => {
   switch (activeTab.value.category) {
-    case FaqCategory.Target:
+    case FaqCategory.Targets:
       if (searchQuery.value.trim().length) {
         return targetfaqs.value.filter(t =>
           t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
@@ -53,7 +55,7 @@ const filteredfaqs = computed(() => {
       }
       return Scanfaqs.value
       break
-    case FaqCategory.Organization:
+    case FaqCategory.Organizations:
       if (searchQuery.value.trim().length) {
         return Organizationfaqs.value.filter(t =>
           t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
@@ -82,12 +84,18 @@ const filteredfaqs = computed(() => {
         )
       }
       return Unathenticatefaqs.value
+    case FaqCategory['Getting-Started']:
+      if (searchQuery.value.trim().length) {
+        return gettingStartedFaqs.value.filter(t =>
+          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
+        )
+      }
+      return gettingStartedFaqs.value
     default:
       return []
   }
   return []
 })
-
 </script>
 
 <template>
@@ -171,13 +179,22 @@ const filteredfaqs = computed(() => {
               }"
               class="transition-all duration-500 overflow-hidden px-6"
             >
+              <!-- {{ item.a }} -->
               <div class="py-4 text-gray-600 tracking-wider text-sm font-zt_regular leading-6">
-                {{ item.a }}
+                <MDC
+                  :value="item.a"
+                  :unwrap="true"
+                  class="custom-list"
+                />
               </div>
-              <div v-if="item.link" id="faq-list" class="relative ms-4 before:absolute before:w-[7px] before:h-[7px] before:-top-[1px] before:-left-4 before:bg-gray-500 before:rounded-full ">
-                <MDC :value="item.link"/>
+              <div
+                v-if="item.link"
+                id="faq-list"
+                class="relative ms-4 before:absolute before:w-[7px] before:h-[7px] before:-top-[1px] before:-left-4 before:bg-gray-500 before:rounded-full"
+              >
+                <MDC :value="item.link" />
               </div>
-            </div>  
+            </div>
           </div>
         </div>
       </div>
@@ -207,3 +224,15 @@ const filteredfaqs = computed(() => {
   </div>
 </template>
 
+<style>
+  .custom-list > li {
+    margin-left: 20px !important;
+    padding: 1px 0px !important;
+  }
+  .custom-list > a {
+    color: #9b26b6 !important;
+  }
+  .custom-list > a:hover {
+    text-decoration: underline !important;
+  }
+</style>
