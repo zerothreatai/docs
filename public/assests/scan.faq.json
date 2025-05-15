@@ -21,7 +21,7 @@
     },
     {
         "q":"How to identify scanner requests through the user-agent header? ",
-        "a":"ZeroThreat uses a custom header value of Mozilla\/5.0 (Windows NT 10.0; Win64; x64; compatible; +https:\/\/zerothreat.ai\/sos) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/115.0.0.0 Safari\/537.36 ZeroThreatAIBot 0.0.65. You can identify scanner requests through similar ZeroThreatAIBot signatures. "
+        "a":"ZeroThreat uses a custom header value of Mozilla\/5.0 (Windows NT 10.0; Win64; x64; compatible; +`https:\/\/zerothreat.ai\/sos`) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/115.0.0.0 Safari\/537.36 ZeroThreatAIBot 0.0.65. You can identify scanner requests through similar ZeroThreatAIBot signatures. "
     },
     {
         "q":"Does ZeroThreat scan OWASP Top 10? ",
