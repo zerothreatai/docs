@@ -9,6 +9,6 @@
     },
     {
         "q":"How to verify target using HTML file upload? ",
-        "a":"To verify a target using an HTML file, download the unique zero-threat.html file provided by ZeroThreat. Upload this file to the root directory of your web application (e.g., https:\/\/yourdomain.com\/zero-threat.html). Ensure the file is accessible by visiting the URL (e.g., https:\/\/yourdomain.com\/zero-threat.html) and confirm it is placed in the root directory, not a subfolder, and click Verify in ZeroThreat. "
+        "a":"To verify a target using an HTML file, download the unique zero-threat.html file provided by ZeroThreat. Upload this file to the root directory of your web application (e.g., `https:\/\/yourdomain.com\/zero-threat.html`). Ensure the file is accessible by visiting the URL (e.g., `https:\/\/yourdomain.com\/zero-threat.html`) and confirm it is placed in the root directory, not a subfolder, and click Verify in ZeroThreat. "
     }
 ]
