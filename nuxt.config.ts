@@ -67,7 +67,7 @@ export default defineNuxtConfig({
       crawlLinks: true,
     },
     publicAssets: [{
-      baseURL: 'public/assests',
+      baseURL: 'public/assets',
       dir: 'public',
     }],
   },
