@@ -31,8 +31,8 @@ jobs:
 
       - name: Assets folder copy
         run: |
-          rm -rf $GITHUB_WORKSPACE/public/assets/*
-          cp -R $GITHUB_WORKSPACE/public/prod/* $GITHUB_WORKSPACE/public/assets
+          rm -rf $GITHUB_WORKSPACE/public/assests/*
+          cp -R $GITHUB_WORKSPACE/public/prod/* $GITHUB_WORKSPACE/public/assests
 
       - name: Generate documentation
         run: |
