@@ -9,8 +9,7 @@
     },
     {
         "q":"How to perform target authentication for login forms using login sequence recording? ",
-        "a":"Install the ZeroThreat Chrome Recorder, select your target, and record your login steps (e.g., entering credentials, navigating few authenticated areas and logout). Lastly confirm the recording and start the scan.",
-        "link":"For more Information refer [**Scan With Login Sequence**](/docs/getting-started/authenticated-scan/scan-with-login-sequence 'mentions')"
+        "a":"Install the ZeroThreat Chrome Recorder, select your target, and record your login steps (e.g., entering credentials and navigating authenticated areas). Tag key HTTP requests (login, authenticated, logout), save the sequence, and start the scan. Details at Scan with Login Sequence. "
     },
     {
         "q":"Can I reuse a login sequence? ",
@@ -18,12 +17,11 @@
     },
     {
         "q":"Can I scan specific parts of a target? ",
-        "a":"Yes, you can use a navigation sequence-only scan to focus only on areas navigated during recording, like a dashboard or search functionality. You can also refine a target’s scope by ignoring unwanted URLs in Target Configuration, such as /login or /test, to exclude them from the scan. This allows ZeroThreat to assess just the intended parts of your application."
+        "a":"Yes, you can use a navigation sequence-only scan to focus only on areas navigated during recording, like a dashboard or search functionality. You can also refine a target\u2019s scope by ignoring unwanted URLs in Target Configuration, such as \/login or \/test, to exclude them from the scan. This allows ZeroThreat to assess just the intended parts of your application. "
     },
     {
         "q":"Can ZeroThreat scan MFA-protected apps? ",
-        "a":"Yes, it supports Multi-Factor Authentication scans. Using the ZeroThreat Chrome Recorder extension, it can even scan MFA apps including OTPs, CAPTCHAs, SSO, or others.",
-        "link":"For more Information refer [**Scan MFA App**](/docs/getting-started/authenticated-scan/scan-mfa-app 'mentions')"
+        "a":"Yes, it supports Multi-Factor Authentication scans. Using the ZeroThreat Chrome Recorder extension, it can even scan MFA apps including OTPs, CAPTCHAs, SSO, or others. Check Scan MFA App for a step-by-step guide. "
     },
     {
         "q":"What if the ZeroThreat extension doesn\u2019t open with the target in a new tab during recording? ",

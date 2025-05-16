@@ -1,8 +1,7 @@
 [
     {
         "q":"What is a target? ",
-        "a":"A target is referred to as the unique domain address of a website, defined by its name or IP, protocol (e.g., HTTP\/HTTPS), and port (e.g., 80\/8080). For example, `https:\/\/app.domain.com `and `https:\/\/docs.domain.com` are considered distinct domains because they use different subdomains (app vs. docs), even though they share the same base domain (domain.com). This distinction allows ZeroThreat to treat them as separate entities for scanning purposes. \n\nFor more Information refers Targets ",
-        "link":"For more Information refer [**Targets**](/docs/manage-targets/targets-section 'mentions')"
+        "a":"A target is referred to as the unique domain address of a website, defined by its name or IP, protocol (e.g., HTTP\/HTTPS), and port (e.g., 80\/8080). For example, `https:\/\/app.domain.com `and `https:\/\/docs.domain.com` are considered distinct domains because they use different subdomains (app vs. docs), even though they share the same base domain (domain.com). This distinction allows ZeroThreat to treat them as separate entities for scanning purposes. \n\nFor more Information refers Targets "
     },
     {
         "q":"How do I add a target in ZeroThreat? ",

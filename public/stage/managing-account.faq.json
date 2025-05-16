@@ -1,7 +1,7 @@
 [
     {
         "q":"How do roles and permissions work in ZeroThreat? ",
-        "a":"ZeroThreat offers role-based access control (RBAC). This allows you to assign users specific roles such as Administrator, Contributor, or Reader. Each role comes with defined permissions—for example, Administrators can manage users and settings, Contributors can run scans and access reports, and Viewers have read-only access."
+        "a":"ZeroThreat offers role-based access control (RBAC). This allows you to assign users specific roles such as Admin, Manager, or Viewer. Each role comes with defined permissions\u2014for example, Admins can manage users and settings, Managers can run scans and access reports, and Viewers have read-only access. "
     },
     {
         "q":"What roles and scopes are available on each plan? ",
@@ -13,6 +13,6 @@
     },
     {
         "q":"How to add users to an organization workspace and assign roles? ",
-        "a":"To add users, go to Organization settings in your account, click Add User (+), enter their name and email, and assign a role (Owner, Administrator, Contributor, or Reader). After that, they will receive an email and gain access in their ZeroThreat account based on the assigned role."
+        "a":"To add users, go to User Management in your account settings, click Add User (+), enter their name and email, and assign a role (Owner, Administrator, Contributor, or Reader). After that, they will receive an email and gain access to your organization dashboard based on the assigned role. "
     }
 ]

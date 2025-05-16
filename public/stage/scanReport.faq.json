@@ -5,8 +5,7 @@
   },
   {
     "q": "How do I share a scan report?",
-    "a": "From the Scans section, select your report, click the 'Share' button on the right, and enter the recipient’s name and email (e.g., 'Zerothreat Admin' at 'zerothreat.example@zerothreat.com'). Confirm and send to securely share the report.",
-    "link":"For more Information refer [**Share Scan Results**](/docs/manage-scans/share-scan-results 'mentions')"
+    "a": "From the Scans section, select your report, click the 'Share' button on the right, and enter the recipient’s name and email (e.g., 'Zerothreat Admin' at 'zerothreat.example@zerothreat.com'). Confirm and send to securely share the report. Check Docs for detailed step-by-step guide."
   },
   {
     "q": "What does the Web App Vulnerabilities section show?",
