@@ -1,0 +1,42 @@
+[
+    {
+        "q":"What is the use of Promos? How can I redeem it? ",
+        "a":"Promos allow you to get discounts or additional credits on your subscription. To redeem, simply enter the promo code during checkout or contact our support team to apply it to your account. "
+    },
+    {
+        "q":"How do I apply a promo code to my ZeroThreat account? ",
+        "a":"To apply a promo code, enter the code at checkout when purchasing or upgrading your plan. The discount will be automatically applied to your total. For assistance, contact our support team. "
+    },
+    {
+        "q":"Where can I find active promotions or discounts for ZeroThreat? ",
+        "a":"You can find current promotions and discounts in the Dashboard (Settings > Promos). For personalized deals or bulk purchase discounts, please contact our sales team directly. "
+    },
+    {
+        "q":"Can I use multiple promo codes at the same time? ",
+        "a":"No, only one promo code can be applied per transaction. However, you can choose the promo code that gives you the best discount. "
+    },
+    {
+        "q":"Do promo codes apply to credit purchases, subscription plans, or both? ",
+        "a":"Promo codes can be applied to both credit purchases and subscription plans, depending on the promotion. Check the terms of the specific promo code for eligibility. "
+    },
+    {
+        "q":"Are there any restrictions on using promotional credits? ",
+        "a":"Yes, promotional credits may have specific terms, such as expiration dates to certain plans or features. Be sure to check the promo details for any restrictions. "
+    },
+    {
+        "q":"Do promo credits expire if unused? ",
+        "a":"Yes, promo credits typically have an expiration date (30 days). If unused by the specified date, they will expire. Be sure to use them before they expire to maximize your savings. "
+    },
+    {
+        "q":"How do I get notified about upcoming sales, offers, or promotions? ",
+        "a":"Stay updated on our latest sales, offers, and promotions by following us on social media. You\u2019ll receive timely emails or notifications about exclusive deals and discounts. "
+    },
+    {
+        "q":"What happens if I cancel a plan that had a promo code applied? ",
+        "a":"If you cancel a plan that had a promo code applied, the promo will no longer be valid for any future charges. If you re-subscribe, you may not be able to use the same promo code, but we can offer you the best available deal at the time. "
+    },
+    {
+        "q":"Can I transfer promo benefits to another account? ",
+        "a":"No, promo benefits are non-transferable and can only be applied to the account where the promo code was originally redeemed. "
+    }
+]

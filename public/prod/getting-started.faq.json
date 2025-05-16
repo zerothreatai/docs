@@ -49,24 +49,12 @@
         "a":"You can reach ZeroThreat support through email at hello@zerothreat.ai. "
     },
     {
-        "q":"Is there a free trial available for ZeroThreat? ",
-        "a":"Yes, ZeroThreat offers a free trial that allows you to scan your web applications and APIs for vulnerabilities without any cost. You can start complete automated scanning coverage immediately\u2014no credit card required. \n\nSign up for free and get 5 credits worth $125 to begin your scan today. "
-    },
-    {
-        "q":"What types of applications can ZeroThreat scan? ",
-        "a":"ZeroThreat can scan a wide variety of applications, including traditional web applications, modern Single-Page Applications (SPAs), and both REST and GraphQL APIs integrated within these apps. It also supports scanning microservices. "
-    },
-    {
         "q":"What are the best practices for deploying DAST? ",
         "a":"To effectively deploy DAST, start by integrating it early into your SDLC to catch vulnerabilities before deployment. Use authenticated scans to test behind login screens, and schedule regular scans to catch new threats. Always verify scan results to reduce false positives, and combine DAST with other testing methods like SAST or SCA for full coverage. Lastly, ensure scan configurations are optimized per application environment to avoid noise and missed detections. "
     },
     {
         "q":"Why do I need continuous web application security testing if I already perform manual penetration tests? ",
         "a":"Manual penetration tests are valuable, but they\u2019re typically periodic and may miss vulnerabilities introduced between test cycles. Continuous web application security testing with tools like ZeroThreat helps you catch threats in real-time as code changes are made. It ensures consistent monitoring, rapid detection, and quick remediation\u2014closing the gaps that manual testing alone can't cover. This proactive approach significantly reduces your risk of breaches, especially in agile or DevOps environments where application updates are frequent. "
-    },
-    {
-        "q":"What all can I security test using ZeroThreat? ",
-        "a":"ZeroThreat enables comprehensive security testing across a wide range of targets. You can test modern web applications (including SPAs), APIs (Postman, gRPC), and authenticated pages. ZeroThreat also scans for a wide spectrum of vulnerabilities\u2014like XSS, SQLi, misconfigurations, and access control issues\u2014while integrating seamlessly into CI\/CD pipelines for continuous security. "
     },
     {
         "q":"Is it safe to scan production environments with ZeroThreat?",

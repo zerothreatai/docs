@@ -49,9 +49,9 @@
         "a":"You can reach ZeroThreat support through email at hello@zerothreat.ai. "
     },
     {
-        "q":"Is there a free trial available for ZeroThreat? ",
-        "a":"Yes, ZeroThreat offers a free trial that allows you to scan your web applications and APIs for vulnerabilities without any cost. You can start complete automated scanning coverage immediately\u2014no credit card required. \n\nSign up for free and get 5 credits worth $125 to begin your scan today. "
-    },
+    "q":"Is there a free trial available for ZeroThreat? ",
+    "a":"Yes, ZeroThreat offers a free trial that allows you to scan your web applications and APIs for vulnerabilities without any cost. You can start complete automated scanning coverage immediately\u2014no credit card required. \n\nSign up for free and get 5 credits worth $125 to begin your scan today. "
+},
     {
         "q":"What types of applications can ZeroThreat scan? ",
         "a":"ZeroThreat can scan a wide variety of applications, including traditional web applications, modern Single-Page Applications (SPAs), and both REST and GraphQL APIs integrated within these apps. It also supports scanning microservices. "

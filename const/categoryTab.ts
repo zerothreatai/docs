@@ -8,7 +8,6 @@ const tabs = [
     iconCLass: 'text-blue-400',
     file: 'assests/getting-started.faq.json',
   },
-  // <i class="fa-solid fa-bullseye"></i>
   {
     title: 'Targets',
     category: FaqCategory.Targets,
@@ -44,13 +43,13 @@ const tabs = [
     iconCLass: 'text-red-500',
     file: 'assests/unauthenticate.faq.json',
   },
-  // {
-  //   title: 'Product',
-  //   category: FaqCategory.Product,
-  //   icon: 'cube',
-  //   iconCLass: 'text-stone-500',
-  //   file: 'assests/product.faq.json',
-  // },
+  {
+    title: 'Product',
+    category: FaqCategory.Product,
+    icon: 'cube',
+    iconCLass: 'text-stone-500',
+    file: 'assests/product.faq.json',
+  },
   {
     title: 'Scan',
     category: FaqCategory.Scan,
@@ -58,13 +57,13 @@ const tabs = [
     iconCLass: 'text-blue-500',
     file: 'assests/scan.faq.json',
   },
-  // {
-  //   title: 'API Security',
-  //   category: FaqCategory['API Security'],
-  //   icon: 'key',
-  //   iconCLass: 'text-green-500',
-  //   file: 'assests/api-security.faq.json',
-  // },
+  {
+    title: 'API Security',
+    category: FaqCategory['API Security'],
+    icon: 'key',
+    iconCLass: 'text-green-500',
+    file: 'assests/api-security.faq.json',
+  },
   {
     title: 'Reports',
     category: FaqCategory.Reports,
@@ -72,34 +71,34 @@ const tabs = [
     iconCLass: 'text-zt_purple',
     file: 'assests/reports.faq.json',
   },
-  // {
-  //   title: 'Plans',
-  //   category: FaqCategory.Plans,
-  //   icon: 'lightbulb',
-  //   iconCLass: 'text-yellow-500',
-  //   file: 'assests/plans.faq.json',
-  // },
-  // {
-  //   title: 'Pricing',
-  //   category: FaqCategory.Pricing,
-  //   icon: 'dollar-sign',
-  //   iconCLass: 'text-green-500',
-  //   file: 'assests/pricing.faq.json',
-  // },
-  // {
-  //   title: 'Promos',
-  //   category: FaqCategory.Promos,
-  //   icon: 'tags',
-  //   iconCLass: 'text-zt_purple',
-  //   file: 'assests/promos.faq.json',
-  // },
-  // {
-  //   title: 'Integrations',
-  //   category: FaqCategory.Integrations,
-  //   icon: 'code',
-  //   iconCLass: 'text-blue-500',
-  //   file: 'assests/integrations.faq.json',
-  // },
+  {
+    title: 'Plans',
+    category: FaqCategory.Plans,
+    icon: 'lightbulb',
+    iconCLass: 'text-yellow-500',
+    file: 'assests/plans.faq.json',
+  },
+  {
+    title: 'Pricing',
+    category: FaqCategory.Pricing,
+    icon: 'dollar-sign',
+    iconCLass: 'text-green-500',
+    file: 'assests/pricing.faq.json',
+  },
+  {
+    title: 'Promos',
+    category: FaqCategory.Promos,
+    icon: 'tags',
+    iconCLass: 'text-zt_purple',
+    file: 'assests/promos.faq.json',
+  },
+  {
+    title: 'Integrations',
+    category: FaqCategory.Integrations,
+    icon: 'code',
+    iconCLass: 'text-blue-500',
+    file: 'assests/integrations.faq.json',
+  },
   {
     title: 'Managing Account',
     category: FaqCategory['Managing Account'],
@@ -116,4 +115,7 @@ const tabs = [
   },
 ]
 
-export default tabs
+const irrevelantCategory = [FaqCategory['API Security'], FaqCategory.Integrations, FaqCategory.Plans, FaqCategory.Promos, FaqCategory.Pricing, FaqCategory.Product]
+const fileredtabs = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging' ? tabs.filter(tabs => !irrevelantCategory.includes(tabs.category)) : tabs
+
+export default fileredtabs

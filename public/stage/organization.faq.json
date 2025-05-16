@@ -1,7 +1,7 @@
 [
   {
       "q":"What are organizations in ZeroThreat? ",
-      "a":"Organizations in ZeroThreat help group users and scan targets for easier management. You can create multiple organizations, each with its own settings, users, and scan data. Roles like Reader, Contributor and Administrator control what each user can access or do. When you sign up, you're asked to enter an organization name — this becomes your default organization. You can create more organizations later from the settings page."
+      "a":"Organizations in ZeroThreat group users, targets for simpler management. You can set up multiple organizations, each working separately, and assign roles like Reader, Contributor and more to control access. This limits users to specific tasks or resources, keeping everything organized and secure. When a user signup the application asks for the organization name, that\u2019s your default organization, more users can create through the settings page. "
   },
   {
       "q":"How do I create an organization? ",

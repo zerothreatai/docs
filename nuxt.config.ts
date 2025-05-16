@@ -18,11 +18,11 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: false },
   app: {
-    trailingSlash: false,
+    // trailingSlash: false,
   },
   css: ['~/main.css', '@fortawesome/fontawesome-svg-core/styles.css'],
   router: {
-    trailingSlash: false,
+    // trailingSlash: false,
   },
   content: {
     markdown: {

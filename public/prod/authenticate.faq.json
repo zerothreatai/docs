@@ -23,11 +23,11 @@
     {
         "q":"Can ZeroThreat scan MFA-protected apps? ",
         "a":"Yes, it supports Multi-Factor Authentication scans. Using the ZeroThreat Chrome Recorder extension, it can even scan MFA apps including OTPs, CAPTCHAs, SSO, or others.",
-        "link":"For more Information refer [**Scan MFA App**](/docs/getting-started/authenticated-scan/scan-mfa-app 'mentions')"
-    },
+        "link":"For more Information refer [**Scan MFA App**](/docs/getting-started/authenticated-scan/scan-mfa-app 'mentions')"},
     {
         "q":"What if the ZeroThreat extension doesn\u2019t open with the target in a new tab during recording? ",
-        "a":"When recording a login sequence, the ZeroThreat extension should open with the target page in a new tab, but if it doesn\u2019t, you can open it manually. Launch the target in a new tab, click the extension icon in Chrome\u2019s toolbar, and select ZeroThreat AI Recorder. Copy the Steps Token and Target Code from the scanning portal, paste them into the extension, and click Open Step Recorder to continue. See the docs for a detailed guide. "
+        "a":"When recording a login sequence, the ZeroThreat extension should open with the target page in a new tab, but if it doesn’t, you can open it manually. Launch the target in a new tab, click the extension icon in Chrome’s toolbar, and select ZeroThreat AI Recorder. Copy the Steps Token and Target Code from the scanning portal, paste them into the extension, and click Open Step Recorder to continue.",
+        "link":"For more Information refer [**Targets**](/docs/manage-targets/targets-section 'mentions')"
     },
     {
         "q":"What are the important things to keep in mind before starting an authenticated test? ",
