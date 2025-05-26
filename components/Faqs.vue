@@ -1,9 +1,9 @@
 <script setup>
 import tabs from '~/const/categoryTab'
 
-const condifgsRuntime = useRuntimeConfig()
+// const condifgsRuntime = useRuntimeConfig()
 const irrevelantCategory = [FaqCategory['API Security'], FaqCategory.Integrations, FaqCategory.Plans, FaqCategory.Promos, FaqCategory.Pricing, FaqCategory.Product]
-const fileredtabs = condifgsRuntime.public.projectEnv == 'production' || condifgsRuntime.public.projectEnv == 'staging' ? tabs.filter(tabs => !irrevelantCategory.includes(tabs.category)) : tabs
+const fileredtabs = process.env.NODE_ENV == 'production' || process.env.NODE_ENV == 'staging' ? tabs.filter(tabs => !irrevelantCategory.includes(tabs.category)) : tabs
 const activeTab = ref(fileredtabs[0])
 
 const filteredfaqs = ref([])
