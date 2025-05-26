@@ -2,10 +2,8 @@
 import tabs from '~/const/categoryTab'
 
 const condifgsRuntime = useRuntimeConfig()
-console.log('condifgsRuntime', condifgsRuntime)
 const irrevelantCategory = [FaqCategory['API Security'], FaqCategory.Integrations, FaqCategory.Plans, FaqCategory.Promos, FaqCategory.Pricing, FaqCategory.Product]
-if (condifgsRuntime.public.nodeEnv === 'production') console.log('ENV')
-const fileredtabs = condifgsRuntime.public.nodeEnv == 'production' || condifgsRuntime.public.nodeEnv == 'staging' ? tabs.filter(tabs => !irrevelantCategory.includes(tabs.category)) : tabs
+const fileredtabs = condifgsRuntime.public.projectEnv == 'production' || condifgsRuntime.public.projectEnv == 'staging' ? tabs.filter(tabs => !irrevelantCategory.includes(tabs.category)) : tabs
 const activeTab = ref(fileredtabs[0])
 
 const filteredfaqs = ref([])
