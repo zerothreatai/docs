@@ -115,7 +115,4 @@ const tabs = [
   },
 ]
 
-const irrevelantCategory = [FaqCategory['API Security'], FaqCategory.Integrations, FaqCategory.Plans, FaqCategory.Promos, FaqCategory.Pricing, FaqCategory.Product]
-const fileredtabs = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging' ? tabs.filter(tabs => !irrevelantCategory.includes(tabs.category)) : tabs
-
-export default fileredtabs
+export default tabs
