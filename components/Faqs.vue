@@ -1,7 +1,7 @@
 <script setup>
-import tabs from '~/const/categoryTab'
+import fileredtabs from '~/const/categoryTab'
 
-const activeTab = ref(tabs[0])
+const activeTab = ref(fileredtabs[0])
 
 const filteredfaqs = ref([])
 const selectButton = async (tab) => {
@@ -63,7 +63,7 @@ const toggleItem = (item) => {
     </div>
     <!--  -->
     <div class="text-base text-gray-500 font-zt_regular tracking-wide text-justify py-5">
-      Frequently asked questions about ZeroThreat features, target, scans, and scan report.
+      Everything you need to know about ZeroThreat’s features, target management, scans, and reporting—all in one place. 
     </div>
     <!-- Tabs -->
     <div

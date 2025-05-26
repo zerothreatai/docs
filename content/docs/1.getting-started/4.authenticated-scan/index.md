@@ -1,20 +1,20 @@
 ---
 icon: shield-virus
 title: Authenticated Scan
-description: Web applications often contain sensitive and critical functionality hidden behind authentication mechanisms. These areas, such as user dashboards, administrative panels, or protected APIs, are common targets for attackers and can harbor significant vulnerabilities. However, traditional web scanners often struggle to access these protected sections, leaving them untested.
+description: Authenticated Scans allow you to test areas of your web applications that require user login—ensuring deeper and more accurate vulnerability detection. This guide walks you through how to set up an Authenticated Scan using ZeroThreat’s browser extension to capture login sequences or session tokens. <br>With this capability, you can uncover hidden vulnerabilities behind authentication layers and ensure complete application coverage during security testing. Ideal for applications with user-based content or restricted access areas. 
 ---
 
 The **ZeroThreat Chrome Recorder extension** bridges this gap by enabling authenticated scans, allowing you to examine the security of these areas comprehensively. This ensures that no part of your application is left untested, providing a deeper level of security assurance.
 
 ## Why Perform an Authenticated Scan?
 
-- **Identify Hidden Vulnerabilities:** Detect security flaws in user-specific or admin-only areas that are not accessible without logging in.
-- **Ensure Compliance:** Meet industry standards and security best practices by testing all areas of your application, including protected sections.
+- **Identify Hidden Vulnerabilities:** Detect security flaws in authenticated or admin-only areas that aren’t accessible without proper access. 
+- **Ensure Full Compliance:** Meet regulatory requirements and security best practices by thoroughly testing every section of your application, including protected areas. 
 - **Protect User Data:** Safeguard sensitive information stored or processed in authenticated areas.
 
 ## Methods for Authenticated Scans
 
-ZeroThreat offers two powerful methods to perform authenticated scans, covering two different authentication mechanisms:
+ZeroThreat provides some powerful methods for performing authenticated scans, each tailored to different authentication mechanisms: 
 
 1. **Scan with Login Sequence**
    - Ideal for traditional login flows using usernames and passwords.
