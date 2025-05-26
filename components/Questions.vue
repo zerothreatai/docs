@@ -1,9 +1,14 @@
 <script setup>
 import tabs from '~/const/categoryTab'
 
-const searchQuery = ref('')
+const condifgsRuntime = useRuntimeConfig()
 
-const activeTab = ref(tabs[0])
+console.log('condifgsRuntime', condifgsRuntime)
+const irrevelantCategory = [FaqCategory['API Security'], FaqCategory.Integrations, FaqCategory.Plans, FaqCategory.Promos, FaqCategory.Pricing, FaqCategory.Product]
+const fileredtabs = condifgsRuntime.public.workingEnv === 'production' || condifgsRuntime.public.workingEnv === 'staging' ? tabs.filter(tabs => !irrevelantCategory.includes(tabs.category)) : tabs
+const activeTab = ref(fileredtabs[0])
+
+const searchQuery = ref('')
 
 const filteredfaqs = ref([])
 const selectButton = async (tab) => {
@@ -85,7 +90,7 @@ const filteredfaqsSearch = () => {
             class="flex items-center justify-start gap-x-3 text-xs text-gray-600 font-zt_medium *:text-nowrap *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer max-w-full flex-wrap gap-y-3"
           >
             <div
-              v-for="(tab, index) in tabs"
+              v-for="(tab, index) in fileredtabs"
               :key="index"
               class="flex items-center gap-x-2 w-fit group transition-all duration-300"
               :class="{
