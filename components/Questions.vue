@@ -3,9 +3,8 @@ import tabs from '~/const/categoryTab'
 
 const condifgsRuntime = useRuntimeConfig()
 
-console.log('condifgsRuntime', condifgsRuntime)
 const irrevelantCategory = [FaqCategory['API Security'], FaqCategory.Integrations, FaqCategory.Plans, FaqCategory.Promos, FaqCategory.Pricing, FaqCategory.Product]
-const fileredtabs = condifgsRuntime.public.workingEnv === 'production' || condifgsRuntime.public.workingEnv === 'staging' ? tabs.filter(tabs => !irrevelantCategory.includes(tabs.category)) : tabs
+const fileredtabs = condifgsRuntime.public.projectEnv === 'production' || condifgsRuntime.public.projectEnv === 'staging' ? tabs.filter(tabs => !irrevelantCategory.includes(tabs.category)) : tabs
 const activeTab = ref(fileredtabs[0])
 
 const searchQuery = ref('')

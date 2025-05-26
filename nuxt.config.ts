@@ -37,7 +37,7 @@ export default defineNuxtConfig({
       algoliaAppId: process.env.ALGOLIA_APPLICATION_ID || '',
       algoliaSearchKey: process.env.ALGOLIA_SEARCH_API_KEY || '',
       algoliaIndexName: process.env.ALGOLIA_INDEX_NAME || '',
-      nodeEnv: process.env.NODE_ENV || '',
+      projectEnv: process.env.PROJECT_ENV || '',
     },
   },
   dir: {
