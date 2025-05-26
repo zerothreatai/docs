@@ -63,14 +63,14 @@ const toggleItem = (item) => {
     </div>
     <!--  -->
     <div class="text-base text-gray-500 font-zt_regular tracking-wide text-justify py-5">
-      Everything you need to know about ZeroThreat’s features, target management, scans, and reporting—all in one place. 
+      Everything you need to know about ZeroThreat’s features, target management, scans, and reporting—all in one place.
     </div>
     <!-- Tabs -->
     <div
       class="mb-10 mt-3 flex items-center gap-x-3 text-xs text-gray-600 font-zt_medium *:text-nowrap *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer max-w-full flex-wrap gap-y-4"
     >
       <div
-        v-for="(tab, index) in tabs"
+        v-for="(tab, index) in fileredtabs"
         :key="index"
         class="flex items-center gap-x-2 w-fit group transition-all duration-300"
         :class="{
