@@ -18,11 +18,11 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: false },
   app: {
-    trailingSlash: false,
+    // trailingSlash: false,
   },
   css: ['~/main.css', '@fortawesome/fontawesome-svg-core/styles.css'],
   router: {
-    trailingSlash: false,
+    // trailingSlash: false,
   },
   content: {
     markdown: {
@@ -37,7 +37,11 @@ export default defineNuxtConfig({
       algoliaAppId: process.env.ALGOLIA_APPLICATION_ID || '',
       algoliaSearchKey: process.env.ALGOLIA_SEARCH_API_KEY || '',
       algoliaIndexName: process.env.ALGOLIA_INDEX_NAME || '',
+      projectEnv: process.env.PROJECT_ENV || '',
     },
+  },
+  dir: {
+    static: 'public',
   },
   // head: {
   //   link: [
@@ -63,6 +67,10 @@ export default defineNuxtConfig({
       routes: ['/'],
       crawlLinks: true,
     },
+    publicAssets: [{
+      baseURL: 'public/assets',
+      dir: 'public',
+    }],
   },
   algolia: {
     apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
@@ -71,6 +79,7 @@ export default defineNuxtConfig({
       indexName: process.env.ALGOLIA_INDEX_NAME,
     },
   },
+
   eslint: {
     config: {
       stylistic: true, // <---

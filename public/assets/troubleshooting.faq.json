@@ -1,0 +1,18 @@
+[
+    {
+        "q":"Troubleshooting: Can't verify a domain using a HTML file Upload ",
+        "a":"Make sure the verification file is uploaded to the exact path as instructed and contains the correct value. The file must be publicly accessible\u2014there should be no login requirement, redirects, or firewall restrictions blocking access. You can verify this by visiting the file\u2019s URL in an incognito window. "
+    },
+    {
+        "q":"Troubleshooting: Can\u2019t verify a domain using DNS TXT record ",
+        "a":"Double-check that the record you\u2019ve created is of type TXT (not CNAME, A, or others). Ensure the TXT value matches the one provided by ZeroThreat and that it's associated with the correct domain. DNS propagation may also take time\u2014verify using online DNS lookup tools if needed. "
+    },
+    {
+        "q":"Troubleshooting: Login failed in target authentication with a login sequence ",
+        "a":"If authentication fails during scanning, verify that the login sequence was correctly recorded using the ZeroThreat Chrome Extension. Ensure all steps\u2014login form submission, navigation, and tagging\u2014were completed properly. Also confirm the target application is online and accessible, and not blocking scanner requests through WAF or rate limiting. "
+    },
+    {
+        "q":"Troubleshooting: Low coverage in a scan ",
+        "a":"If scan results show low coverage, especially in an authenticated scan, review the Crawled URIs section in the scan report. This section lists all discovered pages and endpoints. Ensure that all critical sections and authenticated areas are listed. If key areas are missing, consider re-recording the login sequence to improve coverage. "
+    }
+]

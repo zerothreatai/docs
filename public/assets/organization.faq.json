@@ -1,0 +1,22 @@
+[
+  {
+      "q":"What are organizations in ZeroThreat? ",
+      "a":"Organizations in ZeroThreat help group users and scan targets for easier management. You can create multiple organizations, each with its own settings, users, and scan data. Roles like Reader, Contributor and Administrator control what each user can access or do. When you sign up, you're asked to enter an organization name — this becomes your default organization. You can create more organizations later from the settings page."
+  },
+  {
+      "q":"How do I create an organization? ",
+      "a":"In Organization Settings, click 'Add Organization,' enter a unique name (e.g., 'ZeroThreat-Security-Team'), select a data storage location, and save. This sets up a hub for your team\u2019s security efforts. Check Docs for detailed step-by-step guide. "
+  },
+  {
+      "q":"What user roles exist in ZeroThreat? ",
+      "a":"Owner has full control, including billing; Administrator manages most features except subscriptions; Contributor runs scans and creates profiles; Reader has view-only access to reports and configs. "
+  },
+  {
+      "q":"How do I add a user to an organization? ",
+      "a":"Go to Organization Settings, click 'Add User,' enter the user\u2019s full name, email, and role (e.g., 'Alice Braun' as Contributor), then save. An invite is sent to their email notifying access to the organization. "
+  },
+  {
+      "q":"How to remove a user from an organization? ",
+      "a":"Head to Organization Settings, pick the organization, and check the member list. Locate the user you want to remove, click the three dots beside their name, click Delete, and confirm the action. If you don\u2019t see the Delete option, your user role doesn\u2019t have the necessary permissions to make changes. "
+  }
+]

@@ -1,82 +1,47 @@
 <script setup>
-import targetFaq from '../assests/target.faq.json'
-import ScanFaq from '../assests/scan.faq.json'
-import OrganizationFaq from '../assests/organization.faq.json'
-import ScanReportFaq from '../assests/scanReport.faq.json'
-import authenticatedFaq from '../assests/authenticate.faq.json'
-import unauthenticateFaq from '../assests/unauthenticate.faq.json'
 import tabs from '~/const/categoryTab'
-import { FaqCategory } from '~/utils/category.enum'
 
-const searchQuery = ref('')
+// const condifgsRuntime = useRuntimeConfig()
+const irrevelantCategory = [FaqCategory['API Security'], FaqCategory.Integrations, FaqCategory.Plans, FaqCategory.Promos, FaqCategory.Pricing, FaqCategory.Product]
+const fileredtabs = process.env.NODE_ENV == 'production' || process.env.NODE_ENV == 'staging' ? tabs.filter(tabs => !irrevelantCategory.includes(tabs.category)) : tabs
+const activeTab = ref(fileredtabs[0])
 
-const activeTab = ref(tabs[0])
-
-const targetfaqs = ref(targetFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-const Scanfaqs = ref(ScanFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-const Organizationfaqs = ref(OrganizationFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-const ScanReportfaqs = ref(ScanReportFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-const Authenticatedfaqs = ref(authenticatedFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-const Unathenticatefaqs = ref(unauthenticateFaq.slice(0, 3).map(d => ({ ...d, isOpen: false })))
-
-const selectButton = (tab) => {
+const filteredfaqs = ref([])
+const selectButton = async (tab) => {
   activeTab.value = tab
-}
-const filteredfaqs = computed(() => {
-  switch (activeTab.value.category) {
-    case FaqCategory.Target:
-      if (searchQuery.value.trim().length) {
-        return targetfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return targetfaqs.value
-      break
-    case FaqCategory.Scan:
-      if (searchQuery.value.trim().length) {
-        return Scanfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return Scanfaqs.value
-      break
-    case FaqCategory.Organization:
-      if (searchQuery.value.trim().length) {
-        return Organizationfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return Organizationfaqs.value
-      break
-    case FaqCategory['Scan-Report']:
-      if (searchQuery.value.trim().length) {
-        return ScanReportfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return ScanReportfaqs.value
-      break
-    case FaqCategory['Authenticate']:
-      if (searchQuery.value.trim().length) {
-        return Authenticatedfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return Authenticatedfaqs.value
-    case FaqCategory['Unauthenticate']:
-      if (searchQuery.value.trim().length) {
-        return Unathenticatefaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return Unathenticatefaqs.value
-    default:
-      return []
+  try {
+    if (tab.file) {
+      const res = await fetch(tab.file)
+      const jsonData = await res.json()
+      // console.log(jsonData)
+      filteredfaqs.value = jsonData ? jsonData.map(d => ({ ...d, isOpen: false })).slice(0, 3) : []
+    }
+    else {
+      filteredfaqs.value = []
+    }
   }
-  return []
-},
+  catch {
+    filteredfaqs.value = []
+  }
+}
 
-)
+onMounted(async () => {
+  if (activeTab.value.file) {
+    try {
+      const res = await fetch(activeTab.value.file)
+      const jsonData = await res.json()
+      // console.log(jsonData)
+      filteredfaqs.value = jsonData.map(d => ({ ...d, isOpen: false })).slice(0, 3)
+    }
+    catch {
+      filteredfaqs.value = []
+    }
+  }
+  else {
+    filteredfaqs.value = []
+  }
+})
+
 const toggleItem = (item) => {
   filteredfaqs.value.map((d) => {
     if (d.q == item.q) {
@@ -101,20 +66,20 @@ const toggleItem = (item) => {
     </div>
     <!--  -->
     <div class="text-base text-gray-500 font-zt_regular tracking-wide text-justify py-5">
-      Frequently asked questions about ZeroThreat features, target, scans, and scan report.
+      Everything you need to know about ZeroThreat’s features, target management, scans, and reporting—all in one place.
     </div>
     <!-- Tabs -->
     <div
-      class="mb-6 flex items-center gap-x-3 text-xs text-gray-600 font-zt_medium *:text-nowrap *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer max-w-full flex-wrap gap-y-4"
+      class="mb-10 mt-3 flex items-center gap-x-3 text-xs text-gray-600 font-zt_medium *:text-nowrap *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer max-w-full flex-wrap gap-y-4"
     >
       <div
-        v-for="(tab, index) in tabs"
+        v-for="(tab, index) in fileredtabs"
         :key="index"
         class="flex items-center gap-x-2 w-fit group transition-all duration-300"
         :class="{
           'bg-zt_purple text-white': tab.category === activeTab.category,
         }"
-        @click="selectButton(tab)"
+        @click="() => selectButton(tab)"
       >
         <span><font-awesome-icon
           :icon="tab.icon"
@@ -168,9 +133,18 @@ const toggleItem = (item) => {
                   class="transition-all duration-500 overflow-hidden px-6"
                 >
                   <div class="py-4 text-gray-600 tracking-wider text-sm font-zt_regular leading-6">
-                    {{ item.a }}
+                    <MDC
+                      :value="item.a"
+                      :unwrap="true"
+                      class="custom-list"
+                    />
                   </div>
-                  <div v-if="item.link" id="faq-list" class="relative  ms-4 before:absolute before:w-[7px] before:h-[7px] before:-top-[1px] before:-left-4 before:bg-gray-500 before:rounded-full ">
+                  <!-- {{ item.a }} -->
+                  <div
+                    v-if="item.link"
+                    id="faq-list"
+                    class="relative  ms-4 before:absolute before:w-[7px] before:h-[7px] before:-top-[1px] before:-left-4 before:bg-gray-500 before:rounded-full "
+                  >
                     <MDC :value="item.link" />
                   </div>
                 </div>

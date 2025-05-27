@@ -29,6 +29,11 @@ jobs:
           echo "ALGOLIA_SEARCH_API_KEY=${{ secrets.ALGOLIA_SEARCH_API_KEY }}" >> $GITHUB_ENV
           echo "ALGOLIA_INDEX_NAME=${{ secrets.ALGOLIA_INDEX_NAME }}" >> $GITHUB_ENV
 
+      - name: Assets folder copy
+        run: |
+          rm -rf $GITHUB_WORKSPACE/public/assets/*
+          cp -R $GITHUB_WORKSPACE/public/prod/* $GITHUB_WORKSPACE/public/assets
+
       - name: Generate documentation
         run: |
           npm run generate

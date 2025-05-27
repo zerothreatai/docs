@@ -1,29 +1,50 @@
 <script setup>
-import targetFaq from '../assests/target.faq.json'
-import ScanFaq from '../assests/scan.faq.json'
-import OrganizationFaq from '../assests/organization.faq.json'
-import ScanReportFaq from '../assests/scanReport.faq.json'
-import authenticatedFaq from '../assests/authenticate.faq.json'
-import unauthenticateFaq from '../assests/unauthenticate.faq.json'
 import tabs from '~/const/categoryTab'
 
-import { FaqCategory } from '~/utils/category.enum'
+// const condifgsRuntime = useRuntimeConfig()
+
+const irrevelantCategory = [FaqCategory['API Security'], FaqCategory.Integrations, FaqCategory.Plans, FaqCategory.Promos, FaqCategory.Pricing, FaqCategory.Product]
+const fileredtabs = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging' ? tabs.filter(tabs => !irrevelantCategory.includes(tabs.category)) : tabs
+const activeTab = ref(fileredtabs[0])
 
 const searchQuery = ref('')
 
-const activeTab = ref(tabs[0])
-
-const targetfaqs = ref(targetFaq.map(d => ({ ...d, isOpen: false })))
-const Scanfaqs = ref(ScanFaq.map(d => ({ ...d, isOpen: false })))
-const Organizationfaqs = ref(OrganizationFaq.map(d => ({ ...d, isOpen: false })))
-const ScanReportfaqs = ref(ScanReportFaq.map(d => ({ ...d, isOpen: false })))
-const Authenticatedfaqs = ref(authenticatedFaq.map(d => ({ ...d, isOpen: false })))
-const Unathenticatefaqs = ref(unauthenticateFaq.map(d => ({ ...d, isOpen: false })))
-
-const selectButton = (tab) => {
+const filteredfaqs = ref([])
+const selectButton = async (tab) => {
   activeTab.value = tab
+  try {
+    if (tab.file) {
+      const res = await fetch(`/${tab.file}`)
+      const jsonData = (await res.json()).map(d => ({ ...d, isOpen: false }))
+      // console.log(jsonData)
+      filteredfaqs.value = jsonData ? searchQuery.value.trim().length ? jsonData.filter(d => d.q.lowerCase().includes(searchQuery.value.trim().toLowerCase())) : jsonData : []
+    }
+    else {
+      filteredfaqs.value = []
+    }
+  }
+  catch {
+    filteredfaqs.value = []
+  }
 }
 
+onMounted(async () => {
+  activeTab.value = tabs[0]
+  if (activeTab.value.file) {
+    try {
+      const res = await fetch(`/${activeTab.value.file}`)
+      const jsonData = await res.json()
+      // console.log(jsonData)
+      filteredfaqs.value = jsonData.map(d => ({ ...d, isOpen: false }))
+    }
+    catch {
+      filteredfaqs.value = []
+    }
+  }
+  else {
+    filteredfaqs.value = []
+  }
+})
 const toggleAccordion = (item) => {
   filteredfaqs.value.map((d) => {
     if (d.q == item.q) {
@@ -35,59 +56,9 @@ const toggleAccordion = (item) => {
   })
 }
 
-const filteredfaqs = computed(() => {
-  switch (activeTab.value.category) {
-    case FaqCategory.Target:
-      if (searchQuery.value.trim().length) {
-        return targetfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return targetfaqs.value
-      break
-    case FaqCategory.Scan:
-      if (searchQuery.value.trim().length) {
-        return Scanfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return Scanfaqs.value
-      break
-    case FaqCategory.Organization:
-      if (searchQuery.value.trim().length) {
-        return Organizationfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return Organizationfaqs.value
-      break
-    case FaqCategory['Scan-Report']:
-      if (searchQuery.value.trim().length) {
-        return ScanReportfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return ScanReportfaqs.value
-    case FaqCategory['Authenticate']:
-      if (searchQuery.value.trim().length) {
-        return Authenticatedfaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return Authenticatedfaqs.value
-    case FaqCategory['Unauthenticate']:
-      if (searchQuery.value.trim().length) {
-        return Unathenticatefaqs.value.filter(t =>
-          t.q.toLowerCase().includes(searchQuery.value.toLowerCase().trim()),
-        )
-      }
-      return Unathenticatefaqs.value
-    default:
-      return []
-  }
-  return []
-})
-
+const filteredfaqsSearch = () => {
+  filteredfaqs.value = filteredfaqs.value.filter(d => d.q.lowerCase().includes(searchQuery.value.trim().toLowerCase()))
+}
 </script>
 
 <template>
@@ -109,15 +80,16 @@ const filteredfaqs = computed(() => {
             type="text"
             placeholder="How can we help you today ?"
             class="text-sm w-full placeholder:text-gray-400 placeholder:font-zt_regular text-gray-700 font-zt_medium outline-none"
+            @change="() => filteredfaqsSearch()"
           >
         </div>
         <!-- tabs -->
         <div>
           <div
-            class="flex items-center gap-x-3 text-xs text-gray-600 font-zt_medium *:text-nowrap *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer max-w-full flex-wrap gap-y-3"
+            class="flex items-center justify-start gap-x-3 text-xs text-gray-600 font-zt_medium *:text-nowrap *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer max-w-full flex-wrap gap-y-3"
           >
             <div
-              v-for="(tab, index) in tabs"
+              v-for="(tab, index) in fileredtabs"
               :key="index"
               class="flex items-center gap-x-2 w-fit group transition-all duration-300"
               :class="{
@@ -171,13 +143,22 @@ const filteredfaqs = computed(() => {
               }"
               class="transition-all duration-500 overflow-hidden px-6"
             >
+              <!-- {{ item.a }} -->
               <div class="py-4 text-gray-600 tracking-wider text-sm font-zt_regular leading-6">
-                {{ item.a }}
+                <MDC
+                  :value="item.a"
+                  :unwrap="true"
+                  class="custom-list"
+                />
               </div>
-              <div v-if="item.link" id="faq-list" class="relative ms-4 before:absolute before:w-[7px] before:h-[7px] before:-top-[1px] before:-left-4 before:bg-gray-500 before:rounded-full ">
-                <MDC :value="item.link"/>
+              <div
+                v-if="item.link"
+                id="faq-list"
+                class="relative ms-4 before:absolute before:w-[7px] before:h-[7px] before:-top-[1px] before:-left-4 before:bg-gray-500 before:rounded-full"
+              >
+                <MDC :value="item.link" />
               </div>
-            </div>  
+            </div>
           </div>
         </div>
       </div>
@@ -207,3 +188,15 @@ const filteredfaqs = computed(() => {
   </div>
 </template>
 
+<style>
+  .custom-list > li {
+    margin-left: 20px !important;
+    padding: 1px 0px !important;
+  }
+  .custom-list > a {
+    color: #9b26b6 !important;
+  }
+  .custom-list > a:hover {
+    text-decoration: underline !important;
+  }
+</style>

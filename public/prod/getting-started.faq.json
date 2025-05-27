@@ -1,0 +1,77 @@
+[
+    {
+        "q":"How do I create a ZeroThreat account? ",
+        "a":"Creating a ZeroThreat account is quick and easy. You can sign up using your Google or Microsoft account for instant access, or choose a custom login by registering with your email and a password of your choice. "
+    },
+    {
+        "q":"What browsers are supported by ZeroThreat? ",
+        "a":"ZeroThreat is supported on all major browsers for running scans and accessing the platform. However, the ZeroThreat browser extension, which helps you create scan templates and login sequences, is currently only supported on Google Chrome. "
+    },
+    {
+        "q":"What are the system requirements to use ZeroThreat? ",
+        "a":"ZeroThreat is a cloud-based Dynamic Application Security Testing (DAST) platform designed for ease of use and broad accessibility. Since it operates entirely in the cloud, there are no specific hardware or software requirements for running scans or accessing the platform. You can use ZeroThreat from any modern device with an internet connection and a web browser. "
+    },
+    {
+        "q":"Does ZeroThreat require installation or is it cloud-based? ",
+        "a":"ZeroThreat is a fully cloud-based platform\u2014there\u2019s no installation required. You can start scanning and securing your applications instantly through your browser, with no setup hassles or infrastructure overhead. "
+    },
+    {
+        "q":"How do I set up my first vulnerability scan? ",
+        "a":"Setting up your first vulnerability scan with ZeroThreat is quick and beginner-friendly. Here's how to get started: \n\n1. Create Your Organization \u2013 After signing up, set up your organization space within ZeroThreat. \n\n2. Add and Verify Targets \u2013 Enter the URL of the application you want to scan and complete the quick verification process. \n\n3. Configure the Scan \u2013 Choose from unauthenticated or authenticated scan options and define your scope (including login sequences, if needed). \n\n4. Run the Scan \u2013 Start the scan in 15 minutes with just a click. ZeroThreat will begin analyzing your app for vulnerabilities in real-time within minutes. \n\n5. Start Remediating with Results \u2013 While scanning, ZeroThreat will showcase detailed, actionable insights in real-time for remediating issues. \n\nYou can also watch a step-by-step video on YouTube: https:\/\/youtu.be\/iwDZRgSpNXM?si=zp3JRgFE8w3xQKO0 that walks you through the entire setup process. It\u2019s perfect for first-time users! "
+    },
+    {
+        "q":"How do I start an authenticated scan? ",
+        "a":"To begin an authenticated scan, install the ZeroThreat Chrome Recorder extension. Choose your target application and record the login process\u2014this includes actions like entering credentials, accessing protected areas and logout. Once done, make final configurations to the recording then save the sequence and initiate the scan. For step-by-step guidance, see Scan with Login Sequence in docs. "
+    },
+    {
+        "q":"How do I triage and fix vulnerabilities in ZeroThreat? ",
+        "a":"While the scan is going on, go to your vulnerability report in the ZeroThreat dashboard. The found vulnerability is listed with its severity level, affected URLs, and technical details. Use the filters to prioritize high or critical issues first. Click on a vulnerability to view suggested fixes, code references, and remediation steps. You can assign issues to team members, mark them as resolved, or retest them after applying fixes to confirm resolution. "
+    },
+    {
+        "q":"Can I integrate ZeroThreat into my CI\/CD pipeline? ",
+        "a":"Yes, ZeroThreat supports seamless integration into your CI\/CD pipeline\u2014available with the Professional and Enterprise plans. This allows you to automate vulnerability scans during code deployment, ensuring security is built into every stage of your development lifecycle. "
+    },
+    {
+        "q":"What authentication methods does ZeroThreat support? ",
+        "a":"ZeroThreat supports a wide range of authentication mechanisms through its Chrome Extension, making it easy to scan even complex authenticated areas. You don\u2019t need to manually configure tokens or headers\u2014just use the extension to record a login sequence or use active user session. It handles form-based logins, CAPTCHA challenges, multi-factor authentication (2FA\/MFA), OTPs, and other interactive login flows by capturing real browser behavior. This approach ensures that ZeroThreat can access and scan secure sections of your application without requiring static credential input. "
+    },
+    
+    {
+        "q":"How does ZeroThreat ensure my data is secure? ",
+        "a":"ZeroThreat ensures data security through: \n\n- End-to-End Encryption: SSL\/TLS for secure data transmission. \n- Zero Trust Architecture: Every access request is verified. \n- Compliance: Adheres to GDPR and data privacy regulations. \n- Data Scan & Storage Location: Choose where your data is scanned and stored in real-time. "
+    },
+    {
+        "q":"What kind of reports does ZeroThreat generate? ",
+        "a":"ZeroThreat generates detailed vulnerability reports, including risk assessments, AI-driven remediation suggestions, and compliance reports (OWASP, GDPR, HIPAA, ISO 27001, PCI DSS). You can also experience tailored executive and technical summaries for different stakeholders. "
+    },
+    {
+        "q":"How can I contact ZeroThreat support? ",
+        "a":"You can reach ZeroThreat support through email at hello@zerothreat.ai. "
+    },
+    {
+        "q":"What are the best practices for deploying DAST? ",
+        "a":"To effectively deploy DAST, start by integrating it early into your SDLC to catch vulnerabilities before deployment. Use authenticated scans to test behind login screens, and schedule regular scans to catch new threats. Always verify scan results to reduce false positives, and combine DAST with other testing methods like SAST or SCA for full coverage. Lastly, ensure scan configurations are optimized per application environment to avoid noise and missed detections. "
+    },
+    {
+        "q":"Why do I need continuous web application security testing if I already perform manual penetration tests? ",
+        "a":"Manual penetration tests are valuable, but they\u2019re typically periodic and may miss vulnerabilities introduced between test cycles. Continuous web application security testing with tools like ZeroThreat helps you catch threats in real-time as code changes are made. It ensures consistent monitoring, rapid detection, and quick remediation\u2014closing the gaps that manual testing alone can't cover. This proactive approach significantly reduces your risk of breaches, especially in agile or DevOps environments where application updates are frequent. "
+    },
+    {
+        "q":"Is it safe to scan production environments with ZeroThreat?",
+        "a":"While ZeroThreat is designed with security in mind, we strongly running scans only in non-production environments. ZeroThreat performs active testing, which may generate high request volumes, modify data, or trigger alerts\u2014potentially impacting live systems. For safer and more controlled results, always scan in a staging or testing environment that closely mirrors production."
+    },
+    {
+        "q":"How long will it take for a security test to complete? ",
+        "a":"Security tests with ZeroThreat are typically fast, completing in 0.5 to 2 hours, depending on the size and complexity of the application. "
+    },
+    {
+        "q":"What IPs do I need to whitelist for more effective tests with ZeroThreat? ",
+        "a":"To ensure smooth and effective testing, you should whitelist the IP addresses used by ZeroThreat's scanning infrastructure. This will prevent any interference from firewalls or security measures that might block the scan requests. For the specific list of IPs to whitelist, please contact our support team."
+    },
+    {
+        "q":"Will ZeroThreat's tests damage my systems? ",
+        "a":"No, ZeroThreat’s tests are designed to be and safe. However, they can generate test data or delete entries during scans, which may affect live environments. For this reason, we strongly recommend running tests only on non-production environments."
+    }
+]
+
+
