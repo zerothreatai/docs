@@ -1,5 +1,5 @@
 <script setup>
-import VideoSection from '~/components/VideoSection.vue'
+// import VideoSection from '~/components/VideoSection.vue'
 
 navigateTo('docs')
 </script>
@@ -7,6 +7,6 @@ navigateTo('docs')
 <template>
   <div class="px-16 max-w-[110rem] mx-auto py-16">
     <!-- <info-corner /> -->
-    <video-section />
+    <!-- <video-section /> -->
   </div>
 </template>
