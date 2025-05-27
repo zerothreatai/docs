@@ -1,11 +1,10 @@
 <script setup>
 import tabs from '~/const/categoryTab'
 
+const { filteredTabs } = useFilteredTabs()
 // const condifgsRuntime = useRuntimeConfig()
 
-const irrevelantCategory = [FaqCategory['API Security'], FaqCategory.Integrations, FaqCategory.Plans, FaqCategory.Promos, FaqCategory.Pricing, FaqCategory.Product]
-const fileredtabs = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging' ? tabs.filter(tabs => !irrevelantCategory.includes(tabs.category)) : tabs
-const activeTab = ref(fileredtabs[0])
+const activeTab = ref(filteredTabs.value[0])
 
 const searchQuery = ref('')
 
@@ -87,6 +86,7 @@ const filteredfaqsSearch = () => {
         <ClientOnly>
           <div>
             <div
+
               class="flex items-center justify-start gap-x-3 text-xs text-gray-600 font-zt_medium *:text-nowrap *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer max-w-full flex-wrap gap-y-3"
             >
               <div

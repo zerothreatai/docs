@@ -1,10 +1,6 @@
 <script setup>
-import tabs from '~/const/categoryTab'
-
-// const condifgsRuntime = useRuntimeConfig()
-const irrevelantCategory = [FaqCategory['API Security'], FaqCategory.Integrations, FaqCategory.Plans, FaqCategory.Promos, FaqCategory.Pricing, FaqCategory.Product]
-const fileredtabs = process.env.NODE_ENV == 'production' || process.env.NODE_ENV == 'staging' ? tabs.filter(tabs => !irrevelantCategory.includes(tabs.category)) : tabs
-const activeTab = ref(fileredtabs[0])
+const { filteredTabs } = useFilteredTabs()
+const activeTab = ref({})
 
 const filteredfaqs = ref([])
 const selectButton = async (tab) => {
@@ -26,6 +22,7 @@ const selectButton = async (tab) => {
 }
 
 onMounted(async () => {
+  activeTab.value = filteredTabs.value[0]
   if (activeTab.value.file) {
     try {
       const res = await fetch(activeTab.value.file)
@@ -71,6 +68,7 @@ const toggleItem = (item) => {
     <!-- Tabs -->
 
       <div
+
         class="mb-10 mt-3 flex items-center gap-x-3 text-xs text-gray-600 font-zt_medium *:text-nowrap *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer max-w-full flex-wrap gap-y-4"
       >
         <div
