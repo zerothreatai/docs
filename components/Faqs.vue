@@ -67,27 +67,27 @@ const toggleItem = (item) => {
     </div>
     <!-- Tabs -->
 
-      <div
+    <div
 
-        class="mb-10 mt-3 flex items-center gap-x-3 text-xs text-gray-600 font-zt_medium *:text-nowrap *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer max-w-full flex-wrap gap-y-4"
+      class="mb-10 mt-3 flex items-center gap-x-3 text-xs text-gray-600 font-zt_medium *:text-nowrap *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer max-w-full flex-wrap gap-y-4"
+    >
+      <div
+        v-for="(tab, index) in filteredTabs"
+        :key="index"
+        class="flex items-center gap-x-2 w-fit group transition-all duration-300"
+        :class="{
+          'bg-zt_purple text-white': tab.category === activeTab.category,
+        }"
+        @click="() => selectButton(tab)"
       >
-        <div
-          v-for="(tab, index) in fileredtabs"
-          :key="index"
-          class="flex items-center gap-x-2 w-fit group transition-all duration-300"
-          :class="{
-            'bg-zt_purple text-white': tab.category === activeTab.category,
-          }"
-          @click="() => selectButton(tab)"
-        >
-          <span><font-awesome-icon
-            :icon="tab.icon"
-            class="group-hover:text-white"
-            :class="tab.category === activeTab.category ? 'text-white' : tab.iconCLass"
-          /></span>
-          <span>{{ tab.title }}</span>
-        </div>
+        <span><font-awesome-icon
+          :icon="tab.icon"
+          class="group-hover:text-white"
+          :class="tab.category === activeTab.category ? 'text-white' : tab.iconCLass"
+        /></span>
+        <span>{{ tab.title }}</span>
       </div>
+    </div>
     <!-- faq -->
     <div class="relative">
       <div>

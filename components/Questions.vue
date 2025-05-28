@@ -90,7 +90,7 @@ const filteredfaqsSearch = () => {
               class="flex items-center justify-start gap-x-3 text-xs text-gray-600 font-zt_medium *:text-nowrap *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer max-w-full flex-wrap gap-y-3"
             >
               <div
-                v-for="(tab, index) in fileredtabs"
+                v-for="(tab, index) in filteredTabs"
                 :key="index"
                 class="flex items-center gap-x-2 w-fit group transition-all duration-300"
                 :class="{
