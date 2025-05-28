@@ -7,6 +7,7 @@ const { filteredTabs } = useFilteredTabs()
 const activeTab = ref(filteredTabs.value[0])
 
 const searchQuery = ref('')
+let jsonData = []
 
 const filteredfaqs = ref([])
 const selectButton = async (tab) => {
@@ -14,16 +15,17 @@ const selectButton = async (tab) => {
   try {
     if (tab.file) {
       const res = await fetch(`/${tab.file}`)
-      const jsonData = (await res.json()).map(d => ({ ...d, isOpen: false }))
+      jsonData = (await res.json()).map(d => ({ ...d, isOpen: false }))
       // console.log(jsonData)
-      filteredfaqs.value = jsonData ? searchQuery.value.trim().length ? jsonData.filter(d => d.q.lowerCase().includes(searchQuery.value.trim().toLowerCase())) : jsonData : []
+      filteredfaqs.value = jsonData ? searchQuery.value.trim().length ? jsonData.filter(d => d.q.toLowerCase().includes(searchQuery.value.trim().toLowerCase())) : jsonData : []
     }
     else {
       filteredfaqs.value = []
     }
   }
-  catch {
+  catch (err) {
     filteredfaqs.value = []
+    jsonData = []
   }
 }
 
@@ -32,7 +34,7 @@ onMounted(async () => {
   if (activeTab.value.file) {
     try {
       const res = await fetch(`/${activeTab.value.file}`)
-      const jsonData = await res.json()
+      jsonData = await res.json()
       // console.log(jsonData)
       filteredfaqs.value = jsonData.map(d => ({ ...d, isOpen: false }))
     }
@@ -56,7 +58,11 @@ const toggleAccordion = (item) => {
 }
 
 const filteredfaqsSearch = () => {
-  filteredfaqs.value = filteredfaqs.value.filter(d => d.q.lowerCase().includes(searchQuery.value.trim().toLowerCase()))
+  if (!searchQuery.value.trim().length) {
+    filteredfaqs.value = jsonData.map(d => ({ ...d, isOpen: false }))
+    return
+  }
+  filteredfaqs.value = jsonData.filter(d => d.q.toLowerCase().includes(searchQuery.value.trim().toLowerCase()))
 }
 </script>
 
@@ -79,7 +85,7 @@ const filteredfaqsSearch = () => {
             type="text"
             placeholder="How can we help you today ?"
             class="text-sm w-full placeholder:text-gray-400 placeholder:font-zt_regular text-gray-700 font-zt_medium outline-none"
-            @change="() => filteredfaqsSearch()"
+            @input="filteredfaqsSearch"
           >
         </div>
         <!-- tabs -->
