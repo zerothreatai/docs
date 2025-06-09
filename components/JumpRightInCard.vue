@@ -19,7 +19,7 @@ const cards = page.value.meta.cards || []
         :to="card.path"
       >
         <div class="flex items-center gap-x-2.5">
-          <span v-if="card.icon"><font-awesome-icon
+          <span v-if="card?.icon"><font-awesome-icon
             :icon="card.icon"
             class="text-gray-500 -translate-y-1.5 group-hover:text-zt_purple transition-all duration-300"
           /></span>
