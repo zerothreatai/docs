@@ -2,10 +2,12 @@
 import TocLinks from '~/components/TocLinks.vue'
 import Hint from '~/components/Hint.vue'
 import Figure from '~/components/Figure.vue'
+import UCode from '~/components/UCode.vue'
 
 const components = {
   'hint': Hint,
   'fiqure-img': Figure,
+  'u-code': UCode,
 }
 
 const route = useRoute()
