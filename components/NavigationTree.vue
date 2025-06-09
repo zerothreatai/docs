@@ -46,7 +46,6 @@ import RecursiveNavigation from './RecursiveNavigation.vue'
 
 const props = defineProps(['navigation'])
 const route = useRoute()
-
 function normalizePath(path: string): string {
   return path !== '/' ? path.replace(/\/+$/, '') : path
 }
