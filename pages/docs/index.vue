@@ -17,7 +17,7 @@ const { data: page } = await useAsyncData(`page`, () =>
 )
 
 useSeoMeta({
-  title: page.value.title,
+  title: `${page.value?.title} | ZeroThreat AI `,
   description: page.value.description,
 })
 
