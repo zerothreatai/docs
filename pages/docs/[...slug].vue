@@ -38,7 +38,7 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
 const [prev, next] = surround.value || []
 
 useSeoMeta({
-  title: page.value?.title,
+  title: `${page.value?.title} | ZeroThreat AI `,
   description: page.value?.description,
 })
 </script>
