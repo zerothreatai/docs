@@ -4,10 +4,6 @@
       "a":"Organizations in ZeroThreat group users, targets for simpler management. You can set up multiple organizations, each working separately, and assign roles like Reader, Contributor and more to control access. This limits users to specific tasks or resources, keeping everything organized and secure. When a user signup the application asks for the organization name, that\u2019s your default organization, more users can create through the settings page. "
   },
   {
-      "q":"How do I create an organization? ",
-      "a":"In Organization Settings, click 'Add Organization,' enter a unique name (e.g., 'ZeroThreat-Security-Team'), select a data storage location, and save. This sets up a hub for your team\u2019s security efforts. Check Docs for detailed step-by-step guide. "
-  },
-  {
       "q":"What user roles exist in ZeroThreat? ",
       "a":"Owner has full control, including billing; Administrator manages most features except subscriptions; Contributor runs scans and creates profiles; Reader has view-only access to reports and configs. "
   },
