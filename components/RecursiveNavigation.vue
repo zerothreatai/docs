@@ -43,14 +43,20 @@ watch(
     <div
       class="flex justify-between hover:bg-slate-100 w-full items-center px-3 rounded-md transition-all duration-300"
     >
-      <span
-        v-if="item.meta.icon"
-        class="min-w-5"
-      >
-        <font-awesome-icon
-          :icon="item.meta.icon"
-          class="text-gray-400"
-        />
+      <span class="min-w-5">
+        <template v-if="item.meta?.imageSrc">
+          <img
+            :src="item.meta.imageSrc"
+            class="w-[18px] p-0 border-0 m-0"
+          >
+
+        </template>
+        <template v-if="item.meta?.icon">
+          <font-awesome-icon
+            :icon="item.meta.icon"
+            class="-translate-y-[1px] text-gray-400"
+          />
+        </template>
       </span>
       <NuxtLink
         class="text-sm mt-1 ps-2 font-zt_regular text-gray-700 flex items-center justify-between hover:text-zt_purple hover:border-zt_purple/70 transition-all duration-300 cursor-pointer py-1 my-1 w-full tracking-wide"

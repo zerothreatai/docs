@@ -2,10 +2,12 @@
 import TocLinks from '~/components/TocLinks.vue'
 import Hint from '~/components/Hint.vue'
 import Figure from '~/components/Figure.vue'
+import UCode from '~/components/UCode.vue'
 
 const components = {
   'hint': Hint,
   'fiqure-img': Figure,
+  'u-code': UCode,
 }
 
 const route = useRoute()
@@ -27,7 +29,8 @@ definePageMeta({
   layout: 'docslayout',
 })
 
-const routepath = route.path != '/' && route.path.endsWith('/') ? route.path.replace(/\/+$/, '') : route.path
+const routepath
+    = route.path != '/' && route.path.endsWith('/') ? route.path.replace(/\/+$/, '') : route.path
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
   queryCollectionItemSurroundings('content', routepath),
 )
@@ -45,15 +48,26 @@ useSeoMeta({
     <div class="col-span-12 xl:col-span-9 pt-8 pb-5 px-10">
       <div class="border-b pb-2">
         <NuxtLink :to="`/docs/${params[0]}`">
-          <span class="text-zt_purple/80 tracking-wide font-semibold text-sm hover:underline">{{ title }}</span>
+          <span class="text-zt_purple/80 tracking-wide font-semibold text-sm hover:underline">{{
+            title
+          }}</span>
         </NuxtLink>
         <div class="flex items-center">
-          <span class="text-3xl text-gray-500">
-            <font-awesome-icon
-              :icon="page?.meta.icon"
-              class="pe-3 pt-6"
-            />
+          <span class="text-3xl text-gray-500 pe-3 pt-6">
+            <template v-if="page?.meta.icon">
+              <font-awesome-icon
+                :icon="page?.meta.icon"
+                class=""
+              />
+            </template>
+            <template v-if="page?.meta?.imageSrc">
+              <img
+                :src="page?.meta?.imageSrc ?? ''"
+                class="size-6 pt-0 ps-0"
+              >
+            </template>
           </span>
+
           <h1 class="text-3xl text-gray-800 pt-5 font-zt_bold">
             {{ page?.title }}
           </h1>
