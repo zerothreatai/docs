@@ -47,14 +47,14 @@ watch(
         <template v-if="item.meta?.imageSrc">
           <img
             :src="item.meta.imageSrc"
-            class="size-6 pt-0 ps-0"
+            class="w-[18px] p-0 border-0 m-0"
           >
 
         </template>
         <template v-if="item.meta?.icon">
           <font-awesome-icon
             :icon="item.meta.icon"
-            class="-translate-y-[1px]"
+            class="-translate-y-[1px] text-gray-400"
           />
         </template>
       </span>
