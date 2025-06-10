@@ -36,7 +36,7 @@ function copytoclipboard() {
         class="w-4 fill-gray-500 hover:fill-gray-700 cursor-pointer pb-2"
       /></span>
     </div>
-    <div id="code-block" class="px-5 rounded-b-md text-xl ">
+    <div id="code-block" class="px-5 rounded-b-md text-xl">
       <component
         :is="tabs?.component"
         :key="tabs.label"
@@ -45,17 +45,3 @@ function copytoclipboard() {
     </div>
   </div>
 </template>
-
-<style>
-#code-block pre code {
-font-size: 0.8rem !important;
-border: none !important;
-line-height: 1rem !important;
-}
-#code-block pre code {
-padding: 0px !important;
-}
-#code-block pre code span {
-line-height: 1.2rem !important;
-}
-</style>
