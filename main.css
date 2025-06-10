@@ -221,7 +221,7 @@ ol li ul li strong {
 
 ul li strong,
 ol li strong {
-  @apply pb-1 inline-block;
+  @apply inline-block;
 }
 
 ul li a strong {
@@ -249,7 +249,7 @@ ol li img {
   @apply p-0 border rounded-md shadow-md mx-1 inline-block my-2;
 }
 p > span > img,
-li > span > img {
+li > span > img, p > img, ul > li > img {
   @apply inline-block rounded-md shadow-md my-0;
 }
 code {
@@ -302,7 +302,7 @@ blockquote p {
 }
 
 #code-block > pre > code {
-  @apply text-sm border-0 leading-4 p-0
+  @apply text-sm border-0 leading-4 p-0 font-mono
 }
 
 #code-block > pre > code > span {
