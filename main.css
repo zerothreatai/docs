@@ -221,7 +221,7 @@ ol li ul li strong {
 
 ul li strong,
 ol li strong {
-  @apply pb-1 inline-block;
+  @apply inline-block;
 }
 
 ul li a strong {
@@ -249,8 +249,11 @@ ol li img {
   @apply p-0 border rounded-md shadow-md mx-1 inline-block my-2;
 }
 p > span > img,
-li > span > img {
+li > span > img, p > img, ul > li > img {
   @apply inline-block rounded-md shadow-md my-0;
+}
+p > img, ul > li > img, ol > li > img {
+  @apply max-h-6 my-0
 }
 code {
   @apply text-xs bg-slate-50 px-2 py-0.5 text-gray-800 font-zt_regular tracking-widest leading-none border rounded-md;
@@ -299,4 +302,25 @@ blockquote p {
 }
 .custom-list > a:hover {
   text-decoration: underline !important;
+}
+
+#code-block > pre > code {
+  @apply text-sm border-0 leading-4 p-0 font-mono
+}
+
+#code-block > pre > code > span {
+  @apply leading-4
+}
+
+table tr th {
+  @apply font-zt_regular tracking-wider text-sm bg-slate-100 py-2 text-gray-700 text-left px-5
+} 
+table tr td {
+  @apply font-zt_regular tracking-wider text-sm py-3 text-gray-700 min-w-60 text-left px-5
+} 
+table tr {
+  @apply border-b border-dashed last:border-b-0
+}
+table {
+  @apply mb-5
 }
