@@ -52,8 +52,8 @@ useSeoMeta({
             title
           }}</span>
         </NuxtLink>
-        <div class="flex items-center">
-          <span class="text-3xl text-gray-500 pe-3 pt-6">
+        <div class="flex items-center pt-6">
+          <span class="text-3xl text-gray-500 fill-gray-500 stroke-gray-300 pe-3">
             <template v-if="page?.meta.icon">
               <font-awesome-icon
                 :icon="page?.meta.icon"
@@ -63,12 +63,12 @@ useSeoMeta({
             <template v-if="page?.meta?.imageSrc">
               <img
                 :src="page?.meta?.imageSrc ?? ''"
-                class="size-6 pt-0 ps-0"
+                class="w-8 p-0 m-0 ps-0 border-none fill-gray-500 stroke-gray-500"
               >
             </template>
           </span>
 
-          <h1 class="text-3xl text-gray-800 pt-5 font-zt_bold">
+          <h1 class="text-3xl text-gray-800 font-zt_bold">
             {{ page?.title }}
           </h1>
         </div>

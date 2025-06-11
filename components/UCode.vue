@@ -31,16 +31,16 @@ function copytoclipboard() {
 
 <template>
   <div class="relative border rounded-md bg-gray-50 mb-5">
-    <div class="flex items-center w-full justify-end px-3 pt-3">
+    <div class="flex items-center w-full justify-end px-3 relative">
       <span @click="copytoclipboard"><copy-icon
-        class="w-4 fill-gray-500 hover:fill-gray-700 cursor-pointer pb-2"
+        class="absolute right-4 top-4 w-4 fill-gray-500 hover:fill-gray-700 cursor-pointer pb-2"
       /></span>
     </div>
     <div id="code-block" class="px-5 rounded-b-md text-xl">
       <component
         :is="tabs?.component"
         :key="tabs.label"
-        class="p-0 m-0 h-fit text-wrap pb-5"
+        class="p-0 m-0 h-fit text-wrap py-5"
       />
     </div>
   </div>
