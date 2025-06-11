@@ -47,7 +47,7 @@ watch(
         <template v-if="item.meta?.imageSrc">
           <img
             :src="item.meta.imageSrc"
-            class="w-[18px] p-0 border-0 m-0"
+            class="w-[18px] p-0 border-0 m-0 opacity-70"
           >
 
         </template>

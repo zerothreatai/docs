@@ -252,6 +252,9 @@ p > span > img,
 li > span > img, p > img, ul > li > img {
   @apply inline-block rounded-md shadow-md my-0;
 }
+p > img, ul > li > img, ol > li > img {
+  @apply max-h-6 my-0
+}
 code {
   @apply text-xs bg-slate-50 px-2 py-0.5 text-gray-800 font-zt_regular tracking-widest leading-none border rounded-md;
 }
