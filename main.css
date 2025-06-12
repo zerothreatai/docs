@@ -198,7 +198,7 @@ ol li ul li ul li ul li {
 
 li ul li,
 ol li ul li ul li {
-  @apply text-sm mt-2 tracking-wider font-zt_regular leading-6 relative after:absolute after:-left-5 after:top-[1px] after:text-black after:content-['⮚'];
+  @apply text-sm mt-2 tracking-wider font-zt_regular leading-6 relative after:absolute after:-left-5 after:top-[1px] after:text-black/60 after:content-['➤'];
 }
 
 ol li ul li ul li {
@@ -206,7 +206,7 @@ ol li ul li ul li {
 }
 
 li ul li ul li {
-  @apply text-sm mt-2 tracking-wider font-zt_regular leading-6 relative after:absolute after:-left-5 after:top-[1px] after:text-black after:content-['⬥'];
+  @apply text-sm mt-2 tracking-wider font-zt_regular leading-6 relative after:absolute after:-left-5 after:top-[1px] after:text-black after:content-['♦']
 }
 
 ul li > ul li code,
