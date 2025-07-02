@@ -29,7 +29,7 @@ Running an API scan typically involves the following stages:
 3. **Configure Authentication (if needed):** For protected APIs, set up an API Authentication Configuration.
 4. **Run the Scan:** Choose between **Unauthenticated** or **Authenticated** scan modes, based on your target and collection setup.
 
-ZeroThreat uses your **API Collection** as the source for endpoint discovery and scanning.
+ZeroThreat uses your **API Collection** as the source for endpoint discovery and scanning.\
 For APIs with authentication, ZeroThreat handles login, cookies and token capture for protected endpoints.
 
 ## Quick Overview of Key Concepts and terms
