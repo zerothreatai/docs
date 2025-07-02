@@ -4,7 +4,7 @@ title: API Scan
 cards:
     - icon: file-circle-plus
       title: Create a collection
-      path: /docs/getting-started/api-scan/create-a-collection
+      path: /docs/getting-started/api-scan/creating-a-collection
       description: A Collection represents the source of your API endpoints and acts as the starting point for both unauthenticated and authenticated API scans.
     - icon: radar
       title: Unauthenticated API Scan
