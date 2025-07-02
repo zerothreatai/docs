@@ -242,7 +242,7 @@ img {
   @apply max-h-[450px];
 }
 div > img {
-  @apply block mx-auto rounded-lg shadow-md my-0.5;
+  @apply block mx-auto rounded-lg shadow-md my-0.5 bg-cover;
 }
 ul li img,
 ol li img {
