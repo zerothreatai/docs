@@ -305,7 +305,7 @@ blockquote p {
 }
 
 #code-block > pre > code {
-  @apply text-sm border-0 leading-4 p-0 font-mono
+  @apply text-sm tracking-normal border-0 leading-4 p-0 font-mono
 }
 
 #code-block > pre > code > span {
