@@ -1,0 +1,11 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect fill="none" height="512" rx="15%" width="512" />
+    <g fill="#e01e5a">
+        <path id="a"
+            d="m149 305a39 39 0 0 1 -78 0c0-22 17-39 39-39h39zm19 0a39 39 0 0 1 78 0v97a39 39 0 0 1 -78 0z" />
+    </g>
+    <use fill="#36c5f0" transform="matrix(0 1 -1 0 512 0)" xlink:href="#a" />
+    <use fill="#2eb67d" transform="matrix(-1 0 0 -1 512 512)" xlink:href="#a" />
+    <use fill="#ecb22e" transform="matrix(0 -1 1 0 0 512)" xlink:href="#a" />
+</svg>
