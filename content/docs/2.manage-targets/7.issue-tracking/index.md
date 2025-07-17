@@ -5,9 +5,9 @@ description: ZeroThreat’s issue tracking integrations help bridge the gap betw
 cards:
     - title: Jira
       path: /docs/manage-targets/issue-tracking/jira
-      description: Displays real-time scan progress, including authenticated and unauthenticated crawling, along with OWASP Top
+      description: Create Jira tickets from scan findings and assign them to specific boards, projects, and sprints with full vulnerability details.
     - title: Azure Boards
-      description: Displays real-time scan progress, including authenticated and unauthenticated crawling, along with OWASP Top in Azure Board
+      description: Create Azure Boards work items from scan findings and assign them to specific projects, and boards with complete vulnerabiltiy details.
       path: /docs/manage-targets/issue-tracking/azure-board
     - title: GitHub Issues
       description: Coming Soon
