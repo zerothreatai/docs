@@ -1,5 +1,11 @@
 <script setup>
 import Header from './components/Header.vue'
+
+useHead({
+  meta: [
+    { name: 'robots', content: 'noindex, nofollow' },
+  ],
+})
 </script>
 
 <template>

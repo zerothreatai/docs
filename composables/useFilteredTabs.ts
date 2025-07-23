@@ -1,6 +1,7 @@
 import { computed } from 'vue'
 import { useRuntimeConfig } from '#imports'
 import tabs from '~/const/categoryTab'
+import { FaqCategory } from '~/utils/category.enum'
 
 export function useFilteredTabs() {
   const { public: { appEnv } } = useRuntimeConfig()
