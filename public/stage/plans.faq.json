@@ -1,94 +1,90 @@
 [
     {
-        "q":"Can I switch my plan - between Pay Per Credit and Professional (unlimited) scanning? ",
-        "a":"Yes, you can switch between Pay Per Credit and the Professional plan at any time. Just update your plan from the dashboard\u2014your data and scan history remain intact. Changes are applied seamlessly to match your billing cycle. "
+        "q": "Is there a difference in features between Pay Per Scan and Professional plans?",
+        "a": "The Professional plan includes advanced features like CI/CD tools integration, Issue Tracking Integration, Schedule Scanning and Notification Tools integration, which are not available in the Pay Per Scan plan. However, all core scanning capabilities are consistently available across all plans."
     },
     {
-        "q":"How do I purchase additional scan credits? ",
-        "a":"You can easily purchase additional scan credits directly from your ZeroThreat dashboard (Settings > Scan Credits). Just navigate to the scan credits section, click on Buy Scan Credit, select the quantity you need, and complete the checkout. Your new credits will be available instantly. "
+        "q": "Can I scan multiple targets with the Pay Per Credit plan?",
+        "a": "Yes, with the Pay Per Credit plan, you can scan multiple targets. Each scan consumes credits, regardless of the target or host. This gives you the flexibility to scan any number of applications or environments as needed."
     },
     {
-        "q":"What discount do I get if I choose an annual subscription plan? ",
-        "a":"By choosing an annual subscription plan, you get 20% cost savings compared to paying monthly. It\u2019s a smarter, more economical option for those who want long-term access while keeping expenses lower. "
+        "q": "How can I change the target with a target-based scan plan?",
+        "a": "With the Target-based (Professional) plan, you get a 30-day cooling period that allows you to flexibly change your target as needed."
     },
     {
-        "q":"Is there a difference in features between Pay Per Scan and Professional plans? ",
-        "a":"The Professional plan includes advanced features like CI\/CD tools integration (GitLab, CircleCI, Bitbucket, and more) and Project Management integration (Jira, Slack, Trello, etc), which are not available in the Pay Per Scan plan. However, all core scanning capabilities are consistently available across all plans. "
+        "q": "Can I have multiple plans (Pay Per Credit + Professional) under one account?",
+        "a": "Yes, you can have both Pay Per Credit and Professional plans under a single account. This is especially useful if you have a target that requires less frequent scanning—you can simply purchase a credit for that target while maintaining your Professional plan for others."
     },
     {
-        "q":"Can I scan multiple targets with the Pay Per Credit plan? ",
-        "a":"Yes, with the Pay Per Credit plan, you can scan multiple targets. Each scan consumes credits, regardless of the target or host. This gives you the flexibility to scan any number of applications or environments as needed. "
+        "q": "How to get free Credits on ZeroThreat Platform?",
+        "a": "When you sign up for ZeroThreat, you receive five free credits worth $125 as part of the trial period. This credit can be utilized within 1 year of sign up. You also get a new free credit every month, helping you find and fix the latest vulnerabilities."
     },
     {
-        "q":"How is billing handled for Host-Based pricing? ",
-        "a":"Host-based pricing is billed monthly or annually based on the plan you choose for your domains (hosts). Each host allows unlimited scans. You will be notified if adding a new host affects your current billing. "
+        "q": "How do I purchase additional scan credits?",
+        "a": "You can easily purchase additional scan credits directly from your ZeroThreat dashboard (Organization Settings > Scan Credits). Just navigate to the scan credits section, click on Buy Scan Credit, select the quantity you need, and complete the checkout. Your new credits will be available instantly."
     },
     {
-        "q":"How can I change the domain with a target-based scan plan? ",
-        "a":"With the Target-based (Professional) plan, you get a 30-day cooling period that allows you to flexibly change your target or host as needed. "
+        "q": "What is the minimum number of credits I need to purchase in the Pay Per Scan model?",
+        "a": "In the Pay Per Scan model, the minimum number of credits you need to purchase is 5."
     },
     {
-        "q":"Do you offer refunds if I cancel my plan? ",
-        "a":"No, we don\u2019t offer refunds if you cancel a plan. "
+        "q": "What is the validity period of Pay Per Scan credits?",
+        "a": "The validity period of Pay Per Scan credits is 1 year from the date of purchase. Any unused credits will automatically expire after 12 months and cannot be renewed or carried forward."
     },
     {
-        "q":"Can I downgrade my Target-Based (Professional) plan? ",
-        "a":"No, the Target-based (Professional) plan cannot be canceled or downgraded during the active subscription period. Please ensure you select the plan that best fits your long-term needs before subscribing. "
+        "q": "Does the Pay Per Scan plan include rescans? How does rescan work for this plan?",
+        "a": "Yes, the Pay Per Scan plan includes unlimited rescans for two weeks. During this period, the ZeroThreat allows unlimited retesting of previously discovered vulnerabilities. However, it does not crawl for new URLs or findings—it strictly re-tests the vulnerabilities identified in the initial scan."
     },
     {
-        "q":"How to get free Credits on ZeroThreat Platform? ",
-        "a":"When you sign up for ZeroThreat, you receive five free credits worth $125 as part of the trial period. This credit can be utilized within 1 year of sign up. You also get a new free credit every month, helping you find and fix the latest vulnerabilities.\u00a0"
+        "q": "What discount do I get if I choose an annual subscription plan?",
+        "a": "By choosing an annual subscription plan, you get 20% cost savings compared to paying monthly. It’s a smarter, more economical option for those who want long-term access while keeping expenses lower."
     },
     {
-        "q":"Can I have multiple plans (Pay Per Credit + Professional) under one account? ",
-        "a":"Yes, you can have both Pay Per Credit and Professional plans under a single account. This is especially useful if you have a host or target that requires less frequent scanning\u2014you can simply purchase a credit for that target while maintaining your Professional plan for others.\u00a0"
+        "q": "What is the billing cycle offered for professional plan?",
+        "a": "We offer both monthly and yearly billing options for professional plans. Choose the cycle that best fits your budget and flexibility needs."
     },
     {
-        "q":"Can I pause my subscription and resume later? ",
-        "a":"ZeroThreat does not currently support pausing subscriptions. However, you can cancel your plan at any time and resubscribe when you're ready\u2014your account data and scan history will remain available unless manually deleted. "
+        "q": "Can I downgrade my Target-Based (Professional) plan?",
+        "a": "No, the Target-based (Professional) plan cannot be canceled or downgraded during the active subscription period. Please ensure you select the plan that best fits your long-term needs before subscribing."
     },
     {
-        "q":"What happens if my payment fails or is declined? ",
-        "a":"You don\u2019t need to worry about if your payment fails or is declined. We'll review it promptly and initiate a refund if applicable. "
+        "q": "Can I pause my subscription and resume later?",
+        "a": "ZeroThreat does not currently support pausing subscriptions. However, you can cancel your plan at any time and resubscribe when you're ready—your account data and scan history will remain available unless manually deleted."
     },
     {
-        "q":"Can I view and download my invoices and payment history? ",
-        "a":"Yes, you can easily access, view, and download all your Invoices and Transaction history directly from your account dashboard. "
+        "q": "Do you offer refunds if I cancel my plan?",
+        "a": "No, we don’t offer refunds if you cancel a plan."
     },
     {
-        "q":"Do you offer custom plans for larger organizations? ",
-        "a":"Yes, we offer tailored plans designed to meet the specific needs of larger teams and enterprises. Get in touch with us to discuss your requirements and we\u2019ll build a solution that fits. "
+        "q": "What happens if my payment fails or is declined?",
+        "a": "You don’t need to worry about if your payment fails or is declined. We'll review it promptly and initiate a refund if applicable."
     },
     {
-        "q":"What is the billing cycle (monthly, yearly) for each plan? ",
-        "a":"We offer both monthly and yearly billing options for all paid plans. Choose the cycle that best fits your budget and flexibility needs. Will I receive a notification before my subscription renews? \n\nYes, you\u2019ll receive an email notification before your subscription is set to renew\u2014giving you time to review or make changes if needed. "
+        "q": "How does ZeroThreat handle currency conversion for international billing?",
+        "a": "For international billing, we process payments in USD. Currency conversion fees, if applicable, will be determined by your payment provider."
     },
     {
-        "q":"How do taxes (like VAT or GST) apply to my billing? ",
-        "a":"All applicable taxes, such as VAT or GST, are already included in the plan cost shown. You will not be charged any additional taxes beyond the price listed, ensuring transparent and straightforward billing.\u00a0"
+        "q": "Can I view and download my invoices and payment history?",
+        "a": "Yes, you can easily access, view, and download all your Invoices and Transaction history directly from your account dashboard."
     },
     {
-        "q":"Is there a limit on how many users can use the same subscription? ",
-        "a":"There are no restrictions on adding users to your subscription. You can invite as many team members as needed, regardless of the plan you choose. "
+        "q": "Is there a limit on how many users can use the same subscription?",
+        "a": "There are no restrictions on adding users to your subscription. You can invite as many team members as needed, regardless of the plan you choose."
     },
     {
-        "q":"How does ZeroThreat handle currency conversion for international billing? ",
-        "a":"For international billing, we process payments in USD. Currency conversion fees, if applicable, will be determined by your payment provider. "
+        "q": "Do you offer custom plans for larger organizations?",
+        "a": "Yes, we offer tailored plans designed to meet the specific needs of larger teams and enterprises. Get in touch with us to discuss your requirements and we’ll build a solution that fits."
     },
     {
-        "q":"What is the minimum number of credits I need to purchase in the Pay Per Scan model? ",
-        "a":"In the Pay Per Scan model, the minimum number of credits you need to purchase is 5. "
+        "q": "What if I have more questions?",
+        "a": "If you have any queries or more questions, you can contact us at: hello@zerothreat.ai."
     },
     {
-        "q":"Does the Pay Per Scan plan include rescans? How does rescan work for this plan? ",
-        "a":"Yes, the Pay Per Scan plan includes unlimited rescans for two weeks. During this period, the ZeroThreat allows unlimited verification and validation of previously discovered vulnerabilities. However, it does not crawl for new URLs or findings\u2014it strictly re-tests the vulnerabilities identified in the initial scan. "
+        "q": "Can I cancel my Target-Based (Professional) plan?",
+        "a": "Yes—you can cancel a Target-Based (Professional) plan at any time. The cancellation takes effect at the start of your next billing cycle; until then, your current targets remain active."
     },
     {
-        "q":"What is the validity period of Pay Per Scan credits? ",
-        "a":"The validity period of Pay Per Scan credits is 1 year from the date of purchase. Any unused credits will automatically expire after 12 months and cannot be renewed or carried forward. "
-    },
-    {
-        "q":"What if I have more q? ",
-        "a":"If you have any queries or more q, you can contact us at: hello@zerothreat.ai. "
+        "q": "Can I de-associate a target from my Target-Based (Professional) plan?",
+        "a": "Yes—simply de-associate the target you no longer need. The slot tied to that target becomes free at the next billing cycle(if cooling period is over, otherwise instantly), letting you assign a different target without purchasing an additional subscription."
     }
 ]
