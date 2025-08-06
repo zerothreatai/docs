@@ -1,50 +1,42 @@
 [
     {
-        "q":"How many credits do I get when I sign up? ",
-        "a":"When you sign up, you receive a Full Credit Signup Bonus of 5 credits worth of $125, valid for 1 year. Also, you get 1 new credit every year without any additional cost. "
+        "q": "How many credits do I get when I sign up?",
+        "a": "When you sign up, you receive a Full Credit Signup Bonus of 5 credits worth of $125, valid for 1 month. Also, you get 1 new credit every year without any additional cost."
     },
     {
-        "q":"How many free credits do I receive per month? ",
-        "a":"You receive one free credit every month, which is valid for 1 year. "
+        "q": "How many free credits do I receive per month?",
+        "a": "You receive one free credit every month, which is valid for 1 month."
     },
     {
-        "q":"Is Continuous Integration (CI\/CD) available in the Free and Pay Per Scan plans? ",
-        "a":"No, CI\/CD is not available in the Free and Pay Per Scan plans. This feature is only included in the Professional and Enterprise plans, which are designed to support automated security testing within your development pipelines. "
+        "q": "Does the Free Credit plan include rescans?",
+        "a": "No, the free credit plan doesn’t include rescans."
     },
     {
-        "q":"How does ZeroThreat define a \"host\" for billing purposes? ",
-        "a":"A host in ZeroThreat refers to a unique domain or subdomain that you scan (e.g., app.example.com or api.example.com). Each distinct domain or subdomain is treated as a separate host for billing. \n\nExample: If you scan both www.example.com and dashboard.example.com, they are counted as two separate hosts under your plan."
+        "q": "What are the different types of credits offered?",
+        "a": "We offer three types of credits:\n1) Full Credit (Signup Credit)\nGranted upon sign-up—5 credits valid for 30 days, valued at $125. These are full-feature credits with standard scanning and rescan capabilities.\n\n2) Promo Credit (on Request)\nProvided during special promotions or on request, mainly for rescan purposes. These help with validating previously found vulnerabilities.\n\n3) Paid Credit\nPurchased credits that include 2 weeks of unlimited rescans, ideal for continuous validation and repeated scans of the same target. These are valid for 1 year from the date of purchase."
     },
     {
-        "q":"How is usage calculated for API scanning in ZeroThreat? ",
-        "a":"API scanning usage in ZeroThreat is calculated based on the number of endpoints scanned. Each endpoint scanned consumes credits. For host-based plans, it counts under the registered host, regardless of the number of endpoints. "
+        "q": "Do paid credits include rescan capabilities?",
+        "a": "Yes, paid credits include rescan capabilities."
     },
     {
-        "q":"Are there discounts for non-profits, startups, or educational institutions? ",
-        "a":"Our Annual Subscription plans are already offered at discounted rates with upto 20%. However, if you have any specific queries or doubts about additional discounts, feel free to reach out to our team at hello@zerothreat.ai and we will be happy to assist you. "
+        "q": "What happens during the two-week rescan period—do you find new vulnerabilities?",
+        "a": "During the two-week rescan period, the platform does not crawl for new URLs or discover new vulnerabilities. Instead, it focuses on retesting the previously identified vulnerabilities for verification and validation. This helps you confirm whether issues have been resolved, without consuming additional credits."
     },
     {
-        "q":"Are there additional charges for integrations (CI\/CD, ticketing, etc.)? ",
-        "a":"No, integrations with CI\/CD pipelines, ticketing systems, and other tools are included in your professional plan at no extra cost. "
+        "q": "How does ZeroThreat define a \"target\" for billing purposes?",
+        "a": "A target in ZeroThreat refers to a unique domain or subdomain that you scan (e.g., app.example.com or api.example.com). Each distinct domain or subdomain is treated as a separate target for billing.\nExample: If you scan both www.example.com and dashboard.example.com, they are counted as two separate targets under your plan."
     },
     {
-        "q":"What happens during the two-week rescan period\u2014do you find new vulnerabilities? ",
-        "a":"During the two-week rescan period, the platform does not crawl for new URLs or discover new vulnerabilities. Instead, it focuses on retesting the previously identified vulnerabilities for verification and validation. This helps you confirm whether issues have been resolved, without consuming additional credits. "
+        "q": "Is Continuous Integration (CI/CD) available in the Free and Pay Per Scan plans?",
+        "a": "No, CI/CD is not available in the Free and Pay Per Scan plans. This feature is only included in the Professional and Enterprise plans, which are designed to support automated security testing within your development pipelines."
     },
     {
-        "q":"What is a Concurrent Scan in Target-based (Professional) Scan? ",
-        "a":"ZeroThreat allows you to perform concurrent scans multiple time, which means you can run multiple vulnerability scans for a single target. For example, if your plan includes 1 concurrent scan, you can run one scan at a time, and the next scan will start only after the current one finishes, as many scans as you want. "
+        "q": "Are there additional charges for integrations (CI/CD, ticketing, etc.)?",
+        "a": "No, integrations with CI/CD pipelines, Notification integrations, Issue Tracking, Scheduled Scans and other tools are included in your professional plan at no extra cost."
     },
     {
-        "q":"Does the Free Credit plan include rescans? ",
-        "a":"No, the free credit plan doesn\u2019t include rescans. "
-    },
-    {
-        "q":"What are the different types of credits offered? ",
-        "a":"We offer three types of credits: \n\n1) Full Credit (Signup Credit) \nGranted upon sign-up\u20145 credits valid for 30 days, valued at $125. These are full-feature credits with standard scanning and rescan capabilities. \n\n2) Promo Credit (on Request) \nProvided during special promotions or on request, mainly for rescan purposes. These help with validating previously found vulnerabilities. \n\n3) Paid Credit \nPurchased credits that include 2 weeks of unlimited rescans, ideal for continuous validation and repeated scans of the same target. These are valid for 1 year from the date of purchase. "
-    },
-    {
-        "q":"Do paid credits include rescan capabilities? ",
-        "a":"Yes, paid credits include rescan capabilities. "
+        "q": "Are there discounts for non-profits, startups, or educational institutions?",
+        "a": "Our Annual Subscription plans are already offered at discounted rates with upto 20%. However, if you have any specific queries or doubts about additional discounts, feel free to reach out to our team at hello@zerothreat.ai and we will be happy to assist you."
     }
 ]

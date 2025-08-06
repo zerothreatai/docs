@@ -9,10 +9,7 @@ export function useFilteredTabs() {
   const irrelevantCategories = [
     FaqCategory['API Security'],
     FaqCategory.Integrations,
-    FaqCategory.Plans,
     FaqCategory.Promos,
-    FaqCategory.Pricing,
-    FaqCategory.Product,
   ]
 
   const filteredTabs = computed(() => {

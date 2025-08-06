@@ -1,34 +1,26 @@
 [
     {
-        "q":"Are there setup fees or hidden charges apart from subscription fees? ",
-        "a":"No, there are no setup fees or hidden charges. You only pay the subscription fee based on your selected plan. Everything else is included. "
+        "q": "Is there a trial period for Target-based plans?",
+        "a": "Yes, we offer free credit for any of the plans you choose. It allows you to experience the full range of features with fully authenticated scans before committing to a paid plan."
     },
     {
-        "q":"How is pricing affected if I use both Web App Scans and API Scans? ",
-        "a":"There\u2019s no additional charge for using both Web App and API Scans. In fact, APIs that are part of your web applications can be scanned at no additional cost\u2014no need for a separate API scanning plan. "
+        "q": "Are there setup fees or hidden charges apart from subscription fees?",
+        "a": "No, there are no setup fees or hidden charges. You only pay the subscription fee based on your selected plan. Everything else is included."
     },
     {
-        "q":"Do you charge separately for authenticated scans? ",
-        "a":"No, authenticated scans are included in all plans at no extra cost. You can scan behind login areas without any additional charges. "
+        "q": "Do you charge separately for authenticated scans?",
+        "a": "No, authenticated scans are included in all plans at no extra cost. You can scan behind login areas without any additional charges."
     },
     {
-        "q":"How much does it cost to add an additional target mid-billing cycle? ",
-        "a":"You can easily add an additional target by purchasing a credit based on its scanning needs. Each additional credit costs just $75 per month, giving you the flexibility to scale as needed. "
+        "q": "Are scans unlimited for a target during the subscription period?",
+        "a": "Yes, you can run unlimited scans on any active target throughout your subscription period—no limits or extra charges."
     },
     {
-        "q":"Are scans unlimited for a target during the subscription period? ",
-        "a":"Yes, you can run unlimited scans on any active target throughout your subscription period\u2014no limits or extra charges. "
+        "q": "How does ZeroThreat pricing compare to traditional DAST tools?",
+        "a": "ZeroThreat offers more cost-effective pricing compared to traditional DAST tools or vulnerability scanners, with no hidden fees for features like authentication, unlimited scans, or API testing. Our annual subscription plans provide superior value by integrating automated vulnerability detection and remediation, reducing manual efforts and saving your team time and resources."
     },
     {
-        "q":"How do bulk purchases of credits or targets impact pricing? ",
-        "a":"We offer volume-based discounts of up to 20% depending on the number of targets or credits you purchase. The more you scale, the more you save. You can visit our Pricing Page or contact our team for a custom quote that fits your needs. "
-    },
-    {
-        "q":"How does ZeroThreat pricing compare to traditional DAST tools? ",
-        "a":"ZeroThreat offers more cost-effective pricing compared to traditional DAST tools or vulnerability scanners, with no hidden fees for features like authentication, unlimited scans, or API testing. Our annual subscription plans provide superior value by integrating automated vulnerability detection and remediation, reducing manual efforts and saving your team time and resources. "
-    },
-    {
-        "q":"Is there a trial period for Target-based plans? ",
-        "a":"Yes, we offer free credit for any of the plans you choose. It allows you to experience the full range of features with fully authenticated scans before committing to a paid plan. "
+        "q": "How do bulk purchases of credits or targets impact pricing?",
+        "a": "We offer volume-based discounts of up to 20% depending on the number of targets or credits you purchase. The more you scale, the more you save. You can visit our Pricing Page or contact our team for a custom quote that fits your needs."
     }
 ]
