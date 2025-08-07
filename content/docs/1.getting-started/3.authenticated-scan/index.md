@@ -1,7 +1,7 @@
 ---
 icon: shield-virus
 title: Authenticated Scan
-description: Authenticated Scans allow you to test areas of your web applications that require user login—ensuring deeper and more accurate vulnerability detection. This guide walks you through how to set up an Authenticated Scan using ZeroThreat’s browser extension to capture login sequences or session tokens. <br>With this capability, you can uncover hidden vulnerabilities behind authentication layers and ensure complete application coverage during security testing. Ideal for applications with user-based content or restricted access areas. 
+description: Authenticated Scans allow you to test areas of your web applications that require user login ensuring deeper and more accurate vulnerability detection. This guide walks you through how to set up an Authenticated Scan using ZeroThreat’s browser extension to capture login sequences or session tokens. <br>With this capability, you can uncover hidden vulnerabilities behind authentication layers and ensure complete application coverage during security testing. Ideal for applications with user-based content or restricted access areas. 
 ---
 
 The **ZeroThreat Chrome Recorder extension** bridges this gap by enabling authenticated scans, allowing you to examine the security of these areas comprehensively. This ensures that no part of your application is left untested, providing a deeper level of security assurance.

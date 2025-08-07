@@ -18,7 +18,7 @@ cards:
     
 ---
 
-Each issue created from ZeroThreat includes technical details such as request/response details, severity level, and suggested remediation—all mapped to your selected Issue Tracking service. Comments are synced in real time between platforms, ensuring collaboration stays clear and centralized.
+Each issue created from ZeroThreat includes technical details such as request/response details, severity level, and suggested remediation all mapped to your selected Issue Tracking service. Comments are synced in real time between platforms, ensuring collaboration stays clear and centralized.
 
 By aligning security workflows with agile project management, helps ensure that every task is tracked to resolution.
 

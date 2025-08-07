@@ -33,7 +33,7 @@ cards:
 
 
 
-With each code push or pull request, your application can be automatically scanned for security issues—ensuring early detection and faster remediation in the SDLC.&#x20;
+With each code push or pull request, your application can be automatically scanned for security issues ensuring early detection and faster remediation in the SDLC.&#x20;
 
 These integrations are designed to be easy to set up, customizable to your workflow, and secure by default. Whether you want to run scans on feature branches, enforce checks before merging, or schedule regular testing, ZeroThreat fits seamlessly into your existing CI/CD process.
 

@@ -10,7 +10,9 @@ const selectButton = async (tab) => {
       const res = await fetch(tab.file)
       const jsonData = await res.json()
       // console.log(jsonData)
-      filteredfaqs.value = jsonData ? jsonData.map(d => ({ ...d, isOpen: false })).slice(0, 3) : []
+      filteredfaqs.value = jsonData
+        ? jsonData.map(d => ({ ...d, isOpen: false })).slice(0, 3)
+        : []
     }
     else {
       filteredfaqs.value = []
@@ -63,12 +65,11 @@ const toggleItem = (item) => {
     </div>
     <!--  -->
     <div class="text-base text-gray-500 font-zt_regular tracking-wide text-justify py-5">
-      Everything you need to know about ZeroThreat’s features, target management, scans, and reporting—all in one place.
+      Everything you need to know about ZeroThreat’s features, target management, scans, and reporting all in one place.
     </div>
     <!-- Tabs -->
 
     <div
-
       class="mb-10 mt-3 flex items-center gap-x-3 text-xs text-gray-600 font-zt_medium *:text-nowrap *:px-4 *:py-1.5 *:border *:rounded-full hover:*:bg-zt_purple hover:*:text-white *:transition-all *:duration-300 *:cursor-pointer max-w-full flex-wrap gap-y-4"
     >
       <div
@@ -142,7 +143,7 @@ const toggleItem = (item) => {
                   <div
                     v-if="item.link"
                     id="faq-list"
-                    class="relative  ms-4 before:absolute before:w-[7px] before:h-[7px] before:-top-[1px] before:-left-4 before:bg-gray-500 before:rounded-full "
+                    class="relative ms-4 before:absolute before:w-[7px] before:h-[7px] before:-top-[1px] before:-left-4 before:bg-gray-500 before:rounded-full"
                   >
                     <MDC :value="item.link" />
                   </div>

@@ -14,7 +14,7 @@
   },
   {
     "q": "What is sensitive data exposure in target security scan report?",
-    "a": "Sensitive data exposure in ZeroThreat refers to unprotected personal or financial data—like Social Security Numbers, credit card details,  health records and many more—that attackers could use for identity theft or fraud. The scan report flags these risks, detailing their location and potential impact. You can mark severe cases as Critical for urgent action or ignore false positives to prioritize effectively."
+    "a": "Sensitive data exposure in ZeroThreat refers to unprotected personal or financial data like Social Security Numbers, credit card details,  health records and many more that attackers could use for identity theft or fraud. The scan report flags these risks, detailing their location and potential impact. You can mark severe cases as Critical for urgent action or ignore false positives to prioritize effectively."
   },
   {
     "q": "What is secret data exposure in target security scan report?",
