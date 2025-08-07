@@ -13,7 +13,7 @@
 	},
 	{
     	"q": "Can I have multiple plans (Pay Per Credit + Professional) under one account?",
-    	"a": "Yes, you can have both Pay Per Credit and Professional plans under a single account. This is especially useful if you have a target that requires less frequent scanning—you can simply purchase a credit for that target while maintaining your Professional plan for others."
+    	"a": "Yes, you can have both Pay Per Credit and Professional plans under a single account. This is especially useful if you have a target that requires less frequent scanning you can simply purchase a credit for that target while maintaining your Professional plan for others."
 	},
 	{
     	"q": "How to get free Credits on ZeroThreat Platform?",
@@ -33,7 +33,7 @@
 	},
 	{
     	"q": "Does the Pay Per Scan plan include rescans? How does rescan work for this plan?",
-    	"a": "Yes, the Pay Per Scan plan includes unlimited rescans for two weeks (after scanning a target). During this period, the ZeroThreat allows unlimited retesting of previously discovered vulnerabilities. However, it does not crawl for new URLs or findings—it strictly re-tests the vulnerabilities identified in the initial scan."
+    	"a": "Yes, the Pay Per Scan plan includes unlimited rescans for two weeks (after scanning a target). During this period, the ZeroThreat allows unlimited retesting of previously discovered vulnerabilities. However, it does not crawl for new URLs or findings it strictly re-tests the vulnerabilities identified in the initial scan."
 	},
 	{
     	"q": "What discount do I get if I choose an annual subscription plan?",
@@ -45,14 +45,14 @@
 	},
 	{
     	"q": "Will I receive a notification before my subscription renews?",
-    	"a": "Yes, you’ll receive an email notification before your subscription is set to renew—giving you time to review or make changes if needed."
+    	"a": "Yes, you’ll receive an email notification before your subscription is set to renew giving you time to review or make changes if needed."
 	},
 	{
     	"q": "Can I reduce targets in my purchased Target-Based (Professional) plan?",
     	"a": "Yes, you can reduce the number of purchased targets in Professional plan by deassociating them. In the next billing cycle you will be billed for 1 less target. Although note that it remains functional during the active subscription period. Changes only take place in next billing cycle." 	},
 	{
     	"q": "Can I pause my subscription and resume later?",
-    	"a": "ZeroThreat does not currently support pausing subscriptions. However, you can cancel your plan at any time and resubscribe when you're ready—your account data and scan history will remain available unless manually deleted."
+    	"a": "ZeroThreat does not currently support pausing subscriptions. However, you can cancel your plan at any time and resubscribe when you're ready, your account data and scan history will remain available unless manually deleted."
 	},
 	{
     	"q": "Do you offer refunds if I cancel my plan?",
