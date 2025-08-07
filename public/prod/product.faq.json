@@ -1,42 +1,42 @@
 [
-    {
-        "q": "How many credits do I get when I sign up?",
-        "a": "When you sign up, you receive a Full Credit Signup Bonus of 5 credits worth of $125, valid for 1 year. Also, you get 1 new credit every year without any additional cost."
+	{
+    	"q": "How many credits do I get when I sign up?",
+    	"a": "When you sign up, you receive a Promotional Credit Signup Bonus of 5 credits worth $125, valid for 1month. Also, you get 1 new credit every month without any additional cost."
+	},
+	{
+    	"q": "How many free credits do I receive per month?",
+    	"a": "You receive one free credit every month, which is valid for 1month."
+	},
+	{
+    	"q": "Does the Free Credit plan include rescans?",
+    	"a": "No, the free credit plan doesn’t include rescans."
+	},
+	{
+    	"q": "What are the different types of credits offered?",
+   	    "a": "ZeroThreat offers three types of credits:\n1) Promotional Credit (Signup Credit)\nYou get 5 credits when you create a new account in the newly created organization. These include rescans and credits expire in 30 days.\n\n2) Free Credit (every month)\nEvery organization receives 1 free credit each month. These are for single scans only and do not include rescans. They also expire in 30 days.\n\n3) Paid Credit\nPurchased through the Pay-Per-Scan option. These credits include 2 weeks of unlimited rescans (after each scan) and are valid for 1 year from the date of purchase."
     },
-    {
-        "q": "How many free credits do I receive per month?",
-        "a": "You receive one free credit every month, which is valid for 1 year."
-    },
-    {
-        "q": "Does the Free Credit plan include rescans?",
-        "a": "No, the free credit plan doesn’t include rescans."
-    },
-    {
-        "q": "What are the different types of credits offered?",
-        "a": "We offer three types of credits:\n1) Full Credit (Signup Credit)\nGranted upon sign-up—5 credits valid for 30 days, valued at $125. These are full-feature credits with standard scanning and rescan capabilities.\n\n2) Promo Credit (on Request)\nProvided during special promotions or on request, mainly for rescan purposes. These help with validating previously found vulnerabilities.\n\n3) Paid Credit\nPurchased credits that include 2 weeks of unlimited rescans, ideal for continuous validation and repeated scans of the same target. These are valid for 1 year from the date of purchase."
-    },
-    {
-        "q": "Do paid credits include rescan capabilities?",
-        "a": "Yes, paid credits include rescan capabilities."
-    },
-    {
-        "q": "What happens during the two-week rescan period—do you find new vulnerabilities?",
-        "a": "During the two-week rescan period, the platform does not crawl for new URLs or discover new vulnerabilities. Instead, it focuses on retesting the previously identified vulnerabilities for verification and validation. This helps you confirm whether issues have been resolved, without consuming additional credits."
-    },
-    {
-        "q": "How does ZeroThreat define a \"target\" for billing purposes?",
-        "a": "A target in ZeroThreat refers to a unique domain or subdomain that you scan (e.g., app.example.com or api.example.com). Each distinct domain or subdomain is treated as a separate target for billing.\nExample: If you scan both www.example.com and dashboard.example.com, they are counted as two separate targets under your plan."
-    },
-    {
-        "q": "Is Continuous Integration (CI/CD) available in the Free and Pay Per Scan plans?",
-        "a": "No, CI/CD is not available in the Free and Pay Per Scan plans. This feature is only included in the Professional and Enterprise plans, which are designed to support automated security testing within your development pipelines."
-    },
-    {
-        "q": "Are there additional charges for integrations (CI/CD, ticketing, etc.)?",
-        "a": "No, integrations with CI/CD pipelines, Notification integrations, Issue Tracking, Scheduled Scans and other tools are included in your professional plan at no extra cost."
-    },
-    {
-        "q": "Are there discounts for non-profits, startups, or educational institutions?",
-        "a": "Our Annual Subscription plans are already offered at discounted rates with upto 20%. However, if you have any specific queries or doubts about additional discounts, feel free to reach out to our team at hello@zerothreat.ai and we will be happy to assist you."
-    }
+	{
+    	"q": "Do paid credits include rescan capabilities?",
+    	"a": "Yes, paid credits include rescan capabilities."
+	},
+	{
+    	"q": "What happens during the two-week rescan period—do you find new vulnerabilities?",
+    	"a": "During the two-week rescan period, the platform does not crawl for new URLs or discover new vulnerabilities. Instead, it focuses on retesting the previously identified vulnerabilities for verification and validation. This helps you confirm whether issues have been resolved, without consuming additional credits."
+	},
+	{
+    	"q": "How does ZeroThreat define a \"target\" for billing purposes?",
+    	"a": "In ZeroThreat, a target is defined as a unique domain or subdomain that you scan—for example, app.example.com or api.example.com.\nEach domain or subdomain is counted as a separate target for billing.\n\nExample:\nIf you scan both www.example.com and dashboard.example.com, they will count as two separate targets under your plan.\n\nHowever, once a target like dashboard.example.com is associated, you can scan any paths under it—such as dashboard.example.com/admin or dashboard.example.com/client without needing to buy additional target slots."
+	},
+	{
+    	"q": "Is Continuous Integration (CI/CD) available in the Free and Pay Per Scan plans?",
+    	"a": "No, CI/CD is not available in the Free and Pay Per Scan plans. This feature is only included in the Professional and Enterprise plans, which are designed to support automated security testing within your development pipelines."
+	},
+	{
+    	"q": "Are there additional charges for integrations (CI/CD, ticketing, etc.)?",
+    	"a": "No, integrations with CI/CD pipelines, Notification integrations, Issue Tracking, Scheduled Scans and other tools are included in your professional plan at no extra cost."
+	},
+	{
+    	"q": "Are there discounts for non-profits, startups, or educational institutions?",
+    	"a": "Our Annual Subscription plans are already offered at discounted rates with upto 20%. However, if you have any specific queries or doubts about additional discounts, feel free to reach out to our team at hello@zerothreat.ai and we will be happy to assist you."
+	}
 ]
