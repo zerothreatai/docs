@@ -125,9 +125,9 @@ const filteredfaqsSearch = () => {
         >
           <div>
             <div
-              class="text-base flex justify-between tracking-wide items-center gap-x-5 text-gray-600 font-zt_regular px-6 py-5 cursor-pointer hover:bg-gray-100"
+              class="text-base flex justify-between tracking-wide items-center gap-x-5 text-gray-800 font-zt_regular px-6 py-5 cursor-pointer hover:bg-gray-50 bg-white"
               :class="{
-                'bg-gray-100 text-gray-700': item.isOpen,
+                'bg-gray-100 text-gray-700 shadow-md': item.isOpen,
                 'rounded-t-lg': index === 0,
                 'rounded-b-lg': !item.isOpen && filteredfaqs.length - 1 === index,
               }"
@@ -146,7 +146,7 @@ const filteredfaqsSearch = () => {
             </div>
             <div
               :class="{
-                'max-h-52 overflow-y-auto': item.isOpen,
+                'max-h-52 overflow-y-auto bg-slate-50/40': item.isOpen,
                 'max-h-0': !item.isOpen,
               }"
               class="transition-all duration-500 overflow-hidden px-6"

@@ -10,7 +10,8 @@ cards:
       description: Create Azure Boards work items from scan findings and assign them to specific projects, and boards with complete vulnerabiltiy details.
       path: /docs/manage-targets/issue-tracking/azure-board
     - title: GitHub Issues
-      description: Coming Soon
+      description: Create GitHub issues from scan findings and assign them to specific repositories and Projects with full vulnerability details.
+      path: /docs/manage-targets/issue-tracking/github-issues
     - title: GitLab Issues
       description: Coming Soon
     - title: Trello
@@ -18,7 +19,7 @@ cards:
     
 ---
 
-Each issue created from ZeroThreat includes technical details such as request/response details, severity level, and suggested remediation—all mapped to your selected Issue Tracking service. Comments are synced in real time between platforms, ensuring collaboration stays clear and centralized.
+Each issue created from ZeroThreat includes technical details such as request/response details, severity level, and suggested remediation all mapped to your selected Issue Tracking service. Comments are synced in real time between platforms, ensuring collaboration stays clear and centralized.
 
 By aligning security workflows with agile project management, helps ensure that every task is tracked to resolution.
 
