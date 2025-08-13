@@ -1,6 +1,7 @@
 ---
 imageSrc: /Images/api-scan-icon.svg
-title: API Scan
+title: API Scan 
+description: Modern applications rely heavily on APIs, and scanning them for vulnerabilities like broken authentication, insecure endpoints, injection attacks and data exposure risks is essential for maintaining a strong security posture.
 cards:
     - icon: file-circle-plus
       title: Create a collection
@@ -15,8 +16,6 @@ cards:
       path: /docs/getting-started/api-scan/authenticated-api-scan
       description: Lists detected security issues in web applications, categorized by severity, with detailed remediation steps 
 ---
-
-Modern applications rely heavily on APIs, and scanning them for vulnerabilities like broken authentication, insecure endpoints, injection attacks and data exposure risks is essential for maintaining a strong security posture.
 
 With ZeroThreat, you can run both **unauthenticated** and **authenticated** API scans to ensure complete coverage of your API surface.
 
