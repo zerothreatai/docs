@@ -5,11 +5,12 @@ on:
     branches:
       - main
 
+env:
+  NODE_VERSION: 20.18.2
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      NODE_VERSION: 20.18.2
     environment: production
     steps:
       - name: Checkout repository
@@ -51,7 +52,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     env:
-      NODE_VERSION: 20.18.2
       FIREBASE_DEPLOY_PRODUCTION: ${{ secrets.FIREBASE_DEPLOY_PRODUCTION }}
     environment: production
     steps:
