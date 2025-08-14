@@ -79,6 +79,7 @@ jobs:
 
   algolia-crawler:
     needs: deploy
+    environment: staging
     runs-on: ubuntu-latest
     steps:
       - name: Algolia crawler creation and crawl
