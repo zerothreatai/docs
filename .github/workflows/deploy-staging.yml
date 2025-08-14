@@ -87,6 +87,8 @@ jobs:
         uses: algolia/algoliasearch-crawler-github-actions@v1.1.13
         id: algolia_crawler
         with: # mandatory parameters
+          override-config: true
+          crawler-name: "help-67d930ad3f2b0600375eab9c"
           crawler-user-id: ${{ secrets.CRAWLER_USER_ID }}
           crawler-api-key: ${{ secrets.CRAWLER_API_KEY }}
           algolia-app-id: ${{ secrets.ALGOLIA_APPLICATION_ID }}
