@@ -1,16 +1,17 @@
 name: Deploy Documentation to Staging
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - staging
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: 20.18.2
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      NODE_VERSION: 20.18.2
     environment: staging
     steps:
       - name: Checkout repository
@@ -51,7 +52,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     env:
-      NODE_VERSION: 20.18.2
       FIREBASE_DEPLOY_STAGING: ${{ secrets.FIREBASE_DEPLOY_STAGING }}
     environment: staging
     steps:
@@ -91,4 +91,4 @@ jobs:
           crawler-api-key: ${{ secrets.CRAWLER_API_KEY }}
           algolia-app-id: ${{ secrets.ALGOLIA_APPLICATION_ID }}
           algolia-api-key: ${{ secrets.ALGOLIA_API_KEY }}
-          site-url: "https://help.zerothreat.dev/docs"
+          site-url: ${{ secrets.SITE_URL }}
