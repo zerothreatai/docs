@@ -1,16 +1,17 @@
 name: Deploy Documentation to Staging
 
 on:
+  push:
+    branches:
+      - staging
   workflow_dispatch:
-  # push:
-  #   branches:
-  #     - staging
+
+env:
+  NODE_VERSION: 20.18.2
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      NODE_VERSION: 20.18.2
     environment: staging
     steps:
       - name: Checkout repository
@@ -51,7 +52,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     env:
-      NODE_VERSION: 20.18.2
       FIREBASE_DEPLOY_STAGING: ${{ secrets.FIREBASE_DEPLOY_STAGING }}
     environment: staging
     steps:
