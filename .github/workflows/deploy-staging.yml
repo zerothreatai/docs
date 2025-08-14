@@ -76,3 +76,17 @@ jobs:
           echo $FIREBASE_DEPLOY_STAGING > firebaselogin.json
           export GOOGLE_APPLICATION_CREDENTIALS=firebaselogin.json
           firebase deploy --project ${{ secrets.FIREBASE_PROJECT_ID_STAGING }}
+
+  algolia-crawler:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Algolia crawler creation and crawl
+        uses: algolia/algoliasearch-crawler-github-actions@v1.0.10
+        id: algolia_crawler
+        with: # mandatory parameters
+          crawler-user-id: ${{ secrets.CRAWLER_USER_ID }}
+          crawler-api-key: ${{ secrets.CRAWLER_API_KEY }}
+          algolia-app-id: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+          algolia-api-key: ${{ secrets.ALGOLIA_API_KEY }}
+          site-url: "https://help.zerothreat.dev/docs"
