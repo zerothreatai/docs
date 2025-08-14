@@ -6,7 +6,7 @@
     {
         "q":"How do I perform a quick scan? ",
         "a":"After logging into ZeroThreat, go to the dashboard, enter your target URL in the central input field, select a nearby scanning server from the dropdown, and click 'Start Scan.' This initiates an unauthenticated scan limited to publicly accessible pages.",
-        "link":"For more Information refer [**Quick Scan Guide**](/docs/getting-started/publish-your-docs 'mentions')"
+        "link":"For more Information refer [**Quick Scan Guide**](/docs/getting-started/quick-scan-guide 'mentions')"
     },
     {
         "q":"What\u2019s the benefit of choosing a nearby scanning server? ",
