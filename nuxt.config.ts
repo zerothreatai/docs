@@ -61,6 +61,7 @@ export default defineNuxtConfig({
     '/docs/manage-organizations': {
       redirect: '/docs/manage-organizations/manage-organization',
     },
+    '/docs/plans': { redirect: '/docs/plans/target-association' },
   },
   compatibilityDate: '2024-11-01',
   nitro: {
