@@ -17,7 +17,7 @@ description: Welcome to the official ZeroThreat Documentation! Here, you'll find
 cards:
   - title: 'Getting Started'
     description: 'Quick Start Guide'
-    path: '/docs/getting-started/publish-your-docs'
+    path: '/docs/getting-started/quick-scan-guide'
   - title: 'Manage Targets'
     description: 'Target Configuration'
     path: '/docs/manage-targets/target-configuration'
@@ -34,7 +34,7 @@ cards:
 
 ### Ready to Begin?
 
-Start with [**Quick Scan Guide**](/docs/getting-started/publish-your-docs 'mention') to run your first scan in minutes.
+Start with [**Quick Scan Guide**](/docs/getting-started/quick-scan-guide 'mention') to run your first scan in minutes.
 
 Learn about everything you need to know about scanning you application in our [**Concepts**](/docs/getting-started/concepts 'mention') guide.
 
