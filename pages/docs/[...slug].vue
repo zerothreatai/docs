@@ -11,6 +11,7 @@ const components = {
 }
 
 const route = useRoute()
+console.log(route.params)
 
 const params = (route.params['slug'] as string[]) || []
 
@@ -25,6 +26,16 @@ const { data: page } = await useAsyncData(`docs-${route.path}`, () =>
   queryCollection('content').path(route.path).first(),
 )
 
+const getUrl = () => {
+  switch (params[0]) {
+    case 'getting-started': return 'getting-started/quickstart'
+    case 'manage-targets':return 'manage-targets/targets-section'
+    case 'manage-scans' : return 'manage-scans/scans-section'
+    case 'manage-organizations':return 'manage-organizations/manage-organization'
+    case 'plans':return 'plans/target-association'
+    default : return params[0]
+  }
+}
 definePageMeta({
   layout: 'docslayout',
 })
@@ -47,7 +58,7 @@ useSeoMeta({
   <div class="grid grid-cols-12 gap-x-10 w-full">
     <div class="col-span-12 xl:col-span-9 pt-8 pb-5 px-10">
       <div class="border-b pb-2">
-        <NuxtLink :to="`/docs/${params[0]}`">
+        <NuxtLink :to="`/docs/${getUrl()}`">
           <span class="text-zt_purple/80 tracking-wide font-semibold text-sm hover:underline">{{
             title
           }}</span>
@@ -62,7 +73,7 @@ useSeoMeta({
             </template>
             <template v-if="page?.meta?.imageSrc">
               <img
-                :src="page?.meta?.imageSrc ?? ''"
+                :src="page?.meta?.imageSrc.toString() ?? ''"
                 class="w-8 p-0 m-0 ps-0 border-none fill-gray-500 stroke-gray-500"
               >
             </template>
