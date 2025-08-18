@@ -84,9 +84,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Algolia CLI
-        uses: algolia/setup-algolia-cli@v1
-        with:
-          version: "latest"
+        uses: algolia/setup-algolia-cli@v1.1.0
+
       - name: Start Crawler
         run: algolia crawler reindex ${{ secrets.CRAWLER_ID }}
         env:
