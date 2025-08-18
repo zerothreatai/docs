@@ -86,7 +86,7 @@ jobs:
       - name: Setup Algolia CLI
         uses: algolia/setup-algolia-cli@master
         with:
-          version: 1.2.0
+          version: 1.7.0
 
       - name: Start Crawler
         run: algolia crawler reindex ${{ secrets.CRAWLER_ID }}
