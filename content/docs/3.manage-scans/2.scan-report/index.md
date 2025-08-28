@@ -2,6 +2,9 @@
 icon: file-lines
 title: Scan Report
 description: The <strong>Scan Report</strong> provides a comprehensive analysis of the security posture of your application based on the latest scan results. It highlights vulnerabilities, misconfigurations, and security risks detected across various components, allowing you to assess and prioritize fixes efficiently.
+seo.title: Scan Report – Detailed ZeroThreat Vulnerability Insights
+seo.description: Explore in-depth vulnerability reports with categories, risk levels, and remediation guidance for all scanned targets.
+
 cards:
     - icon: square-poll-horizontal
       title: Scanner

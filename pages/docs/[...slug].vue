@@ -11,9 +11,9 @@ const components = {
 }
 
 const route = useRoute()
-console.log(route.params)
 
 const params = (route.params['slug'] as string[]) || []
+
 
 // if (params.length) params.pop();
 
@@ -49,9 +49,21 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
 const [prev, next] = surround.value || []
 
 useSeoMeta({
-  title: `${page.value?.title} | ZeroThreat AI `,
-  description: page.value?.description,
+  title: `${page.value?.seo?.title || page?.value?.title} | ZeroThreat AI `,
+  description: page.value?.seo?.description || page.value?.description,
+  ogTitle: page.value?.seo?.title || page?.value?.title,
+  ogDescription: page.value?.seo?.description || page.value?.description,
+  ogUrl: window.location.href,
+  ogType: 'website',
+  ogLocale: 'en_US',
+  ogSiteName: 'ZeroThreat Documentation',
+  twitterSite: '@ZeroThreat_ZT',
+  twitterTitle: page.value?.seo?.title || page?.value?.title,
+  twitterDescription: page.value?.seo?.description || page.value?.description,
 })
+
+
+console.log(page)
 </script>
 
 <template>

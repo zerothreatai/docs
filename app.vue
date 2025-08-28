@@ -3,7 +3,10 @@ import Header from './components/Header.vue'
 
 useHead({
   meta: [
-    { name: 'robots', content: 'noindex, nofollow' },
+    { name: 'robots', content: 'index, follow' },
+  ],
+  link: [
+    { rel: 'canonical', href: window.location.href },
   ],
 })
 </script>
