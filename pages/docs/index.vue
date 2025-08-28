@@ -16,12 +16,13 @@ const { data: page } = await useAsyncData(`page`, () =>
   queryCollection('content').path(route.path).first(),
 )
 
+const url = useRequestURL()
 useSeoMeta({
   title: `${page.value?.seo?.title || page?.value?.title} | ZeroThreat AI `,
   description: page.value?.seo?.description || page.value?.description,
   ogTitle: page.value?.seo?.title || page?.value?.title,
   ogDescription: page.value?.seo?.description || page.value?.description,
-  ogUrl: window.location.href,
+  ogUrl: url.href,
   ogType: 'website',
   ogLocale: 'en_US',
   ogSiteName: 'ZeroThreat Documentation',
@@ -33,6 +34,7 @@ useSeoMeta({
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
   queryCollectionItemSurroundings('content', route.path),
 )
+useHead({ link: [{ rel: 'canonical', href: url.href }] })
 
 const [prev, next] = surround.value || []
 </script>

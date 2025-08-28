@@ -1,12 +1,10 @@
 <script setup>
 import Header from './components/Header.vue'
 
+const url = useRequestURL()
 useHead({
   meta: [
     { name: 'robots', content: 'index, follow' },
-  ],
-  link: [
-    { rel: 'canonical', href: window.location.href },
   ],
 })
 </script>
