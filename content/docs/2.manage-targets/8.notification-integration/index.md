@@ -1,5 +1,7 @@
 ---
 icon: bell
+seo.title: Notification Integration – Real-Time ZeroThreat Alerts
+seo.description: Get instant alerts from ZeroThreat via Slack, Microsoft Teams, or other channels to keep your team informed about scans in real time.
 title: Notification Integration
 description: ZeroThreat’s notification integrations help security and development teams stay in sync by sending real-time scan alerts directly into the communication tools they already use. ZeroThreat can instantly notify your team when a scan starts or completes, keeping visibility high without needing to constantly check the dashboard.
 cards:

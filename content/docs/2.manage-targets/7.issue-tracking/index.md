@@ -1,7 +1,9 @@
 ---
 icon: id-card
 title: Issue Tracking
+seo.title: Issue Tracking – Link ZeroThreat Scans with Project Management Tools
 description: ZeroThreat’s issue tracking integrations help bridge the gap between security and development teams by turning vulnerabilities into actionable tasks within your existing project management tools. With support for platforms like Jira, GitHub Issues, Azure Boards, and Trello, teams can assign, prioritize, and track remediation efforts directly from the scan report.
+seo.description : Streamline remediation by integrating ZeroThreat findings with issue trackers—sync vulnerabilities to Jira, Azure Boards, Slack, or Teams efficiently.
 cards:
     - title: Jira
       path: /docs/manage-targets/issue-tracking/jira

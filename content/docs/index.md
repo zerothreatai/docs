@@ -13,7 +13,9 @@ layout:
   pagination:
     visible: true
 title: Welcome
+seo.title: ZeroThreat Help Center – Documentation, Guides & FAQs
 description: Welcome to the official ZeroThreat Documentation! Here, you'll find everything you need to utilize the full power of ZeroThreat's advanced security scanner. Our guide is designed for users of all experience levels, from newcomers to seasoned professionals.
+seo.description: Explore ZeroThreat’s official documentation. Get step-by-step guides, best practices, FAQs and troubleshooting tips to secure your web apps and APIs efficiently.
 cards:
   - title: 'Getting Started'
     description: 'Quick Start Guide'

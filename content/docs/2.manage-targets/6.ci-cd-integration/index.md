@@ -1,7 +1,9 @@
 ---
 icon: repeat
 title: CI/CD Integration
+seo.title: CI/CD Integration – Automate Scans in Your DevOps Pipeline
 description: ZeroThreat’s CI/CD integration allows you to do automated security testing directly into your development pipeline. By integrating with platforms like GitHub Actions, GitLab, Jenkins, and others, ZeroThreat enables teams to continuously monitor their applications for vulnerabilities without manual intervention.
+seo.description : Integrate ZeroThreat scans into your CI/CD workflows—automate security testing during development using GitHub Actions, Azure Pipelines, Gitlab, and more.
 
 cards:
     - title: GitHub Actions

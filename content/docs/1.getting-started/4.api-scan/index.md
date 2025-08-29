@@ -1,7 +1,9 @@
 ---
 imageSrc: /Images/api-scan-icon.svg
 title: API Scan 
+seo.title: API Scan – Find Vulnerabilities in your APIs 
 description: Modern applications rely heavily on APIs, and scanning them for vulnerabilities like broken authentication, insecure endpoints, injection attacks and data exposure risks is essential for maintaining a strong security posture.
+seo.description: Scan your APIs for broken auth, injection, data leaks, and more with ZeroThreat. Supports both unauthenticated and authenticated API testing using collections.
 cards:
     - icon: file-circle-plus
       title: Create a collection
