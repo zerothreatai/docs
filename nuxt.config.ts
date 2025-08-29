@@ -40,6 +40,7 @@ export default defineNuxtConfig({
       projectEnv: process.env.PROJECT_ENV || '',
       appEnv: process.env.NODE_ENV || 'development',
       workingMode: process.env.WORKING_MODE || '',
+      siteUrl: process.env.SITE_URL,
     },
   },
   dir: {
