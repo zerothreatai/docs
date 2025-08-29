@@ -1,10 +1,11 @@
 <script setup>
 import Header from './components/Header.vue'
 
-const url = useRequestURL()
+const { public: { appEnv } } = useRuntimeConfig()
+
 useHead({
   meta: [
-    { name: 'robots', content: 'index, follow' },
+    { name: 'robots', content: appEnv === 'production' ? 'index, follow' : 'noIndex, nofollow' },
   ],
 })
 </script>
