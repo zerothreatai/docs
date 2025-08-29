@@ -30,6 +30,7 @@ jobs:
           echo "ALGOLIA_APPLICATION_ID=${{ secrets.ALGOLIA_APPLICATION_ID }}" >> $GITHUB_ENV
           echo "ALGOLIA_SEARCH_API_KEY=${{ secrets.ALGOLIA_SEARCH_API_KEY }}" >> $GITHUB_ENV
           echo "ALGOLIA_INDEX_NAME=${{ secrets.ALGOLIA_INDEX_NAME }}" >> $GITHUB_ENV
+          echo "WORKING_MODE=${{ secrets.WORKING_MODE }}" >> $GITHUB_ENV
 
       - name: Assets folder copy
         run: |
@@ -78,18 +79,18 @@ jobs:
           export GOOGLE_APPLICATION_CREDENTIALS=firebaselogin.json
           firebase deploy --project ${{ secrets.FIREBASE_PROJECT_ID_STAGING }}
 
-  algolia-crawler:
-    needs: deploy
-    environment: staging
-    runs-on: ubuntu-latest
-    steps:
-      - name: Setup Algolia CLI
-        uses: algolia/setup-algolia-cli@master
-        with:
-          version: 1.7.0
+  # algolia-crawler:
+  #   needs: deploy
+  #   environment: staging
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Setup Algolia CLI
+  #       uses: algolia/setup-algolia-cli@master
+  #       with:
+  #         version: 1.7.0
 
-      - name: Start Crawler
-        run: algolia crawler reindex ${{ secrets.CRAWLER_ID }}
-        env:
-          ALGOLIA_CRAWLER_USER_ID: ${{ secrets.CRAWLER_USER_ID }}
-          ALGOLIA_CRAWLER_API_KEY: ${{ secrets.CRAWLER_API_KEY }}
+  #     - name: Start Crawler
+  #       run: algolia crawler reindex ${{ secrets.CRAWLER_ID }}
+  #       env:
+  #         ALGOLIA_CRAWLER_USER_ID: ${{ secrets.CRAWLER_USER_ID }}
+  #         ALGOLIA_CRAWLER_API_KEY: ${{ secrets.CRAWLER_API_KEY }}

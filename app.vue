@@ -1,9 +1,11 @@
 <script setup>
 import Header from './components/Header.vue'
 
+const { public: { workingMode } } = useRuntimeConfig()
+
 useHead({
   meta: [
-    { name: 'robots', content: 'noindex, nofollow' },
+    { name: 'robots', content: workingMode === 'PROD' ? 'index, follow' : 'noIndex, nofollow' },
   ],
 })
 </script>
