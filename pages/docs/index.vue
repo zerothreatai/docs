@@ -18,7 +18,7 @@ const { data: page } = await useAsyncData(`page`, () =>
 
 const url = useRequestURL()
 useSeoMeta({
-  title: `${page.value?.seo?.title || page?.value?.title} | ZeroThreat AI `,
+  title: `${page.value?.seo?.title || page?.value?.title}`,
   description: page.value?.seo?.description || page.value?.description,
   ogTitle: page.value?.seo?.title || page?.value?.title,
   ogDescription: page.value?.seo?.description || page.value?.description,
