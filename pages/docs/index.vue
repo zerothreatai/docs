@@ -24,7 +24,7 @@ useSeoMeta({
   description: page.value?.seo?.description || page.value?.description,
   ogTitle: page.value?.seo?.title || page?.value?.title,
   ogDescription: page.value?.seo?.description || page.value?.description,
-  ogUrl: `${siteUrl}${routepath}`,
+  ogUrl: `${siteUrl}${route.path}`,
   ogType: 'website',
   ogLocale: 'en_US',
   ogSiteName: 'ZeroThreat Documentation',
@@ -36,7 +36,7 @@ useSeoMeta({
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
   queryCollectionItemSurroundings('content', route.path),
 )
-useHead({ link: [{ rel: 'canonical', href: `${siteUrl}${routepath}` }] })
+useHead({ link: [{ rel: 'canonical', href: `${siteUrl}${route.path}` }] })
 
 const [prev, next] = surround.value || []
 </script>
