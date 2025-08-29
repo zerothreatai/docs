@@ -29,6 +29,7 @@ jobs:
           echo "ALGOLIA_APPLICATION_ID=${{ secrets.ALGOLIA_APPLICATION_ID }}" >> $GITHUB_ENV
           echo "ALGOLIA_SEARCH_API_KEY=${{ secrets.ALGOLIA_SEARCH_API_KEY }}" >> $GITHUB_ENV
           echo "ALGOLIA_INDEX_NAME=${{ secrets.ALGOLIA_INDEX_NAME }}" >> $GITHUB_ENV
+          echo "WORKING_MODE"= ${{ secrets.WORKING_MODE }} >> $GITHUB_ENV
 
       - name: Assets folder copy
         run: |

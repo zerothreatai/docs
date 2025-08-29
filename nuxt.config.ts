@@ -39,6 +39,7 @@ export default defineNuxtConfig({
       algoliaIndexName: process.env.ALGOLIA_INDEX_NAME || '',
       projectEnv: process.env.PROJECT_ENV || '',
       appEnv: process.env.NODE_ENV || 'development',
+      workingMode: process.env.WORKING_MODE || '',
     },
   },
   dir: {
