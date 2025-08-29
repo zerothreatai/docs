@@ -1,11 +1,11 @@
 <script setup>
 import Header from './components/Header.vue'
 
-const { public: { appEnv } } = useRuntimeConfig()
+const { public: { workingMode } } = useRuntimeConfig()
 
 useHead({
   meta: [
-    { name: 'robots', content: appEnv === 'production' ? 'index, follow' : 'noIndex, nofollow' },
+    { name: 'robots', content: workingMode === 'PROD' ? 'index, follow' : 'noIndex, nofollow' },
   ],
 })
 </script>
