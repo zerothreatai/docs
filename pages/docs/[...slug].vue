@@ -53,7 +53,9 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
 
 const [prev, next] = surround.value || []
 
-const { public: { siteUrl } } = useRuntimeConfig()
+const {
+  public: { siteUrl },
+} = useRuntimeConfig()
 useSeoMeta({
   title: `${page.value?.seo?.title || page?.value?.title}`,
   description: page.value?.seo?.description || page.value?.description,
