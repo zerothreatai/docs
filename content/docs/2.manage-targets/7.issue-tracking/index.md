@@ -18,7 +18,8 @@ cards:
       description: Create GitLab issues from scan findings and assign them to specific projects and boards with full vulnerability details.
       path: /docs/manage-targets/issue-tracking/gitlab-issues
     - title: Trello
-      description: Coming Soon
+      description: Create Trello cards from scan findings and assign them to specific boards and lists with full vulnerability details.
+      path: /docs/manage-targets/issue-tracking/trello
     
 ---
 
