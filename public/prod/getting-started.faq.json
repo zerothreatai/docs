@@ -71,6 +71,10 @@
     {
         "q":"Will ZeroThreat's tests damage my systems? ",
         "a":"No, ZeroThreat’s tests are designed to be and safe. However, they can generate test data or delete entries during scans, which may affect live environments. For this reason, we strongly recommend running tests only on non-production environments."
+    },
+    {
+        "q":"How to Scan in ZeroThreat if I have WAF setup?",
+        "a":"If your WAF is blocking ZeroThreat requests, ensure it allows traffic whose User-Agent includes the ZeroThreat AI Bot signature. Look for `ZeroThreatAIBot` in the header (versions may vary), for example:`Mozilla/5.0 (Windows NT 10.0; Win64; x64; compatible; +https://zerothreat.ai/sos) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 ZeroThreatAIBot 0.0.65.` Enabling this signature ensures the scanner can access your target without interference from the WAF."
     }
 ]
 

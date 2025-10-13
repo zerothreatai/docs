@@ -19,7 +19,7 @@ cards:
       path: /docs/manage-targets/ci-cd-integration/gitlab
       description: Integrate ZeroThreat Scans in into GitLab CI/CD pipelines that suite your workflow.
     - title: AWS CI/CD
-      path: /docs/manage-targets/ci-cd-integration/aws
+      path: /docs/manage-targets/ci-cd-integration/aws-ci-cd
       description: Integrate ZeroThreat Scans in into AWS CI/CD pipelines that suite your workflow.
     - title: Jenkins
       description: Coming Soon
