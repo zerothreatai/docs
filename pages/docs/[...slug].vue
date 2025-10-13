@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import type { ContentCollectionItem } from '@nuxt/content'
 import TocLinks from '~/components/TocLinks.vue'
 import Hint from '~/components/Hint.vue'
 import Figure from '~/components/Figure.vue'
 import UCode from '~/components/UCode.vue'
+import { showError } from '#app'
 
 const components = {
   'hint': Hint,
@@ -25,6 +27,12 @@ const { data: page } = await useAsyncData(`docs-${route.path}`, () =>
   queryCollection('content').path(route.path).first(),
 )
 
+if (!page.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Document not found',
+  })
+}
 const getUrl = () => {
   switch (params[0]) {
     case 'getting-started':

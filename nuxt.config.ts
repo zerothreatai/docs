@@ -39,7 +39,7 @@ export default defineNuxtConfig({
       algoliaIndexName: process.env.ALGOLIA_INDEX_NAME || '',
       projectEnv: process.env.PROJECT_ENV || '',
       appEnv: process.env.NODE_ENV || 'development',
-      workingMode: process.env.WORKING_MODE || '',
+      workingMode: process.env.WORKING_MODE || 'development',
       siteUrl: process.env.SITE_URL,
     },
   },
@@ -82,6 +82,7 @@ export default defineNuxtConfig({
     docSearch: {
       indexName: process.env.ALGOLIA_INDEX_NAME,
     },
+    // workingMode: 'https://localhost:3201' // Removed invalid property
   },
 
   eslint: {
