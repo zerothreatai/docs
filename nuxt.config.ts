@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '~/plugins/contentScrollFix.client.ts',
     '~/plugins/directives.ts',
     '~/plugins/fontawesome.ts',
+    '~/plugins/external-link.client.ts'
   ],
   components: [
     {
