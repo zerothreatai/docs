@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  NODE_VERSION: 20.18.2
+  NODE_VERSION: 22
 
 jobs:
   build:
