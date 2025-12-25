@@ -20,8 +20,8 @@
     	"a": "Yes, paid credits include rescan capabilities."
 	},
 	{
-    	"q": "What happens during the two-week rescan period—do you find new vulnerabilities?",
-    	"a": "During the two-week rescan period, the platform does not crawl for new URLs or discover new vulnerabilities. Instead, it focuses on retesting the previously identified vulnerabilities for verification and validation. This helps you confirm whether issues have been resolved, without consuming additional credits."
+    	"q": "What happens during the 7 days rescan period—do you find new vulnerabilities?",
+    	"a": "During the 7 days rescan period, the platform does not crawl for new URLs or discover new vulnerabilities. Instead, it focuses on retesting the previously identified vulnerabilities for verification and validation. This helps you confirm whether issues have been resolved, without consuming additional credits."
 	},
 	{
     	"q": "How does ZeroThreat define a \"target\" for billing purposes?",
