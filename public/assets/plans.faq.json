@@ -17,7 +17,7 @@
 	},
 	{
     	"q": "How to get free Credits on ZeroThreat Platform?",
-    	"a": "When you sign up for ZeroThreat, you receive five free credits worth $125 as part of the trial period. This credit can be utilized within 1 month of sign up. You also get a new free credit every month, helping you find and fix the latest vulnerabilities."
+    	"a": "When you sign up for ZeroThreat, you receive five free credits worth $125 as part of the trial period. This credit can be utilized within 15 days of sign up. You also get a new free credit every month, helping you find and fix the latest vulnerabilities."
 	},
 	{
     	"q": "How do I purchase additional scan credits?",
@@ -33,7 +33,7 @@
 	},
 	{
     	"q": "Does the Pay Per Scan plan include rescans? How does rescan work for this plan?",
-    	"a": "Yes, the Pay Per Scan plan includes unlimited rescans for two weeks (after scanning a target). During this period, the ZeroThreat allows unlimited retesting of previously discovered vulnerabilities. However, it does not crawl for new URLs or findings it strictly re-tests the vulnerabilities identified in the initial scan."
+    	"a": "When you sign up for ZeroThreat, you receive five free credits worth $125 as part of the trial period. This credit can be utilized within 15 days of sign up. You also get a new free credit every month, helping you find and fix the latest vulnerabilities."
 	},
 	{
     	"q": "What discount do I get if I choose an annual subscription plan?",
