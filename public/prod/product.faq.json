@@ -13,7 +13,7 @@
 	},
 	{
     	"q": "What are the different types of credits offered?",
-   	    "a": "ZeroThreat offers three types of credits:\n1) Promotional Credit (Signup Credit)\nYou get 5 credits when you create a new account in the newly created organization. These include rescans and credits expire in 30 days.\n\n2) Free Credit (every month)\nEvery organization receives 1 free credit each month. These are for single scans only and do not include rescans. They also expire in 30 days.\n\n3) Paid Credit\nPurchased through the Pay-Per-Scan option. These credits include 2 weeks of unlimited rescans (after each scan) and are valid for 1 year from the date of purchase."
+   	    "a": "ZeroThreat offers three types of credits:\n1) Promotional Credit (Signup Credit)\nYou get 5 credits when you create a new account in the newly created organization. These include rescans and credits expire in 15 days.\n\n2) Free Credit (every month)\nEvery organization receives 1 free credit each month. These are for single scans only and do not include rescans. They also expire in 30 days.\n\n3) Paid Credit\nPurchased through the Pay-Per-Scan option. These credits include 2 weeks of unlimited rescans (after each scan) and are valid for 1 year from the date of purchase."
     },
 	{
     	"q": "Do paid credits include rescan capabilities?",
