@@ -1,7 +1,7 @@
 [
 	{
     	"q": "How many credits do I get when I sign up?",
-    	"a": "When you sign up, you receive a Promotional Credit Signup Bonus of 5 credits worth $125, valid for 1month. Also, you get 1 new credit every month without any additional cost."
+    	"a": "When you sign up, you receive a Promotional Credit Signup Bonus of 5 credits worth $125, valid for 15 days. Also, you get 1 new credit every month without any additional cost."
 	},
 	{
     	"q": "How many free credits do I receive per month?",
@@ -13,15 +13,15 @@
 	},
 	{
     	"q": "What are the different types of credits offered?",
-   	    "a": "ZeroThreat offers three types of credits:\n1) Promotional Credit (Signup Credit)\nYou get 5 credits when you create a new account in the newly created organization. These include rescans and credits expire in 30 days.\n\n2) Free Credit (every month)\nEvery organization receives 1 free credit each month. These are for single scans only and do not include rescans. They also expire in 30 days.\n\n3) Paid Credit\nPurchased through the Pay-Per-Scan option. These credits include 2 weeks of unlimited rescans (after each scan) and are valid for 1 year from the date of purchase."
+   	    "a": "ZeroThreat offers three types of credits:\n1) Promotional Credit (Signup Credit): You get 5 credits when you create a new account in the newly created organization. These include rescans and credits expire in 15 days.\n2) Free Credit (every month): Every organization receives 1 free credit each month. These are for single scans only and do not include rescans. They expire in 30 days.\n3) Paid Credit: Purchased through the Pay-Per-Scan option. These credits include 7 days of unlimited rescans (after each scan) and are valid for 1 year from the date of purchase."
     },
 	{
     	"q": "Do paid credits include rescan capabilities?",
     	"a": "Yes, paid credits include rescan capabilities."
 	},
 	{
-    	"q": "What happens during the two-week rescan period—do you find new vulnerabilities?",
-    	"a": "During the two-week rescan period, the platform does not crawl for new URLs or discover new vulnerabilities. Instead, it focuses on retesting the previously identified vulnerabilities for verification and validation. This helps you confirm whether issues have been resolved, without consuming additional credits."
+    	"q": "What happens during the 7 days rescan period—do you find new vulnerabilities?",
+    	"a": "During the 7 days rescan period, the platform does not crawl for new URLs or discover new vulnerabilities. Instead, it focuses on retesting the previously identified vulnerabilities for verification and validation. This helps you confirm whether issues have been resolved, without consuming additional credits."
 	},
 	{
     	"q": "How does ZeroThreat define a \"target\" for billing purposes?",
