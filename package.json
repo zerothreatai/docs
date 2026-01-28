@@ -22,6 +22,7 @@
     "@nuxt/content": "^3.2.0",
     "@nuxtjs/algolia": "^1.10.2",
     "@nuxtjs/fontawesome": "^1.1.2",
+    "@zerothreatai/vulnerability-registry": "^9.0.5",
     "better-sqlite3": "^12.0.0",
     "minisearch": "^7.1.2",
     "nuxt": "^3.19.0",
