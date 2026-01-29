@@ -13,9 +13,6 @@ export default defineNuxtConfig({
       path: '~/components',
       pathPrefix: false, // Allows <JumpRight> without <JumpRight.vue>
     },
-    {
-      global: false,
-    },
   ],
   devtools: { enabled: false },
   app: {
@@ -65,6 +62,7 @@ export default defineNuxtConfig({
       redirect: '/docs/manage-organizations/manage-organization',
     },
     '/docs/plans': { redirect: '/docs/plans/target-association' },
+    '/docs/on-prem': { redirect: '/docs/on-prem/on-prem' },
   },
   compatibilityDate: '2024-11-01',
   nitro: {
