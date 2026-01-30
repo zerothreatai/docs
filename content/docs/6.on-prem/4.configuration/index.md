@@ -3,7 +3,7 @@ imageSrc: /Images/configuration.svg
 title: Configuration
 ---
 
-### Configuration Overview
+## Configuration Overview
 
 ZeroThreat On-Prem provides several configuration options that allow you to tailor how the platform behaves within your environment. These configurations are essential for AI enabled features, Mail Server testing and Automated Pentest configuration.
 
