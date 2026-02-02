@@ -22,9 +22,9 @@ Configuration settings are managed at the **organization level** and are typical
 
 The Configuration section includes:
 
-* **AI Features** for analysis and reporting
-* **Mail Server Configuration** for system notifications
-* **Automated Pentest Configuration** for continuous testing
+* **AI Features** for AI enabled analysis and reporting
+* **Mail Server Configuration** for sending scan related notifications
+* **Automated Pentest Configuration** for Port exploitation and other AI attack related features
 
 Each of these areas is covered in detail on its own page.
 
@@ -32,4 +32,4 @@ Each of these areas is covered in detail on its own page.
 <JumpRightInCard />
 
 **What’s next?**\
-Start by understanding how AI is used in ZeroThreat by continuing to **AI Features Configuration**.
+Start by understanding how AI is used in ZeroThreat by continuing to [**AI Features Configuration**](configuration/ai-configuration 'mention').
