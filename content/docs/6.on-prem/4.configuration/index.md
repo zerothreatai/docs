@@ -1,6 +1,17 @@
 ---
 imageSrc: /Images/configuration.svg
 title: Configuration
+
+cards:
+    - title: AI Features Configuration
+      path: /docs/on-prem/configuration/ai-configuration
+      description: ZeroThreat uses AI-driven capabilities across multiple areas of the platform to improve clarity, reduce manual effort, and accelerate security analysis.
+    - title: Mail Server Configuration
+      path: /docs/on-prem/configuration/mail-server-configuration
+      description: Mail server configuration allows ZeroThreat to send operational and system-related notifications from your On-Prem deployment.
+    - title: Automated Pentest Configuration
+      path: /docs/on-prem/configuration/automated-pentest-configuration
+      description: Automated Pentest enables AI Automated security testing within your On-Prem environment, including automated port exploitation and other attacks.
 ---
 
 ## Configuration Overview
@@ -18,8 +29,7 @@ The Configuration section includes:
 Each of these areas is covered in detail on its own page.
 
 **Available configuration guides**
-
-<table data-view="cards"><tbody><tr><td>AI Features Configuration</td><td><a href="configuration/ai-configuration">ai-configuration</a></td></tr><tr><td>Mail Server Configuration</td><td><a href="configuration/mail-server-configuration">mail-server-configuration</a></td></tr><tr><td>Automated Pentest Configuration</td><td><a href="configuration/automated-pentest-configuration">automated-pentest-configuration</a></td></tr></tbody></table>
+<JumpRightInCard />
 
 **What’s next?**\
 Start by understanding how AI is used in ZeroThreat by continuing to **AI Features Configuration**.
