@@ -161,6 +161,10 @@ h3 {
   @apply text-xl text-[#3c3c43] mt-12 mb-4;
 }
 
+h4 {
+  @apply text-lg text-[#3c3c43] mt-6 mb-4;
+}
+
 p {
   @apply font-zt_regular text-base tracking-wide my-4 text-[#3c3c43] leading-[26px];
 }
@@ -236,21 +240,21 @@ ul li a strong {
 }
 
 img {
-  @apply my-5 border mx-auto;
+  @apply my-5 mx-auto;
 }
 img {
   @apply max-h-[450px];
 }
 div > img {
-  @apply block mx-auto rounded-lg shadow-md my-0.5 bg-cover;
+  @apply block mx-auto rounded-lg shadow-md border border-gray-100 my-0.5 bg-cover;
 }
 ul li img,
 ol li img {
-  @apply p-0 border rounded-md shadow-md mx-1 inline-block my-2;
+  @apply p-0 border rounded-md shadow-md border border-gray-100 mx-1 inline-block my-2;
 }
 p > span > img,
 li > span > img, p > img, ul > li > img {
-  @apply inline-block rounded-md shadow-md my-0;
+  @apply inline-block rounded-md shadow-md border border-gray-100 my-0;
 }
 p > img, ul > li > img, ol > li > img {
   @apply max-h-6 my-0
@@ -312,15 +316,33 @@ blockquote p {
   @apply leading-4
 }
 
-table tr th {
-  @apply font-zt_regular tracking-wider text-sm bg-slate-100 py-2 text-gray-700 text-left px-5
-} 
-table tr td {
-  @apply font-zt_regular tracking-wider text-sm py-3 text-gray-700 min-w-60 text-left px-5
-} 
-table tr {
-  @apply border-b border-dashed last:border-b-0
-}
 table {
-  @apply mb-5
+  @apply w-full border-separate border-spacing-0 rounded-lg border border-gray-200 shadow-sm mb-5 text-sm my-6 table overflow-hidden bg-white;
+}
+
+table tr th {
+  @apply bg-gray-50 text-left text-black/80 font-zt_light tracking-wider px-4 py-3 border-b border-gray-200 align-top;
+}
+
+table tr td {
+  @apply px-4 py-3 text-gray-700 tracking-wide border-b border-gray-100 align-top;
+}
+table tr td a {
+  @apply text-zt_purple underline;
+}
+
+/* Remove bottom border from last row to respect container border */
+table tr:last-child td {
+  @apply border-b-0;
+}
+
+/* Add vertical borders */
+table tr th:not(:last-child),
+table tr td:not(:last-child) {
+  @apply border-r border-gray-100;
+}
+
+/* Bold first column for Feature names */
+table tr td:first-child {
+  @apply font-zt_regular text-black/80;
 }
