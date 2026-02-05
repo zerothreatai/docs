@@ -61,6 +61,9 @@ export default defineNuxtConfig({
     '/docs/manage-organizations': {
       redirect: '/docs/manage-organizations/manage-organization',
     },
+    '/docs/organization-settings': {
+      redirect: '/docs/organization-settings/vulnerability-registry-configuration',
+    },
     '/docs/plans': { redirect: '/docs/plans/target-association' },
     '/docs/on-prem': { redirect: '/docs/on-prem/on-prem' },
   },
