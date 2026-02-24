@@ -9,14 +9,11 @@ cards:
     - title: Mail Server Configuration
       path: /docs/on-prem/configuration/mail-server-configuration
       description: Mail server configuration allows ZeroThreat to send operational and system-related notifications from your On-Prem deployment.
-    - title: Automated Pentest Configuration
-      path: /docs/on-prem/configuration/automated-pentest-configuration
-      description: Automated Pentest enables AI Automated security testing within your On-Prem environment, including automated port exploitation and other attacks.
 ---
 
 ## Configuration Overview
 
-ZeroThreat On-Prem provides several configuration options that allow you to tailor how the platform behaves within your environment. These configurations are essential for AI enabled features, Mail Server testing and Automated Pentest configuration.
+ZeroThreat On-Prem provides several configuration options that allow you to tailor how the platform behaves within your environment. These configurations are essential for AI enabled features, Mail Server testing.
 
 Configuration settings are managed at the **organization level** and are typically handled by security engineers, platform teams, or administrators responsible for maintaining the On-Prem deployment.
 
@@ -24,7 +21,6 @@ The Configuration section includes:
 
 * **AI Features** for AI enabled analysis and reporting
 * **Mail Server Configuration** for sending scan related notifications
-* **Automated Pentest Configuration** for Port exploitation and other AI attack related features
 
 Each of these areas is covered in detail on its own page.
 
