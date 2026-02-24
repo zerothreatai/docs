@@ -27,5 +27,5 @@ Each of these areas is covered in detail on its own page.
 **Available configuration guides**
 <JumpRightInCard />
 
-**What’s next?**\
+**What’s next?**
 Start by understanding how AI is used in ZeroThreat by continuing to [**AI Features Configuration**](configuration/ai-configuration 'mention').
