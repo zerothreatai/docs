@@ -272,7 +272,7 @@ blockquote {
 }
 
 blockquote p {
-  @apply leading-6 ps-2
+  @apply leading-6
 }
 
 .right_navlinks p,
