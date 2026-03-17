@@ -40,7 +40,7 @@ const closeModal = () => {
           alt="Thumbnail"
           @click="openModal(source)"
         >
-        <p class="*:text-sm mt-0 text-center *:text-gray-400 *:mt-2">
+        <p v-if="$slots.default" class="*:text-sm mt-0 text-center *:text-gray-400 *:mt-2">
           <slot unwrap="p" />
         </p>
       </div>
