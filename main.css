@@ -317,7 +317,7 @@ blockquote p {
 }
 
 table {
-  @apply w-full border-separate border-spacing-0 rounded-lg border border-gray-200 shadow-sm mb-5 text-sm my-6 table overflow-hidden bg-white;
+  @apply w-full border-separate border-spacing-0 rounded-lg border border-gray-200 shadow-sm mb-5 text-sm my-6 block overflow-x-auto bg-white;
 }
 
 table tr th {
