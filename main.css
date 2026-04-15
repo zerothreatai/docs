@@ -165,6 +165,10 @@ h4 {
   @apply text-lg text-[#3c3c43] mt-6 mb-4;
 }
 
+#alert-div h5 {
+  @apply pb-1.5 !important
+}
+
 p {
   @apply font-zt_regular text-base tracking-wide my-4 text-[#3c3c43] leading-[26px];
 }
