@@ -33,8 +33,8 @@ ZeroThreat provides some powerful methods for performing authenticated scans, ea
 
 For detailed guide, refer to:
 
-- [**Scan with Login Sequence**](authenticated-scan/scan-with-login-sequence)
-- [**Scan MFA App**](authenticated-scan/scan-mfa-app)
-- [**Scan Navigation Sequence Only**]( authenticated-scan/scan-navigation-sequence-only)
+- [**Scan with Login Sequence**](/docs/getting-started/authenticated-scan/scan-with-login-sequence)
+- [**Scan MFA App**](/docs/getting-started/authenticated-scan/scan-mfa-app)
+- [**Scan Recorded Pages & Actions**](/docs/getting-started/authenticated-scan/scan-recorded-pages-and-actions)
 
 With these methods, ZeroThreat enables you to achieve a comprehensive security assessment, safeguarding your applications and their users from potential threats.
