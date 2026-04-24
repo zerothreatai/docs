@@ -20,7 +20,7 @@ cards:
 
 With support for platforms such as Jira, GitHub Issues, Azure Boards, GitLab Issues, and Trello, teams can create and assign remediation tasks directly from scan reports. Each issue includes detailed vulnerability information such as severity level, technical evidence, request/response data, and recommended remediation steps, ensuring developers have everything needed to fix the issue efficiently.
 
-Unlike the Cloud version, ZeroThreat On-Prem connects to external issue tracking systems using secure tokens from within your infrastructure. This gives organizations greater control over while maintaining alignment between security findings and development workflows.
+Unlike the Cloud version, ZeroThreat On-Prem connects to external issue tracking systems using secure tokens from within your infrastructure. This gives organizations greater control while maintaining alignment between security findings and development workflows.
 
 By integrating security findings directly into your project management tools, ZeroThreat On-Prem helps ensure vulnerabilities are tracked, prioritized, and resolved through structured engineering processes.
 

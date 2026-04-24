@@ -1,7 +1,7 @@
 ---
 icon: file-lines
 title: Scan Report
-description: The <strong>Scan Report</strong> provides a comprehensive analysis of the security posture of your application based on the latest scan results. It highlights vulnerabilities, misconfigurations, and security risks detected across various components, allowing you to assess and prioritize fixes efficiently.
+description: The **Scan Report** provides a comprehensive analysis of the security posture of your application based on the latest scan results. It highlights vulnerabilities, misconfigurations, and security risks detected across various components, allowing you to assess and prioritize fixes efficiently.
 seo.title: Scan Report – Detailed ZeroThreat Vulnerability Insights
 seo.description: Explore in-depth vulnerability reports with categories, risk levels, and remediation guidance for all scanned targets.
 
@@ -9,7 +9,7 @@ cards:
     - icon: square-poll-horizontal
       title: Scanner
       path: /docs/manage-scans/scan-report/scanner
-      description: Displays real-time scan progress, including authenticated and unauthenticated crawling, along with OWASP Top
+      description: Displays real-time scan progress, including crawling and OWASP Top 10 vulnerabilities.
     - icon: file-lines
       title: Scan Summary
       path: /docs/manage-scans/scan-report/scan-summary
@@ -19,7 +19,7 @@ cards:
       path: /docs/manage-scans/scan-report/web-app-vulnerabilities
       description: Lists detected security issues in web applications, categorized by severity, with detailed remediation steps
     - icon: file-circle-check
-      title: Detected API's vulnerabilities
+      title: Detected API vulnerabilities
       path: /docs/manage-scans/scan-report/detected-apis-vulnerabilities
       description: Identifies all the security flaws found in a particular API endpoint, showing affected requests
     - icon: circle-info
@@ -31,7 +31,7 @@ cards:
       path: /docs/manage-scans/scan-report/ssl-certificate
       description: Analyzes SSL/TLS configurations, checking for vulnerabilities, expiration status, and compliance issues.
     - icon: cube
-      title: Vulnerable Version detection
+      title: Vulnerable Version Detection
       path: /docs/manage-scans/scan-report/vulnerable-version-detection
       description: Detects outdated JavaScript libraries and server-side technologies with known security risks.
     - icon: database
@@ -44,11 +44,11 @@ cards:
       description: Evaluates the mail server for misconfigurations like open relays and reverse DNS mismatches
 ---
 
-This report is structured into different sections, each focusing on a specific security aspect. It covers web application and API vulnerabilities, offering insights into detected weaknesses and their severity. The report also evaluates SSL configurations, server security, and mail server settings to identify potential risks in encryption and communication channels. Additionally, it examines the technology stack, detecting outdated JavaScript packages and server-side frameworks that might introduce security gaps.
+This report is structured into different sections, each focusing on a specific security area. It covers web application and API vulnerabilities, offering insights into detected weaknesses and their severity. The report also evaluates SSL configurations, server security, and mail server settings to identify potential risks in encryption and communication channels. Additionally, it examines the technology stack, detecting outdated JavaScript packages and server-side frameworks that might introduce security gaps.
 
-Beyond application security, the Scan Report highlights information exposure risks, including leaked sensitive data, API keys, and cloud misconfigurations. Each finding is categorized based on severity, enabling you to focus on critical threats first. You also have the flexibility to review reported findings, mark them as critical, or ignore those that are not relevant to your environment.
+Beyond application security, the Scan Report highlights information exposure risks, including leaked sensitive data, API keys, and cloud misconfigurations. Each finding is categorized based on severity, enabling you to focus on critical threats first. You also have the flexibility to review reported findings, mark them as critical, or ignore those that are irrelevant to your environment.
 
-By analyzing the Scan Report, security teams and developers can gain a clear understanding of their security risks and take proactive measures to strengthen their defenses.
+By analyzing the Scan Report, security teams and developers can gain a clear understanding of their security risks and take proactive measures to strengthen their defense.
 
 ### Jump Right In
 
