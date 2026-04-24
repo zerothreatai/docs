@@ -24,7 +24,7 @@ The Configuration section includes:
 
 Each of these areas is covered in detail on its own page.
 
-### Available configuration guides
+## Available configuration guides
 <JumpRightInCard />
 
 ## What’s Next?
