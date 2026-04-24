@@ -177,6 +177,10 @@ ul,
 ol {
   @apply ml-10 mb-5;
 }
+ul > li > ul
+{
+  @apply mb-0 mt-3;
+}
 
 ul {
   @apply list-disc;

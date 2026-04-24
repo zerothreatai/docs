@@ -25,7 +25,7 @@ ZeroThreat provides some powerful methods for performing authenticated scans, ea
 2. **Scan MFA App**
    - Designed for applications protected by Multi-Factor Authentication (MFA).
    - Allows users to handle additional security steps, such as SSO's, OTPs, CAPTCHAs, and more ensuring that even these highly secure sections are included in the scan.
-3. **Scan Navigation Sequence Only**
+3. **Scan Recorded Pages & Actions**
    - Perfect for targeting specific sections or functionalities of an authenticated application.
    - Records your navigation through selected pages, limiting the scan to only those areas without crawling the entire site.
 

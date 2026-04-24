@@ -16,7 +16,7 @@ cards:
 
 These alerts are timely, and tied to your targets, making it easier to monitor scan activity across environments and respond quickly when new vulnerabilities are discovered. Each integration is simple to configure and designed to fit into your existing team workflows.
 
-By pushing scan events where your team communicates the most, ZeroThreat helps ensure that security efforts are continuous and proactive.
+By pushing scan events where your team communicates most, ZeroThreat helps ensure that security efforts remain continuous and proactive.
 
 ### Jump Right In
 
