@@ -19,8 +19,8 @@ Configuration settings are managed at the **organization level** and are typical
 
 The Configuration section includes:
 
-* **AI Features** for AI-enabled analysis and reporting
-* **Mail Server Configuration** for sending scan-related notifications
+* **AI Features** for analysis and reporting
+* **Mail Server Configuration**  for system notifications
 
 Each of these areas is covered in detail on its own page.
 
