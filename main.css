@@ -276,11 +276,15 @@ details {
 }
 
 blockquote {
-  @apply bg-zt_purple/5 border-l-4 border-zt_purple/70 py-2 px-3;
+  @apply bg-zt_purple/5 border-l-4 border-zt_purple/70 py-2 px-[17px];
 }
 
 blockquote p {
   @apply leading-6
+}
+
+#alert-div h6:nth-of-type(2) {
+  @apply mt-2;
 }
 
 .right_navlinks p,
