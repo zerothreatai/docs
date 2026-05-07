@@ -272,7 +272,7 @@ code {
 }
 
 details {
-  @apply border rounded-md px-4 py-3 text-base tracking-wide text-[#3c3c43] cursor-pointer bg-slate-50;
+  @apply border rounded-md px-4 py-3 text-base tracking-wide text-[#3c3c43] cursor-pointer bg-slate-50 last:mb-0 mb-1;
 }
 
 blockquote {
