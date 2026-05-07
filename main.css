@@ -165,6 +165,10 @@ h4 {
   @apply text-lg text-[#3c3c43] mt-6 mb-4;
 }
 
+#alert-div h5 {
+  @apply pb-1.5 !important
+}
+
 p {
   @apply font-zt_regular text-base tracking-wide my-4 text-[#3c3c43] leading-[26px];
 }
@@ -172,6 +176,10 @@ p {
 ul,
 ol {
   @apply ml-10 mb-5;
+}
+ul > li > ul
+{
+  @apply mb-0 mt-3;
 }
 
 ul {
@@ -268,11 +276,15 @@ details {
 }
 
 blockquote {
-  @apply bg-zt_purple/5 border-l-4 border-zt_purple/70 py-2 px-3;
+  @apply bg-zt_purple/5 border-l-4 border-zt_purple/70 py-2 px-[17px];
 }
 
 blockquote p {
-  @apply leading-6 italic;
+  @apply leading-6
+}
+
+#alert-div h6:nth-of-type(2) {
+  @apply mt-2;
 }
 
 .right_navlinks p,
@@ -345,4 +357,55 @@ table tr td:not(:last-child) {
 /* Bold first column for Feature names */
 table tr td:first-child {
   @apply font-zt_regular text-black/80;
+}
+
+/* ── Plan Comparison Table: sticky first column + uniform widths ── */
+#plan-comparison-table {
+  @apply overflow-x-auto rounded-lg my-6;
+}
+
+#plan-comparison-table table {
+  @apply table-fixed border-collapse;
+  display: table;
+  min-width: max-content;
+  border: none;
+  border-top: 1px solid rgb(240, 239, 239);
+}
+
+#plan-comparison-table table tr th,
+#plan-comparison-table table tr td {
+  min-width: 160px;
+  max-width: 160px;
+  width: 160px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* First column (Plan) – wider and sticky */
+#plan-comparison-table table tr th:first-child,
+#plan-comparison-table table tr td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  min-width: 180px;
+  max-width: 180px;
+  width: 180px;
+}
+
+#plan-comparison-table table tr th:first-child {
+  @apply bg-gray-50;
+}
+
+#plan-comparison-table table tr td:first-child {
+  @apply bg-white;
+  box-shadow: 2px 0 4px -2px rgba(0, 0, 0, 0.06);
+}
+
+/* Second column (Pricing) – slightly wider for longer text */
+#plan-comparison-table table tr th:nth-child(2),
+#plan-comparison-table table tr td:nth-child(2) {
+  min-width: 220px;
+  max-width: 220px;
+  width: 220px;
 }

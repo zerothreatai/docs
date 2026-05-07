@@ -35,12 +35,12 @@ const closeModal = () => {
         <img
           :key="index"
           :src="source"
-          class="object-contain rounded-lg shadow-md cursor-zoom-in max-w-[45rem]"
+          class="object-contain rounded-lg shadow-md cursor-zoom-in max-w-[42rem]"
           :width="width"
           alt="Thumbnail"
           @click="openModal(source)"
         >
-        <p class="*:text-sm mt-0 text-center *:text-gray-400 *:mt-2">
+        <p v-if="$slots.default" class="*:text-sm mt-0 text-center *:text-gray-400 *:mt-2">
           <slot unwrap="p" />
         </p>
       </div>

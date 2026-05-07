@@ -1,0 +1,173 @@
+---
+imageSrc: /Images/installation.svg
+title: Installation
+---
+
+## Installation and License Activation
+
+This section walks you through installing ZeroThreat On-Prem using the CLI and activating your license. The process is designed to be guided and interactive, with system checks and dependency installation handled automatically where possible.
+
+
+## Prerequisites
+
+Before starting the installation, ensure the following requirements are met:
+
+* **Node.js**: Latest stable version installed
+* **Disk space**: At least **15 GB of free disk space** for initial installation
+* **Internet access**: Required during installation to download system images
+
+> **Note**\
+> Docker is not a direct prerequisite. If required, the ZeroThreat CLI installer can install and configure Docker as part of the setup process.
+
+**Official reference**
+
+* Node.js downloads [**https://nodejs.org/en/download**](https://nodejs.org/en/download)
+
+**Supported Installation Environments**\
+ZeroThreat On-Prem can be installed on **Linux**, **macOS**, and **Windows using WSL**. The CLI-based installer is designed to run in these environments and will guide you through dependency checks, installation, and license activation.
+
+::hint{ style="bg-#f5fdf9; border: 1px solid #10b98133; color:#0a8363;" icon="circle-check" iconClass="text-[#0a8363]"}
+
+##### Recommended Cloud VM Size for Installation
+
+For ZeroThreat On-Prem installation on a cloud VM, use the following minimum and recommended system configuration:
+
+**Minimum**
+
+* 16 GB RAM
+* 64 GB disk
+* 4 vCPUs
+
+**Suggested example instance series for minimum sizing**
+
+* **AWS:** `m6i.xlarge` or `m7g.xlarge` for general purpose, `t3.xlarge` or `t4g.xlarge` for burstable
+* **Azure:** `Standard_D4s_v5` for general purpose, `Standard_B4ms` for burstable
+* **GCP:** `n2-standard-4` for general purpose, `e2-standard-4` for burstable
+
+**Recommended**
+
+* 32 GB RAM
+* 128 GB disk
+* 8 vCPUs
+
+**Suggested example instance series for recommended sizing**
+
+* **AWS:** `m6i.2xlarge` or `m7g.2xlarge` for general purpose, `t3.2xlarge` or `t4g.2xlarge` for burstable
+* **Azure:** `Standard_D8s_v5` for general purpose, `Standard_B8ms` for burstable
+* **GCP:** `n2-standard-8` for general purpose, `e2-standard-8` for burstable
+
+IMPORTANT: The instance models above are only suggested examples. Any equivalent VM with similar CPU, memory, and disk capacity will also work.
+
+::
+
+### Step 1: Install ZeroThreat CLI
+
+Install the ZeroThreat CLI globally using npm:
+
+::u-code
+```bash
+npm install -g @zerothreatai/cli
+```
+::
+
+This command installs the CLI tool that manages installation, configuration, and lifecycle operations for On-Prem deployments.
+
+> **Troubleshooting**
+>
+> * If you see permission errors, ensure you have sufficient privileges
+> * If npm fails due to Node version issues, upgrade to the latest stable Node.js release
+
+
+### Step 2: Launch the Installer
+
+Once installation completes, start the installer by running:
+
+::u-code
+```bash
+zt
+```
+::
+
+This opens the interactive On-Prem installer, which guides you through system checks, dependency installation, and license activation.
+
+
+::fiqure-img{source="/Images/image (438).png"}
+::
+
+
+### Step 3: Install Prerequisite Software (if prompted)
+
+If the installer detects missing system dependencies, select:
+
+**Install Prerequisite Software for \[Linux] Environment**
+
+The installer will automatically install and configure required components, including Docker if needed.
+
+Once completed, you should see a confirmation message indicating that system requirements are met.
+
+::fiqure-img{source="/Images/image (439).png"}
+::
+
+
+### Step 4: License Activation
+
+After system checks pass, the installer proceeds to license activation.
+
+You will be prompted to enter:
+
+* The **email address** associated with your ZeroThreat organization
+* A valid **On-Prem license key**
+
+::hint{ style="background-color:#fff4e6; color:#f97316; border:1px solid #f6d2b0;" icon="triangle-exclamation" iconClass="text-[#f97316]"}
+
+###### The email must belong to the organization where the On-Prem license was purchased.
+::
+
+Once activated, the installer downloads the required images (approximately 8–9 GB). This may take several minutes depending on network speed.
+
+::fiqure-img{source="/Images/image (440).png"}
+::
+
+
+### Common License Activation Error
+
+If installation is interrupted and, on restart, you encounter the following error:
+
+<pre class="bg-slate-50 border rounded-md px-3 py-3 block text-xs text-gray-800 font-zt_regular tracking-wider space-y-1 overflow-x-auto">
+Verification failed. Please check your details.
+
+Error: License cannot be activated. Its current status is 'ClaimRequested'.
+</pre>
+
+This indicates that the license was partially claimed during a previous attempt.
+
+**How to resolve**
+
+* Log in to your ZeroThreat Cloud organization
+* Locate the license and change its status from **Claim Requested** by clicking on the **Reset Claim Request** button.
+
+::fiqure-img{source="/Images/image (441).png"}
+::
+
+::fiqure-img{source="/Images/image (442).png"}
+::
+
+* Restart the installer and activate again
+
+::hint{ style="background-color:#fff4e6; color:#f97316; border:1px solid #f6d2b0;" icon="triangle-exclamation" iconClass="text-[#f97316]"}
+
+###### Retrying activation without resetting the license state will continue to fail.
+::
+
+
+### Step 5: Accessing ZeroThreat On-Prem
+
+After successful installation and activation, the installer displays a **local access URL**.
+
+Use this URL to access your ZeroThreat On-Prem instance and continue configuration.
+
+::fiqure-img{source="/Images/image (443).png"}
+::
+
+## What’s Next?
+Now that ZeroThreat is installed, learn how to manage licenses in our [**License Management**](license-management 'mention') guide.
