@@ -358,3 +358,54 @@ table tr td:not(:last-child) {
 table tr td:first-child {
   @apply font-zt_regular text-black/80;
 }
+
+/* ── Plan Comparison Table: sticky first column + uniform widths ── */
+#plan-comparison-table {
+  @apply overflow-x-auto rounded-lg my-6;
+}
+
+#plan-comparison-table table {
+  @apply table-fixed border-collapse;
+  display: table;
+  min-width: max-content;
+  border: none;
+  border-top: 1px solid rgb(240, 239, 239);
+}
+
+#plan-comparison-table table tr th,
+#plan-comparison-table table tr td {
+  min-width: 160px;
+  max-width: 160px;
+  width: 160px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* First column (Plan) – wider and sticky */
+#plan-comparison-table table tr th:first-child,
+#plan-comparison-table table tr td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  min-width: 180px;
+  max-width: 180px;
+  width: 180px;
+}
+
+#plan-comparison-table table tr th:first-child {
+  @apply bg-gray-50;
+}
+
+#plan-comparison-table table tr td:first-child {
+  @apply bg-white;
+  box-shadow: 2px 0 4px -2px rgba(0, 0, 0, 0.06);
+}
+
+/* Second column (Pricing) – slightly wider for longer text */
+#plan-comparison-table table tr th:nth-child(2),
+#plan-comparison-table table tr td:nth-child(2) {
+  min-width: 220px;
+  max-width: 220px;
+  width: 220px;
+}
