@@ -3,6 +3,9 @@ export default {
   content: ['./components/**/*.{vue,js,ts}', './pages/**/*.{vue,js,ts}', './content/**/*.{md,vue}', './const/*.{ts,js}', './public/Images/*.svg'],
   theme: {
     extend: {
+      screens: {
+        '3xl': '1600px',
+      },
       boxShadow: {
         zt_shadow_two: '0px 0px 8px 0px rgba(0, 0, 0, 0.1)',
       },

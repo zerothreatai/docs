@@ -41,8 +41,7 @@ For APIs with authentication, ZeroThreat handles login, cookies and token captur
 | **Unauthenticated Scans** | Test publicly accessible API endpoints.                                           |
 | **Authenticated Scans**   | Configure login flows or headers to scan private endpoints.                       |
 | **Custom Payloads**       | Provide sample request bodies for endpoints with missing definitions.             |
-| **Dynamic Token Mapping** | Automatically extract tokens from login responses for use in subsequent requests. |
-*** 
+| **Dynamic Token Mapping** | Automatically extract tokens from login responses for use in subsequent requests. | 
 
 ## Jump Right In
 

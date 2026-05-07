@@ -35,7 +35,7 @@ const closeModal = () => {
         <img
           :key="index"
           :src="source"
-          class="object-contain rounded-lg shadow-md cursor-zoom-in max-w-[42rem]"
+          class="object-contain rounded-lg shadow-md cursor-zoom-in max-w-[35rem] 3xl:max-w-[42rem]"
           :width="width"
           alt="Thumbnail"
           @click="openModal(source)"
