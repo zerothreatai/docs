@@ -118,9 +118,9 @@ You will be prompted to enter:
 * The **email address** associated with your ZeroThreat organization
 * A valid **On-Prem license key**
 
-::hint{ style="background-color:#fff4e6; color:#f97316; border:1px solid #f6d2b0;" icon="triangle-exclamation" iconClass="text-[#f97316]"}
+Once the On-Prem license has been purchased, you can view it in your ZeroThreat Cloud organization under the **Licenses** section. Use the organization email address and the license key shown there during installation. Atleast during installation the email used must belong to the organization where the On-Prem license was purchased.
 
-###### The email must belong to the organization where the On-Prem license was purchased.
+::fiqure-img{source="/Images/image (499).png"}
 ::
 
 Once activated, the installer downloads the required images (approximately 8–9 GB). This may take several minutes depending on network speed.
