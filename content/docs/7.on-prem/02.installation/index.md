@@ -13,7 +13,7 @@ This section walks you through installing ZeroThreat On-Prem using the CLI and a
 Before starting the installation, ensure the following requirements are met:
 
 * **Node.js**: Latest stable version installed
-* **Disk space**: At least **15 GB of free disk space** for initial installation
+* **Disk space**: At least 50-100 GB of free disk space for initial installation
 * **Internet access**: Required during installation to download system images
 
 > **Note**\
