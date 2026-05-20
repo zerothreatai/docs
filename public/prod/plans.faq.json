@@ -1,7 +1,7 @@
 [
 	{
-        "q": "Is there a difference in features between Pay Per Scan and Professional plans?",
-    	"a": "The Professional plan includes advanced features like CI/CD tools integration, Issue Tracking Integration, Schedule Scanning and Notification Tools integration, which are not available in the Pay Per Scan plan. However, all core scanning capabilities are consistently available across all plans."
+        "q": "Is there a difference in features between Professional Pay Per Scan and Professional plans?",
+    	"a": "Yes. Both plans provide access to ZeroThreat’s core security testing capabilities, including web application and API scanning, vulnerability validation, and detailed reporting. The main difference is usage and scalability. Professional Pay Per Scan is designed for on-demand testing, while the Professional plan includes recurring scans, continuous testing workflows, and higher operational scale for ongoing security programs."
 	},
 	{
     	"q": "Can I scan multiple targets with the Pay Per Credit plan?",
@@ -12,8 +12,8 @@
     	"a": "With the Target-based (Professional) plan, you get a 30-day cooling period that allows you to flexibly change your target as needed."
 	},
 	{
-    	"q": "Can I have multiple plans (Pay Per Credit + Professional) under one account?",
-    	"a": "Yes, you can have both Pay Per Credit and Professional plans under a single account. This is especially useful if you have a target that requires less frequent scanning—you can simply purchase a credit for that target while maintaining your Professional plan for others."
+    	"q": "Can I have multiple plans (Professional Pay Per Scan + Professional) under one account? ",
+    	"a": "Yes, you can have both Professional Pay Per Scan and Professional plans under a single account. This is especially useful if you have a target that requires less frequent scanning—you can simply purchase a credit for that target while maintaining your Professional plan for others."
 	},
 	{
     	"q": "How to get free Credits on ZeroThreat Platform?",
