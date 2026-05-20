@@ -1,7 +1,7 @@
 [
     {
         "q":"What happens during a scan? ",
-        "a":"During a scan, ZeroThreat systematically analyzes your web application or API to detect security vulnerabilities. Our intelligent crawler crawls the target, identifies all accessible endpoints and inputs, and simulates real-world attack techniques to uncover issues like SQL injection, XSS, and authentication flaws. "
+        "a":"During a scan, ZeroThreat maps the application attack surface, tests web applications and APIs for exploitable vulnerabilities, validates findings with proof-of-impact, and removes false positives using AI-driven verification. Depending on the scan mode, it can also execute authenticated workflows, CVE checks, custom templates, and business logic testing across multi-step attacker paths."
     },
     {
         "q":"How long will a target scan take? ",
@@ -29,7 +29,7 @@
     },
     {
         "q":"How often are vulnerabilities added or updated in ZeroThreat? ",
-        "a":"We consistently update our vulnerability database and scanning engine to efficiently detect threats based on the latest trends and reported CVEs. For example, recent data from CVE Details shows that the most reported vulnerabilities include XSS, SQL Injection, Memory Corruption, Code Execution, and Privilege Escalation. ZeroThreat adapts to these trends to ensure your applications are protected against the most common and critical security risks. "
+        "a":"ZeroThreat continuously updates its vulnerability intelligence and detection coverage. Newly disclosed CVEs are rapidly mapped into executable checks, often within hours of publication. The platform also updates detection logic for emerging threats, zero-day patterns, and community or custom templates through ongoing intelligence and OTA update mechanisms."
     },
     {
         "q":"What do the severity levels in ZeroThreat\u2019s findings mean? ",

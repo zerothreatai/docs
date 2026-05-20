@@ -9,7 +9,7 @@
     },
     {
         "q":"What are the system requirements to use ZeroThreat? ",
-        "a":"ZeroThreat is a cloud-based Dynamic Application Security Testing (DAST) platform designed for ease of use and broad accessibility. Since it operates entirely in the cloud, there are no specific hardware or software requirements for running scans or accessing the platform. You can use ZeroThreat from any modern device with an internet connection and a web browser. "
+        "a":"ZeroThreat is a cloud-based penetration testing platform that requires only a modern web browser and internet connection. Since it operates entirely in the cloud, there are no specific hardware or software requirements for running scans or accessing the platform. You can use ZeroThreat from any modern device with an internet connection and a web browser. "
     },
     {
         "q":"Does ZeroThreat require installation or is it cloud-based? ",
@@ -62,7 +62,7 @@
     },
     {
         "q":"Why do I need continuous web application security testing if I already perform manual penetration tests? ",
-        "a":"Manual penetration tests are valuable, but they\u2019re typically periodic and may miss vulnerabilities introduced between test cycles. Continuous web application security testing with tools like ZeroThreat helps you catch threats in real-time as code changes are made. It ensures consistent monitoring, rapid detection, and quick remediation\u2014closing the gaps that manual testing alone can't cover. This proactive approach significantly reduces your risk of breaches, especially in agile or DevOps environments where application updates are frequent. "
+        "a":"Manual penetration tests provide point-in-time assessments, but modern applications change constantly through deployments, APIs, and third-party integrations. Continuous security testing helps identify newly introduced vulnerabilities, exposed attack paths, and emerging CVEs in real time, reducing the window between vulnerability introduction and detection while continuously validating exploitability and business impact. "
     },
     {
         "q":"What all can I security test using ZeroThreat? ",
@@ -70,7 +70,7 @@
     },
     {
         "q":"Is it safe to scan production environments with ZeroThreat?",
-        "a":"While ZeroThreat is designed with security in mind, we strongly running scans only in non-production environments. ZeroThreat performs active testing, which may generate high request volumes, modify data, or trigger alerts\u2014potentially impacting live systems. For safer and more controlled results, always scan in a staging or testing environment that closely mirrors production."
+        "a":"Yes. ZeroThreat is designed for production-safe security testing with safeguards to minimize service disruption. The platform uses controlled execution, intelligent rate handling, and exploit validation techniques to safely identify real vulnerabilities in live web applications and APIs without relying on destructive testing methods."
     },
     {
         "q":"How long will it take for a security test to complete? ",

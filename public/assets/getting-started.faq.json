@@ -9,7 +9,7 @@
     },
     {
         "q":"What are the system requirements to use ZeroThreat? ",
-        "a":"ZeroThreat is a cloud-based Dynamic Application Security Testing (DAST) platform designed for ease of use and broad accessibility. Since it operates entirely in the cloud, there are no specific hardware or software requirements for running scans or accessing the platform. You can use ZeroThreat from any modern device with an internet connection and a web browser. "
+        "a":"ZeroThreat is a cloud-based penetration testing platform that requires only a modern web browser and internet connection. Since it operates entirely in the cloud, there are no specific hardware or software requirements for running scans or accessing the platform. You can use ZeroThreat from any modern device with an internet connection and a web browser. "
     },
     {
         "q":"Does ZeroThreat require installation or is it cloud-based? ",
@@ -35,7 +35,6 @@
         "q":"What authentication methods does ZeroThreat support? ",
         "a":"ZeroThreat supports a wide range of authentication mechanisms through its Chrome Extension, making it easy to scan even complex authenticated areas. You don\u2019t need to manually configure tokens or headers\u2014just use the extension to record a login sequence or use active user session. It handles form-based logins, CAPTCHA challenges, multi-factor authentication (2FA\/MFA), OTPs, and other interactive login flows by capturing real browser behavior. This approach ensures that ZeroThreat can access and scan secure sections of your application without requiring static credential input. "
     },
-    
     {
         "q":"How does ZeroThreat ensure my data is secure? ",
         "a":"ZeroThreat ensures data security through: \n\n- End-to-End Encryption: SSL\/TLS for secure data transmission. \n- Zero Trust Architecture: Every access request is verified. \n- Compliance: Adheres to GDPR and data privacy regulations. \n- Data Scan & Storage Location: Choose where your data is scanned and stored in real-time. "
@@ -62,7 +61,7 @@
     },
     {
         "q":"Why do I need continuous web application security testing if I already perform manual penetration tests? ",
-        "a":"Manual penetration tests are valuable, but they\u2019re typically periodic and may miss vulnerabilities introduced between test cycles. Continuous web application security testing with tools like ZeroThreat helps you catch threats in real-time as code changes are made. It ensures consistent monitoring, rapid detection, and quick remediation\u2014closing the gaps that manual testing alone can't cover. This proactive approach significantly reduces your risk of breaches, especially in agile or DevOps environments where application updates are frequent. "
+        "a":"Manual penetration tests provide point-in-time assessments, but modern applications change constantly through deployments, APIs, and third-party integrations. Continuous security testing helps identify newly introduced vulnerabilities, exposed attack paths, and emerging CVEs in real time, reducing the window between vulnerability introduction and detection while continuously validating exploitability and business impact. "
     },
     {
         "q":"What all can I security test using ZeroThreat? ",
@@ -70,7 +69,7 @@
     },
     {
         "q":"Is it safe to scan production environments with ZeroThreat?",
-        "a":"While ZeroThreat is designed with security in mind, we strongly running scans only in non-production environments. ZeroThreat performs active testing, which may generate high request volumes, modify data, or trigger alerts\u2014potentially impacting live systems. For safer and more controlled results, always scan in a staging or testing environment that closely mirrors production."
+        "a":"Yes. ZeroThreat is designed for production-safe security testing with safeguards to minimize service disruption. The platform uses controlled execution, intelligent rate handling, and exploit validation techniques to safely identify real vulnerabilities in live web applications and APIs without relying on destructive testing methods. "
     },
     {
         "q":"How long will it take for a security test to complete? ",
@@ -89,5 +88,3 @@
         "a":"If your WAF is blocking ZeroThreat requests, ensure it allows traffic whose User-Agent includes the ZeroThreat AI Bot signature. Look for `ZeroThreatAIBot` in the header (versions may vary), for example:`Mozilla/5.0 (Windows NT 10.0; Win64; x64; compatible; +https://zerothreat.ai/sos) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 ZeroThreatAIBot 0.0.65.` Enabling this signature ensures the scanner can access your target without interference from the WAF."
     }
 ]
-
-
