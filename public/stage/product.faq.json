@@ -29,7 +29,7 @@
 	},
 	{
     	"q": "Is Continuous Integration (CI/CD) available in the Free and Pay Per Scan plans?",
-    	"a": "No, CI/CD is not available in the Free and Pay Per Scan plans. This feature is only included in the Professional and Enterprise plans, which are designed to support automated security testing within your development pipelines."
+    	"a": "No, CI/CD is not available in the Free and Pay Per Scan plans. This feature is only included in the Enterprise Cloud and Enterprise On-Prem plans, which are designed to support automated security testing within your development pipelines."
 	},
 	{
     	"q": "Are there additional charges for integrations (CI/CD, ticketing, etc.)?",

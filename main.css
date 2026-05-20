@@ -283,7 +283,9 @@ blockquote p {
   @apply leading-6
 }
 
-#alert-div h6:nth-of-type(2) {
+#alert-div h6:nth-of-type(2),
+#alert-div h6:nth-of-type(3),
+#alert-div h6:nth-of-type(4) {
   @apply mt-2;
 }
 
