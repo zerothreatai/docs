@@ -48,10 +48,6 @@
         "a":"You can reach ZeroThreat support through email at hello@zerothreat.ai. "
     },
     {
-        "q":"What are the best practices for deploying DAST? ",
-        "a":"To effectively deploy DAST, start by integrating it early into your SDLC to catch vulnerabilities before deployment. Use authenticated scans to test behind login screens, and schedule regular scans to catch new threats. Always verify scan results to reduce false positives, and combine DAST with other testing methods like SAST or SCA for full coverage. Lastly, ensure scan configurations are optimized per application environment to avoid noise and missed detections. "
-    },
-    {
         "q":"Why do I need continuous web application security testing if I already perform manual penetration tests? ",
         "a":"Manual penetration tests provide point-in-time assessments, but modern applications change constantly through deployments, APIs, and third-party integrations. Continuous security testing helps identify newly introduced vulnerabilities, exposed attack paths, and emerging CVEs in real time, reducing the window between vulnerability introduction and detection while continuously validating exploitability and business impact. "
     },
