@@ -15,6 +15,7 @@ Before starting the installation, ensure the following requirements are met:
 * **Node.js**: Latest stable version installed
 * **Disk space**: At least 50-100 GB of free disk space for initial installation
 * **Internet access**: Required during installation to download system images
+* **Operating system:** Linux, macOS, or Windows using WSL
 
 > **Note**\
 > Docker is not a direct prerequisite. If required, the ZeroThreat CLI installer can install and configure Docker as part of the setup process.
@@ -118,16 +119,17 @@ You will be prompted to enter:
 * The **email address** associated with your ZeroThreat organization
 * A valid **On-Prem license key**
 
-Once the On-Prem license has been purchased, you can view it in your ZeroThreat Cloud organization under the **Licenses** section. Use the organization email address and the license key shown there during installation. Atleast during installation the email used must belong to the organization where the On-Prem license was purchased.
+To find these details, log in to your ZeroThreat Cloud organization and go to the **Licenses** section. The On-Prem license must already be purchased before it can be used during installation.
 
 ::fiqure-img{source="/Images/image (499).png"}
 ::
 
-Once activated, the installer downloads the required images (approximately 8–9 GB). This may take several minutes depending on network speed.
+During CLI installation, enter the organization email address and the license key shown in the **On-Prem Licenses** section of ZeroThreat Cloud version. The email address must belong to the same ZeroThreat organization where the On-Prem license was purchased. This allows the installer to verify that the license is being activated for the correct organization.
 
 ::fiqure-img{source="/Images/image (440).png"}
 ::
 
+After the email and license key are verified, the license is activated and the installer begins downloading the required system images, approximately **12–15 GB**. This may take several minutes depending on your network speed.
 
 ### Common License Activation Error
 
