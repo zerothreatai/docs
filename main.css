@@ -411,3 +411,22 @@ table tr td:first-child {
   max-width: 220px;
   width: 220px;
 }
+
+ .table_scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+.table_scroll::-webkit-scrollbar-track {
+  background: rgba(216, 214, 214, 0.658);
+  border-radius: 9999px;
+}
+
+.table_scroll::-webkit-scrollbar-thumb {
+  background: rgba(161, 160, 160, 0.603);
+  border-radius: 9999px;
+}
+
+.table_scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 140, 140, 0.8);
+}
