@@ -38,5 +38,13 @@
 	{
     	"q": "Are there discounts for non-profits, startups, or educational institutions?",
     	"a": "Our Annual Subscription plans are already offered at discounted rates with upto 20%. However, if you have any specific queries or doubts about additional discounts, feel free to reach out to our team at hello@zerothreat.ai and we will be happy to assist you."
+	},
+	{
+    	"q": "How is usage calculated for API scanning in ZeroThreat?",
+    	"a": "API scanning usage in ZeroThreat is calculated based on the number of endpoints scanned. Each endpoint scanned consumes credits. For host-based plans, it counts under the registered host, regardless of the number of endpoints."
+	},
+	{
+    	"q": "What is a Concurrent Scan in Target-based (Professional) Scan?",
+    	"a": "ZeroThreat allows you to perform concurrent scans multiple time, which means you can run multiple vulnerability scans for a single target. For example, if your plan includes 1 concurrent scan, you can run one scan at a time, and the next scan will start only after the current one finishes, as many scans as you want."
 	}
 ]

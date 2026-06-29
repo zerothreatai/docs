@@ -18,5 +18,17 @@
 	{
     	"q": "How do bulk purchases of credits or targets impact pricing?",
     	"a": "We offer volume-based discounts of up to 20% depending on the number of targets or credits you purchase. The more you scale, the more you save. You can visit our Pricing Page or contact our team for a custom quote that fits your needs."
+	},
+	{
+    	"q": "How is pricing affected if I use both Web App Scans and API Scans?",
+    	"a": "There's no additional charge for using both Web App and API Scans. In fact, APIs that are part of your web applications can be scanned at no additional cost—no need for a separate API scanning plan."
+	},
+	{
+    	"q": "How much does it cost to add an additional target mid-billing cycle?",
+    	"a": "You can easily add an additional target by purchasing a credit based on its scanning needs. Each additional credit costs just $75 per month, giving you the flexibility to scale as needed."
+	},
+	{
+    	"q": "Is there a trial period for Target-based plans?",
+    	"a": "Yes, we offer free credit for any of the plans you choose. It allows you to experience the full range of features with fully authenticated scans before committing to a paid plan."
 	}
 ]

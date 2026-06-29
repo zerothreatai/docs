@@ -1,0 +1,14 @@
+[
+    {
+        "q":"What types of APIs are supported in ZeroThreat? ",
+        "a":"ZeroThreat supports testing of REST, SOAP, GraphQL, and JSON-based APIs, along with gRPC endpoints. It also allows easy API collection through Postman collections. "
+    },
+    {
+        "q":"What are the API specifications of GraphQL and REST APIs? ",
+        "a":"REST APIs follow a resource-based architecture using standard HTTP methods like GET, POST, PUT, and DELETE. Each endpoint represents a resource (e.g., \/users, \/orders) and returns structured data\u2014typically in JSON format. REST APIs rely on stateless communication and often include versioning in the URL. \n\nGraphQL APIs, on the other hand, are query-based. Instead of fixed endpoints, GraphQL exposes a single endpoint (usually \/graphql) where clients specify exactly what data they need. This allows for more efficient data retrieval and reduces over-fetching or under-fetching of information. GraphQL uses a strongly typed schema and supports nested queries and mutations. "
+    },
+    {
+        "q":"How to start API security testing on ZeroThreat? ",
+        "a":"You can start API security testing in ZeroThreat in two ways:  \n\n(1) Add your API as a separate target and upload the relevant schema or collection (Postman, Swagger\/OpenAPI, or gRPC definitions) for a dedicated scan. \n\n(2) Scan APIs that are part of a web application during a standard web app scan, where ZeroThreat automatically detects and tests internal API calls. "
+    }
+]
