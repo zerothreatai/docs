@@ -72,9 +72,9 @@ jobs:
           path: .
 
       - name: Install Firebase CLI
-        run: npm install -g firebase-tools@13.35.1
+        run: npm install -g firebase-tools
 
-      - name: Check version
+      - name: Check Firebase CLI version
         run: firebase --version
 
       - name: Deploy to Firebase (Staging)
