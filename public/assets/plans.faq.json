@@ -16,6 +16,18 @@
     	"a": "Yes, you can have both Professional Pay Per Scan and Professional plans under a single account. This is especially useful if you have a target that requires less frequent scanning—you can simply purchase a credit for that target while maintaining your Professional plan for others."
 	},
 	{
+    	"q": "Can I switch my plan - between Pay Per Credit and Professional (unlimited) scanning?",
+    	"a": "Yes, you can switch between Pay Per Credit and the Professional plan at any time. Just update your plan from the dashboard—your data and scan history remain intact. Changes are applied seamlessly to match your billing cycle."
+	},
+	{
+    	"q": "How is billing handled for Host-Based pricing?",
+    	"a": "Host-based pricing is billed monthly or annually based on the plan you choose for your domains (hosts). Each host allows unlimited scans. You will be notified if adding a new host affects your current billing."
+	},
+	{
+    	"q": "Can I downgrade my Target-Based (Professional) plan?",
+    	"a": "No, the Target-based (Professional) plan cannot be canceled or downgraded during the active subscription period. Please ensure you select the plan that best fits your long-term needs before subscribing."
+	},
+	{
     	"q": "How to get free Credits on ZeroThreat Platform?",
     	"a": "When you sign up for ZeroThreat, you receive five free credits worth $125 as part of the trial period. This credit can be utilized within 15 days of sign up. You also get a new free credit every month, helping you find and fix the latest vulnerabilities."
 	},

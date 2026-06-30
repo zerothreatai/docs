@@ -48,6 +48,14 @@
         "a":"You can reach ZeroThreat support through email at hello@zerothreat.ai. "
     },
     {
+    "q":"Is there a free trial available for ZeroThreat? ",
+    "a":"Yes, ZeroThreat offers a free trial that allows you to scan your web applications and APIs for vulnerabilities without any cost. You can start complete automated scanning coverage immediately\u2014no credit card required. \n\nSign up for free and get 5 credits worth $125 to begin your scan today. "
+    },
+    {
+        "q":"What types of applications can ZeroThreat scan? ",
+        "a":"ZeroThreat can scan a wide variety of applications, including traditional web applications, modern Single-Page Applications (SPAs), and both REST and GraphQL APIs integrated within these apps. It also supports scanning microservices. "
+    },
+    {
         "q":"Why do I need continuous web application security testing if I already perform manual penetration tests? ",
         "a":"Manual penetration tests provide point-in-time assessments, but modern applications change constantly through deployments, APIs, and third-party integrations. Continuous security testing helps identify newly introduced vulnerabilities, exposed attack paths, and emerging CVEs in real time, reducing the window between vulnerability introduction and detection while continuously validating exploitability and business impact. "
     },
@@ -70,5 +78,9 @@
     {
         "q":"How to Scan in ZeroThreat if I have WAF setup?",
         "a":"If your WAF is blocking ZeroThreat requests, ensure it allows traffic whose User-Agent includes the ZeroThreat AI Bot signature. Look for `ZeroThreatAIBot` in the header (versions may vary), for example:`Mozilla/5.0 (Windows NT 10.0; Win64; x64; compatible; +https://zerothreat.ai/sos) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 ZeroThreatAIBot 0.0.65.` Enabling this signature ensures the scanner can access your target without interference from the WAF."
+    },
+    {
+        "q":"What all can I security test using ZeroThreat?",
+        "a":"ZeroThreat enables comprehensive security testing across a wide range of targets. You can test modern web applications (including SPAs), APIs (Postman, gRPC), and authenticated pages. ZeroThreat also scans for a wide spectrum of vulnerabilities—like XSS, SQLi, misconfigurations, and access control issues—while integrating seamlessly into CI/CD pipelines for continuous security."
     }
 ]

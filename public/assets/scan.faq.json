@@ -28,7 +28,7 @@
         "a":"Yes, ZeroThreat thoroughly scans for all OWASP Top 10 vulnerabilities, including issues like injection flaws, broken access control, security misconfigurations, and more. "
     },
     {
-        "q":"How often are vulnerabilities added or updated in ZeroThreat? ",
+        "q":"How often are vulnerabilities added or updated in ZeroThreat?",
         "a":"ZeroThreat continuously updates its vulnerability intelligence and detection coverage. Newly disclosed CVEs are rapidly mapped into executable checks, often within hours of publication. The platform also updates detection logic for emerging threats, zero-day patterns, and community or custom templates through ongoing intelligence and OTA update mechanisms."
     },
     {
